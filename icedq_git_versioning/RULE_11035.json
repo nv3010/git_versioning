@@ -201,7 +201,7 @@
       "classObjName" : "ICE_1612244778485",
       "queryBuilderXML" : null,
       "connId" : 429,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -217,7 +217,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from DBO.country",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 11047,
+          "srcTgtColId" : 11075,
           "ruleClsPropId" : 11039,
           "srcTrgColName" : "id",
           "srcTrgColDataType" : "int",
@@ -228,7 +228,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 11048,
+          "srcTgtColId" : 11076,
           "ruleClsPropId" : 11039,
           "srcTrgColName" : "iso",
           "srcTrgColDataType" : "char",
@@ -239,7 +239,7 @@
           "colFormat" : "",
           "displayIndex" : 1
         }, {
-          "srcTgtColId" : 11049,
+          "srcTgtColId" : 11077,
           "ruleClsPropId" : 11039,
           "srcTrgColName" : "name",
           "srcTrgColDataType" : "varchar",
@@ -250,7 +250,7 @@
           "colFormat" : "",
           "displayIndex" : 2
         }, {
-          "srcTgtColId" : 11050,
+          "srcTgtColId" : 11078,
           "ruleClsPropId" : 11039,
           "srcTrgColName" : "nicename",
           "srcTrgColDataType" : "varchar",
@@ -261,7 +261,7 @@
           "colFormat" : "",
           "displayIndex" : 3
         }, {
-          "srcTgtColId" : 11051,
+          "srcTgtColId" : 11079,
           "ruleClsPropId" : 11039,
           "srcTrgColName" : "iso3",
           "srcTrgColDataType" : "char",
@@ -272,7 +272,7 @@
           "colFormat" : "",
           "displayIndex" : 4
         }, {
-          "srcTgtColId" : 11052,
+          "srcTgtColId" : 11080,
           "ruleClsPropId" : 11039,
           "srcTrgColName" : "numcode",
           "srcTrgColDataType" : "smallint",
@@ -283,7 +283,7 @@
           "colFormat" : "",
           "displayIndex" : 5
         }, {
-          "srcTgtColId" : 11053,
+          "srcTgtColId" : 11081,
           "ruleClsPropId" : 11039,
           "srcTrgColName" : "phonecode",
           "srcTrgColDataType" : "int",
@@ -350,7 +350,7 @@
       "classObjName" : "ICE_1612244778485",
       "queryBuilderXML" : null,
       "connId" : 429,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -366,7 +366,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 11059,
+          "srcTgtColId" : 11083,
           "ruleClsPropId" : 11054,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -419,7 +419,7 @@
       "classObjName" : "ICE_1612244778485",
       "queryBuilderXML" : null,
       "connId" : 0,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -428,9 +428,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 11072,
-        "srcColId" : 11047,
-        "trgColId" : 11059,
+        "colMapId" : 11085,
+        "srcColId" : 11075,
+        "trgColId" : 11083,
         "colMapType" : "join",
         "srcColName" : "id",
         "tgtColName" : "cnt",
@@ -438,7 +438,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 11086,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_ZG56YMN",
+        "expression" : "S.id != 0",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 11035,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 11038,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.id != 0",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 11060,
         "paramId" : 9,
@@ -457,14 +480,14 @@
         "ruleClsPropID" : 11062,
         "paramId" : 798,
         "paramMethod" : "setEngineType",
-        "paramValue" : "Null",
+        "paramValue" : "V8",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
         "ruleClsPropID" : 11063,
         "paramId" : 22,
         "paramMethod" : "setMaxRowCount",
-        "paramValue" : "-1",
+        "paramValue" : "5",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -478,14 +501,14 @@
         "ruleClsPropID" : 11065,
         "paramId" : 24,
         "paramMethod" : "setShowErrorData",
-        "paramValue" : "No",
+        "paramValue" : "Yes",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
         "ruleClsPropID" : 11066,
         "paramId" : 72,
         "paramMethod" : "setTimeOut",
-        "paramValue" : "",
+        "paramValue" : "10",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -499,7 +522,7 @@
         "ruleClsPropID" : 11068,
         "paramId" : 465,
         "paramMethod" : "setReportXlsx",
-        "paramValue" : "No",
+        "paramValue" : "Yes",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -526,7 +549,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 11047,
+      "srcTgtColId" : 11075,
       "ruleClsPropId" : 11039,
       "srcTrgColName" : "id",
       "srcTrgColDataType" : "int",
@@ -537,7 +560,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 11048,
+      "srcTgtColId" : 11076,
       "ruleClsPropId" : 11039,
       "srcTrgColName" : "iso",
       "srcTrgColDataType" : "char",
@@ -548,7 +571,7 @@
       "colFormat" : "",
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 11049,
+      "srcTgtColId" : 11077,
       "ruleClsPropId" : 11039,
       "srcTrgColName" : "name",
       "srcTrgColDataType" : "varchar",
@@ -559,7 +582,7 @@
       "colFormat" : "",
       "displayIndex" : 2
     }, {
-      "srcTgtColId" : 11050,
+      "srcTgtColId" : 11078,
       "ruleClsPropId" : 11039,
       "srcTrgColName" : "nicename",
       "srcTrgColDataType" : "varchar",
@@ -570,7 +593,7 @@
       "colFormat" : "",
       "displayIndex" : 3
     }, {
-      "srcTgtColId" : 11051,
+      "srcTgtColId" : 11079,
       "ruleClsPropId" : 11039,
       "srcTrgColName" : "iso3",
       "srcTrgColDataType" : "char",
@@ -581,7 +604,7 @@
       "colFormat" : "",
       "displayIndex" : 4
     }, {
-      "srcTgtColId" : 11052,
+      "srcTgtColId" : 11080,
       "ruleClsPropId" : 11039,
       "srcTrgColName" : "numcode",
       "srcTrgColDataType" : "smallint",
@@ -592,7 +615,7 @@
       "colFormat" : "",
       "displayIndex" : 5
     }, {
-      "srcTgtColId" : 11053,
+      "srcTgtColId" : 11081,
       "ruleClsPropId" : 11039,
       "srcTrgColName" : "phonecode",
       "srcTrgColDataType" : "int",
@@ -603,7 +626,7 @@
       "colFormat" : "",
       "displayIndex" : 6
     }, {
-      "srcTgtColId" : 11059,
+      "srcTgtColId" : 11083,
       "ruleClsPropId" : 11054,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -615,9 +638,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 11072,
-      "srcColId" : 11047,
-      "trgColId" : 11059,
+      "colMapId" : 11085,
+      "srcColId" : 11075,
+      "trgColId" : 11083,
       "colMapType" : "join",
       "srcColName" : "id",
       "tgtColName" : "cnt",
@@ -641,6 +664,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 11086,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_ZG56YMN",
+      "expression" : "S.id != 0",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 11035,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 11038,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
