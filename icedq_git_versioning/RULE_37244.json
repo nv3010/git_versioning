@@ -1,7 +1,7 @@
 {
   "user" : {
-    "userId" : 10918,
-    "userName" : "punam",
+    "userId" : 7,
+    "userName" : "admin",
     "password" : null,
     "email" : null,
     "fullName" : null,
@@ -62,11 +62,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 10918,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-02-22 00:00:00",
-    "ruleModifiedDate" : "2021-02-25 00:00:00",
+    "ruleModifiedDate" : "2021-03-01 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -98,7 +98,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : null,
-    "ruleModifiedByName" : "punam",
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 37321,
     "successBody" : "",
     "failureBody" : "",
@@ -146,7 +146,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "WITH RULE_INFO AS\n  (\nSELECT\n    PROJECT_NAME ,\n    FOLDER_NAME,\n    R.RULE_ID,\n    RULE_NAME,\n    CONVERT(DATE, R.RULE_CREATE_DTTM,101)        RULE_CREATED_ON,\n    CONVERT(DATE, R.RULE_LAST_MODIFY_DTTM,101)  RULE_MODIFIED_ON,\n    IU2.FULL_NAME                    RULE_CREATED_BY ,\n    IU3.FULL_NAME                    RULE_MODIFIED_BY,\n    R.RULE_TYPE,\n    CASE\n        WHEN IRC.EXEC_MODE ='domain'\n        THEN 'Rowdiff'\n        WHEN IRC.EXEC_MODE ='report'\n        THEN 'Validation'\n        WHEN IRC.EXEC_MODE ='scalar'\n        THEN 'Checksum'\n        WHEN IRC.EXEC_MODE ='recon'\n        THEN 'Recon'\n    ELSE 'Script'\n    END RULE_OBJECT_TYPE,\n    CASE\n        WHEN R.RULE_STATUS = 1\n        THEN 'Enabled'\n        ELSE 'Disabled'\n    END RULE_STATUS\nFROM ICE_PROJECT P\nINNER JOIN ICE_RULE_FOLDER F    ON (P.PROJECT_ID = F.PROJECT_ID)\nINNER JOIN ICE_RULE R             ON (R.FOLDER_ID=F.FOLDER_ID)\nLEFT JOIN ICE_RULE_CLASS IRC    ON (IRC.RULE_ID = R.RULE_ID) AND IRC.VID     = 'CompareData11'\nLEFT JOIN ICE_USER IU2             ON (IU2.USER_ID=RULE_CREATED_BY_ID)\nLEFT JOIN ICE_USER IU3            ON (IU3.USER_ID= RULE_LAST_MODIFY_BY_ID)\n),\nRULE_INSTANCE_DETAILS AS\n(\n SELECT\n        IRULE_INSTANCE.RULE_ID,\n        IRULE_INSTANCE.RULE_INSTANCE_ID,\n        CASE ISNULL(ISTATUS.STATUS_NAME ,'NoRun')\n            WHEN 'Completed'\n            THEN 'Success'\n            WHEN 'Halted'\n            THEN 'Problem'\n            WHEN 'NoRun'\n            THEN 'NoRun'\n            WHEN 'Failure'\n            THEN 'Failure'\n            ELSE ISTATUS.STATUS_NAME\n        END AUDIT_STATUS ,\n        IRULE_CLASS_INSTANCE.STATUS_ID,\n        CASE ISNUMERIC(IRULE_CLASS_INSTANCE.RULE_CLASS_RESULT)\n            WHEN 1\n            THEN CAST(IRULE_CLASS_INSTANCE.RULE_CLASS_RESULT AS float)\n            ELSE 1\n        END AUDIT_EXIT_CODE,\n        CONVERT(DATE,AUDIT_START_DTTM,101) AUDIT_EXECUTION_STARTED_DT,\n        AUDIT_START_DTTM AUDIT_EXECUTION_STARTED_DTTM,\n        CONVERT(DATE,AUDIT_END_DTTM,101)  AUDIT_EXECUTION_COMPLETED_DT,\n        AUDIT_END_DTTM AUDIT_EXECUTION_COMPLETED_DTTM,\n        AUDIT_EXECUTION_MEDIUM AUDIT_EXECUTED_FROM,\n        AUDIT_EXECUTED_BY_PROCESS AS CONTEXT_TYPE,\n        EXECUTED_BY,\n        IRULE_CLASS_INSTANCE.ROW_SRC_EXC SOURCE_ROW_COUNT,\n        IRULE_CLASS_INSTANCE.ROW_TRG_EXC TARGET_ROW_COUNT,\n        IRULE_CLASS_INSTANCE.RESULT_TYPE,\n        CAST(MAX_ROW_COUNT AS   VARCHAR) MAX_ROW_COUNT,\n        CAST(MAX_ERROR_COUNT AS VARCHAR) MAX_ERROR_COUNT,\n        STORE_ERROR_ONLY STORE_ONLY_ERROR_ROWS,\n        SRC_CONN SOURCE_CONNECTION_NAME,\n        TRG_CONN TARGET_CONNECTION_NAME\n    FROM ICE_RULE_INSTANCE IRULE_INSTANCE\n    INNER JOIN ICE_RULE_CLASS_INSTANCE IRULE_CLASS_INSTANCE     ON (IRULE_INSTANCE.RULE_INSTANCE_ID = IRULE_CLASS_INSTANCE.RULE_INSTANCE_ID)\n    INNER JOIN ICE_RULE_CLASS IRULE_CLASS                         ON (IRULE_CLASS.RULE_CLASS_ID = IRULE_CLASS_INSTANCE.RULE_CLASS_ID)\n    LEFT JOIN  ICE_STATUS ISTATUS                                 ON (IRULE_CLASS_INSTANCE.STATUS_ID = ISTATUS.STATUS_ID)\n    WHERE     IRULE_CLASS.VID LIKE '%Compare%'\n  )\nSELECT\n    RI.PROJECT_NAME                                AS \"Folder Group\",\n    RI.FOLDER_NAME                                AS \"Folder\",\n    RI.RULE_ID                                    AS \"Rule Id\",\n    RID.RULE_INSTANCE_ID                        AS \"Instance Id\",\n    RI.RULE_NAME                                AS \"Name\",\n    RI.RULE_OBJECT_TYPE                            AS \"Rule Type\",\n    RI.RULE_TYPE                                AS \"Criticality\",\n    RI.RULE_STATUS                                AS \"Active\",\n    RI.RULE_CREATED_BY                            AS \"Created By\",\n    RI.RULE_CREATED_ON                            AS \"Create Date\",\n    RI.RULE_MODIFIED_BY                            AS \"Updated By\",\n    RI.RULE_MODIFIED_ON                            AS \"Update Date\",\n    RID.CONTEXT_TYPE                            AS \"Context Type\",\n    SOURCE_ROW_COUNT                            AS \"Source Count\",\n    TARGET_ROW_COUNT                            AS \"Target Count\",\n    AUDIT_EXIT_CODE                                AS \"Defect Size\",\n    RESULT_TYPE                                    AS \"Result Type\",\n    AUDIT_EXECUTION_STARTED_DT                    AS \"Start Date\",\n    AUDIT_EXECUTION_STARTED_DTTM                AS \"Start Time\",\n    AUDIT_EXECUTION_COMPLETED_DT                AS \"End Date\",\n    AUDIT_EXECUTION_COMPLETED_DTTM                AS \"End Time\",\n    AUDIT_EXECUTED_FROM                            AS \"Execution Source\",\n    CASE\n        WHEN AUDIT_STATUS IS NULL\n        THEN 'NoRun'\n        ELSE AUDIT_STATUS\n    END Result,\n    SOURCE_CONNECTION_NAME                        AS \"Source\",\n    CASE\n        WHEN RULE_TYPE = 'Validation'\n        THEN NULL\n        ELSE TARGET_CONNECTION_NAME\n    END \"Target\",\n    CASE\n        WHEN MAX_ROW_COUNT IS NULL\n        OR MAX_ROW_COUNT    = -1\n        THEN NULL\n        ELSE MAX_ROW_COUNT\n    END \"Stop At Row\",\n    CASE\n        WHEN MAX_ERROR_COUNT IS NULL\n        OR MAX_ERROR_COUNT    = -1\n        THEN NULL\n        ELSE MAX_ERROR_COUNT\n    END \"Stop At Error\",\n    STORE_ONLY_ERROR_ROWS                        AS \"Capture Err Only\"\nFROM RULE_INFO RI\nLEFT JOIN RULE_INSTANCE_DETAILS RID ON RI.RULE_ID=RID.RULE_ID",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 44456,
+          "srcTgtColId" : 44788,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "folder group",
           "srcTrgColDataType" : "varchar",
@@ -157,7 +157,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44457,
+          "srcTgtColId" : 44789,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "folder",
           "srcTrgColDataType" : "varchar",
@@ -168,7 +168,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44458,
+          "srcTgtColId" : 44790,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "rule id",
           "srcTrgColDataType" : "int",
@@ -179,7 +179,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44459,
+          "srcTgtColId" : 44791,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "instance id",
           "srcTrgColDataType" : "int",
@@ -190,7 +190,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44460,
+          "srcTgtColId" : 44792,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "name",
           "srcTrgColDataType" : "varchar",
@@ -201,7 +201,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44461,
+          "srcTgtColId" : 44793,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "rule type",
           "srcTrgColDataType" : "varchar",
@@ -212,7 +212,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44462,
+          "srcTgtColId" : 44794,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "criticality",
           "srcTrgColDataType" : "varchar",
@@ -223,7 +223,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44463,
+          "srcTgtColId" : 44795,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "active",
           "srcTrgColDataType" : "varchar",
@@ -234,7 +234,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44464,
+          "srcTgtColId" : 44796,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "created by",
           "srcTrgColDataType" : "varchar",
@@ -245,7 +245,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44465,
+          "srcTgtColId" : 44797,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "create date",
           "srcTrgColDataType" : "date",
@@ -256,7 +256,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44466,
+          "srcTgtColId" : 44798,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "updated by",
           "srcTrgColDataType" : "varchar",
@@ -267,7 +267,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44467,
+          "srcTgtColId" : 44799,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "update date",
           "srcTrgColDataType" : "date",
@@ -278,7 +278,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44468,
+          "srcTgtColId" : 44800,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "context type",
           "srcTrgColDataType" : "varchar",
@@ -289,7 +289,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44469,
+          "srcTgtColId" : 44801,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "source count",
           "srcTrgColDataType" : "varchar",
@@ -300,7 +300,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44470,
+          "srcTgtColId" : 44802,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "target count",
           "srcTrgColDataType" : "varchar",
@@ -311,7 +311,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44471,
+          "srcTgtColId" : 44803,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "defect size",
           "srcTrgColDataType" : "float",
@@ -322,7 +322,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44472,
+          "srcTgtColId" : 44804,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "result type",
           "srcTrgColDataType" : "varchar",
@@ -333,7 +333,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44473,
+          "srcTgtColId" : 44805,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "start date",
           "srcTrgColDataType" : "date",
@@ -344,7 +344,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44474,
+          "srcTgtColId" : 44806,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "start time",
           "srcTrgColDataType" : "datetime",
@@ -355,7 +355,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44475,
+          "srcTgtColId" : 44807,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "end date",
           "srcTrgColDataType" : "date",
@@ -366,7 +366,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44476,
+          "srcTgtColId" : 44808,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "end time",
           "srcTrgColDataType" : "datetime",
@@ -377,7 +377,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44477,
+          "srcTgtColId" : 44809,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "execution source",
           "srcTrgColDataType" : "varchar",
@@ -388,7 +388,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44478,
+          "srcTgtColId" : 44810,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "result",
           "srcTrgColDataType" : "varchar",
@@ -399,7 +399,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44479,
+          "srcTgtColId" : 44811,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "source",
           "srcTrgColDataType" : "varchar",
@@ -410,7 +410,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44480,
+          "srcTgtColId" : 44812,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "target",
           "srcTrgColDataType" : "varchar",
@@ -421,7 +421,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44481,
+          "srcTgtColId" : 44813,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "stop at row",
           "srcTrgColDataType" : "varchar",
@@ -432,7 +432,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44482,
+          "srcTgtColId" : 44814,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "stop at error",
           "srcTrgColDataType" : "varchar",
@@ -443,7 +443,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44483,
+          "srcTgtColId" : 44815,
           "ruleClsPropId" : 37322,
           "srcTrgColName" : "capture err only",
           "srcTrgColDataType" : "varchar",
@@ -480,7 +480,7 @@
         "ruleClsPropID" : 37327,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1,2,3,4",
+        "paramValue" : "1,2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -533,7 +533,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "WITH RULE_INFO AS\n  (\nSELECT\n    PROJECT_NAME ,\n    FOLDER_NAME,\n    R.RULE_ID,\n    RULE_NAME,\n    CONVERT(DATE, R.RULE_CREATE_DTTM,101)        RULE_CREATED_ON,\n    CONVERT(DATE, R.RULE_LAST_MODIFY_DTTM,101)  RULE_MODIFIED_ON,\n    IU2.FULL_NAME                    RULE_CREATED_BY ,\n    IU3.FULL_NAME                    RULE_MODIFIED_BY,\n    R.RULE_TYPE,\n    CASE\n        WHEN IRC.EXEC_MODE ='domain'\n        THEN 'Rowdiff'\n        WHEN IRC.EXEC_MODE ='report'\n        THEN 'Validation'\n        WHEN IRC.EXEC_MODE ='scalar'\n        THEN 'Checksum'\n        WHEN IRC.EXEC_MODE ='recon'\n        THEN 'Recon'\n    ELSE 'Script'\n    END RULE_OBJECT_TYPE,\n    CASE\n        WHEN R.RULE_STATUS = 1\n        THEN 'Enabled'\n        ELSE 'Disabled'\n    END RULE_STATUS\nFROM ICE_PROJECT P\nINNER JOIN ICE_RULE_FOLDER F    ON (P.PROJECT_ID = F.PROJECT_ID)\nINNER JOIN ICE_RULE R             ON (R.FOLDER_ID=F.FOLDER_ID)\nLEFT JOIN ICE_RULE_CLASS IRC    ON (IRC.RULE_ID = R.RULE_ID) AND IRC.VID     = 'CompareData11'\nLEFT JOIN ICE_USER IU2             ON (IU2.USER_ID=RULE_CREATED_BY_ID)\nLEFT JOIN ICE_USER IU3            ON (IU3.USER_ID= RULE_LAST_MODIFY_BY_ID)\n),\nRULE_INSTANCE_DETAILS AS\n(\n SELECT\n        IRULE_INSTANCE.RULE_ID,\n        IRULE_INSTANCE.RULE_INSTANCE_ID,\n        CASE ISNULL(ISTATUS.STATUS_NAME ,'NoRun')\n            WHEN 'Completed'\n            THEN 'Success'\n            WHEN 'Halted'\n            THEN 'Problem'\n            WHEN 'NoRun'\n            THEN 'NoRun'\n            WHEN 'Failure'\n            THEN 'Failure'\n            ELSE ISTATUS.STATUS_NAME\n        END AUDIT_STATUS ,\n        IRULE_CLASS_INSTANCE.STATUS_ID,\n        CASE ISNUMERIC(IRULE_CLASS_INSTANCE.RULE_CLASS_RESULT)\n            WHEN 1\n            THEN CAST(IRULE_CLASS_INSTANCE.RULE_CLASS_RESULT AS float)\n            ELSE 1\n        END AUDIT_EXIT_CODE,\n        CONVERT(DATE,AUDIT_START_DTTM,101) AUDIT_EXECUTION_STARTED_DT,\n        AUDIT_START_DTTM AUDIT_EXECUTION_STARTED_DTTM,\n        CONVERT(DATE,AUDIT_END_DTTM,101)  AUDIT_EXECUTION_COMPLETED_DT,\n        AUDIT_END_DTTM AUDIT_EXECUTION_COMPLETED_DTTM,\n        AUDIT_EXECUTION_MEDIUM AUDIT_EXECUTED_FROM,\n        AUDIT_EXECUTED_BY_PROCESS AS CONTEXT_TYPE,\n        EXECUTED_BY,\n        IRULE_CLASS_INSTANCE.ROW_SRC_EXC SOURCE_ROW_COUNT,\n        IRULE_CLASS_INSTANCE.ROW_TRG_EXC TARGET_ROW_COUNT,\n        IRULE_CLASS_INSTANCE.RESULT_TYPE,\n        CAST(MAX_ROW_COUNT AS   VARCHAR) MAX_ROW_COUNT,\n        CAST(MAX_ERROR_COUNT AS VARCHAR) MAX_ERROR_COUNT,\n        STORE_ERROR_ONLY STORE_ONLY_ERROR_ROWS,\n        SRC_CONN SOURCE_CONNECTION_NAME,\n        TRG_CONN TARGET_CONNECTION_NAME\n    FROM ICE_RULE_INSTANCE IRULE_INSTANCE\n    INNER JOIN ICE_RULE_CLASS_INSTANCE IRULE_CLASS_INSTANCE     ON (IRULE_INSTANCE.RULE_INSTANCE_ID = IRULE_CLASS_INSTANCE.RULE_INSTANCE_ID)\n    INNER JOIN ICE_RULE_CLASS IRULE_CLASS                         ON (IRULE_CLASS.RULE_CLASS_ID = IRULE_CLASS_INSTANCE.RULE_CLASS_ID)\n    LEFT JOIN  ICE_STATUS ISTATUS                                 ON (IRULE_CLASS_INSTANCE.STATUS_ID = ISTATUS.STATUS_ID)\n    WHERE     IRULE_CLASS.VID LIKE '%Compare%'\n  )\nSELECT\n    RI.PROJECT_NAME                                AS \"Folder Group\",\n    RI.FOLDER_NAME                                AS \"Folder\",\n    RI.RULE_ID                                    AS \"Rule Id\",\n    RID.RULE_INSTANCE_ID                        AS \"Instance Id\",\n    RI.RULE_NAME                                AS \"Name\",\n    RI.RULE_OBJECT_TYPE                            AS \"Rule Type\",\n    RI.RULE_TYPE                                AS \"Criticality\",\n    RI.RULE_STATUS                                AS \"Active\",\n    RI.RULE_CREATED_BY                            AS \"Created By\",\n    RI.RULE_CREATED_ON                            AS \"Create Date\",\n    RI.RULE_MODIFIED_BY                            AS \"Updated By\",\n    RI.RULE_MODIFIED_ON                            AS \"Update Date\",\n    RID.CONTEXT_TYPE                            AS \"Context Type\",\n    SOURCE_ROW_COUNT                            AS \"Source Count\",\n    TARGET_ROW_COUNT                            AS \"Target Count\",\n    AUDIT_EXIT_CODE                                AS \"Defect Size\",\n    RESULT_TYPE                                    AS \"Result Type\",\n    AUDIT_EXECUTION_STARTED_DT                    AS \"Start Date\",\n    AUDIT_EXECUTION_STARTED_DTTM                AS \"Start Time\",\n    AUDIT_EXECUTION_COMPLETED_DT                AS \"End Date\",\n    AUDIT_EXECUTION_COMPLETED_DTTM                AS \"End Time\",\n    AUDIT_EXECUTED_FROM                            AS \"Execution Source\",\n    CASE\n        WHEN AUDIT_STATUS IS NULL\n        THEN 'NoRun'\n        ELSE AUDIT_STATUS\n    END Result,\n    SOURCE_CONNECTION_NAME                        AS \"Source\",\n    CASE\n        WHEN RULE_TYPE = 'Validation'\n        THEN NULL\n        ELSE TARGET_CONNECTION_NAME\n    END \"Target\",\n    CASE\n        WHEN MAX_ROW_COUNT IS NULL\n        OR MAX_ROW_COUNT    = -1\n        THEN NULL\n        ELSE MAX_ROW_COUNT\n    END \"Stop At Row\",\n    CASE\n        WHEN MAX_ERROR_COUNT IS NULL\n        OR MAX_ERROR_COUNT    = -1\n        THEN NULL\n        ELSE MAX_ERROR_COUNT\n    END \"Stop At Error\",\n    STORE_ONLY_ERROR_ROWS                        AS \"Capture Err Only\"\nFROM RULE_INFO RI\nLEFT JOIN RULE_INSTANCE_DETAILS RID ON RI.RULE_ID=RID.RULE_ID",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 44487,
+          "srcTgtColId" : 44819,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "folder group",
           "srcTrgColDataType" : "varchar",
@@ -544,7 +544,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44488,
+          "srcTgtColId" : 44820,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "folder",
           "srcTrgColDataType" : "varchar",
@@ -555,7 +555,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44489,
+          "srcTgtColId" : 44821,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "rule id",
           "srcTrgColDataType" : "int",
@@ -566,7 +566,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44490,
+          "srcTgtColId" : 44822,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "instance id",
           "srcTrgColDataType" : "int",
@@ -577,7 +577,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44491,
+          "srcTgtColId" : 44823,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "name",
           "srcTrgColDataType" : "varchar",
@@ -588,7 +588,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44492,
+          "srcTgtColId" : 44824,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "rule type",
           "srcTrgColDataType" : "varchar",
@@ -599,7 +599,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44493,
+          "srcTgtColId" : 44825,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "criticality",
           "srcTrgColDataType" : "varchar",
@@ -610,7 +610,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44494,
+          "srcTgtColId" : 44826,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "active",
           "srcTrgColDataType" : "varchar",
@@ -621,7 +621,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44495,
+          "srcTgtColId" : 44827,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "created by",
           "srcTrgColDataType" : "varchar",
@@ -632,7 +632,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44496,
+          "srcTgtColId" : 44828,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "create date",
           "srcTrgColDataType" : "date",
@@ -643,7 +643,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44497,
+          "srcTgtColId" : 44829,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "updated by",
           "srcTrgColDataType" : "varchar",
@@ -654,7 +654,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44498,
+          "srcTgtColId" : 44830,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "update date",
           "srcTrgColDataType" : "date",
@@ -665,7 +665,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44499,
+          "srcTgtColId" : 44831,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "context type",
           "srcTrgColDataType" : "varchar",
@@ -676,7 +676,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44500,
+          "srcTgtColId" : 44832,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "source count",
           "srcTrgColDataType" : "varchar",
@@ -687,7 +687,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44501,
+          "srcTgtColId" : 44833,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "target count",
           "srcTrgColDataType" : "varchar",
@@ -698,7 +698,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44502,
+          "srcTgtColId" : 44834,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "defect size",
           "srcTrgColDataType" : "float",
@@ -709,7 +709,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44503,
+          "srcTgtColId" : 44835,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "result type",
           "srcTrgColDataType" : "varchar",
@@ -720,7 +720,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44504,
+          "srcTgtColId" : 44836,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "start date",
           "srcTrgColDataType" : "date",
@@ -731,7 +731,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44505,
+          "srcTgtColId" : 44837,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "start time",
           "srcTrgColDataType" : "datetime",
@@ -742,7 +742,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44506,
+          "srcTgtColId" : 44838,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "end date",
           "srcTrgColDataType" : "date",
@@ -753,7 +753,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44507,
+          "srcTgtColId" : 44839,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "end time",
           "srcTrgColDataType" : "datetime",
@@ -764,7 +764,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44508,
+          "srcTgtColId" : 44840,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "execution source",
           "srcTrgColDataType" : "varchar",
@@ -775,7 +775,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44509,
+          "srcTgtColId" : 44841,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "result",
           "srcTrgColDataType" : "varchar",
@@ -786,7 +786,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44510,
+          "srcTgtColId" : 44842,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "source",
           "srcTrgColDataType" : "varchar",
@@ -797,7 +797,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44511,
+          "srcTgtColId" : 44843,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "target",
           "srcTrgColDataType" : "varchar",
@@ -808,7 +808,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44512,
+          "srcTgtColId" : 44844,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "stop at row",
           "srcTrgColDataType" : "varchar",
@@ -819,7 +819,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44513,
+          "srcTgtColId" : 44845,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "stop at error",
           "srcTrgColDataType" : "varchar",
@@ -830,7 +830,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 44514,
+          "srcTgtColId" : 44846,
           "ruleClsPropId" : 37342,
           "srcTrgColName" : "capture err only",
           "srcTrgColDataType" : "varchar",
@@ -867,7 +867,7 @@
         "ruleClsPropID" : 37347,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1,2,3,4",
+        "paramValue" : "1,2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -913,9 +913,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 44516,
-        "srcColId" : 44456,
-        "trgColId" : 44487,
+        "colMapId" : 44848,
+        "srcColId" : 44788,
+        "trgColId" : 44819,
         "colMapType" : "join",
         "srcColName" : "folder group",
         "tgtColName" : "folder group",
@@ -923,35 +923,15 @@
         "srcTrgColMapVisible" : 1,
         "displayIndex" : 4
       }, {
-        "colMapId" : 44517,
-        "srcColId" : 44457,
-        "trgColId" : 44488,
+        "colMapId" : 44849,
+        "srcColId" : 44789,
+        "trgColId" : 44820,
         "colMapType" : "join",
         "srcColName" : "folder",
         "tgtColName" : "folder",
         "colMapExpr" : "folder=folder",
         "srcTrgColMapVisible" : 1,
         "displayIndex" : 5
-      }, {
-        "colMapId" : 44518,
-        "srcColId" : 44458,
-        "trgColId" : 44489,
-        "colMapType" : "join",
-        "srcColName" : "rule id",
-        "tgtColName" : "rule id",
-        "colMapExpr" : "rule id=rule id",
-        "srcTrgColMapVisible" : 1,
-        "displayIndex" : 6
-      }, {
-        "colMapId" : 44519,
-        "srcColId" : 44459,
-        "trgColId" : 44490,
-        "colMapType" : "join",
-        "srcColName" : "instance id",
-        "tgtColName" : "instance id",
-        "colMapExpr" : "instance id=instance id",
-        "srcTrgColMapVisible" : 1,
-        "displayIndex" : 7
       } ],
       "exprlist" : [ {
         "exprID" : 37970,
@@ -1053,7 +1033,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 8,
+        "exprIndex" : 6,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1076,7 +1056,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 9,
+        "exprIndex" : 7,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1099,7 +1079,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 10,
+        "exprIndex" : 8,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1122,7 +1102,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 11,
+        "exprIndex" : 9,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1145,7 +1125,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 12,
+        "exprIndex" : 10,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1168,7 +1148,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 13,
+        "exprIndex" : 11,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1191,7 +1171,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 14,
+        "exprIndex" : 12,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1214,7 +1194,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 15,
+        "exprIndex" : 13,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1237,7 +1217,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 16,
+        "exprIndex" : 14,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1260,7 +1240,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 17,
+        "exprIndex" : 15,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1283,7 +1263,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 18,
+        "exprIndex" : 16,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1306,7 +1286,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 19,
+        "exprIndex" : 17,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1329,7 +1309,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 20,
+        "exprIndex" : 18,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1352,7 +1332,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 21,
+        "exprIndex" : 19,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1375,7 +1355,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 22,
+        "exprIndex" : 20,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1398,7 +1378,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 23,
+        "exprIndex" : 21,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1421,7 +1401,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 24,
+        "exprIndex" : 22,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1444,7 +1424,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 25,
+        "exprIndex" : 23,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1467,7 +1447,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 26,
+        "exprIndex" : 24,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1490,7 +1470,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 27,
+        "exprIndex" : 25,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1513,7 +1493,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 28,
+        "exprIndex" : 26,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1536,7 +1516,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 29,
+        "exprIndex" : 27,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1559,7 +1539,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 30,
+        "exprIndex" : 28,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1582,7 +1562,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 31,
+        "exprIndex" : 29,
         "ruleId" : 37244,
         "ruleInstanceId" : 0,
         "ruleClassId" : 37321,
@@ -1685,7 +1665,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 44456,
+      "srcTgtColId" : 44788,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "folder group",
       "srcTrgColDataType" : "varchar",
@@ -1696,7 +1676,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44457,
+      "srcTgtColId" : 44789,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "folder",
       "srcTrgColDataType" : "varchar",
@@ -1707,7 +1687,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44458,
+      "srcTgtColId" : 44790,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "rule id",
       "srcTrgColDataType" : "int",
@@ -1718,7 +1698,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44459,
+      "srcTgtColId" : 44791,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "instance id",
       "srcTrgColDataType" : "int",
@@ -1729,7 +1709,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44460,
+      "srcTgtColId" : 44792,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "name",
       "srcTrgColDataType" : "varchar",
@@ -1740,7 +1720,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44461,
+      "srcTgtColId" : 44793,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "rule type",
       "srcTrgColDataType" : "varchar",
@@ -1751,7 +1731,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44462,
+      "srcTgtColId" : 44794,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "criticality",
       "srcTrgColDataType" : "varchar",
@@ -1762,7 +1742,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44463,
+      "srcTgtColId" : 44795,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "active",
       "srcTrgColDataType" : "varchar",
@@ -1773,7 +1753,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44464,
+      "srcTgtColId" : 44796,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "created by",
       "srcTrgColDataType" : "varchar",
@@ -1784,7 +1764,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44465,
+      "srcTgtColId" : 44797,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "create date",
       "srcTrgColDataType" : "date",
@@ -1795,7 +1775,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44466,
+      "srcTgtColId" : 44798,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "updated by",
       "srcTrgColDataType" : "varchar",
@@ -1806,7 +1786,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44467,
+      "srcTgtColId" : 44799,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "update date",
       "srcTrgColDataType" : "date",
@@ -1817,7 +1797,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44468,
+      "srcTgtColId" : 44800,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "context type",
       "srcTrgColDataType" : "varchar",
@@ -1828,7 +1808,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44469,
+      "srcTgtColId" : 44801,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "source count",
       "srcTrgColDataType" : "varchar",
@@ -1839,7 +1819,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44470,
+      "srcTgtColId" : 44802,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "target count",
       "srcTrgColDataType" : "varchar",
@@ -1850,7 +1830,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44471,
+      "srcTgtColId" : 44803,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "defect size",
       "srcTrgColDataType" : "float",
@@ -1861,7 +1841,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44472,
+      "srcTgtColId" : 44804,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "result type",
       "srcTrgColDataType" : "varchar",
@@ -1872,7 +1852,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44473,
+      "srcTgtColId" : 44805,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "start date",
       "srcTrgColDataType" : "date",
@@ -1883,7 +1863,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44474,
+      "srcTgtColId" : 44806,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "start time",
       "srcTrgColDataType" : "datetime",
@@ -1894,7 +1874,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44475,
+      "srcTgtColId" : 44807,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "end date",
       "srcTrgColDataType" : "date",
@@ -1905,7 +1885,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44476,
+      "srcTgtColId" : 44808,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "end time",
       "srcTrgColDataType" : "datetime",
@@ -1916,7 +1896,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44477,
+      "srcTgtColId" : 44809,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "execution source",
       "srcTrgColDataType" : "varchar",
@@ -1927,7 +1907,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44478,
+      "srcTgtColId" : 44810,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "result",
       "srcTrgColDataType" : "varchar",
@@ -1938,7 +1918,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44479,
+      "srcTgtColId" : 44811,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "source",
       "srcTrgColDataType" : "varchar",
@@ -1949,7 +1929,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44480,
+      "srcTgtColId" : 44812,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "target",
       "srcTrgColDataType" : "varchar",
@@ -1960,7 +1940,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44481,
+      "srcTgtColId" : 44813,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "stop at row",
       "srcTrgColDataType" : "varchar",
@@ -1971,7 +1951,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44482,
+      "srcTgtColId" : 44814,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "stop at error",
       "srcTrgColDataType" : "varchar",
@@ -1982,7 +1962,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44483,
+      "srcTgtColId" : 44815,
       "ruleClsPropId" : 37322,
       "srcTrgColName" : "capture err only",
       "srcTrgColDataType" : "varchar",
@@ -1993,7 +1973,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44487,
+      "srcTgtColId" : 44819,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "folder group",
       "srcTrgColDataType" : "varchar",
@@ -2004,7 +1984,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44488,
+      "srcTgtColId" : 44820,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "folder",
       "srcTrgColDataType" : "varchar",
@@ -2015,7 +1995,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44489,
+      "srcTgtColId" : 44821,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "rule id",
       "srcTrgColDataType" : "int",
@@ -2026,7 +2006,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44490,
+      "srcTgtColId" : 44822,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "instance id",
       "srcTrgColDataType" : "int",
@@ -2037,7 +2017,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44491,
+      "srcTgtColId" : 44823,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "name",
       "srcTrgColDataType" : "varchar",
@@ -2048,7 +2028,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44492,
+      "srcTgtColId" : 44824,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "rule type",
       "srcTrgColDataType" : "varchar",
@@ -2059,7 +2039,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44493,
+      "srcTgtColId" : 44825,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "criticality",
       "srcTrgColDataType" : "varchar",
@@ -2070,7 +2050,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44494,
+      "srcTgtColId" : 44826,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "active",
       "srcTrgColDataType" : "varchar",
@@ -2081,7 +2061,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44495,
+      "srcTgtColId" : 44827,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "created by",
       "srcTrgColDataType" : "varchar",
@@ -2092,7 +2072,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44496,
+      "srcTgtColId" : 44828,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "create date",
       "srcTrgColDataType" : "date",
@@ -2103,7 +2083,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44497,
+      "srcTgtColId" : 44829,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "updated by",
       "srcTrgColDataType" : "varchar",
@@ -2114,7 +2094,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44498,
+      "srcTgtColId" : 44830,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "update date",
       "srcTrgColDataType" : "date",
@@ -2125,7 +2105,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44499,
+      "srcTgtColId" : 44831,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "context type",
       "srcTrgColDataType" : "varchar",
@@ -2136,7 +2116,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44500,
+      "srcTgtColId" : 44832,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "source count",
       "srcTrgColDataType" : "varchar",
@@ -2147,7 +2127,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44501,
+      "srcTgtColId" : 44833,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "target count",
       "srcTrgColDataType" : "varchar",
@@ -2158,7 +2138,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44502,
+      "srcTgtColId" : 44834,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "defect size",
       "srcTrgColDataType" : "float",
@@ -2169,7 +2149,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44503,
+      "srcTgtColId" : 44835,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "result type",
       "srcTrgColDataType" : "varchar",
@@ -2180,7 +2160,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44504,
+      "srcTgtColId" : 44836,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "start date",
       "srcTrgColDataType" : "date",
@@ -2191,7 +2171,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44505,
+      "srcTgtColId" : 44837,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "start time",
       "srcTrgColDataType" : "datetime",
@@ -2202,7 +2182,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44506,
+      "srcTgtColId" : 44838,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "end date",
       "srcTrgColDataType" : "date",
@@ -2213,7 +2193,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44507,
+      "srcTgtColId" : 44839,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "end time",
       "srcTrgColDataType" : "datetime",
@@ -2224,7 +2204,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44508,
+      "srcTgtColId" : 44840,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "execution source",
       "srcTrgColDataType" : "varchar",
@@ -2235,7 +2215,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44509,
+      "srcTgtColId" : 44841,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "result",
       "srcTrgColDataType" : "varchar",
@@ -2246,7 +2226,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44510,
+      "srcTgtColId" : 44842,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "source",
       "srcTrgColDataType" : "varchar",
@@ -2257,7 +2237,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44511,
+      "srcTgtColId" : 44843,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "target",
       "srcTrgColDataType" : "varchar",
@@ -2268,7 +2248,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44512,
+      "srcTgtColId" : 44844,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "stop at row",
       "srcTrgColDataType" : "varchar",
@@ -2279,7 +2259,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44513,
+      "srcTgtColId" : 44845,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "stop at error",
       "srcTrgColDataType" : "varchar",
@@ -2290,7 +2270,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 44514,
+      "srcTgtColId" : 44846,
       "ruleClsPropId" : 37342,
       "srcTrgColName" : "capture err only",
       "srcTrgColDataType" : "varchar",
@@ -2302,9 +2282,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 44516,
-      "srcColId" : 44456,
-      "trgColId" : 44487,
+      "colMapId" : 44848,
+      "srcColId" : 44788,
+      "trgColId" : 44819,
       "colMapType" : "join",
       "srcColName" : "folder group",
       "tgtColName" : "folder group",
@@ -2312,35 +2292,15 @@
       "srcTrgColMapVisible" : 1,
       "displayIndex" : 4
     }, {
-      "colMapId" : 44517,
-      "srcColId" : 44457,
-      "trgColId" : 44488,
+      "colMapId" : 44849,
+      "srcColId" : 44789,
+      "trgColId" : 44820,
       "colMapType" : "join",
       "srcColName" : "folder",
       "tgtColName" : "folder",
       "colMapExpr" : "folder=folder",
       "srcTrgColMapVisible" : 1,
       "displayIndex" : 5
-    }, {
-      "colMapId" : 44518,
-      "srcColId" : 44458,
-      "trgColId" : 44489,
-      "colMapType" : "join",
-      "srcColName" : "rule id",
-      "tgtColName" : "rule id",
-      "colMapExpr" : "rule id=rule id",
-      "srcTrgColMapVisible" : 1,
-      "displayIndex" : 6
-    }, {
-      "colMapId" : 44519,
-      "srcColId" : 44459,
-      "trgColId" : 44490,
-      "colMapType" : "join",
-      "srcColName" : "instance id",
-      "tgtColName" : "instance id",
-      "colMapExpr" : "instance id=instance id",
-      "srcTrgColMapVisible" : 1,
-      "displayIndex" : 7
     } ],
     "objectVOList" : null,
     "srcCount" : null,
@@ -2458,7 +2418,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 8,
+      "exprIndex" : 6,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2481,7 +2441,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 9,
+      "exprIndex" : 7,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2504,7 +2464,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 10,
+      "exprIndex" : 8,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2527,7 +2487,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 11,
+      "exprIndex" : 9,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2550,7 +2510,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 12,
+      "exprIndex" : 10,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2573,7 +2533,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 13,
+      "exprIndex" : 11,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2596,7 +2556,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 14,
+      "exprIndex" : 12,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2619,7 +2579,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 15,
+      "exprIndex" : 13,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2642,7 +2602,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 16,
+      "exprIndex" : 14,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2665,7 +2625,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 17,
+      "exprIndex" : 15,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2688,7 +2648,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 18,
+      "exprIndex" : 16,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2711,7 +2671,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 19,
+      "exprIndex" : 17,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2734,7 +2694,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 20,
+      "exprIndex" : 18,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2757,7 +2717,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 21,
+      "exprIndex" : 19,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2780,7 +2740,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 22,
+      "exprIndex" : 20,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2803,7 +2763,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 23,
+      "exprIndex" : 21,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2826,7 +2786,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 24,
+      "exprIndex" : 22,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2849,7 +2809,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 25,
+      "exprIndex" : 23,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2872,7 +2832,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 26,
+      "exprIndex" : 24,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2895,7 +2855,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 27,
+      "exprIndex" : 25,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2918,7 +2878,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 28,
+      "exprIndex" : 26,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2941,7 +2901,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 29,
+      "exprIndex" : 27,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2964,7 +2924,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 30,
+      "exprIndex" : 28,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
@@ -2987,7 +2947,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 31,
+      "exprIndex" : 29,
       "ruleId" : 37244,
       "ruleInstanceId" : 0,
       "ruleClassId" : 37321,
