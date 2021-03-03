@@ -62,11 +62,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 44452,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 44452,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-03-03 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-03-03 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -171,7 +171,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "rahulaparajit",
     "projectName" : null,
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "rahulaparajit",
     "ruleClassId" : 45773,
     "successBody" : "",
     "failureBody" : "",
@@ -219,7 +219,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from DBO.customer_7",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 45782,
+          "srcTgtColId" : 45806,
           "ruleClsPropId" : 45774,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "int",
@@ -302,7 +302,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from DBO.Customer_4",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 45791,
+          "srcTgtColId" : 45809,
           "ruleClsPropId" : 45783,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "int",
@@ -378,9 +378,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 45795,
-        "srcColId" : 45782,
-        "trgColId" : 45791,
+        "colMapId" : 45810,
+        "srcColId" : 45806,
+        "trgColId" : 45809,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -388,7 +388,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 45811,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_RE8F4MB",
+        "expression" : "S.cnt > T.cnt",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 0,
+        "ruleId" : 45770,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 45773,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.cnt > T.cnt",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 45792,
         "paramId" : 9,
@@ -420,7 +443,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 45782,
+      "srcTgtColId" : 45806,
       "ruleClsPropId" : 45774,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "int",
@@ -431,7 +454,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 45791,
+      "srcTgtColId" : 45809,
       "ruleClsPropId" : 45783,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "int",
@@ -443,9 +466,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 45795,
-      "srcColId" : 45782,
-      "trgColId" : 45791,
+      "colMapId" : 45810,
+      "srcColId" : 45806,
+      "trgColId" : 45809,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
@@ -469,6 +492,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 45811,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_RE8F4MB",
+      "expression" : "S.cnt > T.cnt",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 0,
+      "ruleId" : 45770,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 45773,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
