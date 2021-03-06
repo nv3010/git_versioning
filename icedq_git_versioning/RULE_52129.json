@@ -173,7 +173,7 @@
       "classObjName" : "ICE_1615009415013",
       "queryBuilderXML" : null,
       "connId" : 37905,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -187,40 +187,51 @@
         "ruleClsPropID" : 52133,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select flow_id,flow_name,flow_config from DBO.ICE_FLOWS",
+        "paramValue" : "select * from DBO.ICE_FLOWS",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 52177,
+          "srcTgtColId" : 52186,
           "ruleClsPropId" : 52133,
           "srcTrgColName" : "flow_id",
           "srcTrgColDataType" : "varchar",
           "colFlagType" : "src",
-          "srcTrgColVisible" : 1,
+          "srcTrgColVisible" : 0,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
-          "displayIndex" : 1
+          "displayIndex" : 0
         }, {
-          "srcTgtColId" : 52178,
+          "srcTgtColId" : 52187,
           "ruleClsPropId" : 52133,
           "srcTrgColName" : "flow_name",
           "srcTrgColDataType" : "varchar",
           "colFlagType" : "src",
-          "srcTrgColVisible" : 1,
+          "srcTrgColVisible" : 0,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
-          "displayIndex" : 2
+          "displayIndex" : 0
         }, {
-          "srcTgtColId" : 52179,
+          "srcTgtColId" : 52188,
           "ruleClsPropId" : 52133,
           "srcTrgColName" : "flow_config",
           "srcTrgColDataType" : "varbinary",
           "colFlagType" : "src",
-          "srcTrgColVisible" : 1,
+          "srcTrgColVisible" : 0,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
-          "displayIndex" : 3
+          "displayIndex" : 0
+        }, {
+          "srcTgtColId" : 52189,
+          "ruleClsPropId" : 52133,
+          "srcTrgColName" : "status",
+          "srcTrgColDataType" : "varchar",
+          "colFlagType" : "src",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
         } ],
         "fileContent" : null
       }, {
@@ -255,7 +266,7 @@
         "ruleClsPropID" : 52140,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "flow_id^~^12^~^varchar^~^4000^~^1$~$flow_name^~^12^~^varchar^~^4000^~^2$~$flow_config^~^-3^~^varbinary^~^2147483647^~^3",
+        "paramValue" : "flow_id^~^12^~^varchar^~^4000^~^1$~$flow_name^~^12^~^varchar^~^4000^~^2$~$flow_config^~^-3^~^varbinary^~^2147483647^~^3$~$status^~^12^~^varchar^~^4000^~^4",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -278,7 +289,7 @@
       "classObjName" : "ICE_1615009415013",
       "queryBuilderXML" : null,
       "connId" : 37905,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -294,7 +305,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 52181,
+          "srcTgtColId" : 52191,
           "ruleClsPropId" : 52145,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -347,7 +358,7 @@
       "classObjName" : "ICE_1615009415013",
       "queryBuilderXML" : null,
       "connId" : 0,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -356,9 +367,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 52183,
-        "srcColId" : 52177,
-        "trgColId" : 52181,
+        "colMapId" : 52193,
+        "srcColId" : 52186,
+        "trgColId" : 52191,
         "colMapType" : "join",
         "srcColName" : "flow_id",
         "tgtColName" : "cnt",
@@ -366,7 +377,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 52194,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_FBF8SBG",
+        "expression" : "S.flow_id != ''",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 52129,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 52132,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.flow_id != ''",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 52151,
         "paramId" : 9,
@@ -454,40 +488,51 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 52177,
+      "srcTgtColId" : 52186,
       "ruleClsPropId" : 52133,
       "srcTrgColName" : "flow_id",
       "srcTrgColDataType" : "varchar",
       "colFlagType" : "src",
-      "srcTrgColVisible" : 1,
+      "srcTrgColVisible" : 0,
       "joinList" : null,
       "mapColName" : "flow_id",
       "colFormat" : "",
-      "displayIndex" : 1
+      "displayIndex" : 0
     }, {
-      "srcTgtColId" : 52178,
+      "srcTgtColId" : 52187,
       "ruleClsPropId" : 52133,
       "srcTrgColName" : "flow_name",
       "srcTrgColDataType" : "varchar",
       "colFlagType" : "src",
-      "srcTrgColVisible" : 1,
+      "srcTrgColVisible" : 0,
       "joinList" : null,
       "mapColName" : "flow_name",
       "colFormat" : "",
-      "displayIndex" : 2
+      "displayIndex" : 0
     }, {
-      "srcTgtColId" : 52179,
+      "srcTgtColId" : 52188,
       "ruleClsPropId" : 52133,
       "srcTrgColName" : "flow_config",
       "srcTrgColDataType" : "varbinary",
       "colFlagType" : "src",
-      "srcTrgColVisible" : 1,
+      "srcTrgColVisible" : 0,
       "joinList" : null,
       "mapColName" : "flow_config",
       "colFormat" : "",
-      "displayIndex" : 3
+      "displayIndex" : 0
     }, {
-      "srcTgtColId" : 52181,
+      "srcTgtColId" : 52189,
+      "ruleClsPropId" : 52133,
+      "srcTrgColName" : "status",
+      "srcTrgColDataType" : "varchar",
+      "colFlagType" : "src",
+      "srcTrgColVisible" : 0,
+      "joinList" : null,
+      "mapColName" : "status",
+      "colFormat" : "",
+      "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 52191,
       "ruleClsPropId" : 52145,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -499,9 +544,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 52183,
-      "srcColId" : 52177,
-      "trgColId" : 52181,
+      "colMapId" : 52193,
+      "srcColId" : 52186,
+      "trgColId" : 52191,
       "colMapType" : "join",
       "srcColName" : "flow_id",
       "tgtColName" : "cnt",
@@ -525,6 +570,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 52194,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_FBF8SBG",
+      "expression" : "S.flow_id != ''",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 52129,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 52132,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
