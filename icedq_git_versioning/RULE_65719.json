@@ -144,11 +144,11 @@
         "ruleClsPropID" : 65723,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select * from DBO.AUDIT_V",
+        "paramValue" : "select * from DBO.GOVERN_V",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 65861,
+          "srcTgtColId" : 65879,
           "ruleClsPropId" : 65723,
-          "srcTrgColName" : "rule_id",
+          "srcTrgColName" : "parent_object_id",
           "srcTrgColDataType" : "int",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -157,9 +157,9 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65862,
+          "srcTgtColId" : 65880,
           "ruleClsPropId" : 65723,
-          "srcTrgColName" : "folder_id",
+          "srcTrgColName" : "action_id",
           "srcTrgColDataType" : "int",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -168,7 +168,18 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65863,
+          "srcTgtColId" : 65881,
+          "ruleClsPropId" : 65723,
+          "srcTrgColName" : "test_case_id",
+          "srcTrgColDataType" : "int",
+          "colFlagType" : "src",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        }, {
+          "srcTgtColId" : 65882,
           "ruleClsPropId" : 65723,
           "srcTrgColName" : "audit_exit_code",
           "srcTrgColDataType" : "varchar",
@@ -179,18 +190,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65864,
-          "ruleClsPropId" : 65723,
-          "srcTrgColName" : "log_results",
-          "srcTrgColDataType" : "varchar",
-          "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        }, {
-          "srcTgtColId" : 65865,
+          "srcTgtColId" : 65883,
           "ruleClsPropId" : 65723,
           "srcTrgColName" : "auditdt",
           "srcTrgColDataType" : "date",
@@ -201,10 +201,21 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65866,
+          "srcTgtColId" : 65884,
           "ruleClsPropId" : 65723,
           "srcTrgColName" : "rule_instance_id",
           "srcTrgColDataType" : "int",
+          "colFlagType" : "src",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        }, {
+          "srcTgtColId" : 65885,
+          "ruleClsPropId" : 65723,
+          "srcTrgColName" : "log_results",
+          "srcTrgColDataType" : "varchar",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -238,7 +249,7 @@
         "ruleClsPropID" : 65728,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "2",
+        "paramValue" : "1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -252,7 +263,7 @@
         "ruleClsPropID" : 65731,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "rule_id^~^4^~^int^~^10^~^1$~$folder_id^~^4^~^int^~^10^~^2$~$audit_exit_code^~^12^~^varchar^~^200^~^3$~$log_results^~^12^~^varchar^~^17^~^4$~$auditdt^~^91^~^date^~^10^~^5$~$rule_instance_id^~^4^~^int^~^10^~^6",
+        "paramValue" : "parent_object_id^~^4^~^int^~^10^~^1$~$action_id^~^4^~^int^~^10^~^2$~$test_case_id^~^4^~^int^~^10^~^3$~$audit_exit_code^~^12^~^varchar^~^200^~^4$~$auditdt^~^91^~^date^~^10^~^5$~$rule_instance_id^~^4^~^int^~^10^~^6$~$log_results^~^12^~^varchar^~^17^~^7",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -289,11 +300,11 @@
         "ruleClsPropID" : 65738,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select * from DBO.AUDIT_V",
+        "paramValue" : "select * from DBO.GOVERN_V",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 65869,
+          "srcTgtColId" : 65888,
           "ruleClsPropId" : 65738,
-          "srcTrgColName" : "rule_id",
+          "srcTrgColName" : "parent_object_id",
           "srcTrgColDataType" : "int",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -302,9 +313,9 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65870,
+          "srcTgtColId" : 65889,
           "ruleClsPropId" : 65738,
-          "srcTrgColName" : "folder_id",
+          "srcTrgColName" : "action_id",
           "srcTrgColDataType" : "int",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -313,7 +324,18 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65871,
+          "srcTgtColId" : 65890,
+          "ruleClsPropId" : 65738,
+          "srcTrgColName" : "test_case_id",
+          "srcTrgColDataType" : "int",
+          "colFlagType" : "tgt",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        }, {
+          "srcTgtColId" : 65891,
           "ruleClsPropId" : 65738,
           "srcTrgColName" : "audit_exit_code",
           "srcTrgColDataType" : "varchar",
@@ -324,18 +346,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65872,
-          "ruleClsPropId" : 65738,
-          "srcTrgColName" : "log_results",
-          "srcTrgColDataType" : "varchar",
-          "colFlagType" : "tgt",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        }, {
-          "srcTgtColId" : 65873,
+          "srcTgtColId" : 65892,
           "ruleClsPropId" : 65738,
           "srcTrgColName" : "auditdt",
           "srcTrgColDataType" : "date",
@@ -346,10 +357,21 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65874,
+          "srcTgtColId" : 65893,
           "ruleClsPropId" : 65738,
           "srcTrgColName" : "rule_instance_id",
           "srcTrgColDataType" : "int",
+          "colFlagType" : "tgt",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        }, {
+          "srcTgtColId" : 65894,
+          "ruleClsPropId" : 65738,
+          "srcTrgColName" : "log_results",
+          "srcTrgColDataType" : "varchar",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -383,7 +405,7 @@
         "ruleClsPropID" : 65743,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "2",
+        "paramValue" : "1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -397,7 +419,7 @@
         "ruleClsPropID" : 65746,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "rule_id^~^4^~^int^~^10^~^1$~$folder_id^~^4^~^int^~^10^~^2$~$audit_exit_code^~^12^~^varchar^~^200^~^3$~$log_results^~^12^~^varchar^~^17^~^4$~$auditdt^~^91^~^date^~^10^~^5$~$rule_instance_id^~^4^~^int^~^10^~^6",
+        "paramValue" : "parent_object_id^~^4^~^int^~^10^~^1$~$action_id^~^4^~^int^~^10^~^2$~$test_case_id^~^4^~^int^~^10^~^3$~$audit_exit_code^~^12^~^varchar^~^200^~^4$~$auditdt^~^91^~^date^~^10^~^5$~$rule_instance_id^~^4^~^int^~^10^~^6$~$log_results^~^12^~^varchar^~^17^~^7",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -429,15 +451,15 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 65876,
-        "srcColId" : 65862,
-        "trgColId" : 65870,
+        "colMapId" : 65896,
+        "srcColId" : 65879,
+        "trgColId" : 65888,
         "colMapType" : "join",
-        "srcColName" : "folder_id",
-        "tgtColName" : "folder_id",
-        "colMapExpr" : "folder_id=folder_id",
+        "srcColName" : "parent_object_id",
+        "tgtColName" : "parent_object_id",
+        "colMapExpr" : "parent_object_id=parent_object_id",
         "srcTrgColMapVisible" : 1,
-        "displayIndex" : 0
+        "displayIndex" : 1
       } ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
@@ -534,29 +556,40 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 65861,
+      "srcTgtColId" : 65879,
       "ruleClsPropId" : 65723,
-      "srcTrgColName" : "rule_id",
+      "srcTrgColName" : "parent_object_id",
       "srcTrgColDataType" : "int",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "rule_id",
+      "mapColName" : "parent_object_id",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65862,
+      "srcTgtColId" : 65880,
       "ruleClsPropId" : 65723,
-      "srcTrgColName" : "folder_id",
+      "srcTrgColName" : "action_id",
       "srcTrgColDataType" : "int",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "folder_id",
+      "mapColName" : "action_id",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65863,
+      "srcTgtColId" : 65881,
+      "ruleClsPropId" : 65723,
+      "srcTrgColName" : "test_case_id",
+      "srcTrgColDataType" : "int",
+      "colFlagType" : "src",
+      "srcTrgColVisible" : 0,
+      "joinList" : null,
+      "mapColName" : "test_case_id",
+      "colFormat" : "",
+      "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 65882,
       "ruleClsPropId" : 65723,
       "srcTrgColName" : "audit_exit_code",
       "srcTrgColDataType" : "varchar",
@@ -567,18 +600,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65864,
-      "ruleClsPropId" : 65723,
-      "srcTrgColName" : "log_results",
-      "srcTrgColDataType" : "varchar",
-      "colFlagType" : "src",
-      "srcTrgColVisible" : 0,
-      "joinList" : null,
-      "mapColName" : "log_results",
-      "colFormat" : "",
-      "displayIndex" : 0
-    }, {
-      "srcTgtColId" : 65865,
+      "srcTgtColId" : 65883,
       "ruleClsPropId" : 65723,
       "srcTrgColName" : "auditdt",
       "srcTrgColDataType" : "date",
@@ -589,7 +611,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65866,
+      "srcTgtColId" : 65884,
       "ruleClsPropId" : 65723,
       "srcTrgColName" : "rule_instance_id",
       "srcTrgColDataType" : "int",
@@ -600,29 +622,51 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65869,
+      "srcTgtColId" : 65885,
+      "ruleClsPropId" : 65723,
+      "srcTrgColName" : "log_results",
+      "srcTrgColDataType" : "varchar",
+      "colFlagType" : "src",
+      "srcTrgColVisible" : 0,
+      "joinList" : null,
+      "mapColName" : "log_results",
+      "colFormat" : "",
+      "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 65888,
       "ruleClsPropId" : 65738,
-      "srcTrgColName" : "rule_id",
+      "srcTrgColName" : "parent_object_id",
       "srcTrgColDataType" : "int",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "rule_id",
+      "mapColName" : "parent_object_id",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65870,
+      "srcTgtColId" : 65889,
       "ruleClsPropId" : 65738,
-      "srcTrgColName" : "folder_id",
+      "srcTrgColName" : "action_id",
       "srcTrgColDataType" : "int",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "folder_id",
+      "mapColName" : "action_id",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65871,
+      "srcTgtColId" : 65890,
+      "ruleClsPropId" : 65738,
+      "srcTrgColName" : "test_case_id",
+      "srcTrgColDataType" : "int",
+      "colFlagType" : "tgt",
+      "srcTrgColVisible" : 0,
+      "joinList" : null,
+      "mapColName" : "test_case_id",
+      "colFormat" : "",
+      "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 65891,
       "ruleClsPropId" : 65738,
       "srcTrgColName" : "audit_exit_code",
       "srcTrgColDataType" : "varchar",
@@ -633,18 +677,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65872,
-      "ruleClsPropId" : 65738,
-      "srcTrgColName" : "log_results",
-      "srcTrgColDataType" : "varchar",
-      "colFlagType" : "tgt",
-      "srcTrgColVisible" : 0,
-      "joinList" : null,
-      "mapColName" : "log_results",
-      "colFormat" : "",
-      "displayIndex" : 0
-    }, {
-      "srcTgtColId" : 65873,
+      "srcTgtColId" : 65892,
       "ruleClsPropId" : 65738,
       "srcTrgColName" : "auditdt",
       "srcTrgColDataType" : "date",
@@ -655,7 +688,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65874,
+      "srcTgtColId" : 65893,
       "ruleClsPropId" : 65738,
       "srcTrgColName" : "rule_instance_id",
       "srcTrgColDataType" : "int",
@@ -663,19 +696,30 @@
       "srcTrgColVisible" : 0,
       "joinList" : null,
       "mapColName" : "rule_instance_id",
+      "colFormat" : "",
+      "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 65894,
+      "ruleClsPropId" : 65738,
+      "srcTrgColName" : "log_results",
+      "srcTrgColDataType" : "varchar",
+      "colFlagType" : "tgt",
+      "srcTrgColVisible" : 0,
+      "joinList" : null,
+      "mapColName" : "log_results",
       "colFormat" : "",
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 65876,
-      "srcColId" : 65862,
-      "trgColId" : 65870,
+      "colMapId" : 65896,
+      "srcColId" : 65879,
+      "trgColId" : 65888,
       "colMapType" : "join",
-      "srcColName" : "folder_id",
-      "tgtColName" : "folder_id",
-      "colMapExpr" : "folder_id=folder_id",
+      "srcColName" : "parent_object_id",
+      "tgtColName" : "parent_object_id",
+      "colMapExpr" : "parent_object_id=parent_object_id",
       "srcTrgColMapVisible" : 1,
-      "displayIndex" : 0
+      "displayIndex" : 1
     } ],
     "objectVOList" : null,
     "srcCount" : null,
