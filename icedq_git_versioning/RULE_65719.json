@@ -123,7 +123,7 @@
       "name" : null,
       "ruleClassId" : 65720,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
@@ -146,7 +146,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from DBO.AUDIT_V",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 65768,
+          "srcTgtColId" : 65786,
           "ruleClsPropId" : 65723,
           "srcTrgColName" : "rule_id",
           "srcTrgColDataType" : "int",
@@ -157,7 +157,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65769,
+          "srcTgtColId" : 65787,
           "ruleClsPropId" : 65723,
           "srcTrgColName" : "folder_id",
           "srcTrgColDataType" : "int",
@@ -168,7 +168,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65770,
+          "srcTgtColId" : 65788,
           "ruleClsPropId" : 65723,
           "srcTrgColName" : "audit_exit_code",
           "srcTrgColDataType" : "varchar",
@@ -179,7 +179,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65771,
+          "srcTgtColId" : 65789,
           "ruleClsPropId" : 65723,
           "srcTrgColName" : "log_results",
           "srcTrgColDataType" : "varchar",
@@ -190,7 +190,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65772,
+          "srcTgtColId" : 65790,
           "ruleClsPropId" : 65723,
           "srcTrgColName" : "auditdt",
           "srcTrgColDataType" : "date",
@@ -201,7 +201,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65773,
+          "srcTgtColId" : 65791,
           "ruleClsPropId" : 65723,
           "srcTrgColName" : "rule_instance_id",
           "srcTrgColDataType" : "int",
@@ -268,7 +268,7 @@
       "name" : null,
       "ruleClassId" : 65721,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
@@ -291,7 +291,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from DBO.AUDIT_V",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 65776,
+          "srcTgtColId" : 65794,
           "ruleClsPropId" : 65738,
           "srcTrgColName" : "rule_id",
           "srcTrgColDataType" : "int",
@@ -302,7 +302,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65777,
+          "srcTgtColId" : 65795,
           "ruleClsPropId" : 65738,
           "srcTrgColName" : "folder_id",
           "srcTrgColDataType" : "int",
@@ -313,7 +313,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65778,
+          "srcTgtColId" : 65796,
           "ruleClsPropId" : 65738,
           "srcTrgColName" : "audit_exit_code",
           "srcTrgColDataType" : "varchar",
@@ -324,7 +324,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65779,
+          "srcTgtColId" : 65797,
           "ruleClsPropId" : 65738,
           "srcTrgColName" : "log_results",
           "srcTrgColDataType" : "varchar",
@@ -335,7 +335,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65780,
+          "srcTgtColId" : 65798,
           "ruleClsPropId" : 65738,
           "srcTrgColName" : "auditdt",
           "srcTrgColDataType" : "date",
@@ -346,7 +346,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 65781,
+          "srcTgtColId" : 65799,
           "ruleClsPropId" : 65738,
           "srcTrgColName" : "rule_instance_id",
           "srcTrgColDataType" : "int",
@@ -413,7 +413,7 @@
       "name" : null,
       "ruleClassId" : 65722,
       "connType" : "",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
@@ -429,9 +429,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 65783,
-        "srcColId" : 65768,
-        "trgColId" : 65776,
+        "colMapId" : 65802,
+        "srcColId" : 65786,
+        "trgColId" : 65794,
         "colMapType" : "join",
         "srcColName" : "rule_id",
         "tgtColName" : "rule_id",
@@ -517,6 +517,13 @@
         "paramValue" : "",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
+      }, {
+        "ruleClsPropID" : 65800,
+        "paramId" : 487,
+        "paramMethod" : "setDegreeOfParallelism",
+        "paramValue" : "1",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -527,7 +534,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 65768,
+      "srcTgtColId" : 65786,
       "ruleClsPropId" : 65723,
       "srcTrgColName" : "rule_id",
       "srcTrgColDataType" : "int",
@@ -538,7 +545,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65769,
+      "srcTgtColId" : 65787,
       "ruleClsPropId" : 65723,
       "srcTrgColName" : "folder_id",
       "srcTrgColDataType" : "int",
@@ -549,7 +556,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65770,
+      "srcTgtColId" : 65788,
       "ruleClsPropId" : 65723,
       "srcTrgColName" : "audit_exit_code",
       "srcTrgColDataType" : "varchar",
@@ -560,7 +567,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65771,
+      "srcTgtColId" : 65789,
       "ruleClsPropId" : 65723,
       "srcTrgColName" : "log_results",
       "srcTrgColDataType" : "varchar",
@@ -571,7 +578,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65772,
+      "srcTgtColId" : 65790,
       "ruleClsPropId" : 65723,
       "srcTrgColName" : "auditdt",
       "srcTrgColDataType" : "date",
@@ -582,7 +589,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65773,
+      "srcTgtColId" : 65791,
       "ruleClsPropId" : 65723,
       "srcTrgColName" : "rule_instance_id",
       "srcTrgColDataType" : "int",
@@ -593,7 +600,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65776,
+      "srcTgtColId" : 65794,
       "ruleClsPropId" : 65738,
       "srcTrgColName" : "rule_id",
       "srcTrgColDataType" : "int",
@@ -604,7 +611,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65777,
+      "srcTgtColId" : 65795,
       "ruleClsPropId" : 65738,
       "srcTrgColName" : "folder_id",
       "srcTrgColDataType" : "int",
@@ -615,7 +622,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65778,
+      "srcTgtColId" : 65796,
       "ruleClsPropId" : 65738,
       "srcTrgColName" : "audit_exit_code",
       "srcTrgColDataType" : "varchar",
@@ -626,7 +633,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65779,
+      "srcTgtColId" : 65797,
       "ruleClsPropId" : 65738,
       "srcTrgColName" : "log_results",
       "srcTrgColDataType" : "varchar",
@@ -637,7 +644,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65780,
+      "srcTgtColId" : 65798,
       "ruleClsPropId" : 65738,
       "srcTrgColName" : "auditdt",
       "srcTrgColDataType" : "date",
@@ -648,7 +655,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 65781,
+      "srcTgtColId" : 65799,
       "ruleClsPropId" : 65738,
       "srcTrgColName" : "rule_instance_id",
       "srcTrgColDataType" : "int",
@@ -660,9 +667,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 65783,
-      "srcColId" : 65768,
-      "trgColId" : 65776,
+      "colMapId" : 65802,
+      "srcColId" : 65786,
+      "trgColId" : 65794,
       "colMapType" : "join",
       "srcColName" : "rule_id",
       "tgtColName" : "rule_id",
