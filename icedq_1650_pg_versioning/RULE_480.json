@@ -62,11 +62,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-03-15 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-03-15 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -98,7 +98,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : null,
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 483,
     "successBody" : "",
     "failureBody" : "",
@@ -139,9 +139,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 515,
-        "srcColId" : 492,
-        "trgColId" : 502,
+        "colMapId" : 527,
+        "srcColId" : 519,
+        "trgColId" : 525,
         "colMapType" : "join",
         "srcColName" : "orderid",
         "tgtColName" : "cnt",
@@ -150,7 +150,7 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 516,
+        "exprID" : 528,
         "exprLogID" : 0,
         "exprName" : "EXPR_0ZTPE2J",
         "expression" : "S.orderid > 0",
@@ -166,6 +166,29 @@
         "falseCount" : null,
         "errCount" : null,
         "exprOrg" : "S.orderid > 0",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      }, {
+        "exprID" : 529,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_75OLM3I",
+        "expression" : "S.customerid > 0",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 480,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 483,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.customerid > 0",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -307,7 +330,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 502,
+          "srcTgtColId" : 525,
           "ruleClsPropId" : 497,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -390,7 +413,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from DBO.demoorder",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 492,
+          "srcTgtColId" : 519,
           "ruleClsPropId" : 484,
           "srcTrgColName" : "orderid",
           "srcTrgColDataType" : "int",
@@ -401,18 +424,18 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 493,
+          "srcTgtColId" : 520,
           "ruleClsPropId" : 484,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "int",
           "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
+          "srcTrgColVisible" : 1,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
-          "displayIndex" : 0
+          "displayIndex" : 2
         }, {
-          "srcTgtColId" : 494,
+          "srcTgtColId" : 521,
           "ruleClsPropId" : 484,
           "srcTrgColName" : "employeeid",
           "srcTrgColDataType" : "int",
@@ -423,7 +446,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 495,
+          "srcTgtColId" : 522,
           "ruleClsPropId" : 484,
           "srcTrgColName" : "orderdate",
           "srcTrgColDataType" : "date",
@@ -434,7 +457,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 496,
+          "srcTgtColId" : 523,
           "ruleClsPropId" : 484,
           "srcTrgColName" : "shipperid",
           "srcTrgColDataType" : "int",
@@ -456,7 +479,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 492,
+      "srcTgtColId" : 519,
       "ruleClsPropId" : 484,
       "srcTrgColName" : "orderid",
       "srcTrgColDataType" : "int",
@@ -467,18 +490,18 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 493,
+      "srcTgtColId" : 520,
       "ruleClsPropId" : 484,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "int",
       "colFlagType" : "src",
-      "srcTrgColVisible" : 0,
+      "srcTrgColVisible" : 1,
       "joinList" : null,
       "mapColName" : "customerid",
       "colFormat" : "",
-      "displayIndex" : 0
+      "displayIndex" : 2
     }, {
-      "srcTgtColId" : 494,
+      "srcTgtColId" : 521,
       "ruleClsPropId" : 484,
       "srcTrgColName" : "employeeid",
       "srcTrgColDataType" : "int",
@@ -489,7 +512,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 495,
+      "srcTgtColId" : 522,
       "ruleClsPropId" : 484,
       "srcTrgColName" : "orderdate",
       "srcTrgColDataType" : "date",
@@ -500,7 +523,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 496,
+      "srcTgtColId" : 523,
       "ruleClsPropId" : 484,
       "srcTrgColName" : "shipperid",
       "srcTrgColDataType" : "int",
@@ -511,7 +534,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 502,
+      "srcTgtColId" : 525,
       "ruleClsPropId" : 497,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -523,9 +546,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 515,
-      "srcColId" : 492,
-      "trgColId" : 502,
+      "colMapId" : 527,
+      "srcColId" : 519,
+      "trgColId" : 525,
       "colMapType" : "join",
       "srcColName" : "orderid",
       "tgtColName" : "cnt",
@@ -550,7 +573,30 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 516,
+      "exprID" : 529,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_75OLM3I",
+      "expression" : "S.customerid > 0",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 480,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 483,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 528,
       "exprLogID" : 0,
       "exprName" : "EXPR_0ZTPE2J",
       "expression" : "S.orderid > 0",
