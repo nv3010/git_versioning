@@ -93,7 +93,7 @@
     "srcConn" : "conn_sparklsql",
     "trgConn" : "conn_sparklsql",
     "elapseTime" : 0,
-    "parameterId" : null,
+    "parameterId" : "",
     "type" : null,
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
@@ -139,9 +139,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 90178,
-        "srcColId" : 90174,
-        "trgColId" : 90177,
+        "colMapId" : 90190,
+        "srcColId" : 90184,
+        "trgColId" : 90188,
         "colMapType" : "join",
         "srcColName" : "employee_id",
         "tgtColName" : "gd",
@@ -293,7 +293,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select employee_id,employee_code,title from default.employee",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 90174,
+          "srcTgtColId" : 90184,
           "ruleClsPropId" : 90139,
           "srcTrgColName" : "employee_id",
           "srcTrgColDataType" : "VARCHAR",
@@ -304,7 +304,7 @@
           "colFormat" : "",
           "displayIndex" : 1
         }, {
-          "srcTgtColId" : 90175,
+          "srcTgtColId" : 90185,
           "ruleClsPropId" : 90139,
           "srcTrgColName" : "employee_code",
           "srcTrgColDataType" : "VARCHAR",
@@ -315,7 +315,7 @@
           "colFormat" : "",
           "displayIndex" : 2
         }, {
-          "srcTgtColId" : 90176,
+          "srcTgtColId" : 90186,
           "ruleClsPropId" : 90139,
           "srcTrgColName" : "title",
           "srcTrgColDataType" : "VARCHAR",
@@ -440,7 +440,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select GETDATE() as gd",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 90177,
+          "srcTgtColId" : 90188,
           "ruleClsPropId" : 90151,
           "srcTrgColName" : "gd",
           "srcTrgColDataType" : "String",
@@ -490,7 +490,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 90174,
+      "srcTgtColId" : 90184,
       "ruleClsPropId" : 90139,
       "srcTrgColName" : "employee_id",
       "srcTrgColDataType" : "VARCHAR",
@@ -501,7 +501,7 @@
       "colFormat" : "",
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 90175,
+      "srcTgtColId" : 90185,
       "ruleClsPropId" : 90139,
       "srcTrgColName" : "employee_code",
       "srcTrgColDataType" : "VARCHAR",
@@ -512,7 +512,7 @@
       "colFormat" : "",
       "displayIndex" : 2
     }, {
-      "srcTgtColId" : 90176,
+      "srcTgtColId" : 90186,
       "ruleClsPropId" : 90139,
       "srcTrgColName" : "title",
       "srcTrgColDataType" : "VARCHAR",
@@ -523,7 +523,7 @@
       "colFormat" : "",
       "displayIndex" : 3
     }, {
-      "srcTgtColId" : 90177,
+      "srcTgtColId" : 90188,
       "ruleClsPropId" : 90151,
       "srcTrgColName" : "gd",
       "srcTrgColDataType" : "String",
@@ -534,7 +534,17 @@
       "colFormat" : "",
       "displayIndex" : 0
     } ],
-    "colMapList" : [ ],
+    "colMapList" : [ {
+      "colMapId" : 90190,
+      "srcColId" : 90184,
+      "trgColId" : 90188,
+      "colMapType" : "join",
+      "srcColName" : "employee_id",
+      "tgtColName" : "gd",
+      "colMapExpr" : "gd=employee_id",
+      "srcTrgColMapVisible" : 0,
+      "displayIndex" : 0
+    } ],
     "objectVOList" : null,
     "srcCount" : null,
     "trgCount" : null,
@@ -546,7 +556,7 @@
     "resultType" : null,
     "showErrorData" : null,
     "reportXlsx" : null,
-    "ruleParameter" : null,
+    "ruleParameter" : "",
     "classCreatedBy" : 0,
     "classModifydBy" : 0,
     "classCreateDate" : null,
