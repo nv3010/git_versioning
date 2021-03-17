@@ -146,7 +146,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from \"ICEDQ\".STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9860296,
+          "srcTgtColId" : 9860304,
           "ruleClsPropId" : 9860263,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "INTEGER",
@@ -227,9 +227,9 @@
         "ruleClsPropID" : 9860272,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select 100 as count;",
+        "paramValue" : "select 150 as count;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9860299,
+          "srcTgtColId" : 9860307,
           "ruleClsPropId" : 9860272,
           "srcTrgColName" : "count",
           "srcTrgColDataType" : "int4",
@@ -305,9 +305,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9860300,
-        "srcColId" : 9860296,
-        "trgColId" : 9860299,
+        "colMapId" : 9860308,
+        "srcColId" : 9860304,
+        "trgColId" : 9860307,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "count",
@@ -316,10 +316,10 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 9860301,
+        "exprID" : 9860309,
         "exprLogID" : 0,
         "exprName" : "chk_count",
-        "expression" : "S.cnt - T.count <= 50",
+        "expression" : "S.cnt - T.count  > 0",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -331,7 +331,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.cnt - T.count <= 50",
+        "exprOrg" : "S.cnt - T.count  > 0",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -370,7 +370,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9860296,
+      "srcTgtColId" : 9860304,
       "ruleClsPropId" : 9860263,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INTEGER",
@@ -381,7 +381,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9860299,
+      "srcTgtColId" : 9860307,
       "ruleClsPropId" : 9860272,
       "srcTrgColName" : "count",
       "srcTrgColDataType" : "int4",
@@ -393,9 +393,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9860300,
-      "srcColId" : 9860296,
-      "trgColId" : 9860299,
+      "colMapId" : 9860308,
+      "srcColId" : 9860304,
+      "trgColId" : 9860307,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "count",
@@ -420,10 +420,10 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 9860301,
+      "exprID" : 9860309,
       "exprLogID" : 0,
       "exprName" : "chk_count",
-      "expression" : "S.cnt - T.count <= 50",
+      "expression" : "S.cnt - T.count  > 0",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
