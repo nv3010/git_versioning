@@ -62,11 +62,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-03-19 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-03-19 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -98,7 +98,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : null,
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 1997,
     "successBody" : "",
     "failureBody" : "",
@@ -146,7 +146,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from DBO.all_datatypes",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2006,
+          "srcTgtColId" : 2039,
           "ruleClsPropId" : 1998,
           "srcTrgColName" : "col_date",
           "srcTrgColDataType" : "date",
@@ -157,7 +157,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2007,
+          "srcTgtColId" : 2040,
           "ruleClsPropId" : 1998,
           "srcTrgColName" : "col_timestamp",
           "srcTrgColDataType" : "datetime",
@@ -168,7 +168,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2008,
+          "srcTgtColId" : 2041,
           "ruleClsPropId" : 1998,
           "srcTrgColName" : "col_time",
           "srcTrgColDataType" : "time",
@@ -246,12 +246,19 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 2013,
+        "paramId" : 82,
+        "paramMethod" : "setAppendOrderBy",
+        "paramValue" : "false",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 2009,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2014,
+          "srcTgtColId" : 2043,
           "ruleClsPropId" : 2009,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -275,13 +282,6 @@
         "paramId" : 16,
         "paramMethod" : "setConnId",
         "paramValue" : "448",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 2013,
-        "paramId" : 82,
-        "paramMethod" : "setAppendOrderBy",
-        "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
@@ -313,9 +313,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 2027,
-        "srcColId" : 2006,
-        "trgColId" : 2014,
+        "colMapId" : 2045,
+        "srcColId" : 2039,
+        "trgColId" : 2043,
         "colMapType" : "join",
         "srcColName" : "col_date",
         "tgtColName" : "cnt",
@@ -411,7 +411,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 2006,
+      "srcTgtColId" : 2039,
       "ruleClsPropId" : 1998,
       "srcTrgColName" : "col_date",
       "srcTrgColDataType" : "date",
@@ -422,7 +422,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2007,
+      "srcTgtColId" : 2040,
       "ruleClsPropId" : 1998,
       "srcTrgColName" : "col_timestamp",
       "srcTrgColDataType" : "datetime",
@@ -433,7 +433,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2008,
+      "srcTgtColId" : 2041,
       "ruleClsPropId" : 1998,
       "srcTrgColName" : "col_time",
       "srcTrgColDataType" : "time",
@@ -444,7 +444,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2014,
+      "srcTgtColId" : 2043,
       "ruleClsPropId" : 2009,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -456,9 +456,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1993,
-      "srcColId" : 1987,
-      "trgColId" : 1991,
+      "colMapId" : 2045,
+      "srcColId" : 2039,
+      "trgColId" : 2043,
       "colMapType" : "join",
       "srcColName" : "col_date",
       "tgtColName" : "cnt",
