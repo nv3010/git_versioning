@@ -139,9 +139,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1179612,
-        "srcColId" : 1179605,
-        "trgColId" : 1179610,
+        "colMapId" : 1179622,
+        "srcColId" : 1179615,
+        "trgColId" : 1179620,
         "colMapType" : "join",
         "srcColName" : "column1",
         "tgtColName" : "cnt",
@@ -728,7 +728,7 @@
         "exprID" : 1179459,
         "exprLogID" : 0,
         "exprName" : "now",
-        "expression" : "now()",
+        "expression" : "import java.time.ZonedDateTime;  \nS.column1 > ZonedDatetime.now()",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 0,
@@ -740,7 +740,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "now()",
+        "exprOrg" : "import java.time.ZonedDateTime;  \nS.column1 > ZonedDatetime.now()",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -1666,7 +1666,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from REGRESSION_DATABASE.NEWTABLE_1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179605,
+          "srcTgtColId" : 1179615,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column1",
           "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -1677,7 +1677,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1179606,
+          "srcTgtColId" : 1179616,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column2",
           "srcTrgColDataType" : "NUMBER",
@@ -1688,7 +1688,7 @@
           "colFormat" : null,
           "displayIndex" : 1
         }, {
-          "srcTgtColId" : 1179607,
+          "srcTgtColId" : 1179617,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column3",
           "srcTrgColDataType" : "DATE",
@@ -1699,7 +1699,7 @@
           "colFormat" : null,
           "displayIndex" : 2
         }, {
-          "srcTgtColId" : 1179608,
+          "srcTgtColId" : 1179618,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column4",
           "srcTrgColDataType" : "TIMESTAMP",
@@ -1789,7 +1789,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179610,
+          "srcTgtColId" : 1179620,
           "ruleClsPropId" : 1179423,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -1832,7 +1832,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1179605,
+      "srcTgtColId" : 1179615,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column1",
       "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -1843,7 +1843,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1179606,
+      "srcTgtColId" : 1179616,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column2",
       "srcTrgColDataType" : "NUMBER",
@@ -1854,7 +1854,7 @@
       "colFormat" : null,
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 1179607,
+      "srcTgtColId" : 1179617,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column3",
       "srcTrgColDataType" : "DATE",
@@ -1865,7 +1865,7 @@
       "colFormat" : null,
       "displayIndex" : 2
     }, {
-      "srcTgtColId" : 1179608,
+      "srcTgtColId" : 1179618,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column4",
       "srcTrgColDataType" : "TIMESTAMP",
@@ -1876,7 +1876,7 @@
       "colFormat" : null,
       "displayIndex" : 3
     }, {
-      "srcTgtColId" : 1179610,
+      "srcTgtColId" : 1179620,
       "ruleClsPropId" : 1179423,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -1888,9 +1888,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1179612,
-      "srcColId" : 1179605,
-      "trgColId" : 1179610,
+      "colMapId" : 1179622,
+      "srcColId" : 1179615,
+      "trgColId" : 1179620,
       "colMapType" : "join",
       "srcColName" : "column1",
       "tgtColName" : "cnt",
