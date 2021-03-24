@@ -139,9 +139,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1179292,
-        "srcColId" : 1179285,
-        "trgColId" : 1179290,
+        "colMapId" : 1179692,
+        "srcColId" : 1179685,
+        "trgColId" : 1179690,
         "colMapType" : "join",
         "srcColName" : "column1",
         "tgtColName" : "cnt",
@@ -820,7 +820,7 @@
         "exprID" : 1171456,
         "exprLogID" : 0,
         "exprName" : "now",
-        "expression" : "now()",
+        "expression" : "import java.time.ZonedDateTime ;\nS.column1 == ZonedDateTime.now()",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 0,
@@ -832,7 +832,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "now()",
+        "exprOrg" : "import java.time.ZonedDateTime ;\nS.column1 == ZonedDateTime.now()",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -843,7 +843,7 @@
         "exprID" : 1171457,
         "exprLogID" : 0,
         "exprName" : "now Clock ",
-        "expression" : "now(Clock clock)",
+        "expression" : "import java.time.*;\nClock cl = Clock.systemUTC();\nS.column1 > ZonedDateTime.now(cl)",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 0,
@@ -855,7 +855,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "now(Clock clock)",
+        "exprOrg" : "import java.time.*;\nClock cl = Clock.systemUTC();\nS.column1 > ZonedDateTime.now(cl)",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -866,7 +866,7 @@
         "exprID" : 1171458,
         "exprLogID" : 0,
         "exprName" : "now zone",
-        "expression" : "now(ZoneId zone)",
+        "expression" : "import java.time.*;  \nZoneId z = ZoneId.of(\"Asia/Calcutta\")\nS.column1 > ZonedDateTime.now(z)",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 0,
@@ -878,7 +878,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "now(ZoneId zone)",
+        "exprOrg" : "import java.time.*;  \nZoneId z = ZoneId.of(\"Asia/Calcutta\")\nS.column1 > ZonedDateTime.now(z)",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -1942,7 +1942,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from REGRESSION_DATABASE.NEWTABLE_1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179285,
+          "srcTgtColId" : 1179685,
           "ruleClsPropId" : 1171136,
           "srcTrgColName" : "column1",
           "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -1953,7 +1953,7 @@
           "colFormat" : null,
           "displayIndex" : 32
         }, {
-          "srcTgtColId" : 1179286,
+          "srcTgtColId" : 1179686,
           "ruleClsPropId" : 1171136,
           "srcTrgColName" : "column2",
           "srcTrgColDataType" : "NUMBER",
@@ -1964,7 +1964,7 @@
           "colFormat" : null,
           "displayIndex" : 33
         }, {
-          "srcTgtColId" : 1179287,
+          "srcTgtColId" : 1179687,
           "ruleClsPropId" : 1171136,
           "srcTrgColName" : "column3",
           "srcTrgColDataType" : "DATE",
@@ -1975,7 +1975,7 @@
           "colFormat" : null,
           "displayIndex" : 34
         }, {
-          "srcTgtColId" : 1179288,
+          "srcTgtColId" : 1179688,
           "ruleClsPropId" : 1171136,
           "srcTrgColName" : "column4",
           "srcTrgColDataType" : "TIMESTAMP",
@@ -2065,7 +2065,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179290,
+          "srcTgtColId" : 1179690,
           "ruleClsPropId" : 1171149,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -2108,7 +2108,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1179285,
+      "srcTgtColId" : 1179685,
       "ruleClsPropId" : 1171136,
       "srcTrgColName" : "column1",
       "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -2119,7 +2119,7 @@
       "colFormat" : null,
       "displayIndex" : 32
     }, {
-      "srcTgtColId" : 1179286,
+      "srcTgtColId" : 1179686,
       "ruleClsPropId" : 1171136,
       "srcTrgColName" : "column2",
       "srcTrgColDataType" : "NUMBER",
@@ -2130,7 +2130,7 @@
       "colFormat" : null,
       "displayIndex" : 33
     }, {
-      "srcTgtColId" : 1179287,
+      "srcTgtColId" : 1179687,
       "ruleClsPropId" : 1171136,
       "srcTrgColName" : "column3",
       "srcTrgColDataType" : "DATE",
@@ -2141,7 +2141,7 @@
       "colFormat" : null,
       "displayIndex" : 34
     }, {
-      "srcTgtColId" : 1179288,
+      "srcTgtColId" : 1179688,
       "ruleClsPropId" : 1171136,
       "srcTrgColName" : "column4",
       "srcTrgColDataType" : "TIMESTAMP",
@@ -2152,7 +2152,7 @@
       "colFormat" : null,
       "displayIndex" : 35
     }, {
-      "srcTgtColId" : 1179290,
+      "srcTgtColId" : 1179690,
       "ruleClsPropId" : 1171149,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -2164,9 +2164,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1179292,
-      "srcColId" : 1179285,
-      "trgColId" : 1179290,
+      "colMapId" : 1179692,
+      "srcColId" : 1179685,
+      "trgColId" : 1179690,
       "colMapType" : "join",
       "srcColName" : "column1",
       "tgtColName" : "cnt",
