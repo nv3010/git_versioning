@@ -139,9 +139,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1179582,
-        "srcColId" : 1179575,
-        "trgColId" : 1179580,
+        "colMapId" : 1179592,
+        "srcColId" : 1179585,
+        "trgColId" : 1179590,
         "colMapType" : "join",
         "srcColName" : "column1",
         "tgtColName" : "cnt",
@@ -958,7 +958,7 @@
         "exprID" : 1179469,
         "exprLogID" : 0,
         "exprName" : "parse",
-        "expression" : "import java.time.ZonedDateTime;  \nimport java.time.format.DateTimeFormatter\nS.column1 == DateTimeFormatter.ISO_ZONED_DATE_TIME.format(\"2020-10-06T14:18:09.123Z[UTC]\")",
+        "expression" : "import java.time.ZonedDateTime;  \nimport java.time.format.DateTimeFormatter\nS.column1 ==  ZonedDateTime.parse(\"2020-10-06T14:18:09.123Z[UTC]\",DateTimeFormatter.ISO_ZONED_DATE_TIME)",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -970,7 +970,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "import java.time.ZonedDateTime;  \nimport java.time.format.DateTimeFormatter\nS.column1 == DateTimeFormatter.ISO_ZONED_DATE_TIME.format(\"2020-10-06T14:18:09.123Z[UTC]\")",
+        "exprOrg" : "import java.time.ZonedDateTime;  \nimport java.time.format.DateTimeFormatter\nS.column1 ==  ZonedDateTime.parse(\"2020-10-06T14:18:09.123Z[UTC]\",DateTimeFormatter.ISO_ZONED_DATE_TIME)",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -1666,7 +1666,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from REGRESSION_DATABASE.NEWTABLE_1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179575,
+          "srcTgtColId" : 1179585,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column1",
           "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -1677,7 +1677,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1179576,
+          "srcTgtColId" : 1179586,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column2",
           "srcTrgColDataType" : "NUMBER",
@@ -1688,7 +1688,7 @@
           "colFormat" : null,
           "displayIndex" : 1
         }, {
-          "srcTgtColId" : 1179577,
+          "srcTgtColId" : 1179587,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column3",
           "srcTrgColDataType" : "DATE",
@@ -1699,7 +1699,7 @@
           "colFormat" : null,
           "displayIndex" : 2
         }, {
-          "srcTgtColId" : 1179578,
+          "srcTgtColId" : 1179588,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column4",
           "srcTrgColDataType" : "TIMESTAMP",
@@ -1789,7 +1789,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179580,
+          "srcTgtColId" : 1179590,
           "ruleClsPropId" : 1179423,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -1832,7 +1832,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1179575,
+      "srcTgtColId" : 1179585,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column1",
       "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -1843,7 +1843,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1179576,
+      "srcTgtColId" : 1179586,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column2",
       "srcTrgColDataType" : "NUMBER",
@@ -1854,7 +1854,7 @@
       "colFormat" : null,
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 1179577,
+      "srcTgtColId" : 1179587,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column3",
       "srcTrgColDataType" : "DATE",
@@ -1865,7 +1865,7 @@
       "colFormat" : null,
       "displayIndex" : 2
     }, {
-      "srcTgtColId" : 1179578,
+      "srcTgtColId" : 1179588,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column4",
       "srcTrgColDataType" : "TIMESTAMP",
@@ -1876,7 +1876,7 @@
       "colFormat" : null,
       "displayIndex" : 3
     }, {
-      "srcTgtColId" : 1179580,
+      "srcTgtColId" : 1179590,
       "ruleClsPropId" : 1179423,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -1888,9 +1888,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1179582,
-      "srcColId" : 1179575,
-      "trgColId" : 1179580,
+      "colMapId" : 1179592,
+      "srcColId" : 1179585,
+      "trgColId" : 1179590,
       "colMapType" : "join",
       "srcColName" : "column1",
       "tgtColName" : "cnt",
@@ -1918,7 +1918,7 @@
       "exprID" : 1179469,
       "exprLogID" : 0,
       "exprName" : "parse",
-      "expression" : "import java.time.ZonedDateTime;  \nimport java.time.format.DateTimeFormatter\nS.column1 == DateTimeFormatter.ISO_ZONED_DATE_TIME.format(\"2020-10-06T14:18:09.123Z[UTC]\")",
+      "expression" : "import java.time.ZonedDateTime;  \nimport java.time.format.DateTimeFormatter\nS.column1 ==  ZonedDateTime.parse(\"2020-10-06T14:18:09.123Z[UTC]\",DateTimeFormatter.ISO_ZONED_DATE_TIME)",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
