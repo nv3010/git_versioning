@@ -139,9 +139,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1179302,
-        "srcColId" : 1179295,
-        "trgColId" : 1179300,
+        "colMapId" : 1179333,
+        "srcColId" : 1179326,
+        "trgColId" : 1179331,
         "colMapType" : "join",
         "srcColName" : "column1",
         "tgtColName" : "cnt",
@@ -150,52 +150,6 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 1178468,
-        "exprLogID" : 0,
-        "exprName" : "equals",
-        "expression" : "import java.time.ZonedDateTime;  \nS.column1.equals( ZonedDateTime.parse(\"2017-09-12T12:44:07+05:30[Asia/Calcutta]\"))",
-        "result" : "Pass",
-        "exprType" : "5",
-        "exprVisible" : 0,
-        "exprIndex" : 0,
-        "ruleId" : 1178432,
-        "ruleInstanceId" : 0,
-        "ruleClassId" : 1178433,
-        "ruleName" : null,
-        "trueCount" : null,
-        "falseCount" : null,
-        "errCount" : null,
-        "exprOrg" : "import java.time.ZonedDateTime;  \nS.column1.equals( ZonedDateTime.parse(\"2017-09-12T12:44:07+05:30[Asia/Calcutta]\"))",
-        "tc" : null,
-        "fc" : null,
-        "er" : null,
-        "name" : null,
-        "ve" : 0,
-        "exporg" : null
-      }, {
-        "exprID" : 1178469,
-        "exprLogID" : 0,
-        "exprName" : "getDayofWeek",
-        "expression" : "import java.time.ZonedDateTime;  \nS.column1.getDayOfWeek() == ZonedDateTime.parse(\"2020-10-06T13:35:15.522Z[UTC]\").getDayOfWeek()",
-        "result" : "Pass",
-        "exprType" : "5",
-        "exprVisible" : 0,
-        "exprIndex" : 0,
-        "ruleId" : 1178432,
-        "ruleInstanceId" : 0,
-        "ruleClassId" : 1178433,
-        "ruleName" : null,
-        "trueCount" : null,
-        "falseCount" : null,
-        "errCount" : null,
-        "exprOrg" : "import java.time.ZonedDateTime;  \nS.column1.getDayOfWeek() == ZonedDateTime.parse(\"2020-10-06T13:35:15.522Z[UTC]\").getDayOfWeek()",
-        "tc" : null,
-        "fc" : null,
-        "er" : null,
-        "name" : null,
-        "ve" : 0,
-        "exporg" : null
-      }, {
         "exprID" : 1178562,
         "exprLogID" : 0,
         "exprName" : "UDF1",
@@ -203,7 +157,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 2,
+        "exprIndex" : 5,
         "ruleId" : 1178432,
         "ruleInstanceId" : 0,
         "ruleClassId" : 1178433,
@@ -219,37 +173,14 @@
         "ve" : 0,
         "exporg" : null
       }, {
-        "exprID" : 1179272,
-        "exprLogID" : 0,
-        "exprName" : "EXPR_VE2ERQ2",
-        "expression" : "import java.time.*;\nDate calendar = calendar.setTime(S.column3);\nint hours = calendar.get(Calendar.HOUR_OF_DAY);\nint minutes = calendar.get(Calendar.MINUTE); int seconds = calendar.get(Calendar.SECOND);\nreturn hours.toString() + \":\" + minutes.toString() + \":\" + seconds.toString();",
-        "result" : "Pass",
-        "exprType" : "5",
-        "exprVisible" : 1,
-        "exprIndex" : 3,
-        "ruleId" : 1178432,
-        "ruleInstanceId" : 0,
-        "ruleClassId" : 1178433,
-        "ruleName" : null,
-        "trueCount" : null,
-        "falseCount" : null,
-        "errCount" : null,
-        "exprOrg" : "import java.time.*;\nDate calendar = calendar.setTime(S.column3);\nint hours = calendar.get(Calendar.HOUR_OF_DAY);\nint minutes = calendar.get(Calendar.MINUTE); int seconds = calendar.get(Calendar.SECOND);\nreturn hours.toString() + \":\" + minutes.toString() + \":\" + seconds.toString();",
-        "tc" : null,
-        "fc" : null,
-        "er" : null,
-        "name" : null,
-        "ve" : 0,
-        "exporg" : null
-      }, {
         "exprID" : 1179303,
         "exprLogID" : 0,
-        "exprName" : "EXPR_JWJRVO7",
+        "exprName" : "UDF2",
         "expression" : "UDFPCTimezone.abc(S.column1)",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 4,
+        "exprIndex" : 0,
         "ruleId" : 1178432,
         "ruleInstanceId" : 0,
         "ruleClassId" : 1178433,
@@ -283,7 +214,7 @@
         "ruleClsPropID" : 1178438,
         "paramId" : 798,
         "paramMethod" : "setEngineType",
-        "paramValue" : "Null",
+        "paramValue" : "V8",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -378,7 +309,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from REGRESSION_DATABASE.NEWTABLE_1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179295,
+          "srcTgtColId" : 1179326,
           "ruleClsPropId" : 1178448,
           "srcTrgColName" : "column1",
           "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -387,9 +318,9 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 45
+          "displayIndex" : 1
         }, {
-          "srcTgtColId" : 1179296,
+          "srcTgtColId" : 1179327,
           "ruleClsPropId" : 1178448,
           "srcTrgColName" : "column2",
           "srcTrgColDataType" : "NUMBER",
@@ -398,9 +329,9 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 46
+          "displayIndex" : 2
         }, {
-          "srcTgtColId" : 1179297,
+          "srcTgtColId" : 1179328,
           "ruleClsPropId" : 1178448,
           "srcTrgColName" : "column3",
           "srcTrgColDataType" : "DATE",
@@ -409,9 +340,9 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 47
+          "displayIndex" : 3
         }, {
-          "srcTgtColId" : 1179298,
+          "srcTgtColId" : 1179329,
           "ruleClsPropId" : 1178448,
           "srcTrgColName" : "column4",
           "srcTrgColDataType" : "TIMESTAMP",
@@ -420,7 +351,7 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 48
+          "displayIndex" : 4
         } ],
         "fileContent" : null
       }, {
@@ -501,7 +432,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179300,
+          "srcTgtColId" : 1179331,
           "ruleClsPropId" : 1178461,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -544,7 +475,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1179295,
+      "srcTgtColId" : 1179326,
       "ruleClsPropId" : 1178448,
       "srcTrgColName" : "column1",
       "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -553,9 +484,9 @@
       "joinList" : null,
       "mapColName" : "column1",
       "colFormat" : null,
-      "displayIndex" : 45
+      "displayIndex" : 1
     }, {
-      "srcTgtColId" : 1179296,
+      "srcTgtColId" : 1179327,
       "ruleClsPropId" : 1178448,
       "srcTrgColName" : "column2",
       "srcTrgColDataType" : "NUMBER",
@@ -564,9 +495,9 @@
       "joinList" : null,
       "mapColName" : "column2",
       "colFormat" : null,
-      "displayIndex" : 46
+      "displayIndex" : 2
     }, {
-      "srcTgtColId" : 1179297,
+      "srcTgtColId" : 1179328,
       "ruleClsPropId" : 1178448,
       "srcTrgColName" : "column3",
       "srcTrgColDataType" : "DATE",
@@ -575,9 +506,9 @@
       "joinList" : null,
       "mapColName" : "column3",
       "colFormat" : null,
-      "displayIndex" : 47
+      "displayIndex" : 3
     }, {
-      "srcTgtColId" : 1179298,
+      "srcTgtColId" : 1179329,
       "ruleClsPropId" : 1178448,
       "srcTrgColName" : "column4",
       "srcTrgColDataType" : "TIMESTAMP",
@@ -586,9 +517,9 @@
       "joinList" : null,
       "mapColName" : "column4",
       "colFormat" : null,
-      "displayIndex" : 48
+      "displayIndex" : 4
     }, {
-      "srcTgtColId" : 1179300,
+      "srcTgtColId" : 1179331,
       "ruleClsPropId" : 1178461,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -600,9 +531,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1179302,
-      "srcColId" : 1179295,
-      "trgColId" : 1179300,
+      "colMapId" : 1179333,
+      "srcColId" : 1179326,
+      "trgColId" : 1179331,
       "colMapType" : "join",
       "srcColName" : "column1",
       "tgtColName" : "cnt",
@@ -627,6 +558,29 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
+      "exprID" : 1179303,
+      "exprLogID" : 0,
+      "exprName" : "UDF2",
+      "expression" : "UDFPCTimezone.abc(S.column1)",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 0,
+      "ruleId" : 1178432,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 1178433,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
       "exprID" : 1178562,
       "exprLogID" : 0,
       "exprName" : "UDF1",
@@ -634,53 +588,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 2,
-      "ruleId" : 1178432,
-      "ruleInstanceId" : 0,
-      "ruleClassId" : 1178433,
-      "ruleName" : null,
-      "trueCount" : null,
-      "falseCount" : null,
-      "errCount" : null,
-      "exprOrg" : null,
-      "tc" : null,
-      "fc" : null,
-      "er" : null,
-      "name" : null,
-      "ve" : 0,
-      "exporg" : null
-    }, {
-      "exprID" : 1179272,
-      "exprLogID" : 0,
-      "exprName" : "EXPR_VE2ERQ2",
-      "expression" : "import java.time.*;\nDate calendar = calendar.setTime(S.column3);\nint hours = calendar.get(Calendar.HOUR_OF_DAY);\nint minutes = calendar.get(Calendar.MINUTE); int seconds = calendar.get(Calendar.SECOND);\nreturn hours.toString() + \":\" + minutes.toString() + \":\" + seconds.toString();",
-      "result" : "Pass",
-      "exprType" : "5",
-      "exprVisible" : 1,
-      "exprIndex" : 3,
-      "ruleId" : 1178432,
-      "ruleInstanceId" : 0,
-      "ruleClassId" : 1178433,
-      "ruleName" : null,
-      "trueCount" : null,
-      "falseCount" : null,
-      "errCount" : null,
-      "exprOrg" : null,
-      "tc" : null,
-      "fc" : null,
-      "er" : null,
-      "name" : null,
-      "ve" : 0,
-      "exporg" : null
-    }, {
-      "exprID" : 1179303,
-      "exprLogID" : 0,
-      "exprName" : "EXPR_JWJRVO7",
-      "expression" : "UDFPCTimezone.abc(S.column1)",
-      "result" : "Pass",
-      "exprType" : "5",
-      "exprVisible" : 1,
-      "exprIndex" : 4,
+      "exprIndex" : 5,
       "ruleId" : 1178432,
       "ruleInstanceId" : 0,
       "ruleClassId" : 1178433,
