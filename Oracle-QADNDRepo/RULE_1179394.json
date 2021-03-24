@@ -139,9 +139,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1179712,
-        "srcColId" : 1179705,
-        "trgColId" : 1179710,
+        "colMapId" : 1179722,
+        "srcColId" : 1179715,
+        "trgColId" : 1179720,
         "colMapType" : "join",
         "srcColName" : "column1",
         "tgtColName" : "cnt",
@@ -199,7 +199,7 @@
         "exprID" : 1179432,
         "exprLogID" : 0,
         "exprName" : "format",
-        "expression" : "import java.time.ZonedDateTime;  \nS.column1.format(DateTimeFormatter formatter)",
+        "expression" : "import java.time.*;\nimport java.time.ZonedDateTime;  \nimport java.time.format.*;\n\nDateTimeFormatter formatter = DateTimeFormatter.ISO_TIME;\nS.column1.format(formatter) == ZonedDateTime.parse(\"2017-09-12T12:44:07+05:30[Asia/Calcutta]\").format(formatter);",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -211,7 +211,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "import java.time.ZonedDateTime;  \nS.column1.format(DateTimeFormatter formatter)",
+        "exprOrg" : "import java.time.*;\nimport java.time.ZonedDateTime;  \nimport java.time.format.*;\n\nDateTimeFormatter formatter = DateTimeFormatter.ISO_TIME;\nS.column1.format(formatter) == ZonedDateTime.parse(\"2017-09-12T12:44:07+05:30[Asia/Calcutta]\").format(formatter);",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -521,7 +521,7 @@
         "exprID" : 1179449,
         "exprLogID" : 0,
         "exprName" : "minus",
-        "expression" : "import java.time.ZonedDateTime;  \nimport java.time.temporal.*;\nimport java.time.Duration; \n\n\nlong days = 1;\nS.column1.minus(days,ChronoUnit )== ZonedDateTime.parse(\"2020-10-06T14:18:09.123Z[UTC]\").minus(days,ChronoUnit.DAYS)\n\n\n/*minus(long amountToSubtract, TemporalUnit unit)*/",
+        "expression" : "import java.time.ZonedDateTime;  \nimport java.time.temporal.ChronoUnit;\nlong days = 1;\nS.column1.minus(days,ChronoUnit.DAYS)== ZonedDateTime.parse(\"2020-10-06T14:18:09.123Z[UTC]\").minus(days,ChronoUnit.DAYS)\n\n\n/*minus(long amountToSubtract, TemporalUnit unit)*/",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -533,7 +533,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "import java.time.ZonedDateTime;  \nimport java.time.temporal.*;\nimport java.time.Duration; \n\n\nlong days = 1;\nS.column1.minus(days,ChronoUnit )== ZonedDateTime.parse(\"2020-10-06T14:18:09.123Z[UTC]\").minus(days,ChronoUnit.DAYS)\n\n\n/*minus(long amountToSubtract, TemporalUnit unit)*/",
+        "exprOrg" : "import java.time.ZonedDateTime;  \nimport java.time.temporal.ChronoUnit;\nlong days = 1;\nS.column1.minus(days,ChronoUnit.DAYS)== ZonedDateTime.parse(\"2020-10-06T14:18:09.123Z[UTC]\").minus(days,ChronoUnit.DAYS)\n\n\n/*minus(long amountToSubtract, TemporalUnit unit)*/",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -1436,7 +1436,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from REGRESSION_DATABASE.NEWTABLE_1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179705,
+          "srcTgtColId" : 1179715,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column1",
           "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -1447,7 +1447,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1179706,
+          "srcTgtColId" : 1179716,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column2",
           "srcTrgColDataType" : "NUMBER",
@@ -1458,7 +1458,7 @@
           "colFormat" : null,
           "displayIndex" : 1
         }, {
-          "srcTgtColId" : 1179707,
+          "srcTgtColId" : 1179717,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column3",
           "srcTrgColDataType" : "DATE",
@@ -1469,7 +1469,7 @@
           "colFormat" : null,
           "displayIndex" : 2
         }, {
-          "srcTgtColId" : 1179708,
+          "srcTgtColId" : 1179718,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column4",
           "srcTrgColDataType" : "TIMESTAMP",
@@ -1559,7 +1559,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179710,
+          "srcTgtColId" : 1179720,
           "ruleClsPropId" : 1179423,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -1602,7 +1602,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1179705,
+      "srcTgtColId" : 1179715,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column1",
       "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -1613,7 +1613,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1179706,
+      "srcTgtColId" : 1179716,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column2",
       "srcTrgColDataType" : "NUMBER",
@@ -1624,7 +1624,7 @@
       "colFormat" : null,
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 1179707,
+      "srcTgtColId" : 1179717,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column3",
       "srcTrgColDataType" : "DATE",
@@ -1635,7 +1635,7 @@
       "colFormat" : null,
       "displayIndex" : 2
     }, {
-      "srcTgtColId" : 1179708,
+      "srcTgtColId" : 1179718,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column4",
       "srcTrgColDataType" : "TIMESTAMP",
@@ -1646,7 +1646,7 @@
       "colFormat" : null,
       "displayIndex" : 3
     }, {
-      "srcTgtColId" : 1179710,
+      "srcTgtColId" : 1179720,
       "ruleClsPropId" : 1179423,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -1658,9 +1658,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1179712,
-      "srcColId" : 1179705,
-      "trgColId" : 1179710,
+      "colMapId" : 1179722,
+      "srcColId" : 1179715,
+      "trgColId" : 1179720,
       "colMapType" : "join",
       "srcColName" : "column1",
       "tgtColName" : "cnt",
@@ -1734,7 +1734,7 @@
       "exprID" : 1179432,
       "exprLogID" : 0,
       "exprName" : "format",
-      "expression" : "import java.time.ZonedDateTime;  \nS.column1.format(DateTimeFormatter formatter)",
+      "expression" : "import java.time.*;\nimport java.time.ZonedDateTime;  \nimport java.time.format.*;\n\nDateTimeFormatter formatter = DateTimeFormatter.ISO_TIME;\nS.column1.format(formatter) == ZonedDateTime.parse(\"2017-09-12T12:44:07+05:30[Asia/Calcutta]\").format(formatter);",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
@@ -2056,7 +2056,7 @@
       "exprID" : 1179449,
       "exprLogID" : 0,
       "exprName" : "minus",
-      "expression" : "import java.time.ZonedDateTime;  \nimport java.time.temporal.*;\nimport java.time.Duration; \n\n\nlong days = 1;\nS.column1.minus(days,ChronoUnit )== ZonedDateTime.parse(\"2020-10-06T14:18:09.123Z[UTC]\").minus(days,ChronoUnit.DAYS)\n\n\n/*minus(long amountToSubtract, TemporalUnit unit)*/",
+      "expression" : "import java.time.ZonedDateTime;  \nimport java.time.temporal.ChronoUnit;\nlong days = 1;\nS.column1.minus(days,ChronoUnit.DAYS)== ZonedDateTime.parse(\"2020-10-06T14:18:09.123Z[UTC]\").minus(days,ChronoUnit.DAYS)\n\n\n/*minus(long amountToSubtract, TemporalUnit unit)*/",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
