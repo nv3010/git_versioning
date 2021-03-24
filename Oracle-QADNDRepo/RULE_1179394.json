@@ -139,9 +139,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1179622,
-        "srcColId" : 1179615,
-        "trgColId" : 1179620,
+        "colMapId" : 1179632,
+        "srcColId" : 1179625,
+        "trgColId" : 1179630,
         "colMapType" : "join",
         "srcColName" : "column1",
         "tgtColName" : "cnt",
@@ -731,8 +731,8 @@
         "expression" : "import java.time.ZonedDateTime;  \nS.column1 > ZonedDatetime.now()",
         "result" : "Pass",
         "exprType" : "5",
-        "exprVisible" : 0,
-        "exprIndex" : 0,
+        "exprVisible" : 1,
+        "exprIndex" : 5,
         "ruleId" : 1179394,
         "ruleInstanceId" : 0,
         "ruleClassId" : 1179395,
@@ -751,11 +751,11 @@
         "exprID" : 1179460,
         "exprLogID" : 0,
         "exprName" : "now Clock ",
-        "expression" : "now(Clock clock)",
+        "expression" : "import java.time.ZonedDateTime;  \nClock cl = Clock.systemUTC();\nS.column1 > ZonedDatetime.now(cl)",
         "result" : "Pass",
         "exprType" : "5",
-        "exprVisible" : 0,
-        "exprIndex" : 0,
+        "exprVisible" : 1,
+        "exprIndex" : 6,
         "ruleId" : 1179394,
         "ruleInstanceId" : 0,
         "ruleClassId" : 1179395,
@@ -763,7 +763,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "now(Clock clock)",
+        "exprOrg" : "import java.time.ZonedDateTime;  \nClock cl = Clock.systemUTC();\nS.column1 > ZonedDatetime.now(cl)",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -774,11 +774,11 @@
         "exprID" : 1179461,
         "exprLogID" : 0,
         "exprName" : "now zone",
-        "expression" : "now(ZoneId zone)",
+        "expression" : "import java.time.ZonedDateTime;  \nZoneId z = ZoneId.of(\"UTC\")\nS.column1 > ZonedDatetime.now(z)",
         "result" : "Pass",
         "exprType" : "5",
-        "exprVisible" : 0,
-        "exprIndex" : 0,
+        "exprVisible" : 1,
+        "exprIndex" : 7,
         "ruleId" : 1179394,
         "ruleInstanceId" : 0,
         "ruleClassId" : 1179395,
@@ -786,7 +786,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "now(ZoneId zone)",
+        "exprOrg" : "import java.time.ZonedDateTime;  \nZoneId z = ZoneId.of(\"UTC\")\nS.column1 > ZonedDatetime.now(z)",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -962,7 +962,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 4,
+        "exprIndex" : 0,
         "ruleId" : 1179394,
         "ruleInstanceId" : 0,
         "ruleClassId" : 1179395,
@@ -1666,7 +1666,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from REGRESSION_DATABASE.NEWTABLE_1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179615,
+          "srcTgtColId" : 1179625,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column1",
           "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -1675,9 +1675,9 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 0
+          "displayIndex" : 1
         }, {
-          "srcTgtColId" : 1179616,
+          "srcTgtColId" : 1179626,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column2",
           "srcTrgColDataType" : "NUMBER",
@@ -1686,9 +1686,9 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 1
+          "displayIndex" : 2
         }, {
-          "srcTgtColId" : 1179617,
+          "srcTgtColId" : 1179627,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column3",
           "srcTrgColDataType" : "DATE",
@@ -1697,9 +1697,9 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 2
+          "displayIndex" : 3
         }, {
-          "srcTgtColId" : 1179618,
+          "srcTgtColId" : 1179628,
           "ruleClsPropId" : 1179410,
           "srcTrgColName" : "column4",
           "srcTrgColDataType" : "TIMESTAMP",
@@ -1708,7 +1708,7 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 3
+          "displayIndex" : 4
         } ],
         "fileContent" : null
       }, {
@@ -1789,7 +1789,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179620,
+          "srcTgtColId" : 1179630,
           "ruleClsPropId" : 1179423,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -1832,7 +1832,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1179615,
+      "srcTgtColId" : 1179625,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column1",
       "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -1841,9 +1841,9 @@
       "joinList" : null,
       "mapColName" : "column1",
       "colFormat" : null,
-      "displayIndex" : 0
+      "displayIndex" : 1
     }, {
-      "srcTgtColId" : 1179616,
+      "srcTgtColId" : 1179626,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column2",
       "srcTrgColDataType" : "NUMBER",
@@ -1852,9 +1852,9 @@
       "joinList" : null,
       "mapColName" : "column2",
       "colFormat" : null,
-      "displayIndex" : 1
+      "displayIndex" : 2
     }, {
-      "srcTgtColId" : 1179617,
+      "srcTgtColId" : 1179627,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column3",
       "srcTrgColDataType" : "DATE",
@@ -1863,9 +1863,9 @@
       "joinList" : null,
       "mapColName" : "column3",
       "colFormat" : null,
-      "displayIndex" : 2
+      "displayIndex" : 3
     }, {
-      "srcTgtColId" : 1179618,
+      "srcTgtColId" : 1179628,
       "ruleClsPropId" : 1179410,
       "srcTrgColName" : "column4",
       "srcTrgColDataType" : "TIMESTAMP",
@@ -1874,9 +1874,9 @@
       "joinList" : null,
       "mapColName" : "column4",
       "colFormat" : null,
-      "displayIndex" : 3
+      "displayIndex" : 4
     }, {
-      "srcTgtColId" : 1179620,
+      "srcTgtColId" : 1179630,
       "ruleClsPropId" : 1179423,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -1888,9 +1888,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1179622,
-      "srcColId" : 1179615,
-      "trgColId" : 1179620,
+      "colMapId" : 1179632,
+      "srcColId" : 1179625,
+      "trgColId" : 1179630,
       "colMapType" : "join",
       "srcColName" : "column1",
       "tgtColName" : "cnt",
@@ -1922,7 +1922,76 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 4,
+      "exprIndex" : 0,
+      "ruleId" : 1179394,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 1179395,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 1179459,
+      "exprLogID" : 0,
+      "exprName" : "now",
+      "expression" : "import java.time.ZonedDateTime;  \nS.column1 > ZonedDatetime.now()",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 5,
+      "ruleId" : 1179394,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 1179395,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 1179460,
+      "exprLogID" : 0,
+      "exprName" : "now Clock ",
+      "expression" : "import java.time.ZonedDateTime;  \nClock cl = Clock.systemUTC();\nS.column1 > ZonedDatetime.now(cl)",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 6,
+      "ruleId" : 1179394,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 1179395,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 1179461,
+      "exprLogID" : 0,
+      "exprName" : "now zone",
+      "expression" : "import java.time.ZonedDateTime;  \nZoneId z = ZoneId.of(\"UTC\")\nS.column1 > ZonedDatetime.now(z)",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 7,
       "ruleId" : 1179394,
       "ruleInstanceId" : 0,
       "ruleClassId" : 1179395,
