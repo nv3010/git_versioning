@@ -139,9 +139,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1179333,
-        "srcColId" : 1179326,
-        "trgColId" : 1179331,
+        "colMapId" : 1183607,
+        "srcColId" : 1183600,
+        "trgColId" : 1183605,
         "colMapType" : "join",
         "srcColName" : "column1",
         "tgtColName" : "cnt",
@@ -150,33 +150,10 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 1178562,
+        "exprID" : 1183462,
         "exprLogID" : 0,
-        "exprName" : "UDF1",
-        "expression" : "UDFPCTimezone.getTimeFromDate(S.column3) ==\"00:00:00\"",
-        "result" : "Pass",
-        "exprType" : "5",
-        "exprVisible" : 1,
-        "exprIndex" : 5,
-        "ruleId" : 1178432,
-        "ruleInstanceId" : 0,
-        "ruleClassId" : 1178433,
-        "ruleName" : null,
-        "trueCount" : null,
-        "falseCount" : null,
-        "errCount" : null,
-        "exprOrg" : "UDFPCTimezone.getTimeFromDate(S.column3) ==\"00:00:00\"",
-        "tc" : null,
-        "fc" : null,
-        "er" : null,
-        "name" : null,
-        "ve" : 0,
-        "exporg" : null
-      }, {
-        "exprID" : 1179303,
-        "exprLogID" : 0,
-        "exprName" : "UDF2",
-        "expression" : "UDFPCTimezone.abc(S.column1)",
+        "exprName" : "UDF-MinusMonths",
+        "expression" : "UDFPCTimezone.minusMonths(S.column1)",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -188,7 +165,30 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "UDFPCTimezone.abc(S.column1)",
+        "exprOrg" : "UDFPCTimezone.minusMonths(S.column1)",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      }, {
+        "exprID" : 1183463,
+        "exprLogID" : 0,
+        "exprName" : "UDF-getDayOfMonth",
+        "expression" : "UDFPCTimezone.getDayOfMonthFunc(S.column1)",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 1178432,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 1178433,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "UDFPCTimezone.getDayOfMonthFunc(S.column1)",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -309,7 +309,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from REGRESSION_DATABASE.NEWTABLE_1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179326,
+          "srcTgtColId" : 1183600,
           "ruleClsPropId" : 1178448,
           "srcTrgColName" : "column1",
           "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -318,9 +318,9 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 1
+          "displayIndex" : 2
         }, {
-          "srcTgtColId" : 1179327,
+          "srcTgtColId" : 1183601,
           "ruleClsPropId" : 1178448,
           "srcTrgColName" : "column2",
           "srcTrgColDataType" : "NUMBER",
@@ -329,9 +329,9 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 2
+          "displayIndex" : 3
         }, {
-          "srcTgtColId" : 1179328,
+          "srcTgtColId" : 1183602,
           "ruleClsPropId" : 1178448,
           "srcTrgColName" : "column3",
           "srcTrgColDataType" : "DATE",
@@ -340,9 +340,9 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 3
+          "displayIndex" : 4
         }, {
-          "srcTgtColId" : 1179329,
+          "srcTgtColId" : 1183603,
           "ruleClsPropId" : 1178448,
           "srcTrgColName" : "column4",
           "srcTrgColDataType" : "TIMESTAMP",
@@ -351,7 +351,7 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 4
+          "displayIndex" : 5
         } ],
         "fileContent" : null
       }, {
@@ -432,7 +432,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1179331,
+          "srcTgtColId" : 1183605,
           "ruleClsPropId" : 1178461,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -475,7 +475,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1179326,
+      "srcTgtColId" : 1183600,
       "ruleClsPropId" : 1178448,
       "srcTrgColName" : "column1",
       "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
@@ -484,9 +484,9 @@
       "joinList" : null,
       "mapColName" : "column1",
       "colFormat" : null,
-      "displayIndex" : 1
+      "displayIndex" : 2
     }, {
-      "srcTgtColId" : 1179327,
+      "srcTgtColId" : 1183601,
       "ruleClsPropId" : 1178448,
       "srcTrgColName" : "column2",
       "srcTrgColDataType" : "NUMBER",
@@ -495,9 +495,9 @@
       "joinList" : null,
       "mapColName" : "column2",
       "colFormat" : null,
-      "displayIndex" : 2
+      "displayIndex" : 3
     }, {
-      "srcTgtColId" : 1179328,
+      "srcTgtColId" : 1183602,
       "ruleClsPropId" : 1178448,
       "srcTrgColName" : "column3",
       "srcTrgColDataType" : "DATE",
@@ -506,9 +506,9 @@
       "joinList" : null,
       "mapColName" : "column3",
       "colFormat" : null,
-      "displayIndex" : 3
+      "displayIndex" : 4
     }, {
-      "srcTgtColId" : 1179329,
+      "srcTgtColId" : 1183603,
       "ruleClsPropId" : 1178448,
       "srcTrgColName" : "column4",
       "srcTrgColDataType" : "TIMESTAMP",
@@ -517,9 +517,9 @@
       "joinList" : null,
       "mapColName" : "column4",
       "colFormat" : null,
-      "displayIndex" : 4
+      "displayIndex" : 5
     }, {
-      "srcTgtColId" : 1179331,
+      "srcTgtColId" : 1183605,
       "ruleClsPropId" : 1178461,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -531,9 +531,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1179333,
-      "srcColId" : 1179326,
-      "trgColId" : 1179331,
+      "colMapId" : 1183607,
+      "srcColId" : 1183600,
+      "trgColId" : 1183605,
       "colMapType" : "join",
       "srcColName" : "column1",
       "tgtColName" : "cnt",
@@ -558,10 +558,10 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 1179303,
+      "exprID" : 1183462,
       "exprLogID" : 0,
-      "exprName" : "UDF2",
-      "expression" : "UDFPCTimezone.abc(S.column1)",
+      "exprName" : "UDF-MinusMonths",
+      "expression" : "UDFPCTimezone.minusMonths(S.column1)",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
@@ -581,14 +581,14 @@
       "ve" : 0,
       "exporg" : null
     }, {
-      "exprID" : 1178562,
+      "exprID" : 1183463,
       "exprLogID" : 0,
-      "exprName" : "UDF1",
-      "expression" : "UDFPCTimezone.getTimeFromDate(S.column3) ==\"00:00:00\"",
+      "exprName" : "UDF-getDayOfMonth",
+      "expression" : "UDFPCTimezone.getDayOfMonthFunc(S.column1)",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 5,
+      "exprIndex" : 1,
       "ruleId" : 1178432,
       "ruleInstanceId" : 0,
       "ruleClassId" : 1178433,
