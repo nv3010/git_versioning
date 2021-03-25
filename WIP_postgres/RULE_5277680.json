@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-03-25 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-03-25 00:00:00",
     "enterpriseErrorCode" : null,
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : null,
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 5277681,
     "successBody" : null,
     "failureBody" : null,
@@ -97,32 +97,60 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 5277702,
+        "paramId" : 404,
+        "paramMethod" : "setIsMultipleOutVaiables",
+        "paramValue" : "false",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5277703,
+        "paramId" : 83,
+        "paramMethod" : "setColumnsMInfo",
+        "paramValue" : "time_value^~^93^~^TIMESTAMP^~^0^~^1$~$cast(time_valueastimestampwithlocaltimezone)^~^-102^~^TIMESTAMP WITH LOCAL TIME ZONE^~^0^~^2",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5277704,
+        "paramId" : 82,
+        "paramMethod" : "setAppendOrderBy",
+        "paramValue" : "true",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5277705,
+        "paramId" : 84,
+        "paramMethod" : "setOrderByStr",
+        "paramValue" : "",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 5277709,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select hired, cast(hired as TIMESTAMP WITH LOCAL TIME ZONE) from staff",
+        "paramValue" : "select time_value, cast(time_value as TIMESTAMP WITH LOCAL TIME ZONE ) from REGRESSION_DATABASE.EMPLOYEE_50MILLION_RECORDS",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5277711,
+          "srcTgtColId" : 5277716,
           "ruleClsPropId" : 5277709,
-          "srcTrgColName" : "hired",
+          "srcTrgColName" : "time_value",
           "srcTrgColDataType" : "TIMESTAMP",
           "colFlagType" : "src",
           "srcTrgColVisible" : 1,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
-          "displayIndex" : 1
+          "displayIndex" : 22
         }, {
-          "srcTgtColId" : 5277712,
+          "srcTgtColId" : 5277717,
           "ruleClsPropId" : 5277709,
-          "srcTrgColName" : "cast(hiredastimestampwithlocaltimezone)",
+          "srcTrgColName" : "cast(time_valueastimestampwithlocaltimezone)",
           "srcTrgColDataType" : "TIMESTAMP WITH LOCAL TIME ZONE",
           "colFlagType" : "src",
           "srcTrgColVisible" : 1,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
-          "displayIndex" : 0
+          "displayIndex" : 23
         } ],
         "fileContent" : null
       }, {
@@ -136,34 +164,6 @@
         "ruleClsPropID" : 5277707,
         "paramId" : 337,
         "paramMethod" : "setIsStoredProcedure",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277705,
-        "paramId" : 84,
-        "paramMethod" : "setOrderByStr",
-        "paramValue" : "",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277704,
-        "paramId" : 82,
-        "paramMethod" : "setAppendOrderBy",
-        "paramValue" : "true",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277703,
-        "paramId" : 83,
-        "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "hired^~^93^~^TIMESTAMP^~^0^~^1$~$cast(hiredastimestampwithlocaltimezone)^~^-102^~^TIMESTAMP WITH LOCAL TIME ZONE^~^0^~^2",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277702,
-        "paramId" : 404,
-        "paramMethod" : "setIsMultipleOutVaiables",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
@@ -198,12 +198,33 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 5277696,
+        "paramId" : 82,
+        "paramMethod" : "setAppendOrderBy",
+        "paramValue" : "false",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5277697,
+        "paramId" : 16,
+        "paramMethod" : "setConnId",
+        "paramValue" : "2523555",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5277698,
+        "paramId" : 83,
+        "paramMethod" : "setColumnsMInfo",
+        "paramValue" : "cnt^~^12^~^String^~^20^~^1",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 5277699,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5277701,
+          "srcTgtColId" : 5277719,
           "ruleClsPropId" : 5277699,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -214,27 +235,6 @@
           "colFormat" : "",
           "displayIndex" : 0
         } ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277698,
-        "paramId" : 83,
-        "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "cnt^~^12^~^String^~^20^~^1",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277697,
-        "paramId" : 16,
-        "paramMethod" : "setConnId",
-        "paramValue" : "2523555",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277696,
-        "paramId" : 82,
-        "paramMethod" : "setAppendOrderBy",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -265,23 +265,23 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5277713,
-        "srcColId" : 5277711,
-        "trgColId" : 5277701,
+        "colMapId" : 5277721,
+        "srcColId" : 5277716,
+        "trgColId" : 5277719,
         "colMapType" : "join",
-        "srcColName" : "hired",
+        "srcColName" : "time_value",
         "tgtColName" : "cnt",
-        "colMapExpr" : "cnt=hired",
+        "colMapExpr" : "cnt=time_value",
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 5277695,
-        "paramId" : 465,
-        "paramMethod" : "setReportXlsx",
-        "paramValue" : "No",
-        "srcTrgTbllist" : null,
+        "ruleClsPropID" : 5277692,
+        "paramId" : 531,
+        "paramMethod" : "setThresholdExpression",
+        "paramValue" : "",
+        "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 5277694,
@@ -291,51 +291,16 @@
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5277692,
-        "paramId" : 531,
-        "paramMethod" : "setThresholdExpression",
-        "paramValue" : "",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277691,
-        "paramId" : 9,
-        "paramMethod" : "setSourceObject",
-        "paramValue" : "GetData11",
+        "ruleClsPropID" : 5277695,
+        "paramId" : 465,
+        "paramMethod" : "setReportXlsx",
+        "paramValue" : "No",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5277690,
-        "paramId" : 10,
-        "paramMethod" : "setTargetObject",
-        "paramValue" : "GetData21",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277689,
-        "paramId" : 798,
-        "paramMethod" : "setEngineType",
-        "paramValue" : "V8",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277688,
-        "paramId" : 22,
-        "paramMethod" : "setMaxRowCount",
-        "paramValue" : "-1",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277687,
-        "paramId" : 23,
-        "paramMethod" : "setMaxErrorCount",
-        "paramValue" : "500",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5277686,
-        "paramId" : 24,
-        "paramMethod" : "setShowErrorData",
+        "ruleClsPropID" : 5277684,
+        "paramId" : 73,
+        "paramMethod" : "setLoadDataFlag",
         "paramValue" : "No",
         "srcTrgTbllist" : null,
         "fileContent" : null
@@ -347,10 +312,45 @@
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5277684,
-        "paramId" : 73,
-        "paramMethod" : "setLoadDataFlag",
+        "ruleClsPropID" : 5277686,
+        "paramId" : 24,
+        "paramMethod" : "setShowErrorData",
         "paramValue" : "No",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5277687,
+        "paramId" : 23,
+        "paramMethod" : "setMaxErrorCount",
+        "paramValue" : "500",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5277688,
+        "paramId" : 22,
+        "paramMethod" : "setMaxRowCount",
+        "paramValue" : "-1",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5277689,
+        "paramId" : 798,
+        "paramMethod" : "setEngineType",
+        "paramValue" : "V8",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5277690,
+        "paramId" : 10,
+        "paramMethod" : "setTargetObject",
+        "paramValue" : "GetData21",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5277691,
+        "paramId" : 9,
+        "paramMethod" : "setSourceObject",
+        "paramValue" : "GetData11",
         "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
@@ -363,7 +363,29 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5277701,
+      "srcTgtColId" : 5277716,
+      "ruleClsPropId" : 5277709,
+      "srcTrgColName" : "time_value",
+      "srcTrgColDataType" : "TIMESTAMP",
+      "colFlagType" : "src",
+      "srcTrgColVisible" : 1,
+      "joinList" : null,
+      "mapColName" : "time_value",
+      "colFormat" : "",
+      "displayIndex" : 22
+    }, {
+      "srcTgtColId" : 5277717,
+      "ruleClsPropId" : 5277709,
+      "srcTrgColName" : "cast(time_valueastimestampwithlocaltimezone)",
+      "srcTrgColDataType" : "TIMESTAMP WITH LOCAL TIME ZONE",
+      "colFlagType" : "src",
+      "srcTrgColVisible" : 1,
+      "joinList" : null,
+      "mapColName" : "cast(time_valueastimestampwithlocaltimezone)",
+      "colFormat" : "",
+      "displayIndex" : 23
+    }, {
+      "srcTgtColId" : 5277719,
       "ruleClsPropId" : 5277699,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -373,37 +395,15 @@
       "mapColName" : "cnt",
       "colFormat" : "",
       "displayIndex" : 0
-    }, {
-      "srcTgtColId" : 5277711,
-      "ruleClsPropId" : 5277709,
-      "srcTrgColName" : "hired",
-      "srcTrgColDataType" : "TIMESTAMP",
-      "colFlagType" : "src",
-      "srcTrgColVisible" : 1,
-      "joinList" : null,
-      "mapColName" : "hired",
-      "colFormat" : "",
-      "displayIndex" : 1
-    }, {
-      "srcTgtColId" : 5277712,
-      "ruleClsPropId" : 5277709,
-      "srcTrgColName" : "cast(hiredastimestampwithlocaltimezone)",
-      "srcTrgColDataType" : "TIMESTAMP WITH LOCAL TIME ZONE",
-      "colFlagType" : "src",
-      "srcTrgColVisible" : 1,
-      "joinList" : null,
-      "mapColName" : "cast(hiredastimestampwithlocaltimezone)",
-      "colFormat" : "",
-      "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5277713,
-      "srcColId" : 5277711,
-      "trgColId" : 5277701,
+      "colMapId" : 5277721,
+      "srcColId" : 5277716,
+      "trgColId" : 5277719,
       "colMapType" : "join",
-      "srcColName" : "hired",
+      "srcColName" : "time_value",
       "tgtColName" : "cnt",
-      "colMapExpr" : "cnt=hired",
+      "colMapExpr" : "cnt=time_value",
       "srcTrgColMapVisible" : 0,
       "displayIndex" : 0
     } ],
