@@ -100,11 +100,11 @@
         "ruleClsPropID" : 9905526,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*)-50 as max from REGRESSION_DATABASE.STAFF",
+        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9905535,
+          "srcTgtColId" : 9905552,
           "ruleClsPropId" : 9905526,
-          "srcTrgColName" : "max",
+          "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -146,7 +146,7 @@
         "ruleClsPropID" : 9905533,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "max^~^2^~^NUMBER^~^0^~^1",
+        "paramValue" : "cnt^~^2^~^NUMBER^~^0^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -190,9 +190,9 @@
         "ruleClsPropID" : 9905536,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF100",
+        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9905545,
+          "srcTgtColId" : 9905555,
           "ruleClsPropId" : 9905536,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -275,13 +275,13 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9905549,
-        "srcColId" : 9905535,
-        "trgColId" : 9905545,
+        "colMapId" : 9905556,
+        "srcColId" : 9905552,
+        "trgColId" : 9905555,
         "colMapType" : "join",
-        "srcColName" : "max",
+        "srcColName" : "cnt",
         "tgtColName" : "cnt",
-        "colMapExpr" : "cnt=max",
+        "colMapExpr" : "cnt=cnt",
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
@@ -317,18 +317,18 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9905535,
+      "srcTgtColId" : 9905552,
       "ruleClsPropId" : 9905526,
-      "srcTrgColName" : "max",
+      "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "max",
+      "mapColName" : "cnt",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9905545,
+      "srcTgtColId" : 9905555,
       "ruleClsPropId" : 9905536,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -340,13 +340,13 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9905549,
-      "srcColId" : 9905535,
-      "trgColId" : 9905545,
+      "colMapId" : 9905556,
+      "srcColId" : 9905552,
+      "trgColId" : 9905555,
       "colMapType" : "join",
-      "srcColName" : "max",
+      "srcColName" : "cnt",
       "tgtColName" : "cnt",
-      "colMapExpr" : "cnt=max",
+      "colMapExpr" : "cnt=cnt",
       "srcTrgColMapVisible" : 0,
       "displayIndex" : 0
     } ],
