@@ -12,17 +12,17 @@
     "folderType" : null,
     "startTime" : null,
     "endTime" : null,
-    "ruleName" : "R001-V8-A-B-Recon Rule with single join on number datatype column",
+    "ruleName" : "R001-V8 HT-A-B-Recon Rule with multiple join on number and timestamp with timezone datatype column",
     "displayName" : null,
     "rulePurpose" : null,
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-03-18 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-03-25 00:00:00",
     "enterpriseErrorCode" : null,
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -42,28 +42,28 @@
     "failureHeader" : null,
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
-    "srcConnId" : 992370,
-    "trgConnId" : 992370,
+    "srcConnId" : 2192443,
+    "trgConnId" : 2192443,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
-    "srcConn" : "OracleQA",
-    "trgConn" : "OracleQA",
+    "srcConn" : "OracleTest",
+    "trgConn" : "OracleTest",
     "elapseTime" : 0,
     "parameterId" : null,
     "type" : null,
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : null,
-    "ruleModifiedByName" : null,
-    "ruleClassId" : 5272716,
+    "ruleModifiedByName" : "admin",
+    "ruleClassId" : 5275185,
     "successBody" : null,
     "failureBody" : null,
     "templateId" : 202,
     "templateIdFail" : 202,
     "reportIdList" : [ ],
     "contextInstanceId" : 0,
-    "srcConnFlag" : "REGULAR",
-    "trgConnFlag" : "REGULAR",
+    "srcConnFlag" : "PROXY",
+    "trgConnFlag" : "PROXY",
     "degreeOfParallelism" : 0,
     "templateName" : "Rule Template-Default",
     "templateFailureName" : "Rule Template-Default",
@@ -77,15 +77,15 @@
     "classVOList" : [ {
       "classId" : 1,
       "name" : null,
-      "ruleClassId" : 5272718,
+      "ruleClassId" : 5275187,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
       "classObjName" : "ICE_1615800047213",
       "queryBuilderXML" : null,
-      "connId" : 992370,
+      "connId" : 2192443,
       "resultType" : "a-b",
       "connName" : null,
       "connUrl" : null,
@@ -97,62 +97,62 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 5272734,
+        "ruleClsPropID" : 5275203,
         "paramId" : 404,
         "paramMethod" : "setIsMultipleOutVaiables",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272733,
+        "ruleClsPropID" : 5275202,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
         "paramValue" : "column1^~^-101^~^TIMESTAMP WITH TIME ZONE^~^0^~^1$~$column2^~^2^~^NUMBER^~^38^~^2$~$column3^~^93^~^DATE^~^0^~^3$~$column4^~^93^~^TIMESTAMP^~^0^~^4",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272732,
+        "ruleClsPropID" : 5275201,
         "paramId" : 82,
         "paramMethod" : "setAppendOrderBy",
         "paramValue" : "true",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272731,
+        "ruleClsPropID" : 5275200,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "2",
+        "paramValue" : "1,2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272730,
+        "ruleClsPropID" : 5275199,
         "paramId" : 491,
         "paramMethod" : "setDeferredSort",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272729,
+        "ruleClsPropID" : 5275198,
         "paramId" : 337,
         "paramMethod" : "setIsStoredProcedure",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272728,
+        "ruleClsPropID" : 5275197,
         "paramId" : 16,
         "paramMethod" : "setConnId",
         "paramValue" : "453",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272727,
+        "ruleClsPropID" : 5275196,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from REGRESSION_DATABASE.NEWTABLE_1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5272755,
-          "ruleClsPropId" : 5272727,
+          "srcTgtColId" : 5275225,
+          "ruleClsPropId" : 5275196,
           "srcTrgColName" : "column1",
           "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
           "colFlagType" : "tgt",
@@ -160,10 +160,10 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 5
+          "displayIndex" : 4
         }, {
-          "srcTgtColId" : 5272756,
-          "ruleClsPropId" : 5272727,
+          "srcTgtColId" : 5275226,
+          "ruleClsPropId" : 5275196,
           "srcTrgColName" : "column2",
           "srcTrgColDataType" : "NUMBER",
           "colFlagType" : "tgt",
@@ -171,10 +171,10 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 6
+          "displayIndex" : 5
         }, {
-          "srcTgtColId" : 5272757,
-          "ruleClsPropId" : 5272727,
+          "srcTgtColId" : 5275227,
+          "ruleClsPropId" : 5275196,
           "srcTrgColName" : "column3",
           "srcTrgColDataType" : "DATE",
           "colFlagType" : "tgt",
@@ -182,10 +182,10 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 7
+          "displayIndex" : 6
         }, {
-          "srcTgtColId" : 5272758,
-          "ruleClsPropId" : 5272727,
+          "srcTgtColId" : 5275228,
+          "ruleClsPropId" : 5275196,
           "srcTrgColName" : "column4",
           "srcTrgColDataType" : "TIMESTAMP",
           "colFlagType" : "tgt",
@@ -193,7 +193,7 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 8
+          "displayIndex" : 7
         } ],
         "fileContent" : null
       } ],
@@ -207,15 +207,15 @@
     }, {
       "classId" : 1,
       "name" : null,
-      "ruleClassId" : 5272717,
+      "ruleClassId" : 5275186,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
       "classObjName" : "ICE_1615800047213",
       "queryBuilderXML" : null,
-      "connId" : 992370,
+      "connId" : 2192443,
       "resultType" : "a-b",
       "connName" : null,
       "connUrl" : null,
@@ -227,62 +227,62 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 5272726,
+        "ruleClsPropID" : 5275195,
         "paramId" : 404,
         "paramMethod" : "setIsMultipleOutVaiables",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272725,
+        "ruleClsPropID" : 5275194,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
         "paramValue" : "column1^~^-101^~^TIMESTAMP WITH TIME ZONE^~^0^~^1$~$column2^~^2^~^NUMBER^~^38^~^2$~$column3^~^93^~^DATE^~^0^~^3$~$column4^~^93^~^TIMESTAMP^~^0^~^4",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272724,
+        "ruleClsPropID" : 5275193,
         "paramId" : 82,
         "paramMethod" : "setAppendOrderBy",
         "paramValue" : "true",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272723,
+        "ruleClsPropID" : 5275192,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "2",
+        "paramValue" : "1,2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272722,
+        "ruleClsPropID" : 5275191,
         "paramId" : 491,
         "paramMethod" : "setDeferredSort",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272721,
+        "ruleClsPropID" : 5275190,
         "paramId" : 337,
         "paramMethod" : "setIsStoredProcedure",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272720,
+        "ruleClsPropID" : 5275189,
         "paramId" : 16,
         "paramMethod" : "setConnId",
         "paramValue" : "453",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272719,
+        "ruleClsPropID" : 5275188,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from REGRESSION_DATABASE.NEWTABLE_1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5272751,
-          "ruleClsPropId" : 5272719,
+          "srcTgtColId" : 5275221,
+          "ruleClsPropId" : 5275188,
           "srcTrgColName" : "column1",
           "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
           "colFlagType" : "src",
@@ -290,10 +290,10 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 1
+          "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5272752,
-          "ruleClsPropId" : 5272719,
+          "srcTgtColId" : 5275222,
+          "ruleClsPropId" : 5275188,
           "srcTrgColName" : "column2",
           "srcTrgColDataType" : "NUMBER",
           "colFlagType" : "src",
@@ -301,10 +301,10 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 2
+          "displayIndex" : 1
         }, {
-          "srcTgtColId" : 5272753,
-          "ruleClsPropId" : 5272719,
+          "srcTgtColId" : 5275223,
+          "ruleClsPropId" : 5275188,
           "srcTrgColName" : "column3",
           "srcTrgColDataType" : "DATE",
           "colFlagType" : "src",
@@ -312,10 +312,10 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 3
+          "displayIndex" : 2
         }, {
-          "srcTgtColId" : 5272754,
-          "ruleClsPropId" : 5272719,
+          "srcTgtColId" : 5275224,
+          "ruleClsPropId" : 5275188,
           "srcTrgColName" : "column4",
           "srcTrgColDataType" : "TIMESTAMP",
           "colFlagType" : "src",
@@ -323,7 +323,7 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 4
+          "displayIndex" : 3
         } ],
         "fileContent" : null
       } ],
@@ -337,9 +337,9 @@
     }, {
       "classId" : 3,
       "name" : null,
-      "ruleClassId" : 5272716,
+      "ruleClassId" : 5275185,
       "connType" : null,
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
@@ -355,89 +355,106 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5272759,
-        "srcColId" : 5272752,
-        "trgColId" : 5272756,
+        "colMapId" : 5275229,
+        "srcColId" : 5275221,
+        "trgColId" : 5275225,
+        "colMapType" : "join",
+        "srcColName" : "column1",
+        "tgtColName" : "column1",
+        "colMapExpr" : "column1=column1",
+        "srcTrgColMapVisible" : 1,
+        "displayIndex" : 9
+      }, {
+        "colMapId" : 5275230,
+        "srcColId" : 5275222,
+        "trgColId" : 5275226,
         "colMapType" : "join",
         "srcColName" : "column2",
         "tgtColName" : "column2",
         "colMapExpr" : "column2=column2",
         "srcTrgColMapVisible" : 1,
-        "displayIndex" : 0
+        "displayIndex" : 10
       } ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 5272745,
+        "ruleClsPropID" : 5275219,
+        "paramId" : 487,
+        "paramMethod" : "setDegreeOfParallelism",
+        "paramValue" : "1",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5275214,
         "paramId" : 531,
         "paramMethod" : "setThresholdExpression",
         "paramValue" : "",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272744,
+        "ruleClsPropID" : 5275213,
         "paramId" : 530,
         "paramMethod" : "setThresholdFlag",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272743,
+        "ruleClsPropID" : 5275212,
         "paramId" : 465,
         "paramMethod" : "setReportXlsx",
         "paramValue" : "No",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272742,
+        "ruleClsPropID" : 5275211,
         "paramId" : 73,
         "paramMethod" : "setLoadDataFlag",
         "paramValue" : "No",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272741,
+        "ruleClsPropID" : 5275210,
         "paramId" : 72,
         "paramMethod" : "setTimeOut",
         "paramValue" : null,
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272740,
+        "ruleClsPropID" : 5275209,
         "paramId" : 24,
         "paramMethod" : "setShowErrorData",
         "paramValue" : "No",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272739,
+        "ruleClsPropID" : 5275208,
         "paramId" : 23,
         "paramMethod" : "setMaxErrorCount",
         "paramValue" : "500",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272738,
+        "ruleClsPropID" : 5275207,
         "paramId" : 22,
         "paramMethod" : "setMaxRowCount",
         "paramValue" : "-1",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272737,
+        "ruleClsPropID" : 5275206,
         "paramId" : 798,
         "paramMethod" : "setEngineType",
         "paramValue" : "V8",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272736,
+        "ruleClsPropID" : 5275205,
         "paramId" : 10,
         "paramMethod" : "setTargetObject",
         "paramValue" : "GetData21",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5272735,
+        "ruleClsPropID" : 5275204,
         "paramId" : 9,
         "paramMethod" : "setSourceObject",
         "paramValue" : "GetData11",
@@ -453,30 +470,30 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5272751,
-      "ruleClsPropId" : 5272719,
+      "srcTgtColId" : 5275221,
+      "ruleClsPropId" : 5275188,
       "srcTrgColName" : "column1",
       "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
       "colFlagType" : "src",
       "srcTrgColVisible" : 1,
       "joinList" : null,
       "mapColName" : "column1",
+      "colFormat" : null,
+      "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 5275222,
+      "ruleClsPropId" : 5275188,
+      "srcTrgColName" : "column2",
+      "srcTrgColDataType" : "NUMBER",
+      "colFlagType" : "src",
+      "srcTrgColVisible" : 1,
+      "joinList" : null,
+      "mapColName" : "column2",
       "colFormat" : null,
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 5272752,
-      "ruleClsPropId" : 5272719,
-      "srcTrgColName" : "column2",
-      "srcTrgColDataType" : "NUMBER",
-      "colFlagType" : "src",
-      "srcTrgColVisible" : 1,
-      "joinList" : null,
-      "mapColName" : "column2",
-      "colFormat" : null,
-      "displayIndex" : 2
-    }, {
-      "srcTgtColId" : 5272753,
-      "ruleClsPropId" : 5272719,
+      "srcTgtColId" : 5275223,
+      "ruleClsPropId" : 5275188,
       "srcTrgColName" : "column3",
       "srcTrgColDataType" : "DATE",
       "colFlagType" : "src",
@@ -484,10 +501,10 @@
       "joinList" : null,
       "mapColName" : "column3",
       "colFormat" : null,
-      "displayIndex" : 3
+      "displayIndex" : 2
     }, {
-      "srcTgtColId" : 5272754,
-      "ruleClsPropId" : 5272719,
+      "srcTgtColId" : 5275224,
+      "ruleClsPropId" : 5275188,
       "srcTrgColName" : "column4",
       "srcTrgColDataType" : "TIMESTAMP",
       "colFlagType" : "src",
@@ -495,10 +512,10 @@
       "joinList" : null,
       "mapColName" : "column4",
       "colFormat" : null,
-      "displayIndex" : 4
+      "displayIndex" : 3
     }, {
-      "srcTgtColId" : 5272755,
-      "ruleClsPropId" : 5272727,
+      "srcTgtColId" : 5275225,
+      "ruleClsPropId" : 5275196,
       "srcTrgColName" : "column1",
       "srcTrgColDataType" : "TIMESTAMP WITH TIME ZONE",
       "colFlagType" : "tgt",
@@ -506,10 +523,10 @@
       "joinList" : null,
       "mapColName" : "column1",
       "colFormat" : null,
-      "displayIndex" : 5
+      "displayIndex" : 4
     }, {
-      "srcTgtColId" : 5272756,
-      "ruleClsPropId" : 5272727,
+      "srcTgtColId" : 5275226,
+      "ruleClsPropId" : 5275196,
       "srcTrgColName" : "column2",
       "srcTrgColDataType" : "NUMBER",
       "colFlagType" : "tgt",
@@ -517,10 +534,10 @@
       "joinList" : null,
       "mapColName" : "column2",
       "colFormat" : null,
-      "displayIndex" : 6
+      "displayIndex" : 5
     }, {
-      "srcTgtColId" : 5272757,
-      "ruleClsPropId" : 5272727,
+      "srcTgtColId" : 5275227,
+      "ruleClsPropId" : 5275196,
       "srcTrgColName" : "column3",
       "srcTrgColDataType" : "DATE",
       "colFlagType" : "tgt",
@@ -528,10 +545,10 @@
       "joinList" : null,
       "mapColName" : "column3",
       "colFormat" : null,
-      "displayIndex" : 7
+      "displayIndex" : 6
     }, {
-      "srcTgtColId" : 5272758,
-      "ruleClsPropId" : 5272727,
+      "srcTgtColId" : 5275228,
+      "ruleClsPropId" : 5275196,
       "srcTrgColName" : "column4",
       "srcTrgColDataType" : "TIMESTAMP",
       "colFlagType" : "tgt",
@@ -539,18 +556,28 @@
       "joinList" : null,
       "mapColName" : "column4",
       "colFormat" : null,
-      "displayIndex" : 8
+      "displayIndex" : 7
     } ],
     "colMapList" : [ {
-      "colMapId" : 5272759,
-      "srcColId" : 5272752,
-      "trgColId" : 5272756,
+      "colMapId" : 5275229,
+      "srcColId" : 5275221,
+      "trgColId" : 5275225,
+      "colMapType" : "join",
+      "srcColName" : "column1",
+      "tgtColName" : "column1",
+      "colMapExpr" : "column1=column1",
+      "srcTrgColMapVisible" : 1,
+      "displayIndex" : 9
+    }, {
+      "colMapId" : 5275230,
+      "srcColId" : 5275222,
+      "trgColId" : 5275226,
       "colMapType" : "join",
       "srcColName" : "column2",
       "tgtColName" : "column2",
       "colMapExpr" : "column2=column2",
       "srcTrgColMapVisible" : 1,
-      "displayIndex" : 0
+      "displayIndex" : 10
     } ],
     "objectVOList" : null,
     "srcCount" : null,
