@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as max from REGRESSION_DATABASE.CUSTOMER_TABLE",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9906443,
+          "srcTgtColId" : 9906450,
           "ruleClsPropId" : 9906374,
           "srcTrgColName" : "max",
           "srcTrgColDataType" : "NUMBER",
@@ -192,7 +192,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.CUSTOMER_NEW",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9906446,
+          "srcTgtColId" : 9906453,
           "ruleClsPropId" : 9906384,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -275,9 +275,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9906447,
-        "srcColId" : 9906443,
-        "trgColId" : 9906446,
+        "colMapId" : 9906454,
+        "srcColId" : 9906450,
+        "trgColId" : 9906453,
         "colMapType" : "join",
         "srcColName" : "max",
         "tgtColName" : "cnt",
@@ -285,7 +285,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 9906455,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_5S1Y83X",
+        "expression" : "S.max == T.cnt",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 0,
+        "ruleId" : 9906370,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 9906373,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.max == T.cnt",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 9906394,
         "paramId" : 9,
@@ -317,7 +340,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9906443,
+      "srcTgtColId" : 9906450,
       "ruleClsPropId" : 9906374,
       "srcTrgColName" : "max",
       "srcTrgColDataType" : "NUMBER",
@@ -328,7 +351,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9906446,
+      "srcTgtColId" : 9906453,
       "ruleClsPropId" : 9906384,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -340,9 +363,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9906447,
-      "srcColId" : 9906443,
-      "trgColId" : 9906446,
+      "colMapId" : 9906454,
+      "srcColId" : 9906450,
+      "trgColId" : 9906453,
       "colMapType" : "join",
       "srcColName" : "max",
       "tgtColName" : "cnt",
@@ -366,6 +389,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 9906455,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_5S1Y83X",
+      "expression" : "S.max == T.cnt",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 0,
+      "ruleId" : 9906370,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 9906373,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
