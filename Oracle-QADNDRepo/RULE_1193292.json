@@ -100,9 +100,9 @@
         "ruleClsPropID" : 1193296,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select jobcode,count(jobcode) from REGRESSION_DATABASE.STAFF\ngroup by jobcode",
+        "paramValue" : "select jobcode,count(jobcode) from REGRESSION_DATABASE.STAFF\ngroup by jobcode\nhaving count(jobcode) > 1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1193346,
+          "srcTgtColId" : 1193354,
           "ruleClsPropId" : 1193296,
           "srcTrgColName" : "jobcode",
           "srcTrgColDataType" : "VARCHAR2",
@@ -113,7 +113,7 @@
           "colFormat" : null,
           "displayIndex" : 4
         }, {
-          "srcTgtColId" : 1193347,
+          "srcTgtColId" : 1193355,
           "ruleClsPropId" : 1193296,
           "srcTrgColName" : "count(jobcode)",
           "srcTrgColDataType" : "NUMBER",
@@ -203,7 +203,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1193349,
+          "srcTgtColId" : 1193357,
           "ruleClsPropId" : 1193322,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -265,9 +265,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1193351,
-        "srcColId" : 1193346,
-        "trgColId" : 1193349,
+        "colMapId" : 1193359,
+        "srcColId" : 1193354,
+        "trgColId" : 1193357,
         "colMapType" : "join",
         "srcColName" : "jobcode",
         "tgtColName" : "cnt",
@@ -363,7 +363,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1193346,
+      "srcTgtColId" : 1193354,
       "ruleClsPropId" : 1193296,
       "srcTrgColName" : "jobcode",
       "srcTrgColDataType" : "VARCHAR2",
@@ -374,7 +374,7 @@
       "colFormat" : null,
       "displayIndex" : 4
     }, {
-      "srcTgtColId" : 1193347,
+      "srcTgtColId" : 1193355,
       "ruleClsPropId" : 1193296,
       "srcTrgColName" : "count(jobcode)",
       "srcTrgColDataType" : "NUMBER",
@@ -385,7 +385,7 @@
       "colFormat" : null,
       "displayIndex" : 5
     }, {
-      "srcTgtColId" : 1193349,
+      "srcTgtColId" : 1193357,
       "ruleClsPropId" : 1193322,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -397,9 +397,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1193351,
-      "srcColId" : 1193346,
-      "trgColId" : 1193349,
+      "colMapId" : 1193359,
+      "srcColId" : 1193354,
+      "trgColId" : 1193357,
       "colMapType" : "join",
       "srcColName" : "jobcode",
       "tgtColName" : "cnt",
