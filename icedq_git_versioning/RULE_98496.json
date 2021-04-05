@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-04-05 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-04-05 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : null,
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 98499,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 98533,
-        "srcColId" : 98508,
-        "trgColId" : 98520,
+        "colMapId" : 98547,
+        "srcColId" : 98537,
+        "trgColId" : 98545,
         "colMapType" : "join",
         "srcColName" : "id",
         "tgtColName" : "cnt",
@@ -106,10 +106,10 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 98534,
+        "exprID" : 98548,
         "exprLogID" : 0,
-        "exprName" : "EXPR_WZ70MEE",
-        "expression" : "S.name != null",
+        "exprName" : "EXPR_USBAMUW",
+        "expression" : "S.id > 0",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -121,7 +121,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.name != null",
+        "exprOrg" : "S.id > 0",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -242,18 +242,18 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from DBO.country",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 98508,
+          "srcTgtColId" : 98537,
           "ruleClsPropId" : 98500,
           "srcTrgColName" : "id",
           "srcTrgColDataType" : "int",
           "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
+          "srcTrgColVisible" : 1,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 98509,
+          "srcTgtColId" : 98538,
           "ruleClsPropId" : 98500,
           "srcTrgColName" : "iso",
           "srcTrgColDataType" : "char",
@@ -264,18 +264,18 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 98510,
+          "srcTgtColId" : 98539,
           "ruleClsPropId" : 98500,
           "srcTrgColName" : "name",
           "srcTrgColDataType" : "varchar",
           "colFlagType" : "src",
-          "srcTrgColVisible" : 1,
+          "srcTrgColVisible" : 0,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 98511,
+          "srcTgtColId" : 98540,
           "ruleClsPropId" : 98500,
           "srcTrgColName" : "nicename",
           "srcTrgColDataType" : "varchar",
@@ -286,7 +286,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 98512,
+          "srcTgtColId" : 98541,
           "ruleClsPropId" : 98500,
           "srcTrgColName" : "iso3",
           "srcTrgColDataType" : "char",
@@ -297,7 +297,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 98513,
+          "srcTgtColId" : 98542,
           "ruleClsPropId" : 98500,
           "srcTrgColName" : "numcode",
           "srcTrgColDataType" : "smallint",
@@ -308,7 +308,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 98514,
+          "srcTgtColId" : 98543,
           "ruleClsPropId" : 98500,
           "srcTrgColName" : "phonecode",
           "srcTrgColDataType" : "int",
@@ -391,7 +391,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 98520,
+          "srcTgtColId" : 98545,
           "ruleClsPropId" : 98515,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -434,18 +434,18 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 98508,
+      "srcTgtColId" : 98537,
       "ruleClsPropId" : 98500,
       "srcTrgColName" : "id",
       "srcTrgColDataType" : "int",
       "colFlagType" : "src",
-      "srcTrgColVisible" : 0,
+      "srcTrgColVisible" : 1,
       "joinList" : null,
       "mapColName" : "id",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 98509,
+      "srcTgtColId" : 98538,
       "ruleClsPropId" : 98500,
       "srcTrgColName" : "iso",
       "srcTrgColDataType" : "char",
@@ -456,18 +456,18 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 98510,
+      "srcTgtColId" : 98539,
       "ruleClsPropId" : 98500,
       "srcTrgColName" : "name",
       "srcTrgColDataType" : "varchar",
       "colFlagType" : "src",
-      "srcTrgColVisible" : 1,
+      "srcTrgColVisible" : 0,
       "joinList" : null,
       "mapColName" : "name",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 98511,
+      "srcTgtColId" : 98540,
       "ruleClsPropId" : 98500,
       "srcTrgColName" : "nicename",
       "srcTrgColDataType" : "varchar",
@@ -478,7 +478,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 98512,
+      "srcTgtColId" : 98541,
       "ruleClsPropId" : 98500,
       "srcTrgColName" : "iso3",
       "srcTrgColDataType" : "char",
@@ -489,7 +489,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 98513,
+      "srcTgtColId" : 98542,
       "ruleClsPropId" : 98500,
       "srcTrgColName" : "numcode",
       "srcTrgColDataType" : "smallint",
@@ -500,7 +500,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 98514,
+      "srcTgtColId" : 98543,
       "ruleClsPropId" : 98500,
       "srcTrgColName" : "phonecode",
       "srcTrgColDataType" : "int",
@@ -511,7 +511,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 98520,
+      "srcTgtColId" : 98545,
       "ruleClsPropId" : 98515,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -523,9 +523,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 98533,
-      "srcColId" : 98508,
-      "trgColId" : 98520,
+      "colMapId" : 98547,
+      "srcColId" : 98537,
+      "trgColId" : 98545,
       "colMapType" : "join",
       "srcColName" : "id",
       "tgtColName" : "cnt",
@@ -550,10 +550,10 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 98534,
+      "exprID" : 98548,
       "exprLogID" : 0,
-      "exprName" : "EXPR_WZ70MEE",
-      "expression" : "S.name != null",
+      "exprName" : "EXPR_USBAMUW",
+      "expression" : "S.id > 0",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
