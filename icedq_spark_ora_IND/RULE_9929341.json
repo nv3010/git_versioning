@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 9863435,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 9863435,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-04-06 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-04-06 00:00:00",
     "enterpriseErrorCode" : null,
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "Swara",
     "projectName" : null,
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "Swara",
     "ruleClassId" : 9929552,
     "successBody" : null,
     "failureBody" : null,
@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.CUSTOMER1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9929562,
+          "srcTgtColId" : 9929656,
           "ruleClsPropId" : 9929553,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -192,7 +192,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.CUSTOMER_COUNTRYCODE",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9929572,
+          "srcTgtColId" : 9929659,
           "ruleClsPropId" : 9929563,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -275,9 +275,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9929576,
-        "srcColId" : 9929562,
-        "trgColId" : 9929572,
+        "colMapId" : 9929660,
+        "srcColId" : 9929656,
+        "trgColId" : 9929659,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -285,7 +285,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 9929661,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_LYVBWF0",
+        "expression" : "S.cnt != T.cnt",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 0,
+        "ruleId" : 9929341,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 9929552,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.cnt != T.cnt",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 9929573,
         "paramId" : 9,
@@ -317,7 +340,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9929562,
+      "srcTgtColId" : 9929656,
       "ruleClsPropId" : 9929553,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -328,7 +351,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9929572,
+      "srcTgtColId" : 9929659,
       "ruleClsPropId" : 9929563,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -340,9 +363,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9929576,
-      "srcColId" : 9929562,
-      "trgColId" : 9929572,
+      "colMapId" : 9929660,
+      "srcColId" : 9929656,
+      "trgColId" : 9929659,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
@@ -366,6 +389,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 9929661,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_LYVBWF0",
+      "expression" : "S.cnt != T.cnt",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 0,
+      "ruleId" : 9929341,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 9929552,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
