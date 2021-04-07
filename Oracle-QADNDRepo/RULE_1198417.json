@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 1198020,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 1198020,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-04-07 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-04-07 00:00:00",
     "enterpriseErrorCode" : null,
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "SwaraS",
     "projectName" : null,
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "SwaraS",
     "ruleClassId" : 1198431,
     "successBody" : null,
     "failureBody" : null,
@@ -86,7 +86,7 @@
       "classObjName" : "ICE_1617795731841",
       "queryBuilderXML" : null,
       "connId" : 1198024,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select staffid as staff_id, sex as staff_gender, jobcode as staff_jobcode\nfrom REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1198441,
+          "srcTgtColId" : 1198465,
           "ruleClsPropId" : 1198432,
           "srcTrgColName" : "staff_id",
           "srcTrgColDataType" : "VARCHAR2",
@@ -113,27 +113,27 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1198442,
+          "srcTgtColId" : 1198466,
           "ruleClsPropId" : 1198432,
           "srcTrgColName" : "staff_gender",
           "srcTrgColDataType" : "CHAR",
           "colFlagType" : "src",
-          "srcTrgColVisible" : 1,
+          "srcTrgColVisible" : 0,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 1
+          "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1198443,
+          "srcTgtColId" : 1198467,
           "ruleClsPropId" : 1198432,
           "srcTrgColName" : "staff_jobcode",
           "srcTrgColDataType" : "VARCHAR2",
           "colFlagType" : "src",
-          "srcTrgColVisible" : 1,
+          "srcTrgColVisible" : 0,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : null,
-          "displayIndex" : 2
+          "displayIndex" : 0
         } ],
         "fileContent" : null
       }, {
@@ -198,7 +198,7 @@
       "classObjName" : "ICE_1617795731841",
       "queryBuilderXML" : null,
       "connId" : 1198024,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -214,7 +214,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1198449,
+          "srcTgtColId" : 1198469,
           "ruleClsPropId" : 1198444,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -267,7 +267,7 @@
       "classObjName" : "ICE_1617795731841",
       "queryBuilderXML" : null,
       "connId" : 0,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -276,9 +276,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1198462,
-        "srcColId" : 1198441,
-        "trgColId" : 1198449,
+        "colMapId" : 1198471,
+        "srcColId" : 1198465,
+        "trgColId" : 1198469,
         "colMapType" : "join",
         "srcColName" : "staff_id",
         "tgtColName" : "cnt",
@@ -286,7 +286,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 1198472,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_X6CO5M7",
+        "expression" : "S.staff_id == SID1677",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 1198417,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 1198431,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.staff_id == SID1677",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 1198450,
         "paramId" : 9,
@@ -374,7 +397,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1198441,
+      "srcTgtColId" : 1198465,
       "ruleClsPropId" : 1198432,
       "srcTrgColName" : "staff_id",
       "srcTrgColDataType" : "VARCHAR2",
@@ -385,29 +408,29 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1198442,
+      "srcTgtColId" : 1198466,
       "ruleClsPropId" : 1198432,
       "srcTrgColName" : "staff_gender",
       "srcTrgColDataType" : "CHAR",
       "colFlagType" : "src",
-      "srcTrgColVisible" : 1,
+      "srcTrgColVisible" : 0,
       "joinList" : null,
       "mapColName" : "staff_gender",
       "colFormat" : null,
-      "displayIndex" : 1
+      "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1198443,
+      "srcTgtColId" : 1198467,
       "ruleClsPropId" : 1198432,
       "srcTrgColName" : "staff_jobcode",
       "srcTrgColDataType" : "VARCHAR2",
       "colFlagType" : "src",
-      "srcTrgColVisible" : 1,
+      "srcTrgColVisible" : 0,
       "joinList" : null,
       "mapColName" : "staff_jobcode",
       "colFormat" : null,
-      "displayIndex" : 2
+      "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1198449,
+      "srcTgtColId" : 1198469,
       "ruleClsPropId" : 1198444,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -419,9 +442,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1198462,
-      "srcColId" : 1198441,
-      "trgColId" : 1198449,
+      "colMapId" : 1198471,
+      "srcColId" : 1198465,
+      "trgColId" : 1198469,
       "colMapType" : "join",
       "srcColName" : "staff_id",
       "tgtColName" : "cnt",
@@ -445,6 +468,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 1198472,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_X6CO5M7",
+      "expression" : "S.staff_id == SID1677",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 1198417,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 1198431,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
