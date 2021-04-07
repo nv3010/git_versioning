@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select staffid as staff_id, sex as staff_gender, jobcode as staff_jobcode\nfrom REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1198494,
+          "srcTgtColId" : 1198504,
           "ruleClsPropId" : 1198432,
           "srcTrgColName" : "staff_id",
           "srcTrgColDataType" : "VARCHAR2",
@@ -113,7 +113,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1198495,
+          "srcTgtColId" : 1198505,
           "ruleClsPropId" : 1198432,
           "srcTrgColName" : "staff_gender",
           "srcTrgColDataType" : "CHAR",
@@ -124,7 +124,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1198496,
+          "srcTgtColId" : 1198506,
           "ruleClsPropId" : 1198432,
           "srcTrgColName" : "staff_jobcode",
           "srcTrgColDataType" : "VARCHAR2",
@@ -214,7 +214,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1198498,
+          "srcTgtColId" : 1198508,
           "ruleClsPropId" : 1198444,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -276,9 +276,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1198500,
-        "srcColId" : 1198494,
-        "trgColId" : 1198498,
+        "colMapId" : 1198510,
+        "srcColId" : 1198504,
+        "trgColId" : 1198508,
         "colMapType" : "join",
         "srcColName" : "staff_id",
         "tgtColName" : "cnt",
@@ -313,7 +313,7 @@
         "exprID" : 1198501,
         "exprLogID" : 0,
         "exprName" : "EXPR_12EG6UW",
-        "expression" : "(S.staff_genderif == 'M')\n{\nreturn true;\n}\nelse\n{\nreturn false\n}",
+        "expression" : "if (S.staff_gender== 'M')\n{\nreturn true;\n}\nelse\n{\nreturn false\n}",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -325,7 +325,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "(S.staff_genderif == 'M')\n{\nreturn true;\n}\nelse\n{\nreturn false\n}",
+        "exprOrg" : "if (S.staff_gender== 'M')\n{\nreturn true;\n}\nelse\n{\nreturn false\n}",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -420,7 +420,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1198494,
+      "srcTgtColId" : 1198504,
       "ruleClsPropId" : 1198432,
       "srcTrgColName" : "staff_id",
       "srcTrgColDataType" : "VARCHAR2",
@@ -431,7 +431,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1198495,
+      "srcTgtColId" : 1198505,
       "ruleClsPropId" : 1198432,
       "srcTrgColName" : "staff_gender",
       "srcTrgColDataType" : "CHAR",
@@ -442,7 +442,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1198496,
+      "srcTgtColId" : 1198506,
       "ruleClsPropId" : 1198432,
       "srcTrgColName" : "staff_jobcode",
       "srcTrgColDataType" : "VARCHAR2",
@@ -453,7 +453,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1198498,
+      "srcTgtColId" : 1198508,
       "ruleClsPropId" : 1198444,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -465,9 +465,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1198500,
-      "srcColId" : 1198494,
-      "trgColId" : 1198498,
+      "colMapId" : 1198510,
+      "srcColId" : 1198504,
+      "trgColId" : 1198508,
       "colMapType" : "join",
       "srcColName" : "staff_id",
       "tgtColName" : "cnt",
@@ -495,7 +495,7 @@
       "exprID" : 1198501,
       "exprLogID" : 0,
       "exprName" : "EXPR_12EG6UW",
-      "expression" : "(S.staff_genderif == 'M')\n{\nreturn true;\n}\nelse\n{\nreturn false\n}",
+      "expression" : "if (S.staff_gender== 'M')\n{\nreturn true;\n}\nelse\n{\nreturn false\n}",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
