@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as staff_count from REGRESSION_DATABASE.STAFF where sex = 'M'",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1203176,
+          "srcTgtColId" : 1203183,
           "ruleClsPropId" : 1198936,
           "srcTrgColName" : "staff_count",
           "srcTrgColDataType" : "NUMBER",
@@ -192,7 +192,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as staff_cnt from REGRESSION_DATABASE.STAFF100 where sex = 'F'",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1203179,
+          "srcTgtColId" : 1203186,
           "ruleClsPropId" : 1198946,
           "srcTrgColName" : "staff_cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -275,9 +275,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1203180,
-        "srcColId" : 1203176,
-        "trgColId" : 1203179,
+        "colMapId" : 1203187,
+        "srcColId" : 1203183,
+        "trgColId" : 1203186,
         "colMapType" : "join",
         "srcColName" : "staff_count",
         "tgtColName" : "staff_cnt",
@@ -285,7 +285,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 1203188,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_6NK34P2",
+        "expression" : "S.staff_count - T.staff_cnt != 0",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 0,
+        "ruleId" : 1198932,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 1198935,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.staff_count - T.staff_cnt != 0",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 1198956,
         "paramId" : 9,
@@ -317,7 +340,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1203176,
+      "srcTgtColId" : 1203183,
       "ruleClsPropId" : 1198936,
       "srcTrgColName" : "staff_count",
       "srcTrgColDataType" : "NUMBER",
@@ -328,7 +351,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1203179,
+      "srcTgtColId" : 1203186,
       "ruleClsPropId" : 1198946,
       "srcTrgColName" : "staff_cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -340,9 +363,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1203180,
-      "srcColId" : 1203176,
-      "trgColId" : 1203179,
+      "colMapId" : 1203187,
+      "srcColId" : 1203183,
+      "trgColId" : 1203186,
       "colMapType" : "join",
       "srcColName" : "staff_count",
       "tgtColName" : "staff_cnt",
@@ -366,6 +389,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 1203188,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_6NK34P2",
+      "expression" : "S.staff_count - T.staff_cnt != 0",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 0,
+      "ruleId" : 1198932,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 1198935,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
