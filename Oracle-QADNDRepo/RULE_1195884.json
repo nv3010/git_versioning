@@ -22,7 +22,7 @@
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-04-06 00:00:00",
-    "ruleModifiedDate" : "2021-04-06 00:00:00",
+    "ruleModifiedDate" : "2021-04-07 00:00:00",
     "enterpriseErrorCode" : null,
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE  \n    TYPE RegEmployee_rec IS RECORD (  \n     ENO CHAR(9),\n     ENAME  VARCHAR2(20),\n     HDATE DATE\n   );  \n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;  \n    emp_ouput Emp_TAB := Emp_TAB();  \n    \n BEGIN  \n    SELECT empno,Empname,Hiredate BULK COLLECT INTO emp_ouput  FROM Reg_Employee; \n    \n    FOR i IN 1 .. emp_ouput.COUNT  \n    LOOP  \n  DBMS_OUTPUT.PUT_LINE( emp_ouput (i).ENO  || ',' ||  emp_ouput (i). ENAME  || ',' ||  emp_ouput (i). HDATE);  \n    END LOOP;  \n       \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1195936,
+          "srcTgtColId" : 1198134,
           "ruleClsPropId" : 1195888,
           "srcTrgColName" : "A",
           "srcTrgColDataType" : "String",
@@ -113,7 +113,7 @@
           "colFormat" : null,
           "displayIndex" : 4
         }, {
-          "srcTgtColId" : 1195937,
+          "srcTgtColId" : 1198135,
           "ruleClsPropId" : 1195888,
           "srcTrgColName" : "B",
           "srcTrgColDataType" : "String",
@@ -124,7 +124,7 @@
           "colFormat" : null,
           "displayIndex" : 5
         }, {
-          "srcTgtColId" : 1195938,
+          "srcTgtColId" : 1198136,
           "ruleClsPropId" : 1195888,
           "srcTrgColName" : "C",
           "srcTrgColDataType" : "String",
@@ -161,7 +161,7 @@
         "ruleClsPropID" : 1195893,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1",
+        "paramValue" : "0",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -235,7 +235,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE  \n    TYPE RegEmployee_rec IS RECORD (  \n     ENO CHAR(9),\n     ENAME  VARCHAR2(20),\n     HDATE DATE\n   );  \n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;  \n    emp_ouput Emp_TAB := Emp_TAB();  \n    \n BEGIN  \n    SELECT empno,Empname,Hiredate BULK COLLECT INTO emp_ouput  FROM Reg_Employee; \n    \n    FOR i IN 1 .. emp_ouput.COUNT  \n    LOOP  \n  DBMS_OUTPUT.PUT_LINE( emp_ouput (i).ENO  || ',' ||  emp_ouput (i). ENAME  || ',' ||  emp_ouput (i). HDATE);  \n    END LOOP;  \n       \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1195941,
+          "srcTgtColId" : 1198139,
           "ruleClsPropId" : 1195903,
           "srcTrgColName" : "A",
           "srcTrgColDataType" : "String",
@@ -246,7 +246,7 @@
           "colFormat" : null,
           "displayIndex" : 7
         }, {
-          "srcTgtColId" : 1195942,
+          "srcTgtColId" : 1198140,
           "ruleClsPropId" : 1195903,
           "srcTrgColName" : "B",
           "srcTrgColDataType" : "String",
@@ -257,7 +257,7 @@
           "colFormat" : null,
           "displayIndex" : 8
         }, {
-          "srcTgtColId" : 1195943,
+          "srcTgtColId" : 1198141,
           "ruleClsPropId" : 1195903,
           "srcTrgColName" : "C",
           "srcTrgColDataType" : "String",
@@ -294,7 +294,7 @@
         "ruleClsPropID" : 1195908,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1",
+        "paramValue" : "0",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -361,15 +361,15 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1195946,
-        "srcColId" : 1195936,
-        "trgColId" : 1195941,
+        "colMapId" : 1198143,
+        "srcColId" : 1198134,
+        "trgColId" : 1198139,
         "colMapType" : "join",
         "srcColName" : "A",
         "tgtColName" : "A",
         "colMapExpr" : "A=A",
         "srcTrgColMapVisible" : 1,
-        "displayIndex" : 3
+        "displayIndex" : 10
       } ],
       "exprlist" : [ {
         "exprID" : 1195931,
@@ -535,7 +535,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1195936,
+      "srcTgtColId" : 1198134,
       "ruleClsPropId" : 1195888,
       "srcTrgColName" : "A",
       "srcTrgColDataType" : "String",
@@ -546,7 +546,7 @@
       "colFormat" : null,
       "displayIndex" : 4
     }, {
-      "srcTgtColId" : 1195937,
+      "srcTgtColId" : 1198135,
       "ruleClsPropId" : 1195888,
       "srcTrgColName" : "B",
       "srcTrgColDataType" : "String",
@@ -557,7 +557,7 @@
       "colFormat" : null,
       "displayIndex" : 5
     }, {
-      "srcTgtColId" : 1195938,
+      "srcTgtColId" : 1198136,
       "ruleClsPropId" : 1195888,
       "srcTrgColName" : "C",
       "srcTrgColDataType" : "String",
@@ -568,7 +568,7 @@
       "colFormat" : null,
       "displayIndex" : 6
     }, {
-      "srcTgtColId" : 1195941,
+      "srcTgtColId" : 1198139,
       "ruleClsPropId" : 1195903,
       "srcTrgColName" : "A",
       "srcTrgColDataType" : "String",
@@ -579,7 +579,7 @@
       "colFormat" : null,
       "displayIndex" : 7
     }, {
-      "srcTgtColId" : 1195942,
+      "srcTgtColId" : 1198140,
       "ruleClsPropId" : 1195903,
       "srcTrgColName" : "B",
       "srcTrgColDataType" : "String",
@@ -590,7 +590,7 @@
       "colFormat" : null,
       "displayIndex" : 8
     }, {
-      "srcTgtColId" : 1195943,
+      "srcTgtColId" : 1198141,
       "ruleClsPropId" : 1195903,
       "srcTrgColName" : "C",
       "srcTrgColDataType" : "String",
@@ -602,15 +602,15 @@
       "displayIndex" : 9
     } ],
     "colMapList" : [ {
-      "colMapId" : 1195946,
-      "srcColId" : 1195936,
-      "trgColId" : 1195941,
+      "colMapId" : 1198143,
+      "srcColId" : 1198134,
+      "trgColId" : 1198139,
       "colMapType" : "join",
       "srcColName" : "A",
       "tgtColName" : "A",
       "colMapExpr" : "A=A",
       "srcTrgColMapVisible" : 1,
-      "displayIndex" : 3
+      "displayIndex" : 10
     } ],
     "objectVOList" : null,
     "srcCount" : null,
