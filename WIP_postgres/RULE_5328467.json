@@ -85,12 +85,12 @@
     "failureHeader" : "",
     "failureAttFlag" : 1,
     "successAttFlag" : 0,
-    "srcConnId" : 5270682,
-    "trgConnId" : 5270681,
+    "srcConnId" : 5275048,
+    "trgConnId" : 5275049,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
-    "srcConn" : "Oracle_Rest_2.0",
-    "trgConn" : "SQL_Server_2_Rest_2.0",
+    "srcConn" : "Ora_replace",
+    "trgConn" : "SQL_replace",
     "elapseTime" : 0,
     "parameterId" : "",
     "type" : null,
@@ -118,67 +118,6 @@
     "reportRuleClassId" : 0,
     "ruleCId" : 0,
     "classVOList" : [ {
-      "classId" : 3,
-      "name" : null,
-      "ruleClassId" : 5328470,
-      "connType" : "",
-      "execMode" : "scalar",
-      "index" : 1,
-      "classRun" : "com.ice.bpel.CompareData",
-      "vid" : "CompareData11",
-      "classObjName" : "ICE_1617095383569",
-      "queryBuilderXML" : null,
-      "connId" : 0,
-      "resultType" : "",
-      "connName" : null,
-      "connUrl" : null,
-      "connFullUrl" : null,
-      "sysGrpId" : 0,
-      "ruleId" : 0,
-      "ruleName" : null,
-      "ruleParameter" : null,
-      "srcTrgMaplist" : [ {
-        "colMapId" : 5328493,
-        "srcColId" : 5328480,
-        "trgColId" : 5328489,
-        "colMapType" : "join",
-        "srcColName" : "cnt",
-        "tgtColName" : "cnt",
-        "colMapExpr" : "cnt=cnt",
-        "srcTrgColMapVisible" : 0,
-        "displayIndex" : 0
-      } ],
-      "exprlist" : [ ],
-      "paramsVOLst" : [ {
-        "ruleClsPropID" : 5328492,
-        "paramId" : 798,
-        "paramMethod" : "setEngineType",
-        "paramValue" : "Null",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5328491,
-        "paramId" : 10,
-        "paramMethod" : "setTargetObject",
-        "paramValue" : "GetData21",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5328490,
-        "paramId" : 9,
-        "paramMethod" : "setSourceObject",
-        "paramValue" : "GetData11",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      } ],
-      "bigDataExecMode" : null,
-      "srcConnServer" : null,
-      "trgConnServer" : null,
-      "srcConnExecMode" : null,
-      "trgConnExecMode" : null,
-      "thresholdFlag" : null,
-      "thresholdExpression" : null
-    }, {
       "classId" : 1,
       "name" : null,
       "ruleClassId" : 5328469,
@@ -189,7 +128,7 @@
       "vid" : "GetData21",
       "classObjName" : "ICE_1617095383569",
       "queryBuilderXML" : null,
-      "connId" : 5270681,
+      "connId" : 5275049,
       "resultType" : "",
       "connName" : null,
       "connUrl" : null,
@@ -215,6 +154,31 @@
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
+        "ruleClsPropID" : 5328483,
+        "paramId" : 16,
+        "paramMethod" : "setConnId",
+        "paramValue" : "5275049",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5328481,
+        "paramId" : 6,
+        "paramMethod" : "setQueryString",
+        "paramValue" : "select count(*) as cnt from dbo.customer",
+        "srcTrgTbllist" : [ {
+          "srcTgtColId" : 5328499,
+          "ruleClsPropId" : 5328481,
+          "srcTrgColName" : "cnt",
+          "srcTrgColDataType" : "INT",
+          "colFlagType" : "tgt",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        } ],
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 5328485,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
@@ -227,31 +191,6 @@
         "paramMethod" : "setIsStoredProcedure",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5328483,
-        "paramId" : 16,
-        "paramMethod" : "setConnId",
-        "paramValue" : "5270681",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5328481,
-        "paramId" : 6,
-        "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as cnt from dbo.customer",
-        "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5328489,
-          "ruleClsPropId" : 5328481,
-          "srcTrgColName" : "cnt",
-          "srcTrgColDataType" : "INT",
-          "colFlagType" : "tgt",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        } ],
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -272,7 +211,7 @@
       "vid" : "GetData11",
       "classObjName" : "ICE_1617095383569",
       "queryBuilderXML" : null,
-      "connId" : 5270682,
+      "connId" : 5275048,
       "resultType" : "",
       "connName" : null,
       "connUrl" : null,
@@ -322,7 +261,7 @@
         "ruleClsPropID" : 5328473,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "5270682",
+        "paramValue" : "5275048",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -331,7 +270,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5328480,
+          "srcTgtColId" : 5328496,
           "ruleClsPropId" : 5328471,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -351,9 +290,70 @@
       "trgConnExecMode" : null,
       "thresholdFlag" : null,
       "thresholdExpression" : null
+    }, {
+      "classId" : 3,
+      "name" : null,
+      "ruleClassId" : 5328470,
+      "connType" : "",
+      "execMode" : "scalar",
+      "index" : 1,
+      "classRun" : "com.ice.bpel.CompareData",
+      "vid" : "CompareData11",
+      "classObjName" : "ICE_1617095383569",
+      "queryBuilderXML" : null,
+      "connId" : 0,
+      "resultType" : "",
+      "connName" : null,
+      "connUrl" : null,
+      "connFullUrl" : null,
+      "sysGrpId" : 0,
+      "ruleId" : 0,
+      "ruleName" : null,
+      "ruleParameter" : null,
+      "srcTrgMaplist" : [ {
+        "colMapId" : 5328500,
+        "srcColId" : 5328496,
+        "trgColId" : 5328499,
+        "colMapType" : "join",
+        "srcColName" : "cnt",
+        "tgtColName" : "cnt",
+        "colMapExpr" : "cnt=cnt",
+        "srcTrgColMapVisible" : 0,
+        "displayIndex" : 0
+      } ],
+      "exprlist" : [ ],
+      "paramsVOLst" : [ {
+        "ruleClsPropID" : 5328492,
+        "paramId" : 798,
+        "paramMethod" : "setEngineType",
+        "paramValue" : "Null",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5328491,
+        "paramId" : 10,
+        "paramMethod" : "setTargetObject",
+        "paramValue" : "GetData21",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5328490,
+        "paramId" : 9,
+        "paramMethod" : "setSourceObject",
+        "paramValue" : "GetData11",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      } ],
+      "bigDataExecMode" : null,
+      "srcConnServer" : null,
+      "trgConnServer" : null,
+      "srcConnExecMode" : null,
+      "trgConnExecMode" : null,
+      "thresholdFlag" : null,
+      "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5328480,
+      "srcTgtColId" : 5328496,
       "ruleClsPropId" : 5328471,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -364,7 +364,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5328489,
+      "srcTgtColId" : 5328499,
       "ruleClsPropId" : 5328481,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INT",
@@ -376,9 +376,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5328493,
-      "srcColId" : 5328480,
-      "trgColId" : 5328489,
+      "colMapId" : 5328500,
+      "srcColId" : 5328496,
+      "trgColId" : 5328499,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
