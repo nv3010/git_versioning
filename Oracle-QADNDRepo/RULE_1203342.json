@@ -128,7 +128,7 @@
         "ruleClsPropID" : 1203351,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "customerid^~^2^~^NUMBER^~^38^~^1$~$acctnumber^~^12^~^VARCHAR2^~^2000^~^2$~$gender^~^1^~^CHAR^~^1^~^3",
+        "paramValue" : "customerid^~^2^~^NUMBER^~^38^~^1$~$acctnumber^~^12^~^VARCHAR2^~^2000^~^2$~$gender^~^1^~^CHAR^~^1^~^3$~$birthdate^~^93^~^DATE^~^0^~^4",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -142,9 +142,9 @@
         "ruleClsPropID" : 1203353,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select customerid, acctnumber, gender from REGRESSION_DATABASE.CUSTOMER",
+        "paramValue" : "select customerid, acctnumber, gender, birthdate from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1203355,
+          "srcTgtColId" : 1203380,
           "ruleClsPropId" : 1203353,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "NUMBER",
@@ -155,7 +155,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1203356,
+          "srcTgtColId" : 1203381,
           "ruleClsPropId" : 1203353,
           "srcTrgColName" : "acctnumber",
           "srcTrgColDataType" : "VARCHAR2",
@@ -166,10 +166,21 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1203357,
+          "srcTgtColId" : 1203382,
           "ruleClsPropId" : 1203353,
           "srcTrgColName" : "gender",
           "srcTrgColDataType" : "CHAR",
+          "colFlagType" : "src",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : null,
+          "displayIndex" : 0
+        }, {
+          "srcTgtColId" : 1203383,
+          "ruleClsPropId" : 1203353,
+          "srcTrgColName" : "birthdate",
+          "srcTrgColDataType" : "DATE",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -214,7 +225,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1203363,
+          "srcTgtColId" : 1203385,
           "ruleClsPropId" : 1203358,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -276,9 +287,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1203376,
-        "srcColId" : 1203355,
-        "trgColId" : 1203363,
+        "colMapId" : 1203387,
+        "srcColId" : 1203380,
+        "trgColId" : 1203385,
         "colMapType" : "join",
         "srcColName" : "customerid",
         "tgtColName" : "cnt",
@@ -290,7 +301,7 @@
         "exprID" : 1203377,
         "exprLogID" : 0,
         "exprName" : "EXPR_00IAK4F",
-        "expression" : "S.gender == 'M' || 'F'",
+        "expression" : "S.gender == 'M' && 'F'",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -302,7 +313,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.gender == 'M' || 'F'",
+        "exprOrg" : "S.gender == 'M' && 'F'",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -397,7 +408,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1203355,
+      "srcTgtColId" : 1203380,
       "ruleClsPropId" : 1203353,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "NUMBER",
@@ -408,7 +419,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1203356,
+      "srcTgtColId" : 1203381,
       "ruleClsPropId" : 1203353,
       "srcTrgColName" : "acctnumber",
       "srcTrgColDataType" : "VARCHAR2",
@@ -419,7 +430,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1203357,
+      "srcTgtColId" : 1203382,
       "ruleClsPropId" : 1203353,
       "srcTrgColName" : "gender",
       "srcTrgColDataType" : "CHAR",
@@ -430,7 +441,18 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1203363,
+      "srcTgtColId" : 1203383,
+      "ruleClsPropId" : 1203353,
+      "srcTrgColName" : "birthdate",
+      "srcTrgColDataType" : "DATE",
+      "colFlagType" : "src",
+      "srcTrgColVisible" : 0,
+      "joinList" : null,
+      "mapColName" : "birthdate",
+      "colFormat" : null,
+      "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 1203385,
       "ruleClsPropId" : 1203358,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -442,9 +464,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1203376,
-      "srcColId" : 1203355,
-      "trgColId" : 1203363,
+      "colMapId" : 1203387,
+      "srcColId" : 1203380,
+      "trgColId" : 1203385,
       "colMapType" : "join",
       "srcColName" : "customerid",
       "tgtColName" : "cnt",
@@ -472,7 +494,7 @@
       "exprID" : 1203377,
       "exprLogID" : 0,
       "exprName" : "EXPR_00IAK4F",
-      "expression" : "S.gender == 'M' || 'F'",
+      "expression" : "S.gender == 'M' && 'F'",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
