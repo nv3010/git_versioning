@@ -22,7 +22,7 @@
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-04-06 00:00:00",
-    "ruleModifiedDate" : "2021-04-06 00:00:00",
+    "ruleModifiedDate" : "2021-04-07 00:00:00",
     "enterpriseErrorCode" : null,
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -116,7 +116,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE  \n    TYPE RegEmployee_rec IS RECORD (  \n     ENO CHAR(9),\n     ENAME  VARCHAR2(20),\n     HDATE DATE\n   );  \n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;  \n    emp_ouput Emp_TAB := Emp_TAB();  \n    \n BEGIN  \n    SELECT empno,Empname,Hiredate BULK COLLECT INTO emp_ouput  FROM Reg_Employee; \n    \n    FOR i IN 1 .. emp_ouput.COUNT  \n    LOOP  \n  DBMS_OUTPUT.PUT_LINE( emp_ouput (i).ENO  || ',' ||  emp_ouput (i). ENAME  || ',' ||  emp_ouput (i). HDATE);  \n    END LOOP;  \n       \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1195106,
+          "srcTgtColId" : 1198125,
           "ruleClsPropId" : 1195059,
           "srcTrgColName" : "A",
           "srcTrgColDataType" : "String",
@@ -127,7 +127,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1195107,
+          "srcTgtColId" : 1198126,
           "ruleClsPropId" : 1195059,
           "srcTrgColName" : "B",
           "srcTrgColDataType" : "String",
@@ -138,7 +138,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1195108,
+          "srcTgtColId" : 1198127,
           "ruleClsPropId" : 1195059,
           "srcTrgColName" : "C",
           "srcTrgColDataType" : "String",
@@ -242,7 +242,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1195110,
+          "srcTgtColId" : 1198129,
           "ruleClsPropId" : 1195073,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -304,9 +304,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1195112,
-        "srcColId" : 1195106,
-        "trgColId" : 1195110,
+        "colMapId" : 1198131,
+        "srcColId" : 1198125,
+        "trgColId" : 1198129,
         "colMapType" : "join",
         "srcColName" : "A",
         "tgtColName" : "cnt",
@@ -471,7 +471,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1195106,
+      "srcTgtColId" : 1198125,
       "ruleClsPropId" : 1195059,
       "srcTrgColName" : "A",
       "srcTrgColDataType" : "String",
@@ -482,7 +482,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1195107,
+      "srcTgtColId" : 1198126,
       "ruleClsPropId" : 1195059,
       "srcTrgColName" : "B",
       "srcTrgColDataType" : "String",
@@ -493,7 +493,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1195108,
+      "srcTgtColId" : 1198127,
       "ruleClsPropId" : 1195059,
       "srcTrgColName" : "C",
       "srcTrgColDataType" : "String",
@@ -504,7 +504,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1195110,
+      "srcTgtColId" : 1198129,
       "ruleClsPropId" : 1195073,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -516,9 +516,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1195112,
-      "srcColId" : 1195106,
-      "trgColId" : 1195110,
+      "colMapId" : 1198131,
+      "srcColId" : 1198125,
+      "trgColId" : 1198129,
       "colMapType" : "join",
       "srcColName" : "A",
       "tgtColName" : "cnt",
