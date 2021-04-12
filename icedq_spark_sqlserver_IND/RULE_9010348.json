@@ -42,12 +42,12 @@
     "failureHeader" : "",
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
-    "srcConnId" : 8934103,
-    "trgConnId" : 8934103,
+    "srcConnId" : 8938513,
+    "trgConnId" : 8938513,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
-    "srcConn" : "AvroAzureDataLakeWithSSL_oAuth_Parquet",
-    "trgConn" : "AvroAzureDataLakeWithSSL_oAuth_Parquet",
+    "srcConn" : "AvroazureDatalake_acctk_withssl_parquet",
+    "trgConn" : "AvroazureDatalake_acctk_withssl_parquet",
     "elapseTime" : 0,
     "parameterId" : "",
     "type" : null,
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9010451,
-        "srcColId" : 9010387,
-        "trgColId" : 9010430,
+        "colMapId" : 9010635,
+        "srcColId" : 9010596,
+        "trgColId" : 9010615,
         "colMapType" : "join",
         "srcColName" : "EMPNO",
         "tgtColName" : "EMPNO",
@@ -209,7 +209,7 @@
       "vid" : "GetData11",
       "classObjName" : "ICE_1617707335993",
       "queryBuilderXML" : null,
-      "connId" : 8934103,
+      "connId" : 8938513,
       "resultType" : "rowcount",
       "connName" : null,
       "connUrl" : null,
@@ -224,12 +224,12 @@
         "ruleClsPropID" : 9010365,
         "paramId" : 8,
         "paramMethod" : "setFileName",
-        "paramValue" : "/TestData/employee1.parquet",
+        "paramValue" : "/TestData/part-00000-812ca1e8-45b1-4cba-8eac-0c7f8c289a5e-c000.snappy.parquet",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9010387,
+          "srcTgtColId" : 9010596,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "EMPNO",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "INT",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -237,7 +237,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010388,
+          "srcTgtColId" : 9010597,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "EMPCODE",
           "srcTrgColDataType" : "STRING",
@@ -248,9 +248,9 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010389,
+          "srcTgtColId" : 9010598,
           "ruleClsPropId" : 9010365,
-          "srcTrgColName" : "FIRSTNAME",
+          "srcTrgColName" : "EMPNAME",
           "srcTrgColDataType" : "STRING",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -259,31 +259,20 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010390,
-          "ruleClsPropId" : 9010365,
-          "srcTrgColName" : "LASTNAME",
-          "srcTrgColDataType" : "STRING",
-          "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        }, {
-          "srcTgtColId" : 9010391,
+          "srcTgtColId" : 9010599,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "DEPARTMENT",
           "srcTrgColDataType" : "STRING",
           "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
+          "srcTrgColVisible" : 1,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010392,
+          "srcTgtColId" : 9010600,
           "ruleClsPropId" : 9010365,
-          "srcTrgColName" : "HIREDATE",
+          "srcTrgColName" : "HIRE_DATE",
           "srcTrgColDataType" : "STRING",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -292,7 +281,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010393,
+          "srcTgtColId" : 9010601,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "EMAIL",
           "srcTrgColDataType" : "STRING",
@@ -303,7 +292,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010394,
+          "srcTgtColId" : 9010602,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "EMPADDRESS",
           "srcTrgColDataType" : "STRING",
@@ -314,10 +303,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010395,
+          "srcTgtColId" : 9010603,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "PHONE",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "LONG",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -325,10 +314,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010396,
+          "srcTgtColId" : 9010604,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "SALARY",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "INT",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -336,10 +325,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010397,
+          "srcTgtColId" : 9010605,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "COMM",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "DOUBLE",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -347,10 +336,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010398,
+          "srcTgtColId" : 9010606,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "CALCULATEDSALARY",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "DOUBLE",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -358,10 +347,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010399,
+          "srcTgtColId" : 9010607,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "YEARLYINCOME",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "DOUBLE",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -369,21 +358,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010400,
-          "ruleClsPropId" : 9010365,
-          "srcTrgColName" : "COSTTOCOMPANY",
-          "srcTrgColDataType" : "STRING",
-          "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        }, {
-          "srcTgtColId" : 9010401,
+          "srcTgtColId" : 9010608,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "TDS",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "DOUBLE",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -391,10 +369,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010402,
+          "srcTgtColId" : 9010609,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "DEPTNO",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "INT",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -402,9 +380,9 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010403,
+          "srcTgtColId" : 9010610,
           "ruleClsPropId" : 9010365,
-          "srcTrgColName" : "BIRTHDATE",
+          "srcTrgColName" : "BIRTH_DATE",
           "srcTrgColDataType" : "STRING",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -413,7 +391,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010404,
+          "srcTgtColId" : 9010611,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "GENDER",
           "srcTrgColDataType" : "STRING",
@@ -424,9 +402,9 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010405,
+          "srcTgtColId" : 9010612,
           "ruleClsPropId" : 9010365,
-          "srcTrgColName" : "CITYCOUNTRY",
+          "srcTrgColName" : "CITY",
           "srcTrgColDataType" : "STRING",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -435,9 +413,9 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010406,
+          "srcTgtColId" : 9010613,
           "ruleClsPropId" : 9010365,
-          "srcTrgColName" : "COUNTRYCODE",
+          "srcTrgColName" : "COUNTRY",
           "srcTrgColDataType" : "STRING",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -446,10 +424,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010407,
+          "srcTgtColId" : 9010614,
           "ruleClsPropId" : 9010365,
           "srcTrgColName" : "CREDITCARDNUMBER",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "LONG",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -462,7 +440,7 @@
         "ruleClsPropID" : 9010366,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "8934103",
+        "paramValue" : "8938513",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -588,7 +566,7 @@
         "ruleClsPropID" : 9010384,
         "paramId" : 189,
         "paramMethod" : "setFilterColumn",
-        "paramValue" : "",
+        "paramValue" : "S.DEPARTMENT == 'SALESMAN'",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -624,7 +602,7 @@
       "vid" : "GetData21",
       "classObjName" : "ICE_1617707335993",
       "queryBuilderXML" : null,
-      "connId" : 8934103,
+      "connId" : 8938513,
       "resultType" : "rowcount",
       "connName" : null,
       "connUrl" : null,
@@ -639,12 +617,12 @@
         "ruleClsPropID" : 9010408,
         "paramId" : 8,
         "paramMethod" : "setFileName",
-        "paramValue" : "/TestData/employee1.parquet",
+        "paramValue" : "/TestData/part-00000-812ca1e8-45b1-4cba-8eac-0c7f8c289a5e-c000.snappy.parquet",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9010430,
+          "srcTgtColId" : 9010615,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "EMPNO",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "INT",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -652,7 +630,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010431,
+          "srcTgtColId" : 9010616,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "EMPCODE",
           "srcTrgColDataType" : "STRING",
@@ -663,9 +641,9 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010432,
+          "srcTgtColId" : 9010617,
           "ruleClsPropId" : 9010408,
-          "srcTrgColName" : "FIRSTNAME",
+          "srcTrgColName" : "EMPNAME",
           "srcTrgColDataType" : "STRING",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -674,18 +652,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010433,
-          "ruleClsPropId" : 9010408,
-          "srcTrgColName" : "LASTNAME",
-          "srcTrgColDataType" : "STRING",
-          "colFlagType" : "tgt",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        }, {
-          "srcTgtColId" : 9010434,
+          "srcTgtColId" : 9010618,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "DEPARTMENT",
           "srcTrgColDataType" : "STRING",
@@ -696,9 +663,9 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010435,
+          "srcTgtColId" : 9010619,
           "ruleClsPropId" : 9010408,
-          "srcTrgColName" : "HIREDATE",
+          "srcTrgColName" : "HIRE_DATE",
           "srcTrgColDataType" : "STRING",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -707,7 +674,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010436,
+          "srcTgtColId" : 9010620,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "EMAIL",
           "srcTrgColDataType" : "STRING",
@@ -718,7 +685,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010437,
+          "srcTgtColId" : 9010621,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "EMPADDRESS",
           "srcTrgColDataType" : "STRING",
@@ -729,10 +696,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010438,
+          "srcTgtColId" : 9010622,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "PHONE",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "LONG",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -740,10 +707,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010439,
+          "srcTgtColId" : 9010623,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "SALARY",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "INT",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -751,10 +718,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010440,
+          "srcTgtColId" : 9010624,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "COMM",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "DOUBLE",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -762,10 +729,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010441,
+          "srcTgtColId" : 9010625,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "CALCULATEDSALARY",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "DOUBLE",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -773,10 +740,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010442,
+          "srcTgtColId" : 9010626,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "YEARLYINCOME",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "DOUBLE",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -784,21 +751,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010443,
-          "ruleClsPropId" : 9010408,
-          "srcTrgColName" : "COSTTOCOMPANY",
-          "srcTrgColDataType" : "STRING",
-          "colFlagType" : "tgt",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        }, {
-          "srcTgtColId" : 9010444,
+          "srcTgtColId" : 9010627,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "TDS",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "DOUBLE",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -806,10 +762,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010445,
+          "srcTgtColId" : 9010628,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "DEPTNO",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "INT",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -817,9 +773,9 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010446,
+          "srcTgtColId" : 9010629,
           "ruleClsPropId" : 9010408,
-          "srcTrgColName" : "BIRTHDATE",
+          "srcTrgColName" : "BIRTH_DATE",
           "srcTrgColDataType" : "STRING",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -828,7 +784,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010447,
+          "srcTgtColId" : 9010630,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "GENDER",
           "srcTrgColDataType" : "STRING",
@@ -839,9 +795,9 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010448,
+          "srcTgtColId" : 9010631,
           "ruleClsPropId" : 9010408,
-          "srcTrgColName" : "CITYCOUNTRY",
+          "srcTrgColName" : "CITY",
           "srcTrgColDataType" : "STRING",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -850,9 +806,9 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010449,
+          "srcTgtColId" : 9010632,
           "ruleClsPropId" : 9010408,
-          "srcTrgColName" : "COUNTRYCODE",
+          "srcTrgColName" : "COUNTRY",
           "srcTrgColDataType" : "STRING",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -861,10 +817,10 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9010450,
+          "srcTgtColId" : 9010633,
           "ruleClsPropId" : 9010408,
           "srcTrgColName" : "CREDITCARDNUMBER",
-          "srcTrgColDataType" : "STRING",
+          "srcTrgColDataType" : "LONG",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -877,14 +833,14 @@
         "ruleClsPropID" : 9010409,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "8934103",
+        "paramValue" : "8938513",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 9010410,
         "paramId" : 20,
         "paramMethod" : "setDelimiter",
-        "paramValue" : ",",
+        "paramValue" : "",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -1003,7 +959,7 @@
         "ruleClsPropID" : 9010427,
         "paramId" : 189,
         "paramMethod" : "setFilterColumn",
-        "paramValue" : "",
+        "paramValue" : "S.DEPARTMENT == 'SALESMAN'",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -1030,10 +986,10 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9010387,
+      "srcTgtColId" : 9010596,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "EMPNO",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "INT",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1041,7 +997,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010388,
+      "srcTgtColId" : 9010597,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "EMPCODE",
       "srcTrgColDataType" : "STRING",
@@ -1052,51 +1008,40 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010389,
+      "srcTgtColId" : 9010598,
       "ruleClsPropId" : 9010365,
-      "srcTrgColName" : "FIRSTNAME",
+      "srcTrgColName" : "EMPNAME",
       "srcTrgColDataType" : "STRING",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "FIRSTNAME",
+      "mapColName" : "EMPNAME",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010390,
-      "ruleClsPropId" : 9010365,
-      "srcTrgColName" : "LASTNAME",
-      "srcTrgColDataType" : "STRING",
-      "colFlagType" : "src",
-      "srcTrgColVisible" : 0,
-      "joinList" : null,
-      "mapColName" : "LASTNAME",
-      "colFormat" : "",
-      "displayIndex" : 0
-    }, {
-      "srcTgtColId" : 9010391,
+      "srcTgtColId" : 9010599,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "DEPARTMENT",
       "srcTrgColDataType" : "STRING",
       "colFlagType" : "src",
-      "srcTrgColVisible" : 0,
+      "srcTrgColVisible" : 1,
       "joinList" : null,
       "mapColName" : "DEPARTMENT",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010392,
+      "srcTgtColId" : 9010600,
       "ruleClsPropId" : 9010365,
-      "srcTrgColName" : "HIREDATE",
+      "srcTrgColName" : "HIRE_DATE",
       "srcTrgColDataType" : "STRING",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "HIREDATE",
+      "mapColName" : "HIRE_DATE",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010393,
+      "srcTgtColId" : 9010601,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "EMAIL",
       "srcTrgColDataType" : "STRING",
@@ -1107,7 +1052,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010394,
+      "srcTgtColId" : 9010602,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "EMPADDRESS",
       "srcTrgColDataType" : "STRING",
@@ -1118,10 +1063,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010395,
+      "srcTgtColId" : 9010603,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "PHONE",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "LONG",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1129,10 +1074,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010396,
+      "srcTgtColId" : 9010604,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "SALARY",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "INT",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1140,10 +1085,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010397,
+      "srcTgtColId" : 9010605,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "COMM",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "DOUBLE",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1151,10 +1096,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010398,
+      "srcTgtColId" : 9010606,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "CALCULATEDSALARY",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "DOUBLE",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1162,10 +1107,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010399,
+      "srcTgtColId" : 9010607,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "YEARLYINCOME",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "DOUBLE",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1173,21 +1118,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010400,
-      "ruleClsPropId" : 9010365,
-      "srcTrgColName" : "COSTTOCOMPANY",
-      "srcTrgColDataType" : "STRING",
-      "colFlagType" : "src",
-      "srcTrgColVisible" : 0,
-      "joinList" : null,
-      "mapColName" : "COSTTOCOMPANY",
-      "colFormat" : "",
-      "displayIndex" : 0
-    }, {
-      "srcTgtColId" : 9010401,
+      "srcTgtColId" : 9010608,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "TDS",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "DOUBLE",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1195,10 +1129,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010402,
+      "srcTgtColId" : 9010609,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "DEPTNO",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "INT",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1206,18 +1140,18 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010403,
+      "srcTgtColId" : 9010610,
       "ruleClsPropId" : 9010365,
-      "srcTrgColName" : "BIRTHDATE",
+      "srcTrgColName" : "BIRTH_DATE",
       "srcTrgColDataType" : "STRING",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "BIRTHDATE",
+      "mapColName" : "BIRTH_DATE",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010404,
+      "srcTgtColId" : 9010611,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "GENDER",
       "srcTrgColDataType" : "STRING",
@@ -1228,32 +1162,32 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010405,
+      "srcTgtColId" : 9010612,
       "ruleClsPropId" : 9010365,
-      "srcTrgColName" : "CITYCOUNTRY",
+      "srcTrgColName" : "CITY",
       "srcTrgColDataType" : "STRING",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "CITYCOUNTRY",
+      "mapColName" : "CITY",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010406,
+      "srcTgtColId" : 9010613,
       "ruleClsPropId" : 9010365,
-      "srcTrgColName" : "COUNTRYCODE",
+      "srcTrgColName" : "COUNTRY",
       "srcTrgColDataType" : "STRING",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "COUNTRYCODE",
+      "mapColName" : "COUNTRY",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010407,
+      "srcTgtColId" : 9010614,
       "ruleClsPropId" : 9010365,
       "srcTrgColName" : "CREDITCARDNUMBER",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "LONG",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1261,10 +1195,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010430,
+      "srcTgtColId" : 9010615,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "EMPNO",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "INT",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1272,7 +1206,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010431,
+      "srcTgtColId" : 9010616,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "EMPCODE",
       "srcTrgColDataType" : "STRING",
@@ -1283,29 +1217,18 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010432,
+      "srcTgtColId" : 9010617,
       "ruleClsPropId" : 9010408,
-      "srcTrgColName" : "FIRSTNAME",
+      "srcTrgColName" : "EMPNAME",
       "srcTrgColDataType" : "STRING",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "FIRSTNAME",
+      "mapColName" : "EMPNAME",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010433,
-      "ruleClsPropId" : 9010408,
-      "srcTrgColName" : "LASTNAME",
-      "srcTrgColDataType" : "STRING",
-      "colFlagType" : "tgt",
-      "srcTrgColVisible" : 0,
-      "joinList" : null,
-      "mapColName" : "LASTNAME",
-      "colFormat" : "",
-      "displayIndex" : 0
-    }, {
-      "srcTgtColId" : 9010434,
+      "srcTgtColId" : 9010618,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "DEPARTMENT",
       "srcTrgColDataType" : "STRING",
@@ -1316,18 +1239,18 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010435,
+      "srcTgtColId" : 9010619,
       "ruleClsPropId" : 9010408,
-      "srcTrgColName" : "HIREDATE",
+      "srcTrgColName" : "HIRE_DATE",
       "srcTrgColDataType" : "STRING",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "HIREDATE",
+      "mapColName" : "HIRE_DATE",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010436,
+      "srcTgtColId" : 9010620,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "EMAIL",
       "srcTrgColDataType" : "STRING",
@@ -1338,7 +1261,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010437,
+      "srcTgtColId" : 9010621,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "EMPADDRESS",
       "srcTrgColDataType" : "STRING",
@@ -1349,10 +1272,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010438,
+      "srcTgtColId" : 9010622,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "PHONE",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "LONG",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1360,10 +1283,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010439,
+      "srcTgtColId" : 9010623,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "SALARY",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "INT",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1371,10 +1294,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010440,
+      "srcTgtColId" : 9010624,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "COMM",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "DOUBLE",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1382,10 +1305,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010441,
+      "srcTgtColId" : 9010625,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "CALCULATEDSALARY",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "DOUBLE",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1393,10 +1316,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010442,
+      "srcTgtColId" : 9010626,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "YEARLYINCOME",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "DOUBLE",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1404,21 +1327,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010443,
-      "ruleClsPropId" : 9010408,
-      "srcTrgColName" : "COSTTOCOMPANY",
-      "srcTrgColDataType" : "STRING",
-      "colFlagType" : "tgt",
-      "srcTrgColVisible" : 0,
-      "joinList" : null,
-      "mapColName" : "COSTTOCOMPANY",
-      "colFormat" : "",
-      "displayIndex" : 0
-    }, {
-      "srcTgtColId" : 9010444,
+      "srcTgtColId" : 9010627,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "TDS",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "DOUBLE",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1426,10 +1338,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010445,
+      "srcTgtColId" : 9010628,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "DEPTNO",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "INT",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1437,18 +1349,18 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010446,
+      "srcTgtColId" : 9010629,
       "ruleClsPropId" : 9010408,
-      "srcTrgColName" : "BIRTHDATE",
+      "srcTrgColName" : "BIRTH_DATE",
       "srcTrgColDataType" : "STRING",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "BIRTHDATE",
+      "mapColName" : "BIRTH_DATE",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010447,
+      "srcTgtColId" : 9010630,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "GENDER",
       "srcTrgColDataType" : "STRING",
@@ -1459,32 +1371,32 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010448,
+      "srcTgtColId" : 9010631,
       "ruleClsPropId" : 9010408,
-      "srcTrgColName" : "CITYCOUNTRY",
+      "srcTrgColName" : "CITY",
       "srcTrgColDataType" : "STRING",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "CITYCOUNTRY",
+      "mapColName" : "CITY",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010449,
+      "srcTgtColId" : 9010632,
       "ruleClsPropId" : 9010408,
-      "srcTrgColName" : "COUNTRYCODE",
+      "srcTrgColName" : "COUNTRY",
       "srcTrgColDataType" : "STRING",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "COUNTRYCODE",
+      "mapColName" : "COUNTRY",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9010450,
+      "srcTgtColId" : 9010633,
       "ruleClsPropId" : 9010408,
       "srcTrgColName" : "CREDITCARDNUMBER",
-      "srcTrgColDataType" : "STRING",
+      "srcTrgColDataType" : "LONG",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -1493,9 +1405,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9010451,
-      "srcColId" : 9010387,
-      "trgColId" : 9010430,
+      "colMapId" : 9010635,
+      "srcColId" : 9010596,
+      "trgColId" : 9010615,
       "colMapType" : "join",
       "srcColName" : "EMPNO",
       "tgtColName" : "EMPNO",
