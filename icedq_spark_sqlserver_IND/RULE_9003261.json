@@ -86,7 +86,7 @@
       "classObjName" : "ICE_1618213348240",
       "queryBuilderXML" : null,
       "connId" : 0,
-      "resultType" : "a-b,b-a",
+      "resultType" : "a-b,b-a,expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -95,17 +95,86 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9003360,
-        "srcColId" : 9003301,
-        "trgColId" : 9003342,
+        "colMapId" : 9003400,
+        "srcColId" : 9003361,
+        "trgColId" : 9003380,
         "colMapType" : "join",
-        "srcColName" : "EMPCODE",
-        "tgtColName" : "EMPCODE",
-        "colMapExpr" : "EMPCODE=EMPCODE",
+        "srcColName" : "EMPNO",
+        "tgtColName" : "EMPNO",
+        "colMapExpr" : "EMPNO=EMPNO",
         "srcTrgColMapVisible" : 1,
-        "displayIndex" : 1
+        "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 9003401,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_EKUSV6F",
+        "expression" : "S.EMPNAME == T.EMPNAME",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 9003261,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 9003262,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.EMPNAME == T.EMPNAME",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      }, {
+        "exprID" : 9003402,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_N395WO0",
+        "expression" : "S.DEPARTMENT == T.DEPARTMENT",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 2,
+        "ruleId" : 9003261,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 9003262,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.DEPARTMENT == T.DEPARTMENT",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      }, {
+        "exprID" : 9003403,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_HMJSW00",
+        "expression" : "S.HIRE_DATE == T.HIRE_DATE",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 3,
+        "ruleId" : 9003261,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 9003262,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.HIRE_DATE == T.HIRE_DATE",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 9003265,
         "paramId" : 9,
@@ -145,7 +214,7 @@
         "ruleClsPropID" : 9003270,
         "paramId" : 24,
         "paramMethod" : "setShowErrorData",
-        "paramValue" : "Yes",
+        "paramValue" : "No",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -210,7 +279,7 @@
       "classObjName" : "ICE_1618213348240",
       "queryBuilderXML" : null,
       "connId" : 8938513,
-      "resultType" : "a-b,b-a",
+      "resultType" : "a-b,b-a,expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -226,7 +295,7 @@
         "paramMethod" : "setFileName",
         "paramValue" : "/TestData/part-00000-812ca1e8-45b1-4cba-8eac-0c7f8c289a5e-c000.snappy.parquet",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9003300,
+          "srcTgtColId" : 9003361,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "EMPNO",
           "srcTrgColDataType" : "INT",
@@ -237,7 +306,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003301,
+          "srcTgtColId" : 9003362,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "EMPCODE",
           "srcTrgColDataType" : "STRING",
@@ -248,7 +317,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003302,
+          "srcTgtColId" : 9003363,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "EMPNAME",
           "srcTrgColDataType" : "STRING",
@@ -259,7 +328,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003303,
+          "srcTgtColId" : 9003364,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "DEPARTMENT",
           "srcTrgColDataType" : "STRING",
@@ -270,7 +339,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003304,
+          "srcTgtColId" : 9003365,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "HIRE_DATE",
           "srcTrgColDataType" : "STRING",
@@ -281,7 +350,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003305,
+          "srcTgtColId" : 9003366,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "EMAIL",
           "srcTrgColDataType" : "STRING",
@@ -292,7 +361,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003306,
+          "srcTgtColId" : 9003367,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "EMPADDRESS",
           "srcTrgColDataType" : "STRING",
@@ -303,7 +372,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003307,
+          "srcTgtColId" : 9003368,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "PHONE",
           "srcTrgColDataType" : "LONG",
@@ -314,7 +383,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003308,
+          "srcTgtColId" : 9003369,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "SALARY",
           "srcTrgColDataType" : "INT",
@@ -325,7 +394,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003309,
+          "srcTgtColId" : 9003370,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "COMM",
           "srcTrgColDataType" : "DOUBLE",
@@ -336,7 +405,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003310,
+          "srcTgtColId" : 9003371,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "CALCULATEDSALARY",
           "srcTrgColDataType" : "DOUBLE",
@@ -347,7 +416,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003311,
+          "srcTgtColId" : 9003372,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "YEARLYINCOME",
           "srcTrgColDataType" : "DOUBLE",
@@ -358,7 +427,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003312,
+          "srcTgtColId" : 9003373,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "TDS",
           "srcTrgColDataType" : "DOUBLE",
@@ -369,7 +438,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003313,
+          "srcTgtColId" : 9003374,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "DEPTNO",
           "srcTrgColDataType" : "INT",
@@ -380,7 +449,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003314,
+          "srcTgtColId" : 9003375,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "BIRTH_DATE",
           "srcTrgColDataType" : "STRING",
@@ -391,7 +460,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003315,
+          "srcTgtColId" : 9003376,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "GENDER",
           "srcTrgColDataType" : "STRING",
@@ -402,7 +471,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003316,
+          "srcTgtColId" : 9003377,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "CITY",
           "srcTrgColDataType" : "STRING",
@@ -413,7 +482,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003317,
+          "srcTgtColId" : 9003378,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "COUNTRY",
           "srcTrgColDataType" : "STRING",
@@ -424,7 +493,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003318,
+          "srcTgtColId" : 9003379,
           "ruleClsPropId" : 9003278,
           "srcTrgColName" : "CREDITCARDNUMBER",
           "srcTrgColDataType" : "LONG",
@@ -603,7 +672,7 @@
       "classObjName" : "ICE_1618213348240",
       "queryBuilderXML" : null,
       "connId" : 8934103,
-      "resultType" : "a-b,b-a",
+      "resultType" : "a-b,b-a,expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -619,7 +688,7 @@
         "paramMethod" : "setFileName",
         "paramValue" : "/TestData/part-00000-812ca1e8-45b1-4cba-8eac-0c7f8c289a5e-c000.snappy.parquet",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9003341,
+          "srcTgtColId" : 9003380,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "EMPNO",
           "srcTrgColDataType" : "INT",
@@ -630,7 +699,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003342,
+          "srcTgtColId" : 9003381,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "EMPCODE",
           "srcTrgColDataType" : "STRING",
@@ -641,7 +710,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003343,
+          "srcTgtColId" : 9003382,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "EMPNAME",
           "srcTrgColDataType" : "STRING",
@@ -652,7 +721,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003344,
+          "srcTgtColId" : 9003383,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "DEPARTMENT",
           "srcTrgColDataType" : "STRING",
@@ -663,7 +732,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003345,
+          "srcTgtColId" : 9003384,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "HIRE_DATE",
           "srcTrgColDataType" : "STRING",
@@ -674,7 +743,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003346,
+          "srcTgtColId" : 9003385,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "EMAIL",
           "srcTrgColDataType" : "STRING",
@@ -685,7 +754,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003347,
+          "srcTgtColId" : 9003386,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "EMPADDRESS",
           "srcTrgColDataType" : "STRING",
@@ -696,7 +765,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003348,
+          "srcTgtColId" : 9003387,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "PHONE",
           "srcTrgColDataType" : "LONG",
@@ -707,7 +776,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003349,
+          "srcTgtColId" : 9003388,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "SALARY",
           "srcTrgColDataType" : "INT",
@@ -718,7 +787,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003350,
+          "srcTgtColId" : 9003389,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "COMM",
           "srcTrgColDataType" : "DOUBLE",
@@ -729,7 +798,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003351,
+          "srcTgtColId" : 9003390,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "CALCULATEDSALARY",
           "srcTrgColDataType" : "DOUBLE",
@@ -740,7 +809,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003352,
+          "srcTgtColId" : 9003391,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "YEARLYINCOME",
           "srcTrgColDataType" : "DOUBLE",
@@ -751,7 +820,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003353,
+          "srcTgtColId" : 9003392,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "TDS",
           "srcTrgColDataType" : "DOUBLE",
@@ -762,7 +831,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003354,
+          "srcTgtColId" : 9003393,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "DEPTNO",
           "srcTrgColDataType" : "INT",
@@ -773,7 +842,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003355,
+          "srcTgtColId" : 9003394,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "BIRTH_DATE",
           "srcTrgColDataType" : "STRING",
@@ -784,7 +853,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003356,
+          "srcTgtColId" : 9003395,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "GENDER",
           "srcTrgColDataType" : "STRING",
@@ -795,7 +864,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003357,
+          "srcTgtColId" : 9003396,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "CITY",
           "srcTrgColDataType" : "STRING",
@@ -806,7 +875,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003358,
+          "srcTgtColId" : 9003397,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "COUNTRY",
           "srcTrgColDataType" : "STRING",
@@ -817,7 +886,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9003359,
+          "srcTgtColId" : 9003398,
           "ruleClsPropId" : 9003319,
           "srcTrgColName" : "CREDITCARDNUMBER",
           "srcTrgColDataType" : "LONG",
@@ -986,7 +1055,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9003300,
+      "srcTgtColId" : 9003361,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "EMPNO",
       "srcTrgColDataType" : "INT",
@@ -997,7 +1066,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003301,
+      "srcTgtColId" : 9003362,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "EMPCODE",
       "srcTrgColDataType" : "STRING",
@@ -1008,7 +1077,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003302,
+      "srcTgtColId" : 9003363,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "EMPNAME",
       "srcTrgColDataType" : "STRING",
@@ -1019,7 +1088,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003303,
+      "srcTgtColId" : 9003364,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "DEPARTMENT",
       "srcTrgColDataType" : "STRING",
@@ -1030,7 +1099,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003304,
+      "srcTgtColId" : 9003365,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "HIRE_DATE",
       "srcTrgColDataType" : "STRING",
@@ -1041,7 +1110,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003305,
+      "srcTgtColId" : 9003366,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "EMAIL",
       "srcTrgColDataType" : "STRING",
@@ -1052,7 +1121,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003306,
+      "srcTgtColId" : 9003367,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "EMPADDRESS",
       "srcTrgColDataType" : "STRING",
@@ -1063,7 +1132,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003307,
+      "srcTgtColId" : 9003368,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "PHONE",
       "srcTrgColDataType" : "LONG",
@@ -1074,7 +1143,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003308,
+      "srcTgtColId" : 9003369,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "SALARY",
       "srcTrgColDataType" : "INT",
@@ -1085,7 +1154,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003309,
+      "srcTgtColId" : 9003370,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "COMM",
       "srcTrgColDataType" : "DOUBLE",
@@ -1096,7 +1165,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003310,
+      "srcTgtColId" : 9003371,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "CALCULATEDSALARY",
       "srcTrgColDataType" : "DOUBLE",
@@ -1107,7 +1176,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003311,
+      "srcTgtColId" : 9003372,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "YEARLYINCOME",
       "srcTrgColDataType" : "DOUBLE",
@@ -1118,7 +1187,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003312,
+      "srcTgtColId" : 9003373,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "TDS",
       "srcTrgColDataType" : "DOUBLE",
@@ -1129,7 +1198,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003313,
+      "srcTgtColId" : 9003374,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "DEPTNO",
       "srcTrgColDataType" : "INT",
@@ -1140,7 +1209,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003314,
+      "srcTgtColId" : 9003375,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "BIRTH_DATE",
       "srcTrgColDataType" : "STRING",
@@ -1151,7 +1220,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003315,
+      "srcTgtColId" : 9003376,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "GENDER",
       "srcTrgColDataType" : "STRING",
@@ -1162,7 +1231,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003316,
+      "srcTgtColId" : 9003377,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "CITY",
       "srcTrgColDataType" : "STRING",
@@ -1173,7 +1242,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003317,
+      "srcTgtColId" : 9003378,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "COUNTRY",
       "srcTrgColDataType" : "STRING",
@@ -1184,7 +1253,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003318,
+      "srcTgtColId" : 9003379,
       "ruleClsPropId" : 9003278,
       "srcTrgColName" : "CREDITCARDNUMBER",
       "srcTrgColDataType" : "LONG",
@@ -1195,7 +1264,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003341,
+      "srcTgtColId" : 9003380,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "EMPNO",
       "srcTrgColDataType" : "INT",
@@ -1206,7 +1275,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003342,
+      "srcTgtColId" : 9003381,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "EMPCODE",
       "srcTrgColDataType" : "STRING",
@@ -1217,7 +1286,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003343,
+      "srcTgtColId" : 9003382,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "EMPNAME",
       "srcTrgColDataType" : "STRING",
@@ -1228,7 +1297,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003344,
+      "srcTgtColId" : 9003383,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "DEPARTMENT",
       "srcTrgColDataType" : "STRING",
@@ -1239,7 +1308,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003345,
+      "srcTgtColId" : 9003384,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "HIRE_DATE",
       "srcTrgColDataType" : "STRING",
@@ -1250,7 +1319,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003346,
+      "srcTgtColId" : 9003385,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "EMAIL",
       "srcTrgColDataType" : "STRING",
@@ -1261,7 +1330,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003347,
+      "srcTgtColId" : 9003386,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "EMPADDRESS",
       "srcTrgColDataType" : "STRING",
@@ -1272,7 +1341,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003348,
+      "srcTgtColId" : 9003387,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "PHONE",
       "srcTrgColDataType" : "LONG",
@@ -1283,7 +1352,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003349,
+      "srcTgtColId" : 9003388,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "SALARY",
       "srcTrgColDataType" : "INT",
@@ -1294,7 +1363,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003350,
+      "srcTgtColId" : 9003389,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "COMM",
       "srcTrgColDataType" : "DOUBLE",
@@ -1305,7 +1374,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003351,
+      "srcTgtColId" : 9003390,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "CALCULATEDSALARY",
       "srcTrgColDataType" : "DOUBLE",
@@ -1316,7 +1385,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003352,
+      "srcTgtColId" : 9003391,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "YEARLYINCOME",
       "srcTrgColDataType" : "DOUBLE",
@@ -1327,7 +1396,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003353,
+      "srcTgtColId" : 9003392,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "TDS",
       "srcTrgColDataType" : "DOUBLE",
@@ -1338,7 +1407,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003354,
+      "srcTgtColId" : 9003393,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "DEPTNO",
       "srcTrgColDataType" : "INT",
@@ -1349,7 +1418,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003355,
+      "srcTgtColId" : 9003394,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "BIRTH_DATE",
       "srcTrgColDataType" : "STRING",
@@ -1360,7 +1429,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003356,
+      "srcTgtColId" : 9003395,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "GENDER",
       "srcTrgColDataType" : "STRING",
@@ -1371,7 +1440,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003357,
+      "srcTgtColId" : 9003396,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "CITY",
       "srcTrgColDataType" : "STRING",
@@ -1382,7 +1451,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003358,
+      "srcTgtColId" : 9003397,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "COUNTRY",
       "srcTrgColDataType" : "STRING",
@@ -1393,7 +1462,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9003359,
+      "srcTgtColId" : 9003398,
       "ruleClsPropId" : 9003319,
       "srcTrgColName" : "CREDITCARDNUMBER",
       "srcTrgColDataType" : "LONG",
@@ -1405,15 +1474,15 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9003360,
-      "srcColId" : 9003301,
-      "trgColId" : 9003342,
+      "colMapId" : 9003400,
+      "srcColId" : 9003361,
+      "trgColId" : 9003380,
       "colMapType" : "join",
-      "srcColName" : "EMPCODE",
-      "tgtColName" : "EMPCODE",
-      "colMapExpr" : "EMPCODE=EMPCODE",
+      "srcColName" : "EMPNO",
+      "tgtColName" : "EMPNO",
+      "colMapExpr" : "EMPNO=EMPNO",
       "srcTrgColMapVisible" : 1,
-      "displayIndex" : 1
+      "displayIndex" : 0
     } ],
     "objectVOList" : null,
     "srcCount" : null,
@@ -1431,6 +1500,75 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 9003401,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_EKUSV6F",
+      "expression" : "S.EMPNAME == T.EMPNAME",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 9003261,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 9003262,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 9003402,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_N395WO0",
+      "expression" : "S.DEPARTMENT == T.DEPARTMENT",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 2,
+      "ruleId" : 9003261,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 9003262,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 9003403,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_HMJSW00",
+      "expression" : "S.HIRE_DATE == T.HIRE_DATE",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 3,
+      "ruleId" : 9003261,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 9003262,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
