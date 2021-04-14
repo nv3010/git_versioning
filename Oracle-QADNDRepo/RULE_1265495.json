@@ -7,12 +7,12 @@
     "exitCode" : null,
     "folderId" : 1194048,
     "projectId" : 13930,
-    "ruleCode" : "1618384182551",
+    "ruleCode" : "CS0007",
     "folderName" : null,
     "folderType" : null,
     "startTime" : null,
     "endTime" : null,
-    "ruleName" : "CS0003 - Oracle PL_SQL Block Rule_1618384182551",
+    "ruleName" : "CS0007 - Oracle PL_SQL Block Rule - Valid PL_SQLBlock for Checksum",
     "displayName" : null,
     "rulePurpose" : null,
     "ruleTemplate" : null,
@@ -102,10 +102,10 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE  \n    TYPE RegEmployee_rec IS RECORD (  \n     SAL NUMBER(20)\n   );  \n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;  \n    emp_ouput Emp_TAB := Emp_TAB();  \n    \n BEGIN  \n    SELECT AVG(SALARY) as sal BULK COLLECT INTO emp_ouput FROM Reg_Employee; \n    \n    FOR i IN 1 .. emp_ouput.COUNT  \n    LOOP  \n  DBMS_OUTPUT.PUT_LINE(  emp_ouput (i). sal);  \n    END LOOP;  \n       \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1266616,
+          "srcTgtColId" : 1266623,
           "ruleClsPropId" : 1265499,
           "srcTrgColName" : "A",
-          "srcTrgColDataType" : "String",
+          "srcTrgColDataType" : "Number",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -160,7 +160,7 @@
         "ruleClsPropID" : 1265508,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "A^~^0^~^String^~^0^~^1",
+        "paramValue" : "A^~^0^~^Number^~^0^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -206,10 +206,10 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE  \n    TYPE RegEmployee_rec IS RECORD (  \n     SAL NUMBER(20)\n   );  \n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;  \n    emp_ouput Emp_TAB := Emp_TAB();  \n    \n BEGIN  \n    SELECT MAX(SALARY) as sal BULK COLLECT INTO emp_ouput FROM Reg_Employee; \n    \n    FOR i IN 1 .. emp_ouput.COUNT  \n    LOOP  \n  DBMS_OUTPUT.PUT_LINE(  emp_ouput (i). sal);  \n    END LOOP;  \n       \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1266619,
+          "srcTgtColId" : 1266626,
           "ruleClsPropId" : 1265513,
           "srcTrgColName" : "A",
-          "srcTrgColDataType" : "String",
+          "srcTrgColDataType" : "Number",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -264,7 +264,7 @@
         "ruleClsPropID" : 1265522,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "A^~^0^~^String^~^0^~^1",
+        "paramValue" : "A^~^0^~^Number^~^0^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -303,9 +303,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1266620,
-        "srcColId" : 1266616,
-        "trgColId" : 1266619,
+        "colMapId" : 1266627,
+        "srcColId" : 1266623,
+        "trgColId" : 1266626,
         "colMapType" : "join",
         "srcColName" : "A",
         "tgtColName" : "A",
@@ -345,10 +345,10 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1266616,
+      "srcTgtColId" : 1266623,
       "ruleClsPropId" : 1265499,
       "srcTrgColName" : "A",
-      "srcTrgColDataType" : "String",
+      "srcTrgColDataType" : "Number",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -356,10 +356,10 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1266619,
+      "srcTgtColId" : 1266626,
       "ruleClsPropId" : 1265513,
       "srcTrgColName" : "A",
-      "srcTrgColDataType" : "String",
+      "srcTrgColDataType" : "Number",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -368,9 +368,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1266620,
-      "srcColId" : 1266616,
-      "trgColId" : 1266619,
+      "colMapId" : 1266627,
+      "srcColId" : 1266623,
+      "trgColId" : 1266626,
       "colMapType" : "join",
       "srcColName" : "A",
       "tgtColName" : "A",
