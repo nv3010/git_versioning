@@ -43,11 +43,11 @@
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
     "srcConnId" : 2707224,
-    "trgConnId" : 2707224,
+    "trgConnId" : 3114550,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
     "srcConn" : "Snowflake-1620",
-    "trgConn" : "Snowflake-1620",
+    "trgConn" : "MSSQL-Urvashi",
     "elapseTime" : 0,
     "parameterId" : "",
     "type" : null,
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9028136,
-        "srcColId" : 9028126,
-        "trgColId" : 9028135,
+        "colMapId" : 9028143,
+        "srcColId" : 9028139,
+        "trgColId" : 9028142,
         "colMapType" : "join",
         "srcColName" : "number",
         "tgtColName" : "cnt",
@@ -163,7 +163,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as number from PUBLIC.DIMCUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9028126,
+          "srcTgtColId" : 9028139,
           "ruleClsPropId" : 9028118,
           "srcTrgColName" : "number",
           "srcTrgColDataType" : "NUMBER",
@@ -229,7 +229,7 @@
       "vid" : "GetData21",
       "classObjName" : "ICE_1618385115265",
       "queryBuilderXML" : null,
-      "connId" : 2707224,
+      "connId" : 3114550,
       "resultType" : "",
       "connName" : null,
       "connUrl" : null,
@@ -244,12 +244,12 @@
         "ruleClsPropID" : 9028127,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as number from PUBLIC.DIMCUSTOMER",
+        "paramValue" : "select count(*) as cnt from dbo.all_datatypes",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9028135,
+          "srcTgtColId" : 9028142,
           "ruleClsPropId" : 9028127,
           "srcTrgColName" : "cnt",
-          "srcTrgColDataType" : "NUMBER",
+          "srcTrgColDataType" : "int",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -262,7 +262,7 @@
         "ruleClsPropID" : 9028129,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "2707224",
+        "paramValue" : "3114550",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -290,7 +290,7 @@
         "ruleClsPropID" : 9028134,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "cnt^~^-5^~^NUMBER^~^18^~^1",
+        "paramValue" : "cnt^~^4^~^int^~^10^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -303,7 +303,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9028126,
+      "srcTgtColId" : 9028139,
       "ruleClsPropId" : 9028118,
       "srcTrgColName" : "number",
       "srcTrgColDataType" : "NUMBER",
@@ -314,10 +314,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9028135,
+      "srcTgtColId" : 9028142,
       "ruleClsPropId" : 9028127,
       "srcTrgColName" : "cnt",
-      "srcTrgColDataType" : "NUMBER",
+      "srcTrgColDataType" : "int",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -326,9 +326,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9028136,
-      "srcColId" : 9028126,
-      "trgColId" : 9028135,
+      "colMapId" : 9028143,
+      "srcColId" : 9028139,
+      "trgColId" : 9028142,
       "colMapType" : "join",
       "srcColName" : "number",
       "tgtColName" : "cnt",
