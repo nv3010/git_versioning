@@ -142,7 +142,7 @@
         "ruleClsPropID" : 1271731,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "A^~^0^~^String^~^0^~^1$~$B^~^0^~^String^~^0^~^2$~$C^~^0^~^String^~^0^~^3",
+        "paramValue" : "A^~^0^~^Number^~^0^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -158,32 +158,10 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE  \n    TYPE RegEmployee_rec IS RECORD (  \n     SAL NUMBER(20)\n   );  \n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;  \n    emp_ouput Emp_TAB := Emp_TAB();  \n    \n BEGIN  \n    SELECT MAX(SALARY) as sal BULK COLLECT INTO emp_ouput FROM Reg_Employee; \n    \n    FOR i IN 1 .. emp_ouput.COUNT  \n    LOOP  \n  DBMS_OUTPUT.PUT_LINE(  emp_ouput (i). sal);  \n    END LOOP;  \n       \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1274009,
+          "srcTgtColId" : 1274018,
           "ruleClsPropId" : 1271722,
           "srcTrgColName" : "A",
-          "srcTrgColDataType" : "String",
-          "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : null,
-          "displayIndex" : 0
-        }, {
-          "srcTgtColId" : 1274010,
-          "ruleClsPropId" : 1271722,
-          "srcTrgColName" : "B",
-          "srcTrgColDataType" : "String",
-          "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : null,
-          "displayIndex" : 0
-        }, {
-          "srcTgtColId" : 1274011,
-          "ruleClsPropId" : 1271722,
-          "srcTrgColName" : "C",
-          "srcTrgColDataType" : "String",
+          "srcTrgColDataType" : "Number",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -228,10 +206,10 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE  \n    TYPE RegEmployee_rec IS RECORD (  \n     SAL NUMBER(20)\n   );  \n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;  \n    emp_ouput Emp_TAB := Emp_TAB();  \n    \n BEGIN  \n    SELECT MAX(SALARY) as sal BULK COLLECT INTO emp_ouput FROM Reg_Employee; \n    \n    FOR i IN 1 .. emp_ouput.COUNT  \n    LOOP  \n  DBMS_OUTPUT.PUT_LINE(  emp_ouput (i). sal);  \n    END LOOP;  \n       \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1274014,
+          "srcTgtColId" : 1274021,
           "ruleClsPropId" : 1271736,
           "srcTrgColName" : "A",
-          "srcTrgColDataType" : "String",
+          "srcTrgColDataType" : "Number",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -286,7 +264,7 @@
         "ruleClsPropID" : 1271745,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "A^~^0^~^String^~^0^~^1",
+        "paramValue" : "A^~^0^~^Number^~^0^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -325,9 +303,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1274015,
-        "srcColId" : 1274009,
-        "trgColId" : 1274014,
+        "colMapId" : 1274022,
+        "srcColId" : 1274018,
+        "trgColId" : 1274021,
         "colMapType" : "join",
         "srcColName" : "A",
         "tgtColName" : "A",
@@ -367,10 +345,10 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1274009,
+      "srcTgtColId" : 1274018,
       "ruleClsPropId" : 1271722,
       "srcTrgColName" : "A",
-      "srcTrgColDataType" : "String",
+      "srcTrgColDataType" : "Number",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -378,32 +356,10 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1274010,
-      "ruleClsPropId" : 1271722,
-      "srcTrgColName" : "B",
-      "srcTrgColDataType" : "String",
-      "colFlagType" : "src",
-      "srcTrgColVisible" : 0,
-      "joinList" : null,
-      "mapColName" : "B",
-      "colFormat" : null,
-      "displayIndex" : 0
-    }, {
-      "srcTgtColId" : 1274011,
-      "ruleClsPropId" : 1271722,
-      "srcTrgColName" : "C",
-      "srcTrgColDataType" : "String",
-      "colFlagType" : "src",
-      "srcTrgColVisible" : 0,
-      "joinList" : null,
-      "mapColName" : "C",
-      "colFormat" : null,
-      "displayIndex" : 0
-    }, {
-      "srcTgtColId" : 1274014,
+      "srcTgtColId" : 1274021,
       "ruleClsPropId" : 1271736,
       "srcTrgColName" : "A",
-      "srcTrgColDataType" : "String",
+      "srcTrgColDataType" : "Number",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -412,9 +368,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1274015,
-      "srcColId" : 1274009,
-      "trgColId" : 1274014,
+      "colMapId" : 1274022,
+      "srcColId" : 1274018,
+      "trgColId" : 1274021,
       "colMapType" : "join",
       "srcColName" : "A",
       "tgtColName" : "A",
