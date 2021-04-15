@@ -102,10 +102,10 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE  \n    TYPE RegEmployee_rec IS RECORD (  \n     ENO CHAR(9),\n     ENAME  VARCHAR2(20),\n     HDATE DATE\n   );  \n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;  \n    emp_ouput Emp_TAB := Emp_TAB();  \n    \n BEGIN  \n    SELECT empno,Empname,Hiredate BULK COLLECT INTO emp_ouput  FROM Reg_Employee; \n    \n    FOR i IN 1 .. emp_ouput.COUNT  \n    LOOP  \n  DBMS_OUTPUT.PUT_LINE( emp_ouput (i).ENO  || ',' ||  emp_ouput (i). ENAME  || ',' ||  emp_ouput (i). HDATE);  \n    END LOOP;  \n       \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1274060,
+          "srcTgtColId" : 1274125,
           "ruleClsPropId" : 1271814,
           "srcTrgColName" : "A",
-          "srcTrgColDataType" : "String",
+          "srcTrgColDataType" : "Number",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -113,7 +113,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1274061,
+          "srcTgtColId" : 1274126,
           "ruleClsPropId" : 1271814,
           "srcTrgColName" : "B",
           "srcTrgColDataType" : "String",
@@ -124,15 +124,15 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1274062,
+          "srcTgtColId" : 1274127,
           "ruleClsPropId" : 1271814,
           "srcTrgColName" : "C",
-          "srcTrgColDataType" : "String",
+          "srcTrgColDataType" : "Date",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
           "mapColName" : null,
-          "colFormat" : null,
+          "colFormat" : "dd-MM-yy",
           "displayIndex" : 0
         } ],
         "fileContent" : null
@@ -182,7 +182,7 @@
         "ruleClsPropID" : 1271823,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "A^~^0^~^String^~^0^~^1$~$B^~^0^~^String^~^0^~^2$~$C^~^0^~^String^~^0^~^3",
+        "paramValue" : "A^~^0^~^Number^~^0^~^1$~$B^~^0^~^String^~^0^~^2$~$C^~^0^~^Date:dd-MM-yy^~^0^~^3",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -228,10 +228,10 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE  \n    TYPE RegEmployee_rec IS RECORD (  \n     ENO CHAR(9),\n     ENAME  VARCHAR2(20),\n     HDATE DATE\n   );  \n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;  \n    emp_ouput Emp_TAB := Emp_TAB();  \n    \n BEGIN  \n    SELECT empno,Empname,Hiredate BULK COLLECT INTO emp_ouput  FROM Reg_Employee; \n    \n    FOR i IN 1 .. emp_ouput.COUNT  \n    LOOP  \n  DBMS_OUTPUT.PUT_LINE( emp_ouput (i).ENO  || ',' ||  emp_ouput (i). ENAME  || ',' ||  emp_ouput (i). HDATE);  \n    END LOOP;  \n       \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1274065,
+          "srcTgtColId" : 1274130,
           "ruleClsPropId" : 1271826,
           "srcTrgColName" : "A",
-          "srcTrgColDataType" : "String",
+          "srcTrgColDataType" : "Number",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -239,7 +239,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1274066,
+          "srcTgtColId" : 1274131,
           "ruleClsPropId" : 1271826,
           "srcTrgColName" : "B",
           "srcTrgColDataType" : "String",
@@ -250,15 +250,15 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 1274067,
+          "srcTgtColId" : 1274132,
           "ruleClsPropId" : 1271826,
           "srcTrgColName" : "C",
-          "srcTrgColDataType" : "String",
+          "srcTrgColDataType" : "Date",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
           "mapColName" : null,
-          "colFormat" : null,
+          "colFormat" : "dd-MM-yy",
           "displayIndex" : 0
         } ],
         "fileContent" : null
@@ -308,7 +308,7 @@
         "ruleClsPropID" : 1271835,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "A^~^0^~^String^~^0^~^1$~$B^~^0^~^String^~^0^~^2$~$C^~^0^~^String^~^0^~^3",
+        "paramValue" : "A^~^0^~^Number^~^0^~^1$~$B^~^0^~^String^~^0^~^2$~$C^~^0^~^Date:dd-MM-yy^~^0^~^3",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -347,9 +347,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1274068,
-        "srcColId" : 1274060,
-        "trgColId" : 1274065,
+        "colMapId" : 1274133,
+        "srcColId" : 1274125,
+        "trgColId" : 1274130,
         "colMapType" : "join",
         "srcColName" : "A",
         "tgtColName" : "A",
@@ -389,10 +389,10 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1274060,
+      "srcTgtColId" : 1274125,
       "ruleClsPropId" : 1271814,
       "srcTrgColName" : "A",
-      "srcTrgColDataType" : "String",
+      "srcTrgColDataType" : "Number",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -400,7 +400,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1274061,
+      "srcTgtColId" : 1274126,
       "ruleClsPropId" : 1271814,
       "srcTrgColName" : "B",
       "srcTrgColDataType" : "String",
@@ -411,21 +411,21 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1274062,
+      "srcTgtColId" : 1274127,
       "ruleClsPropId" : 1271814,
       "srcTrgColName" : "C",
-      "srcTrgColDataType" : "String",
+      "srcTrgColDataType" : "Date",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
       "mapColName" : "C",
-      "colFormat" : null,
+      "colFormat" : "dd-MM-yy",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1274065,
+      "srcTgtColId" : 1274130,
       "ruleClsPropId" : 1271826,
       "srcTrgColName" : "A",
-      "srcTrgColDataType" : "String",
+      "srcTrgColDataType" : "Number",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -433,7 +433,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1274066,
+      "srcTgtColId" : 1274131,
       "ruleClsPropId" : 1271826,
       "srcTrgColName" : "B",
       "srcTrgColDataType" : "String",
@@ -444,21 +444,21 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1274067,
+      "srcTgtColId" : 1274132,
       "ruleClsPropId" : 1271826,
       "srcTrgColName" : "C",
-      "srcTrgColDataType" : "String",
+      "srcTrgColDataType" : "Date",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
       "mapColName" : "C",
-      "colFormat" : null,
+      "colFormat" : "dd-MM-yy",
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1274068,
-      "srcColId" : 1274060,
-      "trgColId" : 1274065,
+      "colMapId" : 1274133,
+      "srcColId" : 1274125,
+      "trgColId" : 1274130,
       "colMapType" : "join",
       "srcColName" : "A",
       "tgtColName" : "A",
