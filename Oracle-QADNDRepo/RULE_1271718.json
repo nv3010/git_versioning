@@ -158,7 +158,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE  \n    TYPE RegEmployee_rec IS RECORD (  \n     SAL NUMBER(20)\n   );  \n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;  \n    emp_ouput Emp_TAB := Emp_TAB();  \n    \n BEGIN  \n    SELECT MAX(SALARY) as sal BULK COLLECT INTO emp_ouput FROM Reg_Employee; \n    \n    FOR i IN 1 .. emp_ouput.COUNT  \n    LOOP  \n  DBMS_OUTPUT.PUT_LINE(  emp_ouput (i). sal);  \n    END LOOP;  \n       \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1274032,
+          "srcTgtColId" : 1274039,
           "ruleClsPropId" : 1271722,
           "srcTrgColName" : "A",
           "srcTrgColDataType" : "Number",
@@ -206,7 +206,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE  \n    TYPE RegEmployee_rec IS RECORD (  \n     SAL NUMBER(20)\n   );  \n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;  \n    emp_ouput Emp_TAB := Emp_TAB();  \n    \n BEGIN  \n    SELECT MAX(SALARY) as sal BULK COLLECT INTO emp_ouput FROM Reg_Employee; \n    \n    FOR i IN 1 .. emp_ouput.COUNT  \n    LOOP  \n  DBMS_OUTPUT.PUT_LINE(  emp_ouput (i). sal);  \n    END LOOP;  \n       \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 1274035,
+          "srcTgtColId" : 1274042,
           "ruleClsPropId" : 1271736,
           "srcTrgColName" : "A",
           "srcTrgColDataType" : "Number",
@@ -303,9 +303,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 1274036,
-        "srcColId" : 1274032,
-        "trgColId" : 1274035,
+        "colMapId" : 1274043,
+        "srcColId" : 1274039,
+        "trgColId" : 1274042,
         "colMapType" : "join",
         "srcColName" : "A",
         "tgtColName" : "A",
@@ -332,7 +332,7 @@
         "ruleClsPropID" : 1271752,
         "paramId" : 798,
         "paramMethod" : "setEngineType",
-        "paramValue" : "Null",
+        "paramValue" : "V8",
         "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
@@ -345,7 +345,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 1274032,
+      "srcTgtColId" : 1274039,
       "ruleClsPropId" : 1271722,
       "srcTrgColName" : "A",
       "srcTrgColDataType" : "Number",
@@ -356,7 +356,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 1274035,
+      "srcTgtColId" : 1274042,
       "ruleClsPropId" : 1271736,
       "srcTrgColName" : "A",
       "srcTrgColDataType" : "Number",
@@ -368,9 +368,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 1274036,
-      "srcColId" : 1274032,
-      "trgColId" : 1274035,
+      "colMapId" : 1274043,
+      "srcColId" : 1274039,
+      "trgColId" : 1274042,
       "colMapType" : "join",
       "srcColName" : "A",
       "tgtColName" : "A",
