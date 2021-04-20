@@ -42,11 +42,11 @@
     "failureHeader" : null,
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
-    "srcConnId" : 7640868,
+    "srcConnId" : 6215,
     "trgConnId" : 7342953,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
-    "srcConn" : "Ora01",
+    "srcConn" : "MSSQL",
     "trgConn" : "RedShift_001",
     "elapseTime" : 0,
     "parameterId" : "16.4.0_Urvashi\\16.4.0_SQL1",
@@ -85,7 +85,7 @@
       "vid" : "GetData11",
       "classObjName" : "ICE_1618920497134",
       "queryBuilderXML" : null,
-      "connId" : 7640868,
+      "connId" : 6215,
       "resultType" : null,
       "connName" : null,
       "connUrl" : null,
@@ -100,12 +100,12 @@
         "ruleClsPropID" : 9964220,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as cnt from HR.COUNTRIES",
+        "paramValue" : "select count(*) as cnt from dbo.all_datatypes",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9964245,
+          "srcTgtColId" : 9965548,
           "ruleClsPropId" : 9964220,
           "srcTrgColName" : "cnt",
-          "srcTrgColDataType" : "NUMBER",
+          "srcTrgColDataType" : "int",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -118,7 +118,7 @@
         "ruleClsPropID" : 9964222,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "7640868",
+        "paramValue" : "6215",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -146,15 +146,8 @@
         "ruleClsPropID" : 9964227,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "cnt^~^2^~^NUMBER^~^0^~^1",
+        "paramValue" : "cnt^~^4^~^int^~^10^~^1",
         "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9964228,
-        "paramId" : 404,
-        "paramMethod" : "setIsMultipleOutVaiables",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -192,7 +185,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from RULEX_TESTDATA.customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9964248,
+          "srcTgtColId" : 9965551,
           "ruleClsPropId" : 9964230,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "int8",
@@ -268,9 +261,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9964249,
-        "srcColId" : 9964245,
-        "trgColId" : 9964248,
+        "colMapId" : 9965552,
+        "srcColId" : 9965548,
+        "trgColId" : 9965551,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -297,7 +290,7 @@
         "ruleClsPropID" : 9964241,
         "paramId" : 798,
         "paramMethod" : "setEngineType",
-        "paramValue" : "Null",
+        "paramValue" : "V8",
         "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
@@ -310,10 +303,10 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9964245,
+      "srcTgtColId" : 9965548,
       "ruleClsPropId" : 9964220,
       "srcTrgColName" : "cnt",
-      "srcTrgColDataType" : "NUMBER",
+      "srcTrgColDataType" : "int",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -321,7 +314,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9964248,
+      "srcTgtColId" : 9965551,
       "ruleClsPropId" : 9964230,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "int8",
@@ -333,9 +326,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9964249,
-      "srcColId" : 9964245,
-      "trgColId" : 9964248,
+      "colMapId" : 9965552,
+      "srcColId" : 9965548,
+      "trgColId" : 9965551,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
