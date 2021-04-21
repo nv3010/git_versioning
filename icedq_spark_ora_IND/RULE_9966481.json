@@ -79,7 +79,7 @@
       "name" : null,
       "ruleClassId" : 9966482,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from REG_DB_HV.COL_SPECIAL",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9966587,
+          "srcTgtColId" : 9966682,
           "ruleClsPropId" : 9966485,
           "srcTrgColName" : "id",
           "srcTrgColDataType" : "NUMBER",
@@ -113,7 +113,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9966588,
+          "srcTgtColId" : 9966683,
           "ruleClsPropId" : 9966485,
           "srcTrgColName" : "total salary",
           "srcTrgColDataType" : "NUMBER",
@@ -124,7 +124,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9966589,
+          "srcTgtColId" : 9966684,
           "ruleClsPropId" : 9966485,
           "srcTrgColName" : "first;name",
           "srcTrgColDataType" : "VARCHAR2",
@@ -161,7 +161,7 @@
         "ruleClsPropID" : 9966490,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1,2,3",
+        "paramValue" : "1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -198,7 +198,7 @@
       "name" : null,
       "ruleClassId" : 9966483,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
@@ -221,7 +221,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from REG_DB_HV.COL_SPECIAL",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9966592,
+          "srcTgtColId" : 9966687,
           "ruleClsPropId" : 9966498,
           "srcTrgColName" : "id",
           "srcTrgColDataType" : "NUMBER",
@@ -232,7 +232,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9966593,
+          "srcTgtColId" : 9966688,
           "ruleClsPropId" : 9966498,
           "srcTrgColName" : "total salary",
           "srcTrgColDataType" : "NUMBER",
@@ -243,7 +243,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9966594,
+          "srcTgtColId" : 9966689,
           "ruleClsPropId" : 9966498,
           "srcTrgColName" : "first;name",
           "srcTrgColDataType" : "VARCHAR2",
@@ -280,7 +280,7 @@
         "ruleClsPropID" : 9966503,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1,2,3",
+        "paramValue" : "1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -317,7 +317,7 @@
       "name" : null,
       "ruleClassId" : 9966484,
       "connType" : null,
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
@@ -333,35 +333,15 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9966596,
-        "srcColId" : 9966587,
-        "trgColId" : 9966592,
+        "colMapId" : 9966692,
+        "srcColId" : 9966682,
+        "trgColId" : 9966687,
         "colMapType" : "join",
         "srcColName" : "id",
         "tgtColName" : "id",
         "colMapExpr" : "id=id",
         "srcTrgColMapVisible" : 1,
         "displayIndex" : 1
-      }, {
-        "colMapId" : 9966597,
-        "srcColId" : 9966588,
-        "trgColId" : 9966593,
-        "colMapType" : "join",
-        "srcColName" : "total salary",
-        "tgtColName" : "total salary",
-        "colMapExpr" : "total salary=total salary",
-        "srcTrgColMapVisible" : 1,
-        "displayIndex" : 4
-      }, {
-        "colMapId" : 9966598,
-        "srcColId" : 9966589,
-        "trgColId" : 9966594,
-        "colMapType" : "join",
-        "srcColName" : "first;name",
-        "tgtColName" : "first;name",
-        "colMapExpr" : "first;name=first;name",
-        "srcTrgColMapVisible" : 1,
-        "displayIndex" : 5
       } ],
       "exprlist" : [ {
         "exprID" : 9966548,
@@ -428,7 +408,7 @@
         "ruleClsPropID" : 9966513,
         "paramId" : 798,
         "paramMethod" : "setEngineType",
-        "paramValue" : "Null",
+        "paramValue" : "V8",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -487,6 +467,13 @@
         "paramValue" : "",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9966690,
+        "paramId" : 487,
+        "paramMethod" : "setDegreeOfParallelism",
+        "paramValue" : "1",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -497,7 +484,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9966587,
+      "srcTgtColId" : 9966682,
       "ruleClsPropId" : 9966485,
       "srcTrgColName" : "id",
       "srcTrgColDataType" : "NUMBER",
@@ -508,7 +495,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9966588,
+      "srcTgtColId" : 9966683,
       "ruleClsPropId" : 9966485,
       "srcTrgColName" : "total salary",
       "srcTrgColDataType" : "NUMBER",
@@ -519,7 +506,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9966589,
+      "srcTgtColId" : 9966684,
       "ruleClsPropId" : 9966485,
       "srcTrgColName" : "first;name",
       "srcTrgColDataType" : "VARCHAR2",
@@ -530,7 +517,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9966592,
+      "srcTgtColId" : 9966687,
       "ruleClsPropId" : 9966498,
       "srcTrgColName" : "id",
       "srcTrgColDataType" : "NUMBER",
@@ -541,7 +528,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9966593,
+      "srcTgtColId" : 9966688,
       "ruleClsPropId" : 9966498,
       "srcTrgColName" : "total salary",
       "srcTrgColDataType" : "NUMBER",
@@ -552,7 +539,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9966594,
+      "srcTgtColId" : 9966689,
       "ruleClsPropId" : 9966498,
       "srcTrgColName" : "first;name",
       "srcTrgColDataType" : "VARCHAR2",
@@ -564,35 +551,15 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9966596,
-      "srcColId" : 9966587,
-      "trgColId" : 9966592,
+      "colMapId" : 9966692,
+      "srcColId" : 9966682,
+      "trgColId" : 9966687,
       "colMapType" : "join",
       "srcColName" : "id",
       "tgtColName" : "id",
       "colMapExpr" : "id=id",
       "srcTrgColMapVisible" : 1,
       "displayIndex" : 1
-    }, {
-      "colMapId" : 9966597,
-      "srcColId" : 9966588,
-      "trgColId" : 9966593,
-      "colMapType" : "join",
-      "srcColName" : "total salary",
-      "tgtColName" : "total salary",
-      "colMapExpr" : "total salary=total salary",
-      "srcTrgColMapVisible" : 1,
-      "displayIndex" : 4
-    }, {
-      "colMapId" : 9966598,
-      "srcColId" : 9966589,
-      "trgColId" : 9966594,
-      "colMapType" : "join",
-      "srcColName" : "first;name",
-      "tgtColName" : "first;name",
-      "colMapExpr" : "first;name=first;name",
-      "srcTrgColMapVisible" : 1,
-      "displayIndex" : 5
     } ],
     "objectVOList" : null,
     "srcCount" : null,
