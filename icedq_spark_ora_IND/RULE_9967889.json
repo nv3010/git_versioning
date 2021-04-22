@@ -42,12 +42,12 @@
     "failureHeader" : null,
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
-    "srcConnId" : 840097,
-    "trgConnId" : 840097,
+    "srcConnId" : 7642421,
+    "trgConnId" : 7642421,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
-    "srcConn" : "1310-Oracle_Duplicate_1575959578982",
-    "trgConn" : "1310-Oracle_Duplicate_1575959578982",
+    "srcConn" : "4785",
+    "trgConn" : "4785",
     "elapseTime" : 0,
     "parameterId" : null,
     "type" : null,
@@ -55,7 +55,7 @@
     "ruleCreatedByName" : "admin",
     "projectName" : null,
     "ruleModifiedByName" : null,
-    "ruleClassId" : 9967892,
+    "ruleClassId" : 9967982,
     "successBody" : null,
     "failureBody" : null,
     "templateId" : 234,
@@ -77,15 +77,15 @@
     "classVOList" : [ {
       "classId" : 1,
       "name" : null,
-      "ruleClassId" : 9967890,
+      "ruleClassId" : 9967980,
       "connType" : "DATABASE",
-      "execMode" : "report",
+      "execMode" : "BDReport",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
-      "classObjName" : "ICE_1619088538439",
+      "classObjName" : "ICE_1619088737143",
       "queryBuilderXML" : null,
-      "connId" : 840097,
+      "connId" : 7642421,
       "resultType" : "rowcount",
       "connName" : null,
       "connUrl" : null,
@@ -97,15 +97,15 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 9967893,
+        "ruleClsPropID" : 9967983,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select * from HR.JOBS",
+        "paramValue" : "select * from dbo.CUSTOMER_CHECK",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9967902,
-          "ruleClsPropId" : 9967893,
-          "srcTrgColName" : "job_id",
-          "srcTrgColDataType" : "VARCHAR2",
+          "srcTgtColId" : 9967997,
+          "ruleClsPropId" : 9967983,
+          "srcTrgColName" : "custid",
+          "srcTrgColDataType" : "int",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -113,10 +113,10 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9967903,
-          "ruleClsPropId" : 9967893,
-          "srcTrgColName" : "job_title",
-          "srcTrgColDataType" : "VARCHAR2",
+          "srcTgtColId" : 9967998,
+          "ruleClsPropId" : 9967983,
+          "srcTrgColName" : "acctno",
+          "srcTrgColDataType" : "varchar",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -124,10 +124,10 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9967904,
-          "ruleClsPropId" : 9967893,
-          "srcTrgColName" : "min_salary",
-          "srcTrgColDataType" : "NUMBER",
+          "srcTgtColId" : 9967999,
+          "ruleClsPropId" : 9967983,
+          "srcTrgColName" : "fname",
+          "srcTrgColDataType" : "varchar",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -135,10 +135,10 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9967905,
-          "ruleClsPropId" : 9967893,
-          "srcTrgColName" : "max_salary",
-          "srcTrgColDataType" : "NUMBER",
+          "srcTgtColId" : 9968000,
+          "ruleClsPropId" : 9967983,
+          "srcTrgColName" : "gender",
+          "srcTrgColDataType" : "char",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -148,46 +148,74 @@
         } ],
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 9967895,
+        "ruleClsPropID" : 9967985,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "840097",
+        "paramValue" : "7642421",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 9967896,
+        "ruleClsPropID" : 9967986,
         "paramId" : 337,
         "paramMethod" : "setIsStoredProcedure",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 9967897,
+        "ruleClsPropID" : 9967987,
+        "paramId" : 491,
+        "paramMethod" : "setDefferedSort",
+        "paramValue" : "true",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9967988,
+        "paramId" : 799,
+        "paramMethod" : "setReadPartition",
+        "paramValue" : "None",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9967989,
+        "paramId" : 800,
+        "paramMethod" : "setNumberOfPartition",
+        "paramValue" : null,
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9967990,
+        "paramId" : 801,
+        "paramMethod" : "setPartitionCondition",
+        "paramValue" : "null",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9967992,
+        "paramId" : 902,
+        "paramMethod" : "setSqlSchemaOverride",
+        "paramValue" : "No",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9967993,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
         "paramValue" : "null",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 9967899,
+        "ruleClsPropID" : 9967995,
         "paramId" : 82,
         "paramMethod" : "setAppendOrderBy",
         "paramValue" : "true",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 9967900,
+        "ruleClsPropID" : 9967996,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "job_id^~^12^~^VARCHAR2^~^10^~^1$~$job_title^~^12^~^VARCHAR2^~^35^~^2$~$min_salary^~^2^~^NUMBER^~^6^~^3$~$max_salary^~^2^~^NUMBER^~^6^~^4",
+        "paramValue" : "custid^~^4^~^int^~^10^~^1$~$acctno^~^12^~^varchar^~^10^~^2$~$fname^~^12^~^varchar^~^20^~^3$~$gender^~^1^~^char^~^1^~^4",
         "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9967901,
-        "paramId" : 404,
-        "paramMethod" : "setIsMultipleOutVaiables",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -200,15 +228,15 @@
     }, {
       "classId" : 1,
       "name" : null,
-      "ruleClassId" : 9967891,
+      "ruleClassId" : 9967981,
       "connType" : "DATABASE",
-      "execMode" : "report",
+      "execMode" : "BDReport",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
-      "classObjName" : "ICE_1619088538439",
+      "classObjName" : "ICE_1619088737143",
       "queryBuilderXML" : null,
-      "connId" : 840097,
+      "connId" : 7642421,
       "resultType" : "rowcount",
       "connName" : null,
       "connUrl" : null,
@@ -220,14 +248,14 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 9967906,
+        "ruleClsPropID" : 9968001,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select 1 as cnt from dual",
+        "paramValue" : "select GETDATE() as gd",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9967911,
-          "ruleClsPropId" : 9967906,
-          "srcTrgColName" : "cnt",
+          "srcTgtColId" : 9968007,
+          "ruleClsPropId" : 9968001,
+          "srcTrgColName" : "gd",
           "srcTrgColDataType" : "String",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -238,21 +266,28 @@
         } ],
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 9967908,
-        "paramId" : 83,
-        "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "cnt^~^12^~^String^~^20^~^1",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9967909,
-        "paramId" : 16,
-        "paramMethod" : "setConnId",
-        "paramValue" : "840097",
+        "ruleClsPropID" : 9968003,
+        "paramId" : 491,
+        "paramMethod" : "setDefferedSort",
+        "paramValue" : "true",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 9967910,
+        "ruleClsPropID" : 9968004,
+        "paramId" : 83,
+        "paramMethod" : "setColumnsMInfo",
+        "paramValue" : "gd^~^12^~^String^~^20^~^1",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9968005,
+        "paramId" : 16,
+        "paramMethod" : "setConnId",
+        "paramValue" : "7642421",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9968006,
         "paramId" : 82,
         "paramMethod" : "setAppendOrderBy",
         "paramValue" : "false",
@@ -269,13 +304,13 @@
     }, {
       "classId" : 3,
       "name" : null,
-      "ruleClassId" : 9967892,
+      "ruleClassId" : 9967982,
       "connType" : null,
-      "execMode" : "report",
+      "execMode" : "BDReport",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
-      "classObjName" : "ICE_1619088538439",
+      "classObjName" : "ICE_1619088737143",
       "queryBuilderXML" : null,
       "connId" : 0,
       "resultType" : "rowcount",
@@ -287,93 +322,100 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9967924,
-        "srcColId" : 9967902,
-        "trgColId" : 9967911,
+        "colMapId" : 9968021,
+        "srcColId" : 9967997,
+        "trgColId" : 9968007,
         "colMapType" : "join",
-        "srcColName" : "job_id",
-        "tgtColName" : "cnt",
-        "colMapExpr" : "cnt=job_id",
+        "srcColName" : "custid",
+        "tgtColName" : "gd",
+        "colMapExpr" : "gd=custid",
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 9967912,
-        "paramId" : 9,
-        "paramMethod" : "setSourceObject",
-        "paramValue" : "GetData11",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9967913,
-        "paramId" : 10,
-        "paramMethod" : "setTargetObject",
-        "paramValue" : "GetData21",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9967914,
-        "paramId" : 798,
-        "paramMethod" : "setEngineType",
-        "paramValue" : "Null",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9967915,
-        "paramId" : 22,
-        "paramMethod" : "setMaxRowCount",
-        "paramValue" : "-1",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9967916,
-        "paramId" : 23,
-        "paramMethod" : "setMaxErrorCount",
-        "paramValue" : "500",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9967917,
-        "paramId" : 24,
-        "paramMethod" : "setShowErrorData",
-        "paramValue" : "No",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9967918,
-        "paramId" : 72,
-        "paramMethod" : "setTimeOut",
-        "paramValue" : null,
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9967919,
-        "paramId" : 73,
-        "paramMethod" : "setLoadDataFlag",
-        "paramValue" : "No",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9967920,
+        "ruleClsPropID" : 9968016,
         "paramId" : 465,
         "paramMethod" : "setReportXlsx",
         "paramValue" : "No",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 9967921,
+        "ruleClsPropID" : 9968017,
+        "paramId" : 529,
+        "paramMethod" : "setUserProperty",
+        "paramValue" : "--driver-memory 2g --executor-memory 2g --num-executors 6 --executor-cores 2 --conf spark.sql.broadcastTimeout=4800 --conf spark.executor.heartbeatInterval=30s --conf spark.dynamicAllocation.executorIdleTimeout=180 --conf spark.sql.shuffle.partitions=200 --conf spark.default.parallelism=200 ",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9968018,
         "paramId" : 530,
         "paramMethod" : "setThresholdFlag",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 9967922,
+        "ruleClsPropID" : 9968019,
         "paramId" : 531,
         "paramMethod" : "setThresholdExpression",
         "paramValue" : "",
         "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9968008,
+        "paramId" : 9,
+        "paramMethod" : "setSourceObject",
+        "paramValue" : "GetData11",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9968009,
+        "paramId" : 10,
+        "paramMethod" : "setTargetObject",
+        "paramValue" : "GetData21",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9968010,
+        "paramId" : 798,
+        "paramMethod" : "setEngineType",
+        "paramValue" : "Null",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9968011,
+        "paramId" : 22,
+        "paramMethod" : "setMaxRowCount",
+        "paramValue" : "-1",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9968012,
+        "paramId" : 23,
+        "paramMethod" : "setMaxErrorCount",
+        "paramValue" : "500",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9968013,
+        "paramId" : 24,
+        "paramMethod" : "setShowErrorData",
+        "paramValue" : "Yes",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9968014,
+        "paramId" : 72,
+        "paramMethod" : "setTimeOut",
+        "paramValue" : null,
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9968015,
+        "paramId" : 73,
+        "paramMethod" : "setLoadDataFlag",
+        "paramValue" : "No",
+        "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -385,69 +427,69 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9967902,
-      "ruleClsPropId" : 9967893,
-      "srcTrgColName" : "job_id",
-      "srcTrgColDataType" : "VARCHAR2",
+      "srcTgtColId" : 9967997,
+      "ruleClsPropId" : 9967983,
+      "srcTrgColName" : "custid",
+      "srcTrgColDataType" : "int",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "job_id",
+      "mapColName" : "custid",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9967903,
-      "ruleClsPropId" : 9967893,
-      "srcTrgColName" : "job_title",
-      "srcTrgColDataType" : "VARCHAR2",
+      "srcTgtColId" : 9967998,
+      "ruleClsPropId" : 9967983,
+      "srcTrgColName" : "acctno",
+      "srcTrgColDataType" : "varchar",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "job_title",
+      "mapColName" : "acctno",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9967904,
-      "ruleClsPropId" : 9967893,
-      "srcTrgColName" : "min_salary",
-      "srcTrgColDataType" : "NUMBER",
+      "srcTgtColId" : 9967999,
+      "ruleClsPropId" : 9967983,
+      "srcTrgColName" : "fname",
+      "srcTrgColDataType" : "varchar",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "min_salary",
+      "mapColName" : "fname",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9967905,
-      "ruleClsPropId" : 9967893,
-      "srcTrgColName" : "max_salary",
-      "srcTrgColDataType" : "NUMBER",
+      "srcTgtColId" : 9968000,
+      "ruleClsPropId" : 9967983,
+      "srcTrgColName" : "gender",
+      "srcTrgColDataType" : "char",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "max_salary",
+      "mapColName" : "gender",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9967911,
-      "ruleClsPropId" : 9967906,
-      "srcTrgColName" : "cnt",
+      "srcTgtColId" : 9968007,
+      "ruleClsPropId" : 9968001,
+      "srcTrgColName" : "gd",
       "srcTrgColDataType" : "String",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "cnt",
+      "mapColName" : "gd",
       "colFormat" : null,
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9967924,
-      "srcColId" : 9967902,
-      "trgColId" : 9967911,
+      "colMapId" : 9968021,
+      "srcColId" : 9967997,
+      "trgColId" : 9968007,
       "colMapType" : "join",
-      "srcColName" : "job_id",
-      "tgtColName" : "cnt",
-      "colMapExpr" : "cnt=job_id",
+      "srcColName" : "custid",
+      "tgtColName" : "gd",
+      "colMapExpr" : "gd=custid",
       "srcTrgColMapVisible" : 0,
       "displayIndex" : 0
     } ],
