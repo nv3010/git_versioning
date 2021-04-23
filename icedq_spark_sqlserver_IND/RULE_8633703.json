@@ -42,11 +42,11 @@
     "failureHeader" : "",
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
-    "srcConnId" : 6183359,
+    "srcConnId" : 8612924,
     "trgConnId" : 8612924,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
-    "srcConn" : "Abhi_Oracle",
+    "srcConn" : "Analysis-Services-MultiDimensionl",
     "trgConn" : "Analysis-Services-MultiDimensionl",
     "elapseTime" : 0,
     "parameterId" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9116164,
-        "srcColId" : 9116160,
-        "trgColId" : 9116163,
+        "colMapId" : 9116171,
+        "srcColId" : 9116167,
+        "trgColId" : 9116170,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "x",
@@ -146,7 +146,7 @@
       "vid" : "GetData11",
       "classObjName" : "ICE_1613737809264",
       "queryBuilderXML" : null,
-      "connId" : 6183359,
+      "connId" : 8612924,
       "resultType" : "",
       "connName" : null,
       "connUrl" : null,
@@ -161,9 +161,9 @@
         "ruleClsPropID" : 8633710,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as cnt from ICEDQ_LEGACY.CATALOG",
+        "paramValue" : "WITH MEMBER measures.X AS  \n   [Product].[Product Categories].Levels.Count   \nSelect Measures.X ON 0  \nFROM [Adventure Works]",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9116160,
+          "srcTgtColId" : 9116167,
           "ruleClsPropId" : 8633710,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -179,7 +179,7 @@
         "ruleClsPropID" : 8633712,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "6183359",
+        "paramValue" : "8612924",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -209,13 +209,6 @@
         "paramMethod" : "setColumnsMInfo",
         "paramValue" : "cnt^~^2^~^NUMBER^~^0^~^1",
         "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 9116157,
-        "paramId" : 404,
-        "paramMethod" : "setIsMultipleOutVaiables",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -253,7 +246,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "WITH MEMBER measures.X AS  \n   [Product].[Product Categories].Levels.Count   \nSelect Measures.X ON 0  \nFROM [Adventure Works]",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9116163,
+          "srcTgtColId" : 9116170,
           "ruleClsPropId" : 8633719,
           "srcTrgColName" : "x",
           "srcTrgColDataType" : "VARCHAR",
@@ -310,7 +303,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9116160,
+      "srcTgtColId" : 9116167,
       "ruleClsPropId" : 8633710,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -321,7 +314,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9116163,
+      "srcTgtColId" : 9116170,
       "ruleClsPropId" : 8633719,
       "srcTrgColName" : "x",
       "srcTrgColDataType" : "VARCHAR",
@@ -333,9 +326,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9116164,
-      "srcColId" : 9116160,
-      "trgColId" : 9116163,
+      "colMapId" : 9116171,
+      "srcColId" : 9116167,
+      "trgColId" : 9116170,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "x",
