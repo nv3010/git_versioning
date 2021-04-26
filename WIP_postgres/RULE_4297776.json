@@ -22,7 +22,7 @@
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2020-09-02 00:00:00",
-    "ruleModifiedDate" : "2020-09-02 00:00:00",
+    "ruleModifiedDate" : "2021-04-26 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -135,17 +135,17 @@
     "reportRuleClassId" : 0,
     "ruleCId" : 0,
     "classVOList" : [ {
-      "classId" : 1,
+      "classId" : 3,
       "name" : null,
-      "ruleClassId" : 4297778,
-      "connType" : "DATABASE",
+      "ruleClassId" : 4297780,
+      "connType" : "",
       "execMode" : "scalar",
-      "index" : 0,
-      "classRun" : "com.ice.bpel.GetData",
-      "vid" : "GetData11",
+      "index" : 1,
+      "classRun" : "com.ice.bpel.CompareData",
+      "vid" : "CompareData11",
       "classObjName" : "ICE_1599025827698",
       "queryBuilderXML" : null,
-      "connId" : 992370,
+      "connId" : 0,
       "resultType" : "",
       "connName" : null,
       "connUrl" : null,
@@ -154,66 +154,60 @@
       "ruleId" : 0,
       "ruleName" : null,
       "ruleParameter" : null,
-      "srcTrgMaplist" : [ ],
-      "exprlist" : [ ],
+      "srcTrgMaplist" : [ {
+        "colMapId" : 5362103,
+        "srcColId" : 5362098,
+        "trgColId" : 5362101,
+        "colMapType" : "join",
+        "srcColName" : "salary",
+        "tgtColName" : "salary",
+        "colMapExpr" : "salary=salary",
+        "srcTrgColMapVisible" : 0,
+        "displayIndex" : 0
+      } ],
+      "exprlist" : [ {
+        "exprID" : 4297884,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_R3E16EM",
+        "expression" : "S.salary -T.salary != 3295224",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 0,
+        "ruleId" : 4297776,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 4297780,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.salary -T.salary != 3295224",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 4297781,
-        "paramId" : 6,
-        "paramMethod" : "setQueryString",
-        "paramValue" : "select sum(salary) as salary from staff\n\n--comments\n\n/*select*/",
-        "srcTrgTbllist" : [ {
-          "srcTgtColId" : 4297879,
-          "ruleClsPropId" : 4297781,
-          "srcTrgColName" : "salary",
-          "srcTrgColDataType" : "NUMBER",
-          "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        } ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 4297783,
-        "paramId" : 16,
-        "paramMethod" : "setConnId",
-        "paramValue" : "992370",
+        "ruleClsPropID" : 4297802,
+        "paramId" : 10,
+        "paramMethod" : "setTargetObject",
+        "paramValue" : "GetData21",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 4297784,
-        "paramId" : 337,
-        "paramMethod" : "setIsStoredProcedure",
-        "paramValue" : "false",
+        "ruleClsPropID" : 4297801,
+        "paramId" : 9,
+        "paramMethod" : "setSourceObject",
+        "paramValue" : "GetData11",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 4297785,
-        "paramId" : 84,
-        "paramMethod" : "setOrderByStr",
-        "paramValue" : "",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 4297787,
-        "paramId" : 82,
-        "paramMethod" : "setAppendOrderBy",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 4297788,
-        "paramId" : 83,
-        "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "salary^~^2^~^NUMBER^~^0^~^1",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 4297789,
-        "paramId" : 404,
-        "paramMethod" : "setIsMultipleOutVaiables",
-        "paramValue" : "false",
+        "ruleClsPropID" : 5362102,
+        "paramId" : 798,
+        "paramMethod" : "setEngineType",
+        "paramValue" : "Null",
         "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
@@ -247,48 +241,9 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 4297791,
-        "paramId" : 6,
-        "paramMethod" : "setQueryString",
-        "paramValue" : "select sum(salary) as salary from staff where sex='F'\n\n--comments\n\n/*select*/",
-        "srcTrgTbllist" : [ {
-          "srcTgtColId" : 4297882,
-          "ruleClsPropId" : 4297791,
-          "srcTrgColName" : "salary",
-          "srcTrgColDataType" : "NUMBER",
-          "colFlagType" : "tgt",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        } ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 4297793,
-        "paramId" : 16,
-        "paramMethod" : "setConnId",
-        "paramValue" : "992370",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 4297794,
-        "paramId" : 337,
-        "paramMethod" : "setIsStoredProcedure",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 4297795,
-        "paramId" : 84,
-        "paramMethod" : "setOrderByStr",
-        "paramValue" : "",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 4297797,
-        "paramId" : 82,
-        "paramMethod" : "setAppendOrderBy",
+        "ruleClsPropID" : 4297799,
+        "paramId" : 404,
+        "paramMethod" : "setIsMultipleOutVaiables",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
@@ -300,11 +255,50 @@
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 4297799,
-        "paramId" : 404,
-        "paramMethod" : "setIsMultipleOutVaiables",
+        "ruleClsPropID" : 4297797,
+        "paramId" : 82,
+        "paramMethod" : "setAppendOrderBy",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 4297795,
+        "paramId" : 84,
+        "paramMethod" : "setOrderByStr",
+        "paramValue" : "",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 4297794,
+        "paramId" : 337,
+        "paramMethod" : "setIsStoredProcedure",
+        "paramValue" : "false",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 4297793,
+        "paramId" : 16,
+        "paramMethod" : "setConnId",
+        "paramValue" : "992370",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 4297791,
+        "paramId" : 6,
+        "paramMethod" : "setQueryString",
+        "paramValue" : "select sum(salary) as salary from staff where sex='F'\n\n--comments\n\n/*select*/",
+        "srcTrgTbllist" : [ {
+          "srcTgtColId" : 5362101,
+          "ruleClsPropId" : 4297791,
+          "srcTrgColName" : "salary",
+          "srcTrgColDataType" : "NUMBER",
+          "colFlagType" : "tgt",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        } ],
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -315,17 +309,17 @@
       "thresholdFlag" : null,
       "thresholdExpression" : null
     }, {
-      "classId" : 3,
+      "classId" : 1,
       "name" : null,
-      "ruleClassId" : 4297780,
-      "connType" : "",
+      "ruleClassId" : 4297778,
+      "connType" : "DATABASE",
       "execMode" : "scalar",
-      "index" : 1,
-      "classRun" : "com.ice.bpel.CompareData",
-      "vid" : "CompareData11",
+      "index" : 0,
+      "classRun" : "com.ice.bpel.GetData",
+      "vid" : "GetData11",
       "classObjName" : "ICE_1599025827698",
       "queryBuilderXML" : null,
-      "connId" : 0,
+      "connId" : 992370,
       "resultType" : "",
       "connName" : null,
       "connUrl" : null,
@@ -334,54 +328,67 @@
       "ruleId" : 0,
       "ruleName" : null,
       "ruleParameter" : null,
-      "srcTrgMaplist" : [ {
-        "colMapId" : 4297883,
-        "srcColId" : 4297879,
-        "trgColId" : 4297882,
-        "colMapType" : "join",
-        "srcColName" : "salary",
-        "tgtColName" : "salary",
-        "colMapExpr" : "salary=salary",
-        "srcTrgColMapVisible" : 0,
-        "displayIndex" : 0
-      } ],
-      "exprlist" : [ {
-        "exprID" : 4297884,
-        "exprLogID" : 0,
-        "exprName" : "EXPR_R3E16EM",
-        "expression" : "S.salary -T.salary != 3295224",
-        "result" : "Pass",
-        "exprType" : "5",
-        "exprVisible" : 1,
-        "exprIndex" : 0,
-        "ruleId" : 4297776,
-        "ruleInstanceId" : 0,
-        "ruleClassId" : 4297780,
-        "ruleName" : null,
-        "trueCount" : null,
-        "falseCount" : null,
-        "errCount" : null,
-        "exprOrg" : "S.salary -T.salary != 3295224",
-        "tc" : null,
-        "fc" : null,
-        "er" : null,
-        "name" : null,
-        "ve" : 0,
-        "exporg" : null
-      } ],
+      "srcTrgMaplist" : [ ],
+      "exprlist" : [ ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 4297801,
-        "paramId" : 9,
-        "paramMethod" : "setSourceObject",
-        "paramValue" : "GetData11",
+        "ruleClsPropID" : 4297789,
+        "paramId" : 404,
+        "paramMethod" : "setIsMultipleOutVaiables",
+        "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 4297802,
-        "paramId" : 10,
-        "paramMethod" : "setTargetObject",
-        "paramValue" : "GetData21",
+        "ruleClsPropID" : 4297788,
+        "paramId" : 83,
+        "paramMethod" : "setColumnsMInfo",
+        "paramValue" : "salary^~^2^~^NUMBER^~^0^~^1",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 4297787,
+        "paramId" : 82,
+        "paramMethod" : "setAppendOrderBy",
+        "paramValue" : "false",
         "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 4297785,
+        "paramId" : 84,
+        "paramMethod" : "setOrderByStr",
+        "paramValue" : "",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 4297784,
+        "paramId" : 337,
+        "paramMethod" : "setIsStoredProcedure",
+        "paramValue" : "false",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 4297783,
+        "paramId" : 16,
+        "paramMethod" : "setConnId",
+        "paramValue" : "992370",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 4297781,
+        "paramId" : 6,
+        "paramMethod" : "setQueryString",
+        "paramValue" : "select sum(salary) as salary from staff\n\n--comments\n\n/*select*/",
+        "srcTrgTbllist" : [ {
+          "srcTgtColId" : 5362098,
+          "ruleClsPropId" : 4297781,
+          "srcTrgColName" : "salary",
+          "srcTrgColDataType" : "NUMBER",
+          "colFlagType" : "src",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        } ],
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -393,7 +400,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 4297879,
+      "srcTgtColId" : 5362098,
       "ruleClsPropId" : 4297781,
       "srcTrgColName" : "salary",
       "srcTrgColDataType" : "NUMBER",
@@ -404,7 +411,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 4297882,
+      "srcTgtColId" : 5362101,
       "ruleClsPropId" : 4297791,
       "srcTrgColName" : "salary",
       "srcTrgColDataType" : "NUMBER",
@@ -416,9 +423,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 4297883,
-      "srcColId" : 4297879,
-      "trgColId" : 4297882,
+      "colMapId" : 5362103,
+      "srcColId" : 5362098,
+      "trgColId" : 5362101,
       "colMapType" : "join",
       "srcColName" : "salary",
       "tgtColName" : "salary",
