@@ -97,12 +97,54 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 5367591,
+        "paramId" : 71,
+        "paramMethod" : "setFileFormat",
+        "paramValue" : "JSON",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367592,
+        "paramId" : 497,
+        "paramMethod" : "setRSDSchemaColumn",
+        "paramValue" : "acctnumber^~^12^~^VARCHAR^~^0^~^1$~$addressid^~^12^~^VARCHAR^~^0^~^2$~$birthdate^~^91^~^DATE^~^0^~^3$~$customerid^~^12^~^VARCHAR^~^0^~^4$~$datefirstpurchase^~^91^~^DATE^~^0^~^5$~$email^~^12^~^VARCHAR^~^0^~^6$~$firstname^~^12^~^VARCHAR^~^0^~^7$~$gender^~^12^~^VARCHAR^~^0^~^8$~$lastname^~^12^~^VARCHAR^~^0^~^9$~$phoneno^~^12^~^VARCHAR^~^0^~^10$~$yearlyincome^~^12^~^VARCHAR^~^0^~^11$~$json:_id^~^12^~^VARCHAR^~^0^~^12",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367594,
+        "paramId" : 496,
+        "paramMethod" : "setDataModel",
+        "paramValue" : "FlattenedDocuments",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367595,
+        "paramId" : 493,
+        "paramMethod" : "setCacheTableName",
+        "paramValue" : "",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367596,
+        "paramId" : 494,
+        "paramMethod" : "setXpath",
+        "paramValue" : "",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367597,
+        "paramId" : 466,
+        "paramMethod" : "setXMLRSDSchema",
+        "paramValue" : "<api:script xmlns:api=\"http://apiscript.com/ns?v1\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\n  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->\n  <api:info title=\"Customer\" desc=\"Generated schema file.\" xmlns:other=\"http://apiscript.com/ns?v1\">\n    <!-- You can modify the name, type, and column size here. -->\n    <attr name=\"AcctNumber\"        xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/AcctNumber\"        />\n    <attr name=\"AddressID\"         xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/AddressID\"         />\n    <attr name=\"BirthDate\"         xs:type=\"date\"   readonly=\"false\"              other:xPath=\"/json/BirthDate\"         />\n    <attr name=\"CustomerID\"        xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/CustomerID\"        />\n    <attr name=\"DateFirstPurchase\" xs:type=\"date\"   readonly=\"false\"              other:xPath=\"/json/DateFirstPurchase\" />\n    <attr name=\"Email\"             xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/Email\"             />\n    <attr name=\"FirstName\"         xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/FirstName\"         />\n    <attr name=\"Gender\"            xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/Gender\"            />\n    <attr name=\"LastName\"          xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/LastName\"          />\n    <attr name=\"PhoneNo\"           xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/PhoneNo\"           />\n    <attr name=\"YearlyIncome\"      xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/YearlyIncome\"      />\n    <attr name=\"json:_id\"          xs:type=\"string\" readonly=\"false\"  key=\"true\"  other:xPath=\"/json/_id\"               />\n  </api:info>\n\n  <api:set attr=\"DataModel\" value=\"FLATTENEDDOCUMENTS\" />\n  <api:set attr=\"URI\" value=\"\\\\\\\\\\\\\\\\QA-WIN-SERVER1\\\\\\\\Files\\\\\\\\jsonfiles\\\\\\\\Customer.json\" />\n\n  <api:set attr=\"JSONPath\" value=\"$.\" />\n\n  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->\n  <api:script method=\"GET\">\n    <api:call op=\"jsonproviderGet\">\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->\n  <api:script method=\"POST\">\n    <api:set attr=\"method\" value=\"POST\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Inserts are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->\n  <api:script method=\"MERGE\">\n    <api:set attr=\"method\" value=\"PUT\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Updates are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->\n  <api:script method=\"DELETE\">\n    <api:set attr=\"method\" value=\"DELETE\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Deletes are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n</api:script>\n",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 5367607,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from Customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5367609,
+          "srcTgtColId" : 5367617,
           "ruleClsPropId" : 5367607,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "INT",
@@ -156,48 +198,6 @@
         "paramValue" : "\\Customer.json",
         "srcTrgTbllist" : null,
         "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367597,
-        "paramId" : 466,
-        "paramMethod" : "setXMLRSDSchema",
-        "paramValue" : "<api:script xmlns:api=\"http://apiscript.com/ns?v1\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\n  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->\n  <api:info title=\"Customer\" desc=\"Generated schema file.\" xmlns:other=\"http://apiscript.com/ns?v1\">\n    <!-- You can modify the name, type, and column size here. -->\n    <attr name=\"AcctNumber\"        xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/AcctNumber\"        />\n    <attr name=\"AddressID\"         xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/AddressID\"         />\n    <attr name=\"BirthDate\"         xs:type=\"date\"   readonly=\"false\"              other:xPath=\"/json/BirthDate\"         />\n    <attr name=\"CustomerID\"        xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/CustomerID\"        />\n    <attr name=\"DateFirstPurchase\" xs:type=\"date\"   readonly=\"false\"              other:xPath=\"/json/DateFirstPurchase\" />\n    <attr name=\"Email\"             xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/Email\"             />\n    <attr name=\"FirstName\"         xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/FirstName\"         />\n    <attr name=\"Gender\"            xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/Gender\"            />\n    <attr name=\"LastName\"          xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/LastName\"          />\n    <attr name=\"PhoneNo\"           xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/PhoneNo\"           />\n    <attr name=\"YearlyIncome\"      xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/YearlyIncome\"      />\n    <attr name=\"json:_id\"          xs:type=\"string\" readonly=\"false\"  key=\"true\"  other:xPath=\"/json/_id\"               />\n  </api:info>\n\n  <api:set attr=\"DataModel\" value=\"FLATTENEDDOCUMENTS\" />\n  <api:set attr=\"URI\" value=\"\\\\\\\\\\\\\\\\QA-WIN-SERVER1\\\\\\\\Files\\\\\\\\jsonfiles\\\\\\\\Customer.json\" />\n\n  <api:set attr=\"JSONPath\" value=\"$.\" />\n\n  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->\n  <api:script method=\"GET\">\n    <api:call op=\"jsonproviderGet\">\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->\n  <api:script method=\"POST\">\n    <api:set attr=\"method\" value=\"POST\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Inserts are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->\n  <api:script method=\"MERGE\">\n    <api:set attr=\"method\" value=\"PUT\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Updates are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->\n  <api:script method=\"DELETE\">\n    <api:set attr=\"method\" value=\"DELETE\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Deletes are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n</api:script>\n",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367596,
-        "paramId" : 494,
-        "paramMethod" : "setXpath",
-        "paramValue" : "",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367595,
-        "paramId" : 493,
-        "paramMethod" : "setCacheTableName",
-        "paramValue" : "",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367594,
-        "paramId" : 496,
-        "paramMethod" : "setDataModel",
-        "paramValue" : "FlattenedDocuments",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367592,
-        "paramId" : 497,
-        "paramMethod" : "setRSDSchemaColumn",
-        "paramValue" : "acctnumber^~^12^~^VARCHAR^~^0^~^1$~$addressid^~^12^~^VARCHAR^~^0^~^2$~$birthdate^~^91^~^DATE^~^0^~^3$~$customerid^~^12^~^VARCHAR^~^0^~^4$~$datefirstpurchase^~^91^~^DATE^~^0^~^5$~$email^~^12^~^VARCHAR^~^0^~^6$~$firstname^~^12^~^VARCHAR^~^0^~^7$~$gender^~^12^~^VARCHAR^~^0^~^8$~$lastname^~^12^~^VARCHAR^~^0^~^9$~$phoneno^~^12^~^VARCHAR^~^0^~^10$~$yearlyincome^~^12^~^VARCHAR^~^0^~^11$~$json:_id^~^12^~^VARCHAR^~^0^~^12",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367591,
-        "paramId" : 71,
-        "paramMethod" : "setFileFormat",
-        "paramValue" : "JSON",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -229,34 +229,65 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 5367588,
-        "paramId" : 6,
-        "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as cnt from Customer",
-        "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5367590,
-          "ruleClsPropId" : 5367588,
-          "srcTrgColName" : "cnt",
-          "srcTrgColDataType" : "INT",
-          "colFlagType" : "tgt",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        } ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367587,
-        "paramId" : 16,
-        "paramMethod" : "setConnId",
-        "paramValue" : "5367491",
+        "ruleClsPropID" : 5367572,
+        "paramId" : 71,
+        "paramMethod" : "setFileFormat",
+        "paramValue" : "JSON",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5367586,
-        "paramId" : 337,
-        "paramMethod" : "setIsStoredProcedure",
+        "ruleClsPropID" : 5367573,
+        "paramId" : 497,
+        "paramMethod" : "setRSDSchemaColumn",
+        "paramValue" : "acctnumber^~^12^~^VARCHAR^~^0^~^1$~$addressid^~^12^~^VARCHAR^~^0^~^2$~$birthdate^~^91^~^DATE^~^0^~^3$~$customerid^~^12^~^VARCHAR^~^0^~^4$~$datefirstpurchase^~^91^~^DATE^~^0^~^5$~$email^~^12^~^VARCHAR^~^0^~^6$~$firstname^~^12^~^VARCHAR^~^0^~^7$~$gender^~^12^~^VARCHAR^~^0^~^8$~$lastname^~^12^~^VARCHAR^~^0^~^9$~$phoneno^~^12^~^VARCHAR^~^0^~^10$~$yearlyincome^~^12^~^VARCHAR^~^0^~^11$~$json:_id^~^12^~^VARCHAR^~^0^~^12",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367575,
+        "paramId" : 496,
+        "paramMethod" : "setDataModel",
+        "paramValue" : "FlattenedDocuments",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367576,
+        "paramId" : 493,
+        "paramMethod" : "setCacheTableName",
+        "paramValue" : "",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367577,
+        "paramId" : 494,
+        "paramMethod" : "setXpath",
+        "paramValue" : "",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367578,
+        "paramId" : 466,
+        "paramMethod" : "setXMLRSDSchema",
+        "paramValue" : "<api:script xmlns:api=\"http://apiscript.com/ns?v1\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\n  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->\n  <api:info title=\"Customer\" desc=\"Generated schema file.\" xmlns:other=\"http://apiscript.com/ns?v1\">\n    <!-- You can modify the name, type, and column size here. -->\n    <attr name=\"AcctNumber\"        xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/AcctNumber\"        />\n    <attr name=\"AddressID\"         xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/AddressID\"         />\n    <attr name=\"BirthDate\"         xs:type=\"date\"   readonly=\"false\"              other:xPath=\"/json/BirthDate\"         />\n    <attr name=\"CustomerID\"        xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/CustomerID\"        />\n    <attr name=\"DateFirstPurchase\" xs:type=\"date\"   readonly=\"false\"              other:xPath=\"/json/DateFirstPurchase\" />\n    <attr name=\"Email\"             xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/Email\"             />\n    <attr name=\"FirstName\"         xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/FirstName\"         />\n    <attr name=\"Gender\"            xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/Gender\"            />\n    <attr name=\"LastName\"          xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/LastName\"          />\n    <attr name=\"PhoneNo\"           xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/PhoneNo\"           />\n    <attr name=\"YearlyIncome\"      xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/YearlyIncome\"      />\n    <attr name=\"json:_id\"          xs:type=\"string\" readonly=\"false\"  key=\"true\"  other:xPath=\"/json/_id\"               />\n  </api:info>\n\n  <api:set attr=\"DataModel\" value=\"FLATTENEDDOCUMENTS\" />\n  <api:set attr=\"URI\" value=\"\\\\\\\\\\\\\\\\QA-WIN-SERVER1\\\\\\\\Files\\\\\\\\jsonfiles\\\\\\\\Customer.json\" />\n\n  <api:set attr=\"JSONPath\" value=\"$.\" />\n\n  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->\n  <api:script method=\"GET\">\n    <api:call op=\"jsonproviderGet\">\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->\n  <api:script method=\"POST\">\n    <api:set attr=\"method\" value=\"POST\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Inserts are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->\n  <api:script method=\"MERGE\">\n    <api:set attr=\"method\" value=\"PUT\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Updates are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->\n  <api:script method=\"DELETE\">\n    <api:set attr=\"method\" value=\"DELETE\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Deletes are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n</api:script>\n",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367581,
+        "paramId" : 8,
+        "paramMethod" : "setFileName",
+        "paramValue" : "\\Customer.json",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367582,
+        "paramId" : 83,
+        "paramMethod" : "setColumnsMInfo",
+        "paramValue" : "cnt^~^4^~^INT^~^10^~^1",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5367583,
+        "paramId" : 82,
+        "paramMethod" : "setAppendOrderBy",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
@@ -268,67 +299,36 @@
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5367583,
-        "paramId" : 82,
-        "paramMethod" : "setAppendOrderBy",
+        "ruleClsPropID" : 5367586,
+        "paramId" : 337,
+        "paramMethod" : "setIsStoredProcedure",
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5367582,
-        "paramId" : 83,
-        "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "cnt^~^4^~^INT^~^10^~^1",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367581,
-        "paramId" : 8,
-        "paramMethod" : "setFileName",
-        "paramValue" : "\\Customer.json",
+        "ruleClsPropID" : 5367587,
+        "paramId" : 16,
+        "paramMethod" : "setConnId",
+        "paramValue" : "5367491",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5367578,
-        "paramId" : 466,
-        "paramMethod" : "setXMLRSDSchema",
-        "paramValue" : "<api:script xmlns:api=\"http://apiscript.com/ns?v1\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\n  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->\n  <api:info title=\"Customer\" desc=\"Generated schema file.\" xmlns:other=\"http://apiscript.com/ns?v1\">\n    <!-- You can modify the name, type, and column size here. -->\n    <attr name=\"AcctNumber\"        xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/AcctNumber\"        />\n    <attr name=\"AddressID\"         xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/AddressID\"         />\n    <attr name=\"BirthDate\"         xs:type=\"date\"   readonly=\"false\"              other:xPath=\"/json/BirthDate\"         />\n    <attr name=\"CustomerID\"        xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/CustomerID\"        />\n    <attr name=\"DateFirstPurchase\" xs:type=\"date\"   readonly=\"false\"              other:xPath=\"/json/DateFirstPurchase\" />\n    <attr name=\"Email\"             xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/Email\"             />\n    <attr name=\"FirstName\"         xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/FirstName\"         />\n    <attr name=\"Gender\"            xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/Gender\"            />\n    <attr name=\"LastName\"          xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/LastName\"          />\n    <attr name=\"PhoneNo\"           xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/PhoneNo\"           />\n    <attr name=\"YearlyIncome\"      xs:type=\"string\" readonly=\"false\"              other:xPath=\"/json/YearlyIncome\"      />\n    <attr name=\"json:_id\"          xs:type=\"string\" readonly=\"false\"  key=\"true\"  other:xPath=\"/json/_id\"               />\n  </api:info>\n\n  <api:set attr=\"DataModel\" value=\"FLATTENEDDOCUMENTS\" />\n  <api:set attr=\"URI\" value=\"\\\\\\\\\\\\\\\\QA-WIN-SERVER1\\\\\\\\Files\\\\\\\\jsonfiles\\\\\\\\Customer.json\" />\n\n  <api:set attr=\"JSONPath\" value=\"$.\" />\n\n  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->\n  <api:script method=\"GET\">\n    <api:call op=\"jsonproviderGet\">\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->\n  <api:script method=\"POST\">\n    <api:set attr=\"method\" value=\"POST\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Inserts are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->\n  <api:script method=\"MERGE\">\n    <api:set attr=\"method\" value=\"PUT\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Updates are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->\n  <api:script method=\"DELETE\">\n    <api:set attr=\"method\" value=\"DELETE\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Deletes are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n</api:script>\n",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367577,
-        "paramId" : 494,
-        "paramMethod" : "setXpath",
-        "paramValue" : "",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367576,
-        "paramId" : 493,
-        "paramMethod" : "setCacheTableName",
-        "paramValue" : "",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367575,
-        "paramId" : 496,
-        "paramMethod" : "setDataModel",
-        "paramValue" : "FlattenedDocuments",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367573,
-        "paramId" : 497,
-        "paramMethod" : "setRSDSchemaColumn",
-        "paramValue" : "acctnumber^~^12^~^VARCHAR^~^0^~^1$~$addressid^~^12^~^VARCHAR^~^0^~^2$~$birthdate^~^91^~^DATE^~^0^~^3$~$customerid^~^12^~^VARCHAR^~^0^~^4$~$datefirstpurchase^~^91^~^DATE^~^0^~^5$~$email^~^12^~^VARCHAR^~^0^~^6$~$firstname^~^12^~^VARCHAR^~^0^~^7$~$gender^~^12^~^VARCHAR^~^0^~^8$~$lastname^~^12^~^VARCHAR^~^0^~^9$~$phoneno^~^12^~^VARCHAR^~^0^~^10$~$yearlyincome^~^12^~^VARCHAR^~^0^~^11$~$json:_id^~^12^~^VARCHAR^~^0^~^12",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5367572,
-        "paramId" : 71,
-        "paramMethod" : "setFileFormat",
-        "paramValue" : "JSON",
-        "srcTrgTbllist" : null,
+        "ruleClsPropID" : 5367588,
+        "paramId" : 6,
+        "paramMethod" : "setQueryString",
+        "paramValue" : "select count(*) as cnt from Customer",
+        "srcTrgTbllist" : [ {
+          "srcTgtColId" : 5367623,
+          "ruleClsPropId" : 5367588,
+          "srcTrgColName" : "cnt",
+          "srcTrgColDataType" : "INT",
+          "colFlagType" : "tgt",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        } ],
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -359,9 +359,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5367610,
-        "srcColId" : 5367609,
-        "trgColId" : 5367590,
+        "colMapId" : 5367624,
+        "srcColId" : 5367617,
+        "trgColId" : 5367623,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -394,10 +394,10 @@
         "exporg" : null
       } ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 5367571,
-        "paramId" : 9,
-        "paramMethod" : "setSourceObject",
-        "paramValue" : "GetData11",
+        "ruleClsPropID" : 5367569,
+        "paramId" : 798,
+        "paramMethod" : "setEngineType",
+        "paramValue" : "V8",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -408,10 +408,10 @@
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5367569,
-        "paramId" : 798,
-        "paramMethod" : "setEngineType",
-        "paramValue" : "Null",
+        "ruleClsPropID" : 5367571,
+        "paramId" : 9,
+        "paramMethod" : "setSourceObject",
+        "paramValue" : "GetData11",
         "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
@@ -424,18 +424,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5367590,
-      "ruleClsPropId" : 5367588,
-      "srcTrgColName" : "cnt",
-      "srcTrgColDataType" : "INT",
-      "colFlagType" : "tgt",
-      "srcTrgColVisible" : 0,
-      "joinList" : null,
-      "mapColName" : "cnt",
-      "colFormat" : "",
-      "displayIndex" : 0
-    }, {
-      "srcTgtColId" : 5367609,
+      "srcTgtColId" : 5367617,
       "ruleClsPropId" : 5367607,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INT",
@@ -445,11 +434,22 @@
       "mapColName" : "cnt",
       "colFormat" : "",
       "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 5367623,
+      "ruleClsPropId" : 5367588,
+      "srcTrgColName" : "cnt",
+      "srcTrgColDataType" : "INT",
+      "colFlagType" : "tgt",
+      "srcTrgColVisible" : 0,
+      "joinList" : null,
+      "mapColName" : "cnt",
+      "colFormat" : "",
+      "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5367610,
-      "srcColId" : 5367609,
-      "trgColId" : 5367590,
+      "colMapId" : 5367624,
+      "srcColId" : 5367617,
+      "trgColId" : 5367623,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
