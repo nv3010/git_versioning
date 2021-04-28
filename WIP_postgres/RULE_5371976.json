@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5372203,
-        "srcColId" : 5372189,
-        "trgColId" : 5372201,
+        "colMapId" : 5372220,
+        "srcColId" : 5372206,
+        "trgColId" : 5372218,
         "colMapType" : "join",
         "srcColName" : "A",
         "tgtColName" : "cnt",
@@ -122,6 +122,52 @@
         "falseCount" : null,
         "errCount" : null,
         "exprOrg" : "S.A != Null",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      }, {
+        "exprID" : 5372221,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_96T6U2B",
+        "expression" : "S.B != Null",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 5371976,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 5371977,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.B != Null",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      }, {
+        "exprID" : 5372222,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_B7VHGMN",
+        "expression" : "S.D != Null",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 2,
+        "ruleId" : 5371976,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 5371977,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.D != Null",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -298,7 +344,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE\n    TYPE RegEmployee_rec IS RECORD (\n     ENO CHAR(9),\n     ENAME  VARCHAR2(20),\n     HDATE DATE\n   );\n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;\n    emp_ouput Emp_TAB := Emp_TAB();\n   \n BEGIN\n    SELECT empno,Empname,Hiredate BULK COLLECT INTO emp_ouput  FROM Reg_Employee;\n   \n    FOR i IN 1 .. emp_ouput.COUNT\n    LOOP\n  DBMS_OUTPUT.PUT_LINE( emp_ouput (i).ENO  || ',' ||  emp_ouput (i). ENAME  || ',' ||  emp_ouput (i). HDATE);\n    END LOOP;\n      \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5372189,
+          "srcTgtColId" : 5372206,
           "ruleClsPropId" : 5372002,
           "srcTrgColName" : "A",
           "srcTrgColDataType" : "String",
@@ -309,7 +355,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5372190,
+          "srcTgtColId" : 5372207,
           "ruleClsPropId" : 5372002,
           "srcTrgColName" : "B",
           "srcTrgColDataType" : "String",
@@ -320,7 +366,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5372191,
+          "srcTgtColId" : 5372208,
           "ruleClsPropId" : 5372002,
           "srcTrgColName" : "C",
           "srcTrgColDataType" : "String",
@@ -331,7 +377,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5372192,
+          "srcTgtColId" : 5372209,
           "ruleClsPropId" : 5372002,
           "srcTrgColName" : "D",
           "srcTrgColDataType" : "String",
@@ -342,7 +388,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5372193,
+          "srcTgtColId" : 5372210,
           "ruleClsPropId" : 5372002,
           "srcTrgColName" : "E",
           "srcTrgColDataType" : "String",
@@ -353,7 +399,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5372194,
+          "srcTgtColId" : 5372211,
           "ruleClsPropId" : 5372002,
           "srcTrgColName" : "F",
           "srcTrgColDataType" : "String",
@@ -364,7 +410,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5372195,
+          "srcTgtColId" : 5372212,
           "ruleClsPropId" : 5372002,
           "srcTrgColName" : "G",
           "srcTrgColDataType" : "String",
@@ -375,7 +421,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5372196,
+          "srcTgtColId" : 5372213,
           "ruleClsPropId" : 5372002,
           "srcTrgColName" : "H",
           "srcTrgColDataType" : "String",
@@ -386,7 +432,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5372197,
+          "srcTgtColId" : 5372214,
           "ruleClsPropId" : 5372002,
           "srcTrgColName" : "I",
           "srcTrgColDataType" : "String",
@@ -397,7 +443,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5372198,
+          "srcTgtColId" : 5372215,
           "ruleClsPropId" : 5372002,
           "srcTrgColName" : "J",
           "srcTrgColDataType" : "String",
@@ -408,7 +454,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5372199,
+          "srcTgtColId" : 5372216,
           "ruleClsPropId" : 5372002,
           "srcTrgColName" : "K",
           "srcTrgColDataType" : "String",
@@ -463,7 +509,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5372201,
+          "srcTgtColId" : 5372218,
           "ruleClsPropId" : 5371998,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -520,7 +566,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5372189,
+      "srcTgtColId" : 5372206,
       "ruleClsPropId" : 5372002,
       "srcTrgColName" : "A",
       "srcTrgColDataType" : "String",
@@ -531,7 +577,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5372190,
+      "srcTgtColId" : 5372207,
       "ruleClsPropId" : 5372002,
       "srcTrgColName" : "B",
       "srcTrgColDataType" : "String",
@@ -542,7 +588,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5372191,
+      "srcTgtColId" : 5372208,
       "ruleClsPropId" : 5372002,
       "srcTrgColName" : "C",
       "srcTrgColDataType" : "String",
@@ -553,7 +599,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5372192,
+      "srcTgtColId" : 5372209,
       "ruleClsPropId" : 5372002,
       "srcTrgColName" : "D",
       "srcTrgColDataType" : "String",
@@ -564,7 +610,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5372193,
+      "srcTgtColId" : 5372210,
       "ruleClsPropId" : 5372002,
       "srcTrgColName" : "E",
       "srcTrgColDataType" : "String",
@@ -575,7 +621,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5372194,
+      "srcTgtColId" : 5372211,
       "ruleClsPropId" : 5372002,
       "srcTrgColName" : "F",
       "srcTrgColDataType" : "String",
@@ -586,7 +632,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5372195,
+      "srcTgtColId" : 5372212,
       "ruleClsPropId" : 5372002,
       "srcTrgColName" : "G",
       "srcTrgColDataType" : "String",
@@ -597,7 +643,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5372196,
+      "srcTgtColId" : 5372213,
       "ruleClsPropId" : 5372002,
       "srcTrgColName" : "H",
       "srcTrgColDataType" : "String",
@@ -608,7 +654,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5372197,
+      "srcTgtColId" : 5372214,
       "ruleClsPropId" : 5372002,
       "srcTrgColName" : "I",
       "srcTrgColDataType" : "String",
@@ -619,7 +665,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5372198,
+      "srcTgtColId" : 5372215,
       "ruleClsPropId" : 5372002,
       "srcTrgColName" : "J",
       "srcTrgColDataType" : "String",
@@ -630,7 +676,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5372199,
+      "srcTgtColId" : 5372216,
       "ruleClsPropId" : 5372002,
       "srcTrgColName" : "K",
       "srcTrgColDataType" : "String",
@@ -641,7 +687,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5372201,
+      "srcTgtColId" : 5372218,
       "ruleClsPropId" : 5371998,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -653,9 +699,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5372203,
-      "srcColId" : 5372189,
-      "trgColId" : 5372201,
+      "colMapId" : 5372220,
+      "srcColId" : 5372206,
+      "trgColId" : 5372218,
       "colMapType" : "join",
       "srcColName" : "A",
       "tgtColName" : "cnt",
@@ -680,6 +726,29 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
+      "exprID" : 5372221,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_96T6U2B",
+      "expression" : "S.B != Null",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 5371976,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 5371977,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
       "exprID" : 5372024,
       "exprLogID" : 0,
       "exprName" : "EXPR_8WG743W",
@@ -688,6 +757,29 @@
       "exprType" : "5",
       "exprVisible" : 1,
       "exprIndex" : 1,
+      "ruleId" : 5371976,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 5371977,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 5372222,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_B7VHGMN",
+      "expression" : "S.D != Null",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 2,
       "ruleId" : 5371976,
       "ruleInstanceId" : 0,
       "ruleClassId" : 5371977,
