@@ -8,8 +8,8 @@
     "folderId" : 9919601,
     "projectId" : 9919600,
     "ruleCode" : "1619598668100",
-    "folderName" : null,
-    "folderType" : null,
+    "folderName" : "Versioning",
+    "folderType" : "RULE",
     "startTime" : null,
     "endTime" : null,
     "ruleName" : "PL-SQL_Copied",
@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 3912506,
-    "ruleModifiedBy" : 3912506,
+    "ruleModifiedBy" : 205,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-04-28 00:00:00",
-    "ruleModifiedDate" : "2021-04-28 00:00:00",
+    "ruleModifiedDate" : "2021-05-03 00:00:00",
     "enterpriseErrorCode" : null,
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -53,8 +53,8 @@
     "type" : null,
     "isRuleExit" : null,
     "ruleCreatedByName" : "ldap_urvashi",
-    "projectName" : null,
-    "ruleModifiedByName" : "ldap_urvashi",
+    "projectName" : "Urvashi_16.5.0",
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 9990018,
     "successBody" : null,
     "failureBody" : null,
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9990056,
-        "srcColId" : 9990052,
-        "trgColId" : 9990055,
+        "colMapId" : 9997410,
+        "srcColId" : 9997404,
+        "trgColId" : 9997408,
         "colMapType" : "join",
         "srcColName" : "A",
         "tgtColName" : "cnt",
@@ -226,7 +226,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "DECLARE\n    TYPE RegEmployee_rec IS RECORD (\n     ENO CHAR(9),\n     ENAME  VARCHAR2(20),\n     HDATE DATE\n   );\n    TYPE Emp_TAB IS TABLE OF RegEmployee_rec;\n    emp_ouput Emp_TAB := Emp_TAB();\n   \n BEGIN\n    SELECT empno,Empname,Hiredate BULK COLLECT INTO emp_ouput  FROM Reg_Employee;\n   \n    FOR i IN 1 .. emp_ouput.COUNT\n    LOOP\n  DBMS_OUTPUT.PUT_LINE( emp_ouput (i).ENO  || ',' ||  emp_ouput (i). ENAME  || ',' ||  emp_ouput (i). HDATE);\n    END LOOP;\n      \n END;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9990052,
+          "srcTgtColId" : 9997404,
           "ruleClsPropId" : 9990021,
           "srcTrgColName" : "A",
           "srcTrgColDataType" : "Number",
@@ -237,7 +237,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9990053,
+          "srcTgtColId" : 9997405,
           "ruleClsPropId" : 9990021,
           "srcTrgColName" : "B",
           "srcTrgColDataType" : "String",
@@ -248,7 +248,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9990054,
+          "srcTgtColId" : 9997406,
           "ruleClsPropId" : 9990021,
           "srcTrgColName" : "C",
           "srcTrgColDataType" : "Date",
@@ -352,7 +352,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9990055,
+          "srcTgtColId" : 9997408,
           "ruleClsPropId" : 9990032,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -409,7 +409,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9990052,
+      "srcTgtColId" : 9997404,
       "ruleClsPropId" : 9990021,
       "srcTrgColName" : "A",
       "srcTrgColDataType" : "Number",
@@ -420,7 +420,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9990053,
+      "srcTgtColId" : 9997405,
       "ruleClsPropId" : 9990021,
       "srcTrgColName" : "B",
       "srcTrgColDataType" : "String",
@@ -431,7 +431,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9990054,
+      "srcTgtColId" : 9997406,
       "ruleClsPropId" : 9990021,
       "srcTrgColName" : "C",
       "srcTrgColDataType" : "Date",
@@ -442,7 +442,7 @@
       "colFormat" : "dd-MM-yy",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9990055,
+      "srcTgtColId" : 9997408,
       "ruleClsPropId" : 9990032,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -454,9 +454,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9990056,
-      "srcColId" : 9990052,
-      "trgColId" : 9990055,
+      "colMapId" : 9997410,
+      "srcColId" : 9997404,
+      "trgColId" : 9997408,
       "colMapType" : "join",
       "srcColName" : "A",
       "tgtColName" : "cnt",
