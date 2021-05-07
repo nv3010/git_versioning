@@ -79,7 +79,7 @@
       "name" : null,
       "ruleClassId" : 9132511,
       "connType" : "",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9132655,
-        "srcColId" : 9132639,
-        "trgColId" : 9132652,
+        "colMapId" : 9132669,
+        "srcColId" : 9132659,
+        "trgColId" : 9132664,
         "colMapType" : "join",
         "srcColName" : "country_id",
         "tgtColName" : "country_id",
@@ -206,6 +206,13 @@
         "paramValue" : "",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
+      }, {
+        "ruleClsPropID" : 9132667,
+        "paramId" : 487,
+        "paramMethod" : "setDegreeOfParallelism",
+        "paramValue" : "1",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -219,7 +226,7 @@
       "name" : null,
       "ruleClassId" : 9132509,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
@@ -242,7 +249,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from HR.COUNTRIES",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9132639,
+          "srcTgtColId" : 9132659,
           "ruleClsPropId" : 9132629,
           "srcTrgColName" : "country_id",
           "srcTrgColDataType" : "CHAR",
@@ -253,7 +260,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9132640,
+          "srcTgtColId" : 9132660,
           "ruleClsPropId" : 9132629,
           "srcTrgColName" : "country_name",
           "srcTrgColDataType" : "VARCHAR2",
@@ -264,7 +271,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9132641,
+          "srcTgtColId" : 9132661,
           "ruleClsPropId" : 9132629,
           "srcTrgColName" : "region_id",
           "srcTrgColDataType" : "NUMBER",
@@ -338,7 +345,7 @@
       "name" : null,
       "ruleClassId" : 9132510,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
@@ -361,7 +368,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from HR.COUNTRIES",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9132652,
+          "srcTgtColId" : 9132664,
           "ruleClsPropId" : 9132642,
           "srcTrgColName" : "country_id",
           "srcTrgColDataType" : "CHAR",
@@ -372,7 +379,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9132653,
+          "srcTgtColId" : 9132665,
           "ruleClsPropId" : 9132642,
           "srcTrgColName" : "country_name",
           "srcTrgColDataType" : "VARCHAR2",
@@ -383,7 +390,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9132654,
+          "srcTgtColId" : 9132666,
           "ruleClsPropId" : 9132642,
           "srcTrgColName" : "region_id",
           "srcTrgColDataType" : "NUMBER",
@@ -454,7 +461,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9132639,
+      "srcTgtColId" : 9132659,
       "ruleClsPropId" : 9132629,
       "srcTrgColName" : "country_id",
       "srcTrgColDataType" : "CHAR",
@@ -465,7 +472,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9132640,
+      "srcTgtColId" : 9132660,
       "ruleClsPropId" : 9132629,
       "srcTrgColName" : "country_name",
       "srcTrgColDataType" : "VARCHAR2",
@@ -476,7 +483,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9132641,
+      "srcTgtColId" : 9132661,
       "ruleClsPropId" : 9132629,
       "srcTrgColName" : "region_id",
       "srcTrgColDataType" : "NUMBER",
@@ -487,7 +494,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9132652,
+      "srcTgtColId" : 9132664,
       "ruleClsPropId" : 9132642,
       "srcTrgColName" : "country_id",
       "srcTrgColDataType" : "CHAR",
@@ -498,7 +505,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9132653,
+      "srcTgtColId" : 9132665,
       "ruleClsPropId" : 9132642,
       "srcTrgColName" : "country_name",
       "srcTrgColDataType" : "VARCHAR2",
@@ -509,7 +516,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9132654,
+      "srcTgtColId" : 9132666,
       "ruleClsPropId" : 9132642,
       "srcTrgColName" : "region_id",
       "srcTrgColDataType" : "NUMBER",
@@ -521,9 +528,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9132655,
-      "srcColId" : 9132639,
-      "trgColId" : 9132652,
+      "colMapId" : 9132669,
+      "srcColId" : 9132659,
+      "trgColId" : 9132664,
       "colMapType" : "join",
       "srcColName" : "country_id",
       "tgtColName" : "country_id",
