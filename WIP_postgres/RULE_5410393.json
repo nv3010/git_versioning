@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5410452,
-        "srcColId" : 5410422,
-        "trgColId" : 5410404,
+        "colMapId" : 5410479,
+        "srcColId" : 5410459,
+        "trgColId" : 5410477,
         "colMapType" : "join",
         "srcColName" : "staffid",
         "tgtColName" : "cnt",
@@ -153,44 +153,37 @@
         "exporg" : null
       } ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 5410451,
-        "paramId" : 9,
-        "paramMethod" : "setSourceObject",
-        "paramValue" : "GetData11",
+        "ruleClsPropID" : 5410439,
+        "paramId" : 531,
+        "paramMethod" : "setThresholdExpression",
+        "paramValue" : "",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5410441,
+        "paramId" : 530,
+        "paramMethod" : "setThresholdFlag",
+        "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5410450,
-        "paramId" : 10,
-        "paramMethod" : "setTargetObject",
-        "paramValue" : "GetData21",
+        "ruleClsPropID" : 5410442,
+        "paramId" : 529,
+        "paramMethod" : "setUserProperty",
+        "paramValue" : "--driver-memory 2g --executor-memory 2g --num-executors 2 --executor-cores 2 --conf spark.sql.broadcastTimeout=4800 --conf spark.executor.heartbeatInterval=30s --conf spark.dynamicAllocation.executorIdleTimeout=180 ",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5410449,
-        "paramId" : 798,
-        "paramMethod" : "setEngineType",
-        "paramValue" : "Null",
+        "ruleClsPropID" : 5410443,
+        "paramId" : 465,
+        "paramMethod" : "setReportXlsx",
+        "paramValue" : "No",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5410448,
-        "paramId" : 22,
-        "paramMethod" : "setMaxRowCount",
-        "paramValue" : "-1",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5410447,
-        "paramId" : 23,
-        "paramMethod" : "setMaxErrorCount",
-        "paramValue" : "500",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5410446,
-        "paramId" : 24,
-        "paramMethod" : "setShowErrorData",
+        "ruleClsPropID" : 5410444,
+        "paramId" : 73,
+        "paramMethod" : "setLoadDataFlag",
         "paramValue" : "No",
         "srcTrgTbllist" : null,
         "fileContent" : null
@@ -202,39 +195,46 @@
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5410444,
-        "paramId" : 73,
-        "paramMethod" : "setLoadDataFlag",
+        "ruleClsPropID" : 5410446,
+        "paramId" : 24,
+        "paramMethod" : "setShowErrorData",
         "paramValue" : "No",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5410443,
-        "paramId" : 465,
-        "paramMethod" : "setReportXlsx",
-        "paramValue" : "No",
+        "ruleClsPropID" : 5410447,
+        "paramId" : 23,
+        "paramMethod" : "setMaxErrorCount",
+        "paramValue" : "500",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5410442,
-        "paramId" : 529,
-        "paramMethod" : "setUserProperty",
-        "paramValue" : "--driver-memory 2g --executor-memory 2g --num-executors 2 --executor-cores 2 --conf spark.sql.broadcastTimeout=4800 --conf spark.executor.heartbeatInterval=30s --conf spark.dynamicAllocation.executorIdleTimeout=180 ",
+        "ruleClsPropID" : 5410448,
+        "paramId" : 22,
+        "paramMethod" : "setMaxRowCount",
+        "paramValue" : "-1",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5410441,
-        "paramId" : 530,
-        "paramMethod" : "setThresholdFlag",
-        "paramValue" : "false",
+        "ruleClsPropID" : 5410449,
+        "paramId" : 798,
+        "paramMethod" : "setEngineType",
+        "paramValue" : "Null",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 5410439,
-        "paramId" : 531,
-        "paramMethod" : "setThresholdExpression",
-        "paramValue" : "",
-        "srcTrgTbllist" : [ ],
+        "ruleClsPropID" : 5410450,
+        "paramId" : 10,
+        "paramMethod" : "setTargetObject",
+        "paramValue" : "GetData21",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5410451,
+        "paramId" : 9,
+        "paramMethod" : "setSourceObject",
+        "paramValue" : "GetData11",
+        "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -291,7 +291,7 @@
         "ruleClsPropID" : 5410417,
         "paramId" : 529,
         "paramMethod" : "setUserProperty",
-        "paramValue" : "",
+        "paramValue" : "--driver-memory 2g --executor-memory 2g --num-executors 6 --executor-cores 2 --conf spark.sql.broadcastTimeout=4800 --conf spark.executor.heartbeatInterval=30s --conf spark.dynamicAllocation.executorIdleTimeout=180 --conf spark.sql.shuffle.partitions=200 --conf spark.default.parallelism=200 ",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -314,7 +314,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from icedq.staff",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5410422,
+          "srcTgtColId" : 5410459,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "staffid",
           "srcTrgColDataType" : "STRING",
@@ -325,7 +325,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410423,
+          "srcTgtColId" : 5410460,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "sex",
           "srcTrgColDataType" : "STRING",
@@ -336,7 +336,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410424,
+          "srcTgtColId" : 5410461,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "jobcode",
           "srcTrgColDataType" : "STRING",
@@ -347,7 +347,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410425,
+          "srcTgtColId" : 5410462,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "company",
           "srcTrgColDataType" : "STRING",
@@ -358,7 +358,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410426,
+          "srcTgtColId" : 5410463,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "salary",
           "srcTrgColDataType" : "INT",
@@ -369,7 +369,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410427,
+          "srcTgtColId" : 5410464,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "bonus",
           "srcTrgColDataType" : "INT",
@@ -380,7 +380,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410428,
+          "srcTgtColId" : 5410465,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "comm",
           "srcTrgColDataType" : "INT",
@@ -391,7 +391,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410429,
+          "srcTgtColId" : 5410466,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "totalsalary",
           "srcTrgColDataType" : "INT",
@@ -402,7 +402,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410430,
+          "srcTgtColId" : 5410467,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "birthd",
           "srcTrgColDataType" : "STRING",
@@ -413,7 +413,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410431,
+          "srcTgtColId" : 5410468,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "hired",
           "srcTrgColDataType" : "STRING",
@@ -424,7 +424,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410432,
+          "srcTgtColId" : 5410469,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "lname",
           "srcTrgColDataType" : "STRING",
@@ -435,7 +435,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410433,
+          "srcTgtColId" : 5410470,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "fname",
           "srcTrgColDataType" : "STRING",
@@ -446,7 +446,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410434,
+          "srcTgtColId" : 5410471,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "address",
           "srcTrgColDataType" : "STRING",
@@ -457,7 +457,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410435,
+          "srcTgtColId" : 5410472,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "city",
           "srcTrgColDataType" : "STRING",
@@ -468,7 +468,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410436,
+          "srcTgtColId" : 5410473,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "state",
           "srcTrgColDataType" : "STRING",
@@ -479,7 +479,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410437,
+          "srcTgtColId" : 5410474,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "hphone",
           "srcTrgColDataType" : "STRING",
@@ -490,7 +490,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5410438,
+          "srcTgtColId" : 5410475,
           "ruleClsPropId" : 5410412,
           "srcTrgColName" : "ssn",
           "srcTrgColDataType" : "INT",
@@ -520,7 +520,7 @@
         "ruleClsPropID" : 5410409,
         "paramId" : 491,
         "paramMethod" : "setDefferedSort",
-        "paramValue" : "false",
+        "paramValue" : "true",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -575,12 +575,40 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 5410397,
+        "paramId" : 82,
+        "paramMethod" : "setAppendOrderBy",
+        "paramValue" : "false",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5410398,
+        "paramId" : 16,
+        "paramMethod" : "setConnId",
+        "paramValue" : "5410161",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5410399,
+        "paramId" : 83,
+        "paramMethod" : "setColumnsMInfo",
+        "paramValue" : "cnt^~^12^~^String^~^20^~^1",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5410400,
+        "paramId" : 529,
+        "paramMethod" : "setUserProperty",
+        "paramValue" : "--driver-memory 2g --executor-memory 2g --num-executors 6 --executor-cores 2 --conf spark.sql.broadcastTimeout=4800 --conf spark.executor.heartbeatInterval=30s --conf spark.dynamicAllocation.executorIdleTimeout=180 --conf spark.sql.shuffle.partitions=200 --conf spark.default.parallelism=200 ",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 5410402,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5410404,
+          "srcTgtColId" : 5410477,
           "ruleClsPropId" : 5410402,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -599,34 +627,6 @@
         "paramValue" : "true",
         "srcTrgTbllist" : null,
         "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5410400,
-        "paramId" : 529,
-        "paramMethod" : "setUserProperty",
-        "paramValue" : "--driver-memory 2g --executor-memory 2g --num-executors 6 --executor-cores 2 --conf spark.sql.broadcastTimeout=4800 --conf spark.executor.heartbeatInterval=30s --conf spark.dynamicAllocation.executorIdleTimeout=180 --conf spark.sql.shuffle.partitions=200 --conf spark.default.parallelism=200 ",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5410399,
-        "paramId" : 83,
-        "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "cnt^~^12^~^String^~^20^~^1",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5410398,
-        "paramId" : 16,
-        "paramMethod" : "setConnId",
-        "paramValue" : "5410161",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5410397,
-        "paramId" : 82,
-        "paramMethod" : "setAppendOrderBy",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -637,18 +637,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5410404,
-      "ruleClsPropId" : 5410402,
-      "srcTrgColName" : "cnt",
-      "srcTrgColDataType" : "String",
-      "colFlagType" : "tgt",
-      "srcTrgColVisible" : 0,
-      "joinList" : null,
-      "mapColName" : "cnt",
-      "colFormat" : "",
-      "displayIndex" : 0
-    }, {
-      "srcTgtColId" : 5410422,
+      "srcTgtColId" : 5410459,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "staffid",
       "srcTrgColDataType" : "STRING",
@@ -659,7 +648,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410423,
+      "srcTgtColId" : 5410460,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "sex",
       "srcTrgColDataType" : "STRING",
@@ -670,7 +659,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410424,
+      "srcTgtColId" : 5410461,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "jobcode",
       "srcTrgColDataType" : "STRING",
@@ -681,7 +670,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410425,
+      "srcTgtColId" : 5410462,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "company",
       "srcTrgColDataType" : "STRING",
@@ -692,7 +681,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410426,
+      "srcTgtColId" : 5410463,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "salary",
       "srcTrgColDataType" : "INT",
@@ -703,7 +692,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410427,
+      "srcTgtColId" : 5410464,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "bonus",
       "srcTrgColDataType" : "INT",
@@ -714,7 +703,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410428,
+      "srcTgtColId" : 5410465,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "comm",
       "srcTrgColDataType" : "INT",
@@ -725,7 +714,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410429,
+      "srcTgtColId" : 5410466,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "totalsalary",
       "srcTrgColDataType" : "INT",
@@ -736,7 +725,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410430,
+      "srcTgtColId" : 5410467,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "birthd",
       "srcTrgColDataType" : "STRING",
@@ -747,7 +736,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410431,
+      "srcTgtColId" : 5410468,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "hired",
       "srcTrgColDataType" : "STRING",
@@ -758,7 +747,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410432,
+      "srcTgtColId" : 5410469,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "lname",
       "srcTrgColDataType" : "STRING",
@@ -769,7 +758,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410433,
+      "srcTgtColId" : 5410470,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "fname",
       "srcTrgColDataType" : "STRING",
@@ -780,7 +769,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410434,
+      "srcTgtColId" : 5410471,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "address",
       "srcTrgColDataType" : "STRING",
@@ -791,7 +780,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410435,
+      "srcTgtColId" : 5410472,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "city",
       "srcTrgColDataType" : "STRING",
@@ -802,7 +791,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410436,
+      "srcTgtColId" : 5410473,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "state",
       "srcTrgColDataType" : "STRING",
@@ -813,7 +802,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410437,
+      "srcTgtColId" : 5410474,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "hphone",
       "srcTrgColDataType" : "STRING",
@@ -824,7 +813,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5410438,
+      "srcTgtColId" : 5410475,
       "ruleClsPropId" : 5410412,
       "srcTrgColName" : "ssn",
       "srcTrgColDataType" : "INT",
@@ -834,11 +823,22 @@
       "mapColName" : "ssn",
       "colFormat" : "",
       "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 5410477,
+      "ruleClsPropId" : 5410402,
+      "srcTrgColName" : "cnt",
+      "srcTrgColDataType" : "String",
+      "colFlagType" : "tgt",
+      "srcTrgColVisible" : 0,
+      "joinList" : null,
+      "mapColName" : "cnt",
+      "colFormat" : "",
+      "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5410452,
-      "srcColId" : 5410422,
-      "trgColId" : 5410404,
+      "colMapId" : 5410479,
+      "srcColId" : 5410459,
+      "trgColId" : 5410477,
       "colMapType" : "join",
       "srcColName" : "staffid",
       "tgtColName" : "cnt",
