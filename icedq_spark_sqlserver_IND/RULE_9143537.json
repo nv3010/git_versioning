@@ -86,7 +86,7 @@
       "classObjName" : "ICE_1621417565258",
       "queryBuilderXML" : null,
       "connId" : 0,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9143592,
-        "srcColId" : 9143586,
-        "trgColId" : 9143590,
+        "colMapId" : 9143603,
+        "srcColId" : 9143597,
+        "trgColId" : 9143601,
         "colMapType" : "join",
         "srcColName" : "customerid",
         "tgtColName" : "cnt",
@@ -105,7 +105,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 9143604,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_Z14P7VG",
+        "expression" : "S.fir_t == 'Sydney'",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 9143537,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 9143538,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.fir_t == 'Sydney'",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 9143541,
         "paramId" : 9,
@@ -210,7 +233,7 @@
       "classObjName" : "ICE_1621417565258",
       "queryBuilderXML" : null,
       "connId" : 1064821,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -226,7 +249,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select customerid,acctnumber,firstname as fir_t from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9143586,
+          "srcTgtColId" : 9143597,
           "ruleClsPropId" : 9143554,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "NUMBER",
@@ -237,7 +260,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 9143587,
+          "srcTgtColId" : 9143598,
           "ruleClsPropId" : 9143554,
           "srcTrgColName" : "acctnumber",
           "srcTrgColDataType" : "VARCHAR2",
@@ -248,7 +271,7 @@
           "colFormat" : "",
           "displayIndex" : 1
         }, {
-          "srcTgtColId" : 9143588,
+          "srcTgtColId" : 9143599,
           "ruleClsPropId" : 9143554,
           "srcTrgColName" : "fir_t",
           "srcTrgColDataType" : "VARCHAR2",
@@ -364,7 +387,7 @@
       "classObjName" : "ICE_1621417565258",
       "queryBuilderXML" : null,
       "connId" : 1064821,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -380,7 +403,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9143590,
+          "srcTgtColId" : 9143601,
           "ruleClsPropId" : 9143574,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -430,7 +453,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9143586,
+      "srcTgtColId" : 9143597,
       "ruleClsPropId" : 9143554,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "NUMBER",
@@ -441,7 +464,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9143587,
+      "srcTgtColId" : 9143598,
       "ruleClsPropId" : 9143554,
       "srcTrgColName" : "acctnumber",
       "srcTrgColDataType" : "VARCHAR2",
@@ -452,7 +475,7 @@
       "colFormat" : "",
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 9143588,
+      "srcTgtColId" : 9143599,
       "ruleClsPropId" : 9143554,
       "srcTrgColName" : "fir_t",
       "srcTrgColDataType" : "VARCHAR2",
@@ -463,7 +486,7 @@
       "colFormat" : "",
       "displayIndex" : 2
     }, {
-      "srcTgtColId" : 9143590,
+      "srcTgtColId" : 9143601,
       "ruleClsPropId" : 9143574,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -475,9 +498,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9143592,
-      "srcColId" : 9143586,
-      "trgColId" : 9143590,
+      "colMapId" : 9143603,
+      "srcColId" : 9143597,
+      "trgColId" : 9143601,
       "colMapType" : "join",
       "srcColName" : "customerid",
       "tgtColName" : "cnt",
@@ -501,6 +524,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 9143604,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_Z14P7VG",
+      "expression" : "S.fir_t == 'Sydney'",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 9143537,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 9143538,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
