@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5411856,
-        "srcColId" : 5411847,
-        "trgColId" : 5411853,
+        "colMapId" : 5411878,
+        "srcColId" : 5411869,
+        "trgColId" : 5411875,
         "colMapType" : "join",
         "srcColName" : "customerid",
         "tgtColName" : "customerid",
@@ -105,53 +105,7 @@
         "srcTrgColMapVisible" : 1,
         "displayIndex" : 3
       } ],
-      "exprlist" : [ {
-        "exprID" : 5395665,
-        "exprLogID" : 0,
-        "exprName" : "EXPR_2I3VACG",
-        "expression" : "S.num_salary  <  10000",
-        "result" : "Pass",
-        "exprType" : "5",
-        "exprVisible" : 1,
-        "exprIndex" : 1,
-        "ruleId" : 5395609,
-        "ruleInstanceId" : 0,
-        "ruleClassId" : 5395610,
-        "ruleName" : null,
-        "trueCount" : null,
-        "falseCount" : null,
-        "errCount" : null,
-        "exprOrg" : "S.num_salary  <  10000",
-        "tc" : null,
-        "fc" : null,
-        "er" : null,
-        "name" : null,
-        "ve" : 0,
-        "exporg" : null
-      }, {
-        "exprID" : 5395666,
-        "exprLogID" : 0,
-        "exprName" : "EXPR_ECSRDBI",
-        "expression" : "S.num_salary != null",
-        "result" : "Pass",
-        "exprType" : "5",
-        "exprVisible" : 1,
-        "exprIndex" : 0,
-        "ruleId" : 5395609,
-        "ruleInstanceId" : 0,
-        "ruleClassId" : 5395610,
-        "ruleName" : null,
-        "trueCount" : null,
-        "falseCount" : null,
-        "errCount" : null,
-        "exprOrg" : "S.num_salary != null",
-        "tc" : null,
-        "fc" : null,
-        "er" : null,
-        "name" : null,
-        "ve" : 0,
-        "exporg" : null
-      } ],
+      "exprlist" : [ ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 5395623,
         "paramId" : 531,
@@ -356,7 +310,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "Select customerid, cast(salary as decimal(38)) as num_salary from\n(\nselect 1001 CustomerId, 'Acc001' AccountNumber, 10000 Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1002 CustomerId, 'Acc002' AccountNumber, 12000        Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1003 CustomerId, 'Acc003' AccountNumber,         12000 Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1004 CustomerId, 'Acc004' AccountNumber, null Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1005 CustomerId, 'Acc005' AccountNumber, NULL Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1006 CustomerId, 'Acc006' AccountNumber, Null Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1007 CustomerId, 'Acc007' AccountNumber, 000 Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1008 CustomerId, 'Acc008' AccountNumber, -000 Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1009 CustomerId, 'Acc009' AccountNumber, +250 Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\n) Customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5411853,
+          "srcTgtColId" : 5411875,
           "ruleClsPropId" : 5395638,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "SMALLINT",
@@ -367,7 +321,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5411854,
+          "srcTgtColId" : 5411876,
           "ruleClsPropId" : 5395638,
           "srcTrgColName" : "num_salary",
           "srcTrgColDataType" : "DECIMAL",
@@ -410,6 +364,35 @@
       "srcTrgMaplist" : [ ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 5395625,
+        "paramId" : 6,
+        "paramMethod" : "setQueryString",
+        "paramValue" : "Select customerid, cast(salary as decimal(38)) as num_salary from\n(\nselect 1001 CustomerId, 'Acc001' AccountNumber, 10000 Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1002 CustomerId, 'Acc002' AccountNumber, 12000        Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1003 CustomerId, 'Acc003' AccountNumber,         12000 Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1004 CustomerId, 'Acc004' AccountNumber, null Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1005 CustomerId, 'Acc005' AccountNumber, NULL Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1006 CustomerId, 'Acc006' AccountNumber, Null Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1007 CustomerId, 'Acc007' AccountNumber, 000 Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1008 CustomerId, 'Acc008' AccountNumber, -000 Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1009 CustomerId, 'Acc009' AccountNumber, +250 Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\n) Customer",
+        "srcTrgTbllist" : [ {
+          "srcTgtColId" : 5411869,
+          "ruleClsPropId" : 5395625,
+          "srcTrgColName" : "customerid",
+          "srcTrgColDataType" : "SMALLINT",
+          "colFlagType" : "src",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        }, {
+          "srcTgtColId" : 5411870,
+          "ruleClsPropId" : 5395625,
+          "srcTrgColName" : "num_salary",
+          "srcTrgColDataType" : "DECIMAL",
+          "colFlagType" : "src",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        } ],
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 5395631,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
@@ -493,35 +476,6 @@
         "paramValue" : "5244166",
         "srcTrgTbllist" : null,
         "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5395625,
-        "paramId" : 6,
-        "paramMethod" : "setQueryString",
-        "paramValue" : "Select customerid, cast(salary as decimal(38)) as num_salary from\n(\nselect 1001 CustomerId, 'Acc001' AccountNumber, 10000 Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1002 CustomerId, 'Acc002' AccountNumber, 12000        Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1003 CustomerId, 'Acc003' AccountNumber,         12000 Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1004 CustomerId, 'Acc004' AccountNumber, null Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1005 CustomerId, 'Acc005' AccountNumber, NULL Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1006 CustomerId, 'Acc006' AccountNumber, Null Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1007 CustomerId, 'Acc007' AccountNumber, 000 Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1008 CustomerId, 'Acc008' AccountNumber, -000 Salary, 'M' Gender from (select 1 as \"dummy\") as \"dual\"\nUNION ALL\nselect 1009 CustomerId, 'Acc009' AccountNumber, +250 Salary, 'F' Gender from (select 1 as \"dummy\") as \"dual\"\n) Customer",
-        "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5411847,
-          "ruleClsPropId" : 5395625,
-          "srcTrgColName" : "customerid",
-          "srcTrgColDataType" : "SMALLINT",
-          "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        }, {
-          "srcTgtColId" : 5411848,
-          "ruleClsPropId" : 5395625,
-          "srcTrgColName" : "num_salary",
-          "srcTrgColDataType" : "DECIMAL",
-          "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        } ],
-        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -532,7 +486,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5411847,
+      "srcTgtColId" : 5411869,
       "ruleClsPropId" : 5395625,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "SMALLINT",
@@ -543,7 +497,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5411848,
+      "srcTgtColId" : 5411870,
       "ruleClsPropId" : 5395625,
       "srcTrgColName" : "num_salary",
       "srcTrgColDataType" : "DECIMAL",
@@ -554,7 +508,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5411853,
+      "srcTgtColId" : 5411875,
       "ruleClsPropId" : 5395638,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "SMALLINT",
@@ -565,7 +519,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5411854,
+      "srcTgtColId" : 5411876,
       "ruleClsPropId" : 5395638,
       "srcTrgColName" : "num_salary",
       "srcTrgColDataType" : "DECIMAL",
@@ -577,9 +531,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5411856,
-      "srcColId" : 5411847,
-      "trgColId" : 5411853,
+      "colMapId" : 5411878,
+      "srcColId" : 5411869,
+      "trgColId" : 5411875,
       "colMapType" : "join",
       "srcColName" : "customerid",
       "tgtColName" : "customerid",
@@ -603,52 +557,6 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ {
-      "exprID" : 5395666,
-      "exprLogID" : 0,
-      "exprName" : "EXPR_ECSRDBI",
-      "expression" : "S.num_salary != null",
-      "result" : "Pass",
-      "exprType" : "5",
-      "exprVisible" : 1,
-      "exprIndex" : 0,
-      "ruleId" : 5395609,
-      "ruleInstanceId" : 0,
-      "ruleClassId" : 5395610,
-      "ruleName" : null,
-      "trueCount" : null,
-      "falseCount" : null,
-      "errCount" : null,
-      "exprOrg" : null,
-      "tc" : null,
-      "fc" : null,
-      "er" : null,
-      "name" : null,
-      "ve" : 0,
-      "exporg" : null
-    }, {
-      "exprID" : 5395665,
-      "exprLogID" : 0,
-      "exprName" : "EXPR_2I3VACG",
-      "expression" : "S.num_salary  <  10000",
-      "result" : "Pass",
-      "exprType" : "5",
-      "exprVisible" : 1,
-      "exprIndex" : 1,
-      "ruleId" : 5395609,
-      "ruleInstanceId" : 0,
-      "ruleClassId" : 5395610,
-      "ruleName" : null,
-      "trueCount" : null,
-      "falseCount" : null,
-      "errCount" : null,
-      "exprOrg" : null,
-      "tc" : null,
-      "fc" : null,
-      "er" : null,
-      "name" : null,
-      "ve" : 0,
-      "exporg" : null
-    } ]
+    "exprVOList" : [ ]
   }
 }
