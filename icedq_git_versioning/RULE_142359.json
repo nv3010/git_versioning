@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-05-20 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-05-20 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "0_test_swap",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 142362,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 142402,
-        "srcColId" : 142380,
-        "trgColId" : 142398,
+        "colMapId" : 142413,
+        "srcColId" : 142407,
+        "trgColId" : 142412,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -161,12 +161,12 @@
         "ruleClsPropID" : 142363,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select cnt from 1",
+        "paramValue" : "select count(*) as cnt from customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 142380,
+          "srcTgtColId" : 142407,
           "ruleClsPropId" : 142363,
           "srcTrgColName" : "cnt",
-          "srcTrgColDataType" : "VARCHAR",
+          "srcTrgColDataType" : "INT",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -207,7 +207,7 @@
         "ruleClsPropID" : 142370,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "cnt^~^12^~^VARCHAR^~^0^~^1",
+        "paramValue" : "cnt^~^4^~^INT^~^10^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -235,7 +235,7 @@
         "ruleClsPropID" : 142375,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "1",
+        "paramValue" : "customer",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -293,12 +293,12 @@
         "ruleClsPropID" : 142381,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select cnt from 1",
+        "paramValue" : "select count(*) as cnt from customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 142398,
+          "srcTgtColId" : 142412,
           "ruleClsPropId" : 142381,
           "srcTrgColName" : "cnt",
-          "srcTrgColDataType" : "VARCHAR",
+          "srcTrgColDataType" : "INT",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -339,7 +339,7 @@
         "ruleClsPropID" : 142388,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "cnt^~^12^~^VARCHAR^~^0^~^1",
+        "paramValue" : "cnt^~^4^~^INT^~^10^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -367,7 +367,7 @@
         "ruleClsPropID" : 142393,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "1",
+        "paramValue" : "customer",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -401,10 +401,10 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 142380,
+      "srcTgtColId" : 142407,
       "ruleClsPropId" : 142363,
       "srcTrgColName" : "cnt",
-      "srcTrgColDataType" : "VARCHAR",
+      "srcTrgColDataType" : "INT",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -412,10 +412,10 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 142398,
+      "srcTgtColId" : 142412,
       "ruleClsPropId" : 142381,
       "srcTrgColName" : "cnt",
-      "srcTrgColDataType" : "VARCHAR",
+      "srcTrgColDataType" : "INT",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -424,9 +424,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 142402,
-      "srcColId" : 142380,
-      "trgColId" : 142398,
+      "colMapId" : 142413,
+      "srcColId" : 142407,
+      "trgColId" : 142412,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
