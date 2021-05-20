@@ -79,7 +79,7 @@
       "name" : null,
       "ruleClassId" : 191062,
       "connType" : "DATABASE",
-      "execMode" : "report",
+      "execMode" : "htreport",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from customeraddress",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 191101,
+          "srcTgtColId" : 191168,
           "ruleClsPropId" : 191065,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "int",
@@ -113,7 +113,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 191102,
+          "srcTgtColId" : 191169,
           "ruleClsPropId" : 191065,
           "srcTrgColName" : "addressid",
           "srcTrgColDataType" : "int",
@@ -124,7 +124,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 191103,
+          "srcTgtColId" : 191170,
           "ruleClsPropId" : 191065,
           "srcTrgColName" : "address1",
           "srcTrgColDataType" : "varchar",
@@ -135,7 +135,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 191104,
+          "srcTgtColId" : 191171,
           "ruleClsPropId" : 191065,
           "srcTrgColName" : "address2",
           "srcTrgColDataType" : "varchar",
@@ -146,7 +146,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 191105,
+          "srcTgtColId" : 191172,
           "ruleClsPropId" : 191065,
           "srcTrgColName" : "city",
           "srcTrgColDataType" : "varchar",
@@ -157,7 +157,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 191106,
+          "srcTgtColId" : 191173,
           "ruleClsPropId" : 191065,
           "srcTrgColName" : "country",
           "srcTrgColDataType" : "varchar",
@@ -168,7 +168,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 191107,
+          "srcTgtColId" : 191174,
           "ruleClsPropId" : 191065,
           "srcTrgColName" : "zipcode",
           "srcTrgColDataType" : "varchar",
@@ -228,7 +228,7 @@
       "name" : null,
       "ruleClassId" : 191063,
       "connType" : "DATABASE",
-      "execMode" : "report",
+      "execMode" : "htreport",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
@@ -251,7 +251,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 191109,
+          "srcTgtColId" : 191176,
           "ruleClsPropId" : 191080,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -297,7 +297,7 @@
       "name" : null,
       "ruleClassId" : 191064,
       "connType" : null,
-      "execMode" : "report",
+      "execMode" : "htreport",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
@@ -313,9 +313,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 191111,
-        "srcColId" : 191101,
-        "trgColId" : 191109,
+        "colMapId" : 191179,
+        "srcColId" : 191168,
+        "trgColId" : 191176,
         "colMapType" : "join",
         "srcColName" : "customerid",
         "tgtColName" : "cnt",
@@ -348,6 +348,13 @@
         "exporg" : null
       } ],
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 191177,
+        "paramId" : 487,
+        "paramMethod" : "setDegreeOfParallelism",
+        "paramValue" : "1",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 191086,
         "paramId" : 9,
         "paramMethod" : "setSourceObject",
@@ -434,7 +441,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 191101,
+      "srcTgtColId" : 191168,
       "ruleClsPropId" : 191065,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "int",
@@ -445,7 +452,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 191102,
+      "srcTgtColId" : 191169,
       "ruleClsPropId" : 191065,
       "srcTrgColName" : "addressid",
       "srcTrgColDataType" : "int",
@@ -456,7 +463,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 191103,
+      "srcTgtColId" : 191170,
       "ruleClsPropId" : 191065,
       "srcTrgColName" : "address1",
       "srcTrgColDataType" : "varchar",
@@ -467,7 +474,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 191104,
+      "srcTgtColId" : 191171,
       "ruleClsPropId" : 191065,
       "srcTrgColName" : "address2",
       "srcTrgColDataType" : "varchar",
@@ -478,7 +485,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 191105,
+      "srcTgtColId" : 191172,
       "ruleClsPropId" : 191065,
       "srcTrgColName" : "city",
       "srcTrgColDataType" : "varchar",
@@ -489,7 +496,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 191106,
+      "srcTgtColId" : 191173,
       "ruleClsPropId" : 191065,
       "srcTrgColName" : "country",
       "srcTrgColDataType" : "varchar",
@@ -500,7 +507,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 191107,
+      "srcTgtColId" : 191174,
       "ruleClsPropId" : 191065,
       "srcTrgColName" : "zipcode",
       "srcTrgColDataType" : "varchar",
@@ -511,7 +518,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 191109,
+      "srcTgtColId" : 191176,
       "ruleClsPropId" : 191080,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -523,9 +530,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 191111,
-      "srcColId" : 191101,
-      "trgColId" : 191109,
+      "colMapId" : 191179,
+      "srcColId" : 191168,
+      "trgColId" : 191176,
       "colMapType" : "join",
       "srcColName" : "customerid",
       "tgtColName" : "cnt",
