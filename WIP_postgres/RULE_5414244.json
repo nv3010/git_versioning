@@ -168,9 +168,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5414520,
-        "srcColId" : 5414516,
-        "trgColId" : 5414519,
+        "colMapId" : 5414528,
+        "srcColId" : 5414524,
+        "trgColId" : 5414527,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -179,10 +179,10 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 5414521,
+        "exprID" : 5414529,
         "exprLogID" : 0,
         "exprName" : "EXPR_LBAW1O6",
-        "expression" : "S.cnt - T.cnt != null\n\nS.cnt <= T.cnt\n\nS.cnt >= T.cnt",
+        "expression" : "S.cnt - T.cnt = 0",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -194,7 +194,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.cnt - T.cnt != null\n\nS.cnt <= T.cnt\n\nS.cnt >= T.cnt",
+        "exprOrg" : "S.cnt - T.cnt = 0",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -301,7 +301,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from HR.COUNTRIES",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5414519,
+          "srcTgtColId" : 5414527,
           "ruleClsPropId" : 5414491,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -389,9 +389,9 @@
         "ruleClsPropID" : 5414481,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as cnt from HR.COUNTRIES",
+        "paramValue" : "select count (cnt) from HR.COUNTRIES;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5414516,
+          "srcTgtColId" : 5414524,
           "ruleClsPropId" : 5414481,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -413,7 +413,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5414516,
+      "srcTgtColId" : 5414524,
       "ruleClsPropId" : 5414481,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -424,7 +424,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5414519,
+      "srcTgtColId" : 5414527,
       "ruleClsPropId" : 5414491,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -436,9 +436,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5414520,
-      "srcColId" : 5414516,
-      "trgColId" : 5414519,
+      "colMapId" : 5414528,
+      "srcColId" : 5414524,
+      "trgColId" : 5414527,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
@@ -463,10 +463,10 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 5414521,
+      "exprID" : 5414529,
       "exprLogID" : 0,
       "exprName" : "EXPR_LBAW1O6",
-      "expression" : "S.cnt - T.cnt != null\n\nS.cnt <= T.cnt\n\nS.cnt >= T.cnt",
+      "expression" : "S.cnt - T.cnt = 0",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
