@@ -95,15 +95,25 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 408075,
-        "srcColId" : 408064,
-        "trgColId" : 408071,
+        "colMapId" : 408095,
+        "srcColId" : 408085,
+        "trgColId" : 408092,
         "colMapType" : "join",
-        "srcColName" : "'staff$1'",
-        "tgtColName" : "'staff$1'",
-        "colMapExpr" : "'staff$1'='staff$1'",
+        "srcColName" : "staff$2",
+        "tgtColName" : "staff$2",
+        "colMapExpr" : "staff$2=staff$2",
         "srcTrgColMapVisible" : 1,
         "displayIndex" : 1
+      }, {
+        "colMapId" : 408096,
+        "srcColId" : 408086,
+        "trgColId" : 408093,
+        "colMapType" : "join",
+        "srcColName" : "staff$3",
+        "tgtColName" : "staff$3",
+        "colMapExpr" : "staff$3=staff$3",
+        "srcTrgColMapVisible" : 1,
+        "displayIndex" : 2
       } ],
       "exprlist" : [ {
         "exprID" : 407322,
@@ -307,11 +317,11 @@
         "ruleClsPropID" : 407266,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select staffid as \"'STAFF$1'\" ,sex as  \"'STAFF$2'\" ,Jobcode as  \"'STAFF$3'\"  from REG_DB_HV.STAFF",
+        "paramValue" : "select staffid as \"STAFF$1\" ,sex as  \"STAFF$2\" ,Jobcode as  \"STAFF$3\"  from REG_DB_HV.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 408064,
+          "srcTgtColId" : 408084,
           "ruleClsPropId" : 407266,
-          "srcTrgColName" : "'staff$1'",
+          "srcTrgColName" : "staff$1",
           "srcTrgColDataType" : "VARCHAR2",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -320,9 +330,9 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 408065,
+          "srcTgtColId" : 408085,
           "ruleClsPropId" : 407266,
-          "srcTrgColName" : "'staff$2'",
+          "srcTrgColName" : "staff$2",
           "srcTrgColDataType" : "CHAR",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -331,9 +341,9 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 408066,
+          "srcTgtColId" : 408086,
           "ruleClsPropId" : 407266,
-          "srcTrgColName" : "'staff$3'",
+          "srcTrgColName" : "staff$3",
           "srcTrgColDataType" : "VARCHAR2",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -389,7 +399,7 @@
         "ruleClsPropID" : 407273,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1",
+        "paramValue" : "2,3",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -403,7 +413,7 @@
         "ruleClsPropID" : 407275,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "'staff$1'^~^12^~^VARCHAR2^~^2000^~^1$~$'staff$2'^~^1^~^CHAR^~^1^~^2$~$'staff$3'^~^12^~^VARCHAR2^~^2000^~^3",
+        "paramValue" : "staff$1^~^12^~^VARCHAR2^~^2000^~^1$~$staff$2^~^1^~^CHAR^~^1^~^2$~$staff$3^~^12^~^VARCHAR2^~^2000^~^3",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -461,11 +471,11 @@
         "ruleClsPropID" : 407277,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select staffid as \"'STAFF$1'\" ,sex as  \"'STAFF$2'\" ,Jobcode as  \"'STAFF$3'\"  from REG_DB_HV.STAFF",
+        "paramValue" : "select staffid as \"STAFF$1\" ,sex as  \"STAFF$2\" ,Jobcode as  \"STAFF$3\"  from REG_DB_HV.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 408071,
+          "srcTgtColId" : 408091,
           "ruleClsPropId" : 407277,
-          "srcTrgColName" : "'staff$1'",
+          "srcTrgColName" : "staff$1",
           "srcTrgColDataType" : "VARCHAR2",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -474,9 +484,9 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 408072,
+          "srcTgtColId" : 408092,
           "ruleClsPropId" : 407277,
-          "srcTrgColName" : "'staff$2'",
+          "srcTrgColName" : "staff$2",
           "srcTrgColDataType" : "CHAR",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -485,9 +495,9 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 408073,
+          "srcTgtColId" : 408093,
           "ruleClsPropId" : 407277,
-          "srcTrgColName" : "'staff$3'",
+          "srcTrgColName" : "staff$3",
           "srcTrgColDataType" : "VARCHAR2",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -543,7 +553,7 @@
         "ruleClsPropID" : 407284,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1",
+        "paramValue" : "2,3",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -557,7 +567,7 @@
         "ruleClsPropID" : 407286,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "'staff$1'^~^12^~^VARCHAR2^~^2000^~^1$~$'staff$2'^~^1^~^CHAR^~^1^~^2$~$'staff$3'^~^12^~^VARCHAR2^~^2000^~^3",
+        "paramValue" : "staff$1^~^12^~^VARCHAR2^~^2000^~^1$~$staff$2^~^1^~^CHAR^~^1^~^2$~$staff$3^~^12^~^VARCHAR2^~^2000^~^3",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -577,82 +587,92 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 408064,
+      "srcTgtColId" : 408084,
       "ruleClsPropId" : 407266,
-      "srcTrgColName" : "'staff$1'",
+      "srcTrgColName" : "staff$1",
       "srcTrgColDataType" : "VARCHAR2",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "'staff$1'",
+      "mapColName" : "staff$1",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 408065,
+      "srcTgtColId" : 408085,
       "ruleClsPropId" : 407266,
-      "srcTrgColName" : "'staff$2'",
+      "srcTrgColName" : "staff$2",
       "srcTrgColDataType" : "CHAR",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "'staff$2'",
+      "mapColName" : "staff$2",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 408066,
+      "srcTgtColId" : 408086,
       "ruleClsPropId" : 407266,
-      "srcTrgColName" : "'staff$3'",
+      "srcTrgColName" : "staff$3",
       "srcTrgColDataType" : "VARCHAR2",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "'staff$3'",
+      "mapColName" : "staff$3",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 408071,
+      "srcTgtColId" : 408091,
       "ruleClsPropId" : 407277,
-      "srcTrgColName" : "'staff$1'",
+      "srcTrgColName" : "staff$1",
       "srcTrgColDataType" : "VARCHAR2",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "'staff$1'",
+      "mapColName" : "staff$1",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 408072,
+      "srcTgtColId" : 408092,
       "ruleClsPropId" : 407277,
-      "srcTrgColName" : "'staff$2'",
+      "srcTrgColName" : "staff$2",
       "srcTrgColDataType" : "CHAR",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "'staff$2'",
+      "mapColName" : "staff$2",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 408073,
+      "srcTgtColId" : 408093,
       "ruleClsPropId" : 407277,
-      "srcTrgColName" : "'staff$3'",
+      "srcTrgColName" : "staff$3",
       "srcTrgColDataType" : "VARCHAR2",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "'staff$3'",
+      "mapColName" : "staff$3",
       "colFormat" : null,
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 408075,
-      "srcColId" : 408064,
-      "trgColId" : 408071,
+      "colMapId" : 408095,
+      "srcColId" : 408085,
+      "trgColId" : 408092,
       "colMapType" : "join",
-      "srcColName" : "'staff$1'",
-      "tgtColName" : "'staff$1'",
-      "colMapExpr" : "'staff$1'='staff$1'",
+      "srcColName" : "staff$2",
+      "tgtColName" : "staff$2",
+      "colMapExpr" : "staff$2=staff$2",
       "srcTrgColMapVisible" : 1,
       "displayIndex" : 1
+    }, {
+      "colMapId" : 408096,
+      "srcColId" : 408086,
+      "trgColId" : 408093,
+      "colMapType" : "join",
+      "srcColName" : "staff$3",
+      "tgtColName" : "staff$3",
+      "colMapExpr" : "staff$3=staff$3",
+      "srcTrgColMapVisible" : 1,
+      "displayIndex" : 2
     } ],
     "objectVOList" : null,
     "srcCount" : null,
