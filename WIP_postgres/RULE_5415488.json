@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 5383149,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 5383149,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-05-21 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-05-21 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "shalini.m@toranainc.com",
     "projectName" : "wip_shalini",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "shalini.m@toranainc.com",
     "ruleClassId" : 5415491,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5415521,
-        "srcColId" : 5415501,
-        "trgColId" : 5415508,
+        "colMapId" : 5415530,
+        "srcColId" : 5415525,
+        "trgColId" : 5415528,
         "colMapType" : "join",
         "srcColName" : "country_id",
         "tgtColName" : "cnt",
@@ -106,14 +106,14 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 5415522,
+        "exprID" : 5415531,
         "exprLogID" : 0,
         "exprName" : "EXPR_O8S7XWR",
         "expression" : "S.country_id == 10\nS.country_name == 10",
         "result" : "Pass",
         "exprType" : "5",
-        "exprVisible" : 1,
-        "exprIndex" : 3,
+        "exprVisible" : 0,
+        "exprIndex" : 0,
         "ruleId" : 5415488,
         "ruleInstanceId" : 0,
         "ruleClassId" : 5415491,
@@ -128,15 +128,31 @@
         "name" : null,
         "ve" : 0,
         "exporg" : null
+      }, {
+        "exprID" : 5415532,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_346FZJX",
+        "expression" : "S.country_id in ['A']\nS.country_name in['A','B']",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 5415488,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 5415491,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.country_id in ['A']\nS.country_name in['A','B']",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
       } ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 5415519,
-        "paramId" : 531,
-        "paramMethod" : "setThresholdExpression",
-        "paramValue" : "",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
         "ruleClsPropID" : 5415518,
         "paramId" : 530,
         "paramMethod" : "setThresholdFlag",
@@ -206,6 +222,13 @@
         "paramValue" : "GetData11",
         "srcTrgTbllist" : null,
         "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5415519,
+        "paramId" : 531,
+        "paramMethod" : "setThresholdExpression",
+        "paramValue" : "",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -263,7 +286,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5415508,
+          "srcTgtColId" : 5415528,
           "ruleClsPropId" : 5415503,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -353,7 +376,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select country_id,country_name from HR.COUNTRIES",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5415501,
+          "srcTgtColId" : 5415525,
           "ruleClsPropId" : 5415492,
           "srcTrgColName" : "country_id",
           "srcTrgColDataType" : "CHAR",
@@ -364,7 +387,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5415502,
+          "srcTgtColId" : 5415526,
           "ruleClsPropId" : 5415492,
           "srcTrgColName" : "country_name",
           "srcTrgColDataType" : "VARCHAR2",
@@ -386,7 +409,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5415501,
+      "srcTgtColId" : 5415525,
       "ruleClsPropId" : 5415492,
       "srcTrgColName" : "country_id",
       "srcTrgColDataType" : "CHAR",
@@ -397,7 +420,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5415502,
+      "srcTgtColId" : 5415526,
       "ruleClsPropId" : 5415492,
       "srcTrgColName" : "country_name",
       "srcTrgColDataType" : "VARCHAR2",
@@ -408,7 +431,7 @@
       "colFormat" : "",
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 5415508,
+      "srcTgtColId" : 5415528,
       "ruleClsPropId" : 5415503,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -420,9 +443,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5415521,
-      "srcColId" : 5415501,
-      "trgColId" : 5415508,
+      "colMapId" : 5415530,
+      "srcColId" : 5415525,
+      "trgColId" : 5415528,
       "colMapType" : "join",
       "srcColName" : "country_id",
       "tgtColName" : "cnt",
@@ -447,14 +470,14 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 5415522,
+      "exprID" : 5415532,
       "exprLogID" : 0,
-      "exprName" : "EXPR_O8S7XWR",
-      "expression" : "S.country_id == 10\nS.country_name == 10",
+      "exprName" : "EXPR_346FZJX",
+      "expression" : "S.country_id in ['A']\nS.country_name in['A','B']",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 3,
+      "exprIndex" : 1,
       "ruleId" : 5415488,
       "ruleInstanceId" : 0,
       "ruleClassId" : 5415491,
