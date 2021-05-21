@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5415478,
-        "srcColId" : 5415474,
-        "trgColId" : 5415477,
+        "colMapId" : 5415486,
+        "srcColId" : 5415482,
+        "trgColId" : 5415485,
         "colMapType" : "join",
         "srcColName" : "max(job_id)",
         "tgtColName" : "max(job_id)",
@@ -106,10 +106,10 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 5415479,
+        "exprID" : 5415487,
         "exprLogID" : 0,
         "exprName" : "EXPR_OEQNH2X",
-        "expression" : "S.max(job_id) == T.max(job_id) = 0",
+        "expression" : "S.max(job_id) - T.max(job_id)=0",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -121,7 +121,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.max(job_id) == T.max(job_id) = 0",
+        "exprOrg" : "S.max(job_id) - T.max(job_id)=0",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -226,9 +226,9 @@
         "ruleClsPropID" : 5415449,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select max(job_id) from HR.JOBS",
+        "paramValue" : "select job_id from HR.JOBS order by (job_id) ASC;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5415477,
+          "srcTgtColId" : 5415485,
           "ruleClsPropId" : 5415449,
           "srcTrgColName" : "max(job_id)",
           "srcTrgColDataType" : "VARCHAR2",
@@ -316,9 +316,9 @@
         "ruleClsPropID" : 5415439,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select max(job_id) from HR.JOBS",
+        "paramValue" : "select job_id from HR.JOBS order by (job_id) ASC;",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5415474,
+          "srcTgtColId" : 5415482,
           "ruleClsPropId" : 5415439,
           "srcTrgColName" : "max(job_id)",
           "srcTrgColDataType" : "VARCHAR2",
@@ -340,7 +340,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5415474,
+      "srcTgtColId" : 5415482,
       "ruleClsPropId" : 5415439,
       "srcTrgColName" : "max(job_id)",
       "srcTrgColDataType" : "VARCHAR2",
@@ -351,7 +351,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5415477,
+      "srcTgtColId" : 5415485,
       "ruleClsPropId" : 5415449,
       "srcTrgColName" : "max(job_id)",
       "srcTrgColDataType" : "VARCHAR2",
@@ -363,9 +363,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5415478,
-      "srcColId" : 5415474,
-      "trgColId" : 5415477,
+      "colMapId" : 5415486,
+      "srcColId" : 5415482,
+      "trgColId" : 5415485,
       "colMapType" : "join",
       "srcColName" : "max(job_id)",
       "tgtColName" : "max(job_id)",
@@ -390,10 +390,10 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 5415479,
+      "exprID" : 5415487,
       "exprLogID" : 0,
       "exprName" : "EXPR_OEQNH2X",
-      "expression" : "S.max(job_id) == T.max(job_id) = 0",
+      "expression" : "S.max(job_id) - T.max(job_id)=0",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
