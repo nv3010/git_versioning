@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 205,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 205,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-05-21 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-05-21 00:00:00",
     "enterpriseErrorCode" : null,
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "1640-Spark-Cluster-S",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 408400,
     "successBody" : null,
     "failureBody" : null,
@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select staffid as \"STAFF$1\" ,sex as  \"STAFF$2\" ,Jobcode as  \"STAFF$3\"  from REG_DB_HV.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 408418,
+          "srcTgtColId" : 408449,
           "ruleClsPropId" : 408401,
           "srcTrgColName" : "staff$1",
           "srcTrgColDataType" : "VARCHAR2",
@@ -113,7 +113,7 @@
           "colFormat" : null,
           "displayIndex" : 1
         }, {
-          "srcTgtColId" : 408419,
+          "srcTgtColId" : 408450,
           "ruleClsPropId" : 408401,
           "srcTrgColName" : "staff$2",
           "srcTrgColDataType" : "CHAR",
@@ -124,7 +124,7 @@
           "colFormat" : null,
           "displayIndex" : 2
         }, {
-          "srcTgtColId" : 408420,
+          "srcTgtColId" : 408451,
           "ruleClsPropId" : 408401,
           "srcTrgColName" : "staff$3",
           "srcTrgColDataType" : "VARCHAR2",
@@ -256,7 +256,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 408427,
+          "srcTgtColId" : 408453,
           "ruleClsPropId" : 408421,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -325,9 +325,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 408441,
-        "srcColId" : 408418,
-        "trgColId" : 408427,
+        "colMapId" : 408455,
+        "srcColId" : 408449,
+        "trgColId" : 408453,
         "colMapType" : "join",
         "srcColName" : "staff$1",
         "tgtColName" : "cnt",
@@ -339,7 +339,7 @@
         "exprID" : 408442,
         "exprLogID" : 0,
         "exprName" : "EXPR_0BJYRRW",
-        "expression" : "S.staff$1 != null",
+        "expression" : "S.staff$1 == 'SID1421'",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -351,7 +351,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.staff$1 != null",
+        "exprOrg" : "S.staff$1 == 'SID1421'",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -453,7 +453,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 408418,
+      "srcTgtColId" : 408449,
       "ruleClsPropId" : 408401,
       "srcTrgColName" : "staff$1",
       "srcTrgColDataType" : "VARCHAR2",
@@ -464,7 +464,7 @@
       "colFormat" : null,
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 408419,
+      "srcTgtColId" : 408450,
       "ruleClsPropId" : 408401,
       "srcTrgColName" : "staff$2",
       "srcTrgColDataType" : "CHAR",
@@ -475,7 +475,7 @@
       "colFormat" : null,
       "displayIndex" : 2
     }, {
-      "srcTgtColId" : 408420,
+      "srcTgtColId" : 408451,
       "ruleClsPropId" : 408401,
       "srcTrgColName" : "staff$3",
       "srcTrgColDataType" : "VARCHAR2",
@@ -486,7 +486,7 @@
       "colFormat" : null,
       "displayIndex" : 3
     }, {
-      "srcTgtColId" : 408427,
+      "srcTgtColId" : 408453,
       "ruleClsPropId" : 408421,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -498,9 +498,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 408441,
-      "srcColId" : 408418,
-      "trgColId" : 408427,
+      "colMapId" : 408455,
+      "srcColId" : 408449,
+      "trgColId" : 408453,
       "colMapType" : "join",
       "srcColName" : "staff$1",
       "tgtColName" : "cnt",
@@ -528,7 +528,7 @@
       "exprID" : 408442,
       "exprLogID" : 0,
       "exprName" : "EXPR_0BJYRRW",
-      "expression" : "S.staff$1 != null",
+      "expression" : "S.staff$1 == 'SID1421'",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
