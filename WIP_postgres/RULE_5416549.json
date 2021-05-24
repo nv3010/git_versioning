@@ -95,13 +95,13 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5416638,
-        "srcColId" : 5416634,
-        "trgColId" : 5416637,
+        "colMapId" : 5416645,
+        "srcColId" : 5416641,
+        "trgColId" : 5416644,
         "colMapType" : "join",
         "srcColName" : "min(yearlyincome)",
-        "tgtColName" : "min(yearlyincome)",
-        "colMapExpr" : "min(yearlyincome)=min(yearlyincome)",
+        "tgtColName" : "max(yearlyincome)",
+        "colMapExpr" : "max(yearlyincome)=min(yearlyincome)",
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
@@ -168,7 +168,7 @@
         "ruleClsPropID" : 5416570,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "min(yearlyincome)^~^12^~^VARCHAR2^~^10^~^1",
+        "paramValue" : "max(yearlyincome)^~^12^~^VARCHAR2^~^10^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -203,11 +203,11 @@
         "ruleClsPropID" : 5416563,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select min(yearlyincome)  from REGRESSION_DATABASE.CUSTOMER",
+        "paramValue" : "select max(yearlyincome)  from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5416637,
+          "srcTgtColId" : 5416644,
           "ruleClsPropId" : 5416563,
-          "srcTrgColName" : "min(yearlyincome)",
+          "srcTrgColName" : "max(yearlyincome)",
           "srcTrgColDataType" : "VARCHAR2",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -295,7 +295,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select min(yearlyincome) from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5416634,
+          "srcTgtColId" : 5416641,
           "ruleClsPropId" : 5416553,
           "srcTrgColName" : "min(yearlyincome)",
           "srcTrgColDataType" : "VARCHAR2",
@@ -317,7 +317,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5416634,
+      "srcTgtColId" : 5416641,
       "ruleClsPropId" : 5416553,
       "srcTrgColName" : "min(yearlyincome)",
       "srcTrgColDataType" : "VARCHAR2",
@@ -328,25 +328,25 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5416637,
+      "srcTgtColId" : 5416644,
       "ruleClsPropId" : 5416563,
-      "srcTrgColName" : "min(yearlyincome)",
+      "srcTrgColName" : "max(yearlyincome)",
       "srcTrgColDataType" : "VARCHAR2",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "min(yearlyincome)",
+      "mapColName" : "max(yearlyincome)",
       "colFormat" : "",
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5416638,
-      "srcColId" : 5416634,
-      "trgColId" : 5416637,
+      "colMapId" : 5416645,
+      "srcColId" : 5416641,
+      "trgColId" : 5416644,
       "colMapType" : "join",
       "srcColName" : "min(yearlyincome)",
-      "tgtColName" : "min(yearlyincome)",
-      "colMapExpr" : "min(yearlyincome)=min(yearlyincome)",
+      "tgtColName" : "max(yearlyincome)",
+      "colMapExpr" : "max(yearlyincome)=min(yearlyincome)",
       "srcTrgColMapVisible" : 0,
       "displayIndex" : 0
     } ],
