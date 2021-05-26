@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 5383149,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 5383149,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-05-26 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-05-26 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "shalini.m@toranainc.com",
     "projectName" : "wip_shalini",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "shalini.m@toranainc.com",
     "ruleClassId" : 5418412,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5418436,
-        "srcColId" : 5418422,
-        "trgColId" : 5418432,
+        "colMapId" : 5418443,
+        "srcColId" : 5418439,
+        "trgColId" : 5418442,
         "colMapType" : "join",
         "srcColName" : "min(salary)",
         "tgtColName" : "min(salary)",
@@ -105,15 +105,31 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 5418444,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_ORVTHUK",
+        "expression" : "S.min(salary) == T.min(salary)",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 0,
+        "ruleId" : 5418409,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 5418412,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.min(salary) == T.min(salary)",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
-        "ruleClsPropID" : 5418435,
-        "paramId" : 798,
-        "paramMethod" : "setEngineType",
-        "paramValue" : "Null",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
         "ruleClsPropID" : 5418434,
         "paramId" : 10,
         "paramMethod" : "setTargetObject",
@@ -125,6 +141,13 @@
         "paramId" : 9,
         "paramMethod" : "setSourceObject",
         "paramValue" : "GetData11",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5418435,
+        "paramId" : 798,
+        "paramMethod" : "setEngineType",
+        "paramValue" : "Null",
         "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
@@ -205,7 +228,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select min(salary) from REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5418432,
+          "srcTgtColId" : 5418442,
           "ruleClsPropId" : 5418423,
           "srcTrgColName" : "min(salary)",
           "srcTrgColDataType" : "NUMBER",
@@ -295,7 +318,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select min(salary) from REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5418422,
+          "srcTgtColId" : 5418439,
           "ruleClsPropId" : 5418413,
           "srcTrgColName" : "min(salary)",
           "srcTrgColDataType" : "NUMBER",
@@ -317,7 +340,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5418422,
+      "srcTgtColId" : 5418439,
       "ruleClsPropId" : 5418413,
       "srcTrgColName" : "min(salary)",
       "srcTrgColDataType" : "NUMBER",
@@ -328,7 +351,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5418432,
+      "srcTgtColId" : 5418442,
       "ruleClsPropId" : 5418423,
       "srcTrgColName" : "min(salary)",
       "srcTrgColDataType" : "NUMBER",
@@ -340,9 +363,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5418436,
-      "srcColId" : 5418422,
-      "trgColId" : 5418432,
+      "colMapId" : 5418443,
+      "srcColId" : 5418439,
+      "trgColId" : 5418442,
       "colMapType" : "join",
       "srcColName" : "min(salary)",
       "tgtColName" : "min(salary)",
@@ -366,6 +389,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 5418444,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_ORVTHUK",
+      "expression" : "S.min(salary) == T.min(salary)",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 0,
+      "ruleId" : 5418409,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 5418412,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
