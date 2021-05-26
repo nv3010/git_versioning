@@ -42,11 +42,11 @@
     "failureHeader" : "",
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
-    "srcConnId" : 5340387,
+    "srcConnId" : 4385955,
     "trgConnId" : 4385955,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
-    "srcConn" : "Ora01",
+    "srcConn" : "_ORACLE",
     "trgConn" : "_ORACLE",
     "elapseTime" : 0,
     "parameterId" : "",
@@ -85,7 +85,7 @@
       "vid" : "GetData11",
       "classObjName" : "ICE_1622030277040",
       "queryBuilderXML" : null,
-      "connId" : 5340387,
+      "connId" : 4385955,
       "resultType" : "",
       "connName" : null,
       "connUrl" : null,
@@ -135,16 +135,16 @@
         "ruleClsPropID" : 5419294,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "5340387",
+        "paramValue" : "4385955",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
         "ruleClsPropID" : 5419292,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF where salary between 23000 AND 33000",
+        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF\nwhere salary between 23000 AND 33000\nAND jobcode not in ('TA1','TA2')",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5419318,
+          "srcTgtColId" : 5419408,
           "ruleClsPropId" : 5419292,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -185,9 +185,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5419322,
-        "srcColId" : 5419318,
-        "trgColId" : 5419321,
+        "colMapId" : 5419412,
+        "srcColId" : 5419408,
+        "trgColId" : 5419411,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -293,9 +293,9 @@
         "ruleClsPropID" : 5419302,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF where salary between 23000 AND 33000",
+        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF\nwhere salary between 23000 AND 33000\nAND jobcode not in ('TA1','TA2')",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5419321,
+          "srcTgtColId" : 5419411,
           "ruleClsPropId" : 5419302,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -317,7 +317,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5419318,
+      "srcTgtColId" : 5419408,
       "ruleClsPropId" : 5419292,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -328,7 +328,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5419321,
+      "srcTgtColId" : 5419411,
       "ruleClsPropId" : 5419302,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -340,9 +340,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5419322,
-      "srcColId" : 5419318,
-      "trgColId" : 5419321,
+      "colMapId" : 5419412,
+      "srcColId" : 5419408,
+      "trgColId" : 5419411,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
