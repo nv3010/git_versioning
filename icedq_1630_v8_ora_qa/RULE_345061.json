@@ -188,7 +188,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 345106,
+          "srcTgtColId" : 345121,
           "ruleClsPropId" : 345065,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -278,7 +278,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from dbo.Customer1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 345109,
+          "srcTgtColId" : 345124,
           "ruleClsPropId" : 345075,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "int",
@@ -354,9 +354,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 345110,
-        "srcColId" : 345106,
-        "trgColId" : 345109,
+        "colMapId" : 345125,
+        "srcColId" : 345121,
+        "trgColId" : 345124,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -364,7 +364,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 345126,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_UEV5TL6",
+        "expression" : "S.cnt - T.cnt !=0",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 0,
+        "ruleId" : 345061,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 345064,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.cnt - T.cnt !=0",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 345084,
         "paramId" : 9,
@@ -396,7 +419,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 345106,
+      "srcTgtColId" : 345121,
       "ruleClsPropId" : 345065,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -407,7 +430,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 345109,
+      "srcTgtColId" : 345124,
       "ruleClsPropId" : 345075,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "int",
@@ -419,9 +442,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 345110,
-      "srcColId" : 345106,
-      "trgColId" : 345109,
+      "colMapId" : 345125,
+      "srcColId" : 345121,
+      "trgColId" : 345124,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
@@ -445,6 +468,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 345126,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_UEV5TL6",
+      "expression" : "S.cnt - T.cnt !=0",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 0,
+      "ruleId" : 345061,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 345064,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
