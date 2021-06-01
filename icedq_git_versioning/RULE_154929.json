@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-06-01 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-06-01 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "Punam",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 154998,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 155059,
-        "srcColId" : 155021,
-        "trgColId" : 155045,
+        "colMapId" : 155067,
+        "srcColId" : 155060,
+        "trgColId" : 155063,
         "colMapType" : "join",
         "srcColName" : "empno",
         "tgtColName" : "empno",
@@ -219,7 +219,7 @@
         "paramMethod" : "setFileName",
         "paramValue" : "\\fixedfile\\EmployeeFF.txt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 155021,
+          "srcTgtColId" : 155060,
           "ruleClsPropId" : 154999,
           "srcTrgColName" : "empno",
           "srcTrgColDataType" : "String",
@@ -230,9 +230,20 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 155022,
+          "srcTgtColId" : 155061,
           "ruleClsPropId" : 154999,
-          "srcTrgColName" : "empcode empname",
+          "srcTrgColName" : "empcode empn",
+          "srcTrgColDataType" : "String",
+          "colFlagType" : "src",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        }, {
+          "srcTgtColId" : 155062,
+          "ruleClsPropId" : 154999,
+          "srcTrgColName" : "ame",
           "srcTrgColDataType" : "String",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -253,7 +264,7 @@
         "ruleClsPropID" : 155001,
         "paramId" : 20,
         "paramMethod" : "setDelimiter",
-        "paramValue" : "0-5,5-21",
+        "paramValue" : "0-5,5-18,18-21",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -309,21 +320,21 @@
         "ruleClsPropID" : 155009,
         "paramId" : 407,
         "paramMethod" : "setEmptyStringAsNull",
-        "paramValue" : "true",
+        "paramValue" : "false",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 155010,
         "paramId" : 408,
         "paramMethod" : "setWhiteSpaceAsNull",
-        "paramValue" : "true",
+        "paramValue" : "false",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 155011,
         "paramId" : 409,
         "paramMethod" : "setFixedStringAsNull",
-        "paramValue" : "true",
+        "paramValue" : "false",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -344,7 +355,7 @@
         "ruleClsPropID" : 155014,
         "paramId" : 411,
         "paramMethod" : "setTrimmingEnable",
-        "paramValue" : "true",
+        "paramValue" : "false",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -425,7 +436,7 @@
         "paramMethod" : "setFileName",
         "paramValue" : "\\fixedfile\\EmployeeFF.txt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 155045,
+          "srcTgtColId" : 155063,
           "ruleClsPropId" : 155023,
           "srcTrgColName" : "empno",
           "srcTrgColDataType" : "String",
@@ -436,9 +447,20 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 155046,
+          "srcTgtColId" : 155064,
           "ruleClsPropId" : 155023,
-          "srcTrgColName" : "empcode empname",
+          "srcTrgColName" : "empcode empn",
+          "srcTrgColDataType" : "String",
+          "colFlagType" : "tgt",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        }, {
+          "srcTgtColId" : 155065,
+          "ruleClsPropId" : 155023,
+          "srcTrgColName" : "ame",
           "srcTrgColDataType" : "String",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -459,7 +481,7 @@
         "ruleClsPropID" : 155025,
         "paramId" : 20,
         "paramMethod" : "setDelimiter",
-        "paramValue" : "0-5,5-21",
+        "paramValue" : "0-5,5-18,18-21",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -515,21 +537,21 @@
         "ruleClsPropID" : 155033,
         "paramId" : 407,
         "paramMethod" : "setEmptyStringAsNull",
-        "paramValue" : "true",
+        "paramValue" : "false",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 155034,
         "paramId" : 408,
         "paramMethod" : "setWhiteSpaceAsNull",
-        "paramValue" : "true",
+        "paramValue" : "false",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 155035,
         "paramId" : 409,
         "paramMethod" : "setFixedStringAsNull",
-        "paramValue" : "true",
+        "paramValue" : "false",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -550,7 +572,7 @@
         "ruleClsPropID" : 155038,
         "paramId" : 411,
         "paramMethod" : "setTrimmingEnable",
-        "paramValue" : "true",
+        "paramValue" : "false",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -605,7 +627,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 155021,
+      "srcTgtColId" : 155060,
       "ruleClsPropId" : 154999,
       "srcTrgColName" : "empno",
       "srcTrgColDataType" : "String",
@@ -616,18 +638,29 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 155022,
+      "srcTgtColId" : 155061,
       "ruleClsPropId" : 154999,
-      "srcTrgColName" : "empcode empname",
+      "srcTrgColName" : "empcode empn",
       "srcTrgColDataType" : "String",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "empcode empname",
+      "mapColName" : "empcode empn",
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 155045,
+      "srcTgtColId" : 155062,
+      "ruleClsPropId" : 154999,
+      "srcTrgColName" : "ame",
+      "srcTrgColDataType" : "String",
+      "colFlagType" : "src",
+      "srcTrgColVisible" : 0,
+      "joinList" : null,
+      "mapColName" : "ame",
+      "colFormat" : "",
+      "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 155063,
       "ruleClsPropId" : 155023,
       "srcTrgColName" : "empno",
       "srcTrgColDataType" : "String",
@@ -638,21 +671,32 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 155046,
+      "srcTgtColId" : 155064,
       "ruleClsPropId" : 155023,
-      "srcTrgColName" : "empcode empname",
+      "srcTrgColName" : "empcode empn",
       "srcTrgColDataType" : "String",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "empcode empname",
+      "mapColName" : "empcode empn",
+      "colFormat" : "",
+      "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 155065,
+      "ruleClsPropId" : 155023,
+      "srcTrgColName" : "ame",
+      "srcTrgColDataType" : "String",
+      "colFlagType" : "tgt",
+      "srcTrgColVisible" : 0,
+      "joinList" : null,
+      "mapColName" : "ame",
       "colFormat" : "",
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 155059,
-      "srcColId" : 155021,
-      "trgColId" : 155045,
+      "colMapId" : 155067,
+      "srcColId" : 155060,
+      "trgColId" : 155063,
       "colMapType" : "join",
       "srcColName" : "empno",
       "tgtColName" : "empno",
