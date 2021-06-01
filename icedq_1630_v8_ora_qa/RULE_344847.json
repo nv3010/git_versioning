@@ -12,7 +12,7 @@
     "folderType" : "RULE",
     "startTime" : null,
     "endTime" : null,
-    "ruleName" : "R001 Checksum Rule",
+    "ruleName" : "R001 Vaildation Rule",
     "displayName" : null,
     "rulePurpose" : null,
     "ruleTemplate" : null,
@@ -172,7 +172,7 @@
       "classObjName" : "ICE_1622532338295",
       "queryBuilderXML" : null,
       "connId" : 7362,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -188,7 +188,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from dbo.claims",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 344861,
+          "srcTgtColId" : 344969,
           "ruleClsPropId" : 344853,
           "srcTrgColName" : "patientcontrolnbr",
           "srcTrgColDataType" : "VARCHAR",
@@ -199,7 +199,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 344862,
+          "srcTgtColId" : 344970,
           "ruleClsPropId" : 344853,
           "srcTrgColName" : "serviceid",
           "srcTrgColDataType" : "VARCHAR",
@@ -210,7 +210,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 344863,
+          "srcTgtColId" : 344971,
           "ruleClsPropId" : 344853,
           "srcTrgColName" : "claimpaiddt",
           "srcTrgColDataType" : "VARCHAR",
@@ -221,7 +221,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 344864,
+          "srcTgtColId" : 344972,
           "ruleClsPropId" : 344853,
           "srcTrgColName" : "applsourceid",
           "srcTrgColDataType" : "VARCHAR",
@@ -232,7 +232,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 344865,
+          "srcTgtColId" : 344973,
           "ruleClsPropId" : 344853,
           "srcTrgColName" : "systemid",
           "srcTrgColDataType" : "VARCHAR",
@@ -243,7 +243,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 344866,
+          "srcTgtColId" : 344974,
           "ruleClsPropId" : 344853,
           "srcTrgColName" : "sysclaimkey",
           "srcTrgColDataType" : "VARCHAR",
@@ -254,7 +254,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 344867,
+          "srcTgtColId" : 344975,
           "ruleClsPropId" : 344853,
           "srcTrgColName" : "claimid",
           "srcTrgColDataType" : "INT",
@@ -321,7 +321,7 @@
       "classObjName" : "ICE_1622532338295",
       "queryBuilderXML" : null,
       "connId" : 7362,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -337,7 +337,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 344873,
+          "srcTgtColId" : 344977,
           "ruleClsPropId" : 344868,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -390,7 +390,7 @@
       "classObjName" : "ICE_1622532338295",
       "queryBuilderXML" : null,
       "connId" : 0,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -399,9 +399,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 344886,
-        "srcColId" : 344861,
-        "trgColId" : 344873,
+        "colMapId" : 344979,
+        "srcColId" : 344969,
+        "trgColId" : 344977,
         "colMapType" : "join",
         "srcColName" : "patientcontrolnbr",
         "tgtColName" : "cnt",
@@ -409,7 +409,53 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 344914,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_ENV4UEJ",
+        "expression" : "S.serviceid == 'HUT'",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 0,
+        "exprIndex" : 0,
+        "ruleId" : 344847,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 344852,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.serviceid == 'HUT'",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      }, {
+        "exprID" : 344980,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_XO43ZY4",
+        "expression" : "S.serviceid != null",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 0,
+        "ruleId" : 344847,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 344852,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.serviceid != null",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 344874,
         "paramId" : 9,
@@ -449,7 +495,7 @@
         "ruleClsPropID" : 344879,
         "paramId" : 24,
         "paramMethod" : "setShowErrorData",
-        "paramValue" : "Yes",
+        "paramValue" : "No",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -497,7 +543,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 344861,
+      "srcTgtColId" : 344969,
       "ruleClsPropId" : 344853,
       "srcTrgColName" : "patientcontrolnbr",
       "srcTrgColDataType" : "VARCHAR",
@@ -508,7 +554,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 344862,
+      "srcTgtColId" : 344970,
       "ruleClsPropId" : 344853,
       "srcTrgColName" : "serviceid",
       "srcTrgColDataType" : "VARCHAR",
@@ -519,7 +565,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 344863,
+      "srcTgtColId" : 344971,
       "ruleClsPropId" : 344853,
       "srcTrgColName" : "claimpaiddt",
       "srcTrgColDataType" : "VARCHAR",
@@ -530,7 +576,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 344864,
+      "srcTgtColId" : 344972,
       "ruleClsPropId" : 344853,
       "srcTrgColName" : "applsourceid",
       "srcTrgColDataType" : "VARCHAR",
@@ -541,7 +587,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 344865,
+      "srcTgtColId" : 344973,
       "ruleClsPropId" : 344853,
       "srcTrgColName" : "systemid",
       "srcTrgColDataType" : "VARCHAR",
@@ -552,7 +598,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 344866,
+      "srcTgtColId" : 344974,
       "ruleClsPropId" : 344853,
       "srcTrgColName" : "sysclaimkey",
       "srcTrgColDataType" : "VARCHAR",
@@ -563,7 +609,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 344867,
+      "srcTgtColId" : 344975,
       "ruleClsPropId" : 344853,
       "srcTrgColName" : "claimid",
       "srcTrgColDataType" : "INT",
@@ -574,7 +620,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 344873,
+      "srcTgtColId" : 344977,
       "ruleClsPropId" : 344868,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -586,9 +632,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 344886,
-      "srcColId" : 344861,
-      "trgColId" : 344873,
+      "colMapId" : 344979,
+      "srcColId" : 344969,
+      "trgColId" : 344977,
       "colMapType" : "join",
       "srcColName" : "patientcontrolnbr",
       "tgtColName" : "cnt",
@@ -612,6 +658,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 344980,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_XO43ZY4",
+      "expression" : "S.serviceid != null",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 0,
+      "ruleId" : 344847,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 344852,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
