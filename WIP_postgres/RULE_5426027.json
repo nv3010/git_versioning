@@ -75,6 +75,103 @@
     "reportRuleClassId" : 0,
     "ruleCId" : 0,
     "classVOList" : [ {
+      "classId" : 1,
+      "name" : null,
+      "ruleClassId" : 5426037,
+      "connType" : "DATABASE",
+      "execMode" : "recon",
+      "index" : 0,
+      "classRun" : "com.ice.bpel.GetData",
+      "vid" : "GetData11",
+      "classObjName" : "ICE_1622538167526",
+      "queryBuilderXML" : null,
+      "connId" : 4385955,
+      "resultType" : "expression",
+      "connName" : null,
+      "connUrl" : null,
+      "connFullUrl" : null,
+      "sysGrpId" : 0,
+      "ruleId" : 0,
+      "ruleName" : null,
+      "ruleParameter" : null,
+      "srcTrgMaplist" : [ ],
+      "exprlist" : [ ],
+      "paramsVOLst" : [ {
+        "ruleClsPropID" : 5426049,
+        "paramId" : 404,
+        "paramMethod" : "setIsMultipleOutVaiables",
+        "paramValue" : "false",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5426048,
+        "paramId" : 83,
+        "paramMethod" : "setColumnsMInfo",
+        "paramValue" : "dist_yearlyincome^~^2^~^NUMBER^~^0^~^1",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5426047,
+        "paramId" : 82,
+        "paramMethod" : "setAppendOrderBy",
+        "paramValue" : "true",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5426045,
+        "paramId" : 84,
+        "paramMethod" : "setOrderByStr",
+        "paramValue" : "1",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5426044,
+        "paramId" : 491,
+        "paramMethod" : "setDeferredSort",
+        "paramValue" : "false",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5426043,
+        "paramId" : 337,
+        "paramMethod" : "setIsStoredProcedure",
+        "paramValue" : "false",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5426042,
+        "paramId" : 16,
+        "paramMethod" : "setConnId",
+        "paramValue" : "4385955",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
+        "ruleClsPropID" : 5426040,
+        "paramId" : 6,
+        "paramMethod" : "setQueryString",
+        "paramValue" : "select count (distinct (yearlyincome))as dist_yearlyincome from REGRESSION_DATABASE.CUSTOMER",
+        "srcTrgTbllist" : [ {
+          "srcTgtColId" : 5426173,
+          "ruleClsPropId" : 5426040,
+          "srcTrgColName" : "dist_yearlyincome",
+          "srcTrgColDataType" : "NUMBER",
+          "colFlagType" : "src",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        } ],
+        "fileContent" : null
+      } ],
+      "bigDataExecMode" : null,
+      "srcConnServer" : null,
+      "trgConnServer" : null,
+      "srcConnExecMode" : null,
+      "trgConnExecMode" : null,
+      "thresholdFlag" : null,
+      "thresholdExpression" : null
+    }, {
       "classId" : 3,
       "name" : null,
       "ruleClassId" : 5426039,
@@ -95,18 +192,18 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5426169,
-        "srcColId" : 5426164,
-        "trgColId" : 5426167,
+        "colMapId" : 5426178,
+        "srcColId" : 5426173,
+        "trgColId" : 5426176,
         "colMapType" : "join",
         "srcColName" : "dist_yearlyincome",
         "tgtColName" : "dist_yearlyincome",
         "colMapExpr" : "dist_yearlyincome=dist_yearlyincome",
         "srcTrgColMapVisible" : 1,
-        "displayIndex" : 1
+        "displayIndex" : 2
       } ],
       "exprlist" : [ {
-        "exprID" : 5426170,
+        "exprID" : 5426179,
         "exprLogID" : 0,
         "exprName" : "EXPR_WFYKAWT",
         "expression" : "S.dist_yearlyincome == T.dist_yearlyincome",
@@ -247,7 +344,7 @@
         "ruleClsPropID" : 5426068,
         "paramId" : 82,
         "paramMethod" : "setAppendOrderBy",
-        "paramValue" : "false",
+        "paramValue" : "true",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -284,7 +381,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(distinct (yearlyincome)) as dist_yearlyincome from dbo.Customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5426167,
+          "srcTgtColId" : 5426176,
           "ruleClsPropId" : 5426061,
           "srcTrgColName" : "dist_yearlyincome",
           "srcTrgColDataType" : "int",
@@ -304,106 +401,9 @@
       "trgConnExecMode" : null,
       "thresholdFlag" : null,
       "thresholdExpression" : null
-    }, {
-      "classId" : 1,
-      "name" : null,
-      "ruleClassId" : 5426037,
-      "connType" : "DATABASE",
-      "execMode" : "recon",
-      "index" : 0,
-      "classRun" : "com.ice.bpel.GetData",
-      "vid" : "GetData11",
-      "classObjName" : "ICE_1622538167526",
-      "queryBuilderXML" : null,
-      "connId" : 4385955,
-      "resultType" : "expression",
-      "connName" : null,
-      "connUrl" : null,
-      "connFullUrl" : null,
-      "sysGrpId" : 0,
-      "ruleId" : 0,
-      "ruleName" : null,
-      "ruleParameter" : null,
-      "srcTrgMaplist" : [ ],
-      "exprlist" : [ ],
-      "paramsVOLst" : [ {
-        "ruleClsPropID" : 5426049,
-        "paramId" : 404,
-        "paramMethod" : "setIsMultipleOutVaiables",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5426048,
-        "paramId" : 83,
-        "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "dist_yearlyincome^~^2^~^NUMBER^~^0^~^1",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5426047,
-        "paramId" : 82,
-        "paramMethod" : "setAppendOrderBy",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5426045,
-        "paramId" : 84,
-        "paramMethod" : "setOrderByStr",
-        "paramValue" : "1",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5426044,
-        "paramId" : 491,
-        "paramMethod" : "setDeferredSort",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5426043,
-        "paramId" : 337,
-        "paramMethod" : "setIsStoredProcedure",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5426042,
-        "paramId" : 16,
-        "paramMethod" : "setConnId",
-        "paramValue" : "4385955",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5426040,
-        "paramId" : 6,
-        "paramMethod" : "setQueryString",
-        "paramValue" : "select count (distinct (yearlyincome))as dist_yearlyincome from REGRESSION_DATABASE.CUSTOMER",
-        "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5426164,
-          "ruleClsPropId" : 5426040,
-          "srcTrgColName" : "dist_yearlyincome",
-          "srcTrgColDataType" : "NUMBER",
-          "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        } ],
-        "fileContent" : null
-      } ],
-      "bigDataExecMode" : null,
-      "srcConnServer" : null,
-      "trgConnServer" : null,
-      "srcConnExecMode" : null,
-      "trgConnExecMode" : null,
-      "thresholdFlag" : null,
-      "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5426164,
+      "srcTgtColId" : 5426173,
       "ruleClsPropId" : 5426040,
       "srcTrgColName" : "dist_yearlyincome",
       "srcTrgColDataType" : "NUMBER",
@@ -414,7 +414,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5426167,
+      "srcTgtColId" : 5426176,
       "ruleClsPropId" : 5426061,
       "srcTrgColName" : "dist_yearlyincome",
       "srcTrgColDataType" : "int",
@@ -426,15 +426,15 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5426169,
-      "srcColId" : 5426164,
-      "trgColId" : 5426167,
+      "colMapId" : 5426178,
+      "srcColId" : 5426173,
+      "trgColId" : 5426176,
       "colMapType" : "join",
       "srcColName" : "dist_yearlyincome",
       "tgtColName" : "dist_yearlyincome",
       "colMapExpr" : "dist_yearlyincome=dist_yearlyincome",
       "srcTrgColMapVisible" : 1,
-      "displayIndex" : 1
+      "displayIndex" : 2
     } ],
     "objectVOList" : null,
     "srcCount" : null,
@@ -453,7 +453,7 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 5426170,
+      "exprID" : 5426179,
       "exprLogID" : 0,
       "exprName" : "EXPR_WFYKAWT",
       "expression" : "S.dist_yearlyincome == T.dist_yearlyincome",
