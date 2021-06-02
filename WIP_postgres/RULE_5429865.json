@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5429912,
-        "srcColId" : 5429908,
-        "trgColId" : 5429910,
+        "colMapId" : 5429919,
+        "srcColId" : 5429915,
+        "trgColId" : 5429917,
         "colMapType" : "join",
         "srcColName" : "dist_totalsalary",
         "tgtColName" : "gd",
@@ -112,7 +112,7 @@
         "expression" : "S.dist_salary != 0",
         "result" : "Pass",
         "exprType" : "5",
-        "exprVisible" : 1,
+        "exprVisible" : 0,
         "exprIndex" : 0,
         "ruleId" : 5429865,
         "ruleInstanceId" : 0,
@@ -122,6 +122,29 @@
         "falseCount" : null,
         "errCount" : null,
         "exprOrg" : "S.dist_salary != 0",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      }, {
+        "exprID" : 5429920,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_F6HHOVM",
+        "expression" : "S.dist_totalsalary != 0",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 5429865,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 5429868,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.dist_totalsalary != 0",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -263,7 +286,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select GETDATE() as gd",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5429910,
+          "srcTgtColId" : 5429917,
           "ruleClsPropId" : 5429878,
           "srcTrgColName" : "gd",
           "srcTrgColDataType" : "String",
@@ -346,7 +369,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select COUNT(DISTINCT(TOTALSALARY)) AS DIST_TOTALSALARY from dbo.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5429908,
+          "srcTgtColId" : 5429915,
           "ruleClsPropId" : 5429869,
           "srcTrgColName" : "dist_totalsalary",
           "srcTrgColDataType" : "int",
@@ -355,7 +378,7 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
-          "displayIndex" : 1
+          "displayIndex" : 0
         } ],
         "fileContent" : null
       } ],
@@ -368,7 +391,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5429908,
+      "srcTgtColId" : 5429915,
       "ruleClsPropId" : 5429869,
       "srcTrgColName" : "dist_totalsalary",
       "srcTrgColDataType" : "int",
@@ -377,9 +400,9 @@
       "joinList" : null,
       "mapColName" : "dist_totalsalary",
       "colFormat" : "",
-      "displayIndex" : 1
+      "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5429910,
+      "srcTgtColId" : 5429917,
       "ruleClsPropId" : 5429878,
       "srcTrgColName" : "gd",
       "srcTrgColDataType" : "String",
@@ -391,9 +414,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5429912,
-      "srcColId" : 5429908,
-      "trgColId" : 5429910,
+      "colMapId" : 5429919,
+      "srcColId" : 5429915,
+      "trgColId" : 5429917,
       "colMapType" : "join",
       "srcColName" : "dist_totalsalary",
       "tgtColName" : "gd",
@@ -418,14 +441,14 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 5429897,
+      "exprID" : 5429920,
       "exprLogID" : 0,
-      "exprName" : "EXPR_EQWBEG3",
-      "expression" : "S.dist_salary != 0",
+      "exprName" : "EXPR_F6HHOVM",
+      "expression" : "S.dist_totalsalary != 0",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 0,
+      "exprIndex" : 1,
       "ruleId" : 5429865,
       "ruleInstanceId" : 0,
       "ruleClassId" : 5429868,
