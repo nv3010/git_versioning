@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-06-02 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-06-02 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "shalini",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 5428239,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5428263,
-        "srcColId" : 5428249,
-        "trgColId" : 5428259,
+        "colMapId" : 5428270,
+        "srcColId" : 5428266,
+        "trgColId" : 5428269,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -107,6 +107,13 @@
       } ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 5428260,
+        "paramId" : 9,
+        "paramMethod" : "setSourceObject",
+        "paramValue" : "GetData11",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 5428262,
         "paramId" : 798,
         "paramMethod" : "setEngineType",
@@ -118,13 +125,6 @@
         "paramId" : 10,
         "paramMethod" : "setTargetObject",
         "paramValue" : "GetData21",
-        "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5428260,
-        "paramId" : 9,
-        "paramMethod" : "setSourceObject",
-        "paramValue" : "GetData11",
         "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
@@ -203,9 +203,9 @@
         "ruleClsPropID" : 5428250,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF\nWHERE JOBCODE= 'TA1' OR jobcode = 'TA2'",
+        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF\nWHERE state = 'NJ' or state =' NY'",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5428259,
+          "srcTgtColId" : 5428269,
           "ruleClsPropId" : 5428250,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -293,9 +293,9 @@
         "ruleClsPropID" : 5428240,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF\nWHERE JOBCODE= 'TA1' OR jobcode = 'TA2'",
+        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF\nWHERE state = 'NJ' or state =' NY'",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5428249,
+          "srcTgtColId" : 5428266,
           "ruleClsPropId" : 5428240,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -317,7 +317,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5428249,
+      "srcTgtColId" : 5428266,
       "ruleClsPropId" : 5428240,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -328,7 +328,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5428259,
+      "srcTgtColId" : 5428269,
       "ruleClsPropId" : 5428250,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -340,9 +340,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5428263,
-      "srcColId" : 5428249,
-      "trgColId" : 5428259,
+      "colMapId" : 5428270,
+      "srcColId" : 5428266,
+      "trgColId" : 5428269,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
