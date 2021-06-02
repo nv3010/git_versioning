@@ -95,13 +95,13 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5429905,
-        "srcColId" : 5429901,
-        "trgColId" : 5429903,
+        "colMapId" : 5429912,
+        "srcColId" : 5429908,
+        "trgColId" : 5429910,
         "colMapType" : "join",
-        "srcColName" : "dist_bonus",
+        "srcColName" : "dist_totalsalary",
         "tgtColName" : "gd",
-        "colMapExpr" : "gd=dist_bonus",
+        "colMapExpr" : "gd=dist_totalsalary",
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
@@ -113,7 +113,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 1,
+        "exprIndex" : 0,
         "ruleId" : 5429865,
         "ruleInstanceId" : 0,
         "ruleClassId" : 5429868,
@@ -263,7 +263,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select GETDATE() as gd",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5429903,
+          "srcTgtColId" : 5429910,
           "ruleClsPropId" : 5429878,
           "srcTrgColName" : "gd",
           "srcTrgColDataType" : "String",
@@ -309,7 +309,7 @@
         "ruleClsPropID" : 5429876,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "dist_bonus^~^4^~^int^~^10^~^1",
+        "paramValue" : "dist_totalsalary^~^4^~^int^~^10^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -344,18 +344,18 @@
         "ruleClsPropID" : 5429869,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select COUNT(DISTINCT(BONUS)) AS DIST_BONUS from dbo.STAFF",
+        "paramValue" : "select COUNT(DISTINCT(TOTALSALARY)) AS DIST_TOTALSALARY from dbo.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5429901,
+          "srcTgtColId" : 5429908,
           "ruleClsPropId" : 5429869,
-          "srcTrgColName" : "dist_bonus",
+          "srcTrgColName" : "dist_totalsalary",
           "srcTrgColDataType" : "int",
           "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
+          "srcTrgColVisible" : 1,
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
-          "displayIndex" : 0
+          "displayIndex" : 1
         } ],
         "fileContent" : null
       } ],
@@ -368,18 +368,18 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5429901,
+      "srcTgtColId" : 5429908,
       "ruleClsPropId" : 5429869,
-      "srcTrgColName" : "dist_bonus",
+      "srcTrgColName" : "dist_totalsalary",
       "srcTrgColDataType" : "int",
       "colFlagType" : "src",
-      "srcTrgColVisible" : 0,
+      "srcTrgColVisible" : 1,
       "joinList" : null,
-      "mapColName" : "dist_bonus",
+      "mapColName" : "dist_totalsalary",
       "colFormat" : "",
-      "displayIndex" : 0
+      "displayIndex" : 1
     }, {
-      "srcTgtColId" : 5429903,
+      "srcTgtColId" : 5429910,
       "ruleClsPropId" : 5429878,
       "srcTrgColName" : "gd",
       "srcTrgColDataType" : "String",
@@ -391,13 +391,13 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5429905,
-      "srcColId" : 5429901,
-      "trgColId" : 5429903,
+      "colMapId" : 5429912,
+      "srcColId" : 5429908,
+      "trgColId" : 5429910,
       "colMapType" : "join",
-      "srcColName" : "dist_bonus",
+      "srcColName" : "dist_totalsalary",
       "tgtColName" : "gd",
-      "colMapExpr" : "gd=dist_bonus",
+      "colMapExpr" : "gd=dist_totalsalary",
       "srcTrgColMapVisible" : 0,
       "displayIndex" : 0
     } ],
@@ -425,7 +425,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 1,
+      "exprIndex" : 0,
       "ruleId" : 5429865,
       "ruleInstanceId" : 0,
       "ruleClassId" : 5429868,
