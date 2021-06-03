@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 205,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 205,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-06-03 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-06-03 00:00:00",
     "enterpriseErrorCode" : null,
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "Client_Issue_Recreation",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 195047,
     "successBody" : null,
     "failureBody" : null,
@@ -102,7 +102,7 @@
         "paramMethod" : "setFileName",
         "paramValue" : "/IC2-14210_comma_File_ConvertTOUTF-8.txt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 195070,
+          "srcTgtColId" : 195097,
           "ruleClsPropId" : 195048,
           "srcTrgColName" : "ï»¿id",
           "srcTrgColDataType" : "String",
@@ -113,7 +113,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 195071,
+          "srcTgtColId" : 195098,
           "ruleClsPropId" : 195048,
           "srcTrgColName" : "val1",
           "srcTrgColDataType" : "String",
@@ -308,7 +308,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 id , 'WILDEÂ¿S' val1 from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 195082,
+          "srcTgtColId" : 195101,
           "ruleClsPropId" : 195072,
           "srcTrgColName" : "id",
           "srcTrgColDataType" : "NUMBER",
@@ -319,7 +319,7 @@
           "colFormat" : null,
           "displayIndex" : 3
         }, {
-          "srcTgtColId" : 195083,
+          "srcTgtColId" : 195102,
           "ruleClsPropId" : 195072,
           "srcTrgColName" : "val1",
           "srcTrgColDataType" : "CHAR",
@@ -356,7 +356,7 @@
         "ruleClsPropID" : 195077,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1",
+        "paramValue" : "1,2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -409,15 +409,25 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 195096,
-        "srcColId" : 195070,
-        "trgColId" : 195082,
+        "colMapId" : 195104,
+        "srcColId" : 195097,
+        "trgColId" : 195101,
         "colMapType" : "join",
         "srcColName" : "ï»¿id",
         "tgtColName" : "id",
         "colMapExpr" : "id=ï»¿id",
         "srcTrgColMapVisible" : 1,
         "displayIndex" : 2
+      }, {
+        "colMapId" : 195105,
+        "srcColId" : 195098,
+        "trgColId" : 195102,
+        "colMapType" : "join",
+        "srcColName" : "val1",
+        "tgtColName" : "val1",
+        "colMapExpr" : "val1=val1",
+        "srcTrgColMapVisible" : 1,
+        "displayIndex" : 6
       } ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
@@ -507,7 +517,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 195070,
+      "srcTgtColId" : 195097,
       "ruleClsPropId" : 195048,
       "srcTrgColName" : "ï»¿id",
       "srcTrgColDataType" : "String",
@@ -518,7 +528,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 195071,
+      "srcTgtColId" : 195098,
       "ruleClsPropId" : 195048,
       "srcTrgColName" : "val1",
       "srcTrgColDataType" : "String",
@@ -529,7 +539,7 @@
       "colFormat" : null,
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 195082,
+      "srcTgtColId" : 195101,
       "ruleClsPropId" : 195072,
       "srcTrgColName" : "id",
       "srcTrgColDataType" : "NUMBER",
@@ -540,7 +550,7 @@
       "colFormat" : null,
       "displayIndex" : 3
     }, {
-      "srcTgtColId" : 195083,
+      "srcTgtColId" : 195102,
       "ruleClsPropId" : 195072,
       "srcTrgColName" : "val1",
       "srcTrgColDataType" : "CHAR",
@@ -552,15 +562,25 @@
       "displayIndex" : 4
     } ],
     "colMapList" : [ {
-      "colMapId" : 195096,
-      "srcColId" : 195070,
-      "trgColId" : 195082,
+      "colMapId" : 195104,
+      "srcColId" : 195097,
+      "trgColId" : 195101,
       "colMapType" : "join",
       "srcColName" : "ï»¿id",
       "tgtColName" : "id",
       "colMapExpr" : "id=ï»¿id",
       "srcTrgColMapVisible" : 1,
       "displayIndex" : 2
+    }, {
+      "colMapId" : 195105,
+      "srcColId" : 195098,
+      "trgColId" : 195102,
+      "colMapType" : "join",
+      "srcColName" : "val1",
+      "tgtColName" : "val1",
+      "colMapExpr" : "val1=val1",
+      "srcTrgColMapVisible" : 1,
+      "displayIndex" : 6
     } ],
     "objectVOList" : null,
     "srcCount" : null,
