@@ -162,7 +162,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from icedq.customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 351776,
+          "srcTgtColId" : 351784,
           "ruleClsPropId" : 351744,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "BIGINT",
@@ -245,7 +245,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from icedq.customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 351779,
+          "srcTgtColId" : 351787,
           "ruleClsPropId" : 351753,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "BIGINT",
@@ -321,9 +321,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 351780,
-        "srcColId" : 351776,
-        "trgColId" : 351779,
+        "colMapId" : 351788,
+        "srcColId" : 351784,
+        "trgColId" : 351787,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -335,7 +335,7 @@
         "exprID" : 351781,
         "exprLogID" : 0,
         "exprName" : "EXPR_XYN75G9",
-        "expression" : "S.cnt - T.cnt == 1",
+        "expression" : "S.cnt - T.cnt != 0",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -347,7 +347,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.cnt - T.cnt == 1",
+        "exprOrg" : "S.cnt - T.cnt != 0",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -386,7 +386,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 351776,
+      "srcTgtColId" : 351784,
       "ruleClsPropId" : 351744,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "BIGINT",
@@ -397,7 +397,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 351779,
+      "srcTgtColId" : 351787,
       "ruleClsPropId" : 351753,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "BIGINT",
@@ -409,9 +409,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 351780,
-      "srcColId" : 351776,
-      "trgColId" : 351779,
+      "colMapId" : 351788,
+      "srcColId" : 351784,
+      "trgColId" : 351787,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
@@ -439,7 +439,7 @@
       "exprID" : 351781,
       "exprLogID" : 0,
       "exprName" : "EXPR_XYN75G9",
-      "expression" : "S.cnt - T.cnt == 1",
+      "expression" : "S.cnt - T.cnt != 0",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
