@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select min(DATE_FORMAT(birthdate, '%Y-%m-%d')) as min_birthdate from icedq.customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 355671,
+          "srcTgtColId" : 355709,
           "ruleClsPropId" : 355644,
           "srcTrgColName" : "min_birthdate",
           "srcTrgColDataType" : "VARCHAR",
@@ -185,7 +185,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select min(TO_CHAR(birthdate, 'YYYY-MM-DD')) as min_birthdate from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 355674,
+          "srcTgtColId" : 355712,
           "ruleClsPropId" : 355653,
           "srcTrgColName" : "min_birthdate",
           "srcTrgColDataType" : "VARCHAR2",
@@ -268,9 +268,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 355675,
-        "srcColId" : 355671,
-        "trgColId" : 355674,
+        "colMapId" : 355713,
+        "srcColId" : 355709,
+        "trgColId" : 355712,
         "colMapType" : "join",
         "srcColName" : "min_birthdate",
         "tgtColName" : "min_birthdate",
@@ -282,7 +282,7 @@
         "exprID" : 355667,
         "exprLogID" : 0,
         "exprName" : "EXPR_F395ZKK",
-        "expression" : "S.cnt > T.cnt",
+        "expression" : "S.min_birthdate == T.min_birthdate",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -294,7 +294,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.cnt > T.cnt",
+        "exprOrg" : "S.min_birthdate == T.min_birthdate",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -333,7 +333,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 355671,
+      "srcTgtColId" : 355709,
       "ruleClsPropId" : 355644,
       "srcTrgColName" : "min_birthdate",
       "srcTrgColDataType" : "VARCHAR",
@@ -344,7 +344,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 355674,
+      "srcTgtColId" : 355712,
       "ruleClsPropId" : 355653,
       "srcTrgColName" : "min_birthdate",
       "srcTrgColDataType" : "VARCHAR2",
@@ -356,9 +356,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 355675,
-      "srcColId" : 355671,
-      "trgColId" : 355674,
+      "colMapId" : 355713,
+      "srcColId" : 355709,
+      "trgColId" : 355712,
       "colMapType" : "join",
       "srcColName" : "min_birthdate",
       "tgtColName" : "min_birthdate",
@@ -386,7 +386,7 @@
       "exprID" : 355667,
       "exprLogID" : 0,
       "exprName" : "EXPR_F395ZKK",
-      "expression" : "S.cnt > T.cnt",
+      "expression" : "S.min_birthdate == T.min_birthdate",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
