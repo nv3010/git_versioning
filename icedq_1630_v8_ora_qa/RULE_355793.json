@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from icedq.customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 355805,
+          "srcTgtColId" : 355823,
           "ruleClsPropId" : 355797,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "BIGINT",
@@ -185,7 +185,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 355815,
+          "srcTgtColId" : 355826,
           "ruleClsPropId" : 355806,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -268,9 +268,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 355819,
-        "srcColId" : 355805,
-        "trgColId" : 355815,
+        "colMapId" : 355827,
+        "srcColId" : 355823,
+        "trgColId" : 355826,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -282,7 +282,7 @@
         "exprID" : 355820,
         "exprLogID" : 0,
         "exprName" : "Not equal count",
-        "expression" : "S.cnt != T.cnt",
+        "expression" : "S.cnt  - T.cnt != 0",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -294,7 +294,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.cnt != T.cnt",
+        "exprOrg" : "S.cnt  - T.cnt != 0",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -333,7 +333,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 355805,
+      "srcTgtColId" : 355823,
       "ruleClsPropId" : 355797,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "BIGINT",
@@ -344,7 +344,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 355815,
+      "srcTgtColId" : 355826,
       "ruleClsPropId" : 355806,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -356,9 +356,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 355819,
-      "srcColId" : 355805,
-      "trgColId" : 355815,
+      "colMapId" : 355827,
+      "srcColId" : 355823,
+      "trgColId" : 355826,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
@@ -386,7 +386,7 @@
       "exprID" : 355820,
       "exprLogID" : 0,
       "exprName" : "Not equal count",
-      "expression" : "S.cnt != T.cnt",
+      "expression" : "S.cnt  - T.cnt != 0",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
