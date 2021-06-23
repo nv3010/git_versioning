@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 770681,
-        "srcColId" : 770675,
-        "trgColId" : 770679,
+        "colMapId" : 770690,
+        "srcColId" : 770684,
+        "trgColId" : 770688,
         "colMapType" : "join",
         "srcColName" : "fname",
         "tgtColName" : "gd",
@@ -109,7 +109,7 @@
         "exprID" : 770654,
         "exprLogID" : 0,
         "exprName" : "chk",
-        "expression" : "S.fname == #fkey#  && S.lname == 'ALLEN'  && S.memid == 'MEM140'",
+        "expression" : "S.fname == #fkey#  && S.lname == #lkey#  && S.memid == #mkey#",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -121,7 +121,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.fname == #fkey#  && S.lname == 'ALLEN'  && S.memid == 'MEM140'",
+        "exprOrg" : "S.fname == #fkey#  && S.lname == #lkey#  && S.memid == #mkey#",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -240,9 +240,9 @@
         "ruleClsPropID" : 770624,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "SELECT 'KEN' FNAME, 'ALLEN' LNAME, 'MEM140' MEMID",
+        "paramValue" : "SELECT * FROM \n(\nSELECT 'KEN' FNAME, 'ALLEN' LNAME, 'MEM140' MEMID \nUNION ALL\nSELECT 'BEN' FNAME, 'DOE' LNAME, 'MEM200' MEMID \n) WHERE MEMID = #mkey#",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 770675,
+          "srcTgtColId" : 770684,
           "ruleClsPropId" : 770624,
           "srcTrgColName" : "fname",
           "srcTrgColDataType" : "varchar",
@@ -253,7 +253,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 770676,
+          "srcTgtColId" : 770685,
           "ruleClsPropId" : 770624,
           "srcTrgColName" : "lname",
           "srcTrgColDataType" : "varchar",
@@ -264,7 +264,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 770677,
+          "srcTgtColId" : 770686,
           "ruleClsPropId" : 770624,
           "srcTrgColName" : "memid",
           "srcTrgColDataType" : "varchar",
@@ -347,7 +347,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select GETDATE() as gd",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 770679,
+          "srcTgtColId" : 770688,
           "ruleClsPropId" : 770635,
           "srcTrgColName" : "gd",
           "srcTrgColDataType" : "String",
@@ -390,7 +390,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 770675,
+      "srcTgtColId" : 770684,
       "ruleClsPropId" : 770624,
       "srcTrgColName" : "fname",
       "srcTrgColDataType" : "varchar",
@@ -401,7 +401,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 770676,
+      "srcTgtColId" : 770685,
       "ruleClsPropId" : 770624,
       "srcTrgColName" : "lname",
       "srcTrgColDataType" : "varchar",
@@ -412,7 +412,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 770677,
+      "srcTgtColId" : 770686,
       "ruleClsPropId" : 770624,
       "srcTrgColName" : "memid",
       "srcTrgColDataType" : "varchar",
@@ -423,7 +423,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 770679,
+      "srcTgtColId" : 770688,
       "ruleClsPropId" : 770635,
       "srcTrgColName" : "gd",
       "srcTrgColDataType" : "String",
@@ -435,9 +435,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 770681,
-      "srcColId" : 770675,
-      "trgColId" : 770679,
+      "colMapId" : 770690,
+      "srcColId" : 770684,
+      "trgColId" : 770688,
       "colMapType" : "join",
       "srcColName" : "fname",
       "tgtColName" : "gd",
@@ -465,7 +465,7 @@
       "exprID" : 770654,
       "exprLogID" : 0,
       "exprName" : "chk",
-      "expression" : "S.fname == #fkey#  && S.lname == 'ALLEN'  && S.memid == 'MEM140'",
+      "expression" : "S.fname == #fkey#  && S.lname == #lkey#  && S.memid == #mkey#",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
