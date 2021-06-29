@@ -126,7 +126,7 @@
         "ruleClsPropID" : 771346,
         "paramId" : 231,
         "paramMethod" : "setGroovyScript",
-        "paramValue" : "/* Define Variables */\n\ndef tableName = 'dbo.employees'; \ndef procName = 'dbo.employees_test';\n\n/* Drop Table */\n\ninstanceLog.info(\" Drop table if it already exists \");\ndef checkTable=\"\"\"IF OBJECT_ID('$tableName', 'U') IS NOT NULL DROP TABLE dbo.employees; \"\"\"\nZenCycleDemo.execute(checkTable);\n\n/* Run the sql script for raw data */ \ninstanceLog.info(\" Executing the sql script \");\nZenCycleDemo.call(procName);\n\n/* Get Inserted Record Count */ \n\ndef rowCount= ZenCycleDemo .firstRow (\" SELECT COUNT(*)  FROM employees\");\ninstanceLog.info(\"Rows Inserted \"+ rowCount);\n\nreturn \"0\"",
+        "paramValue" : "/* Define Variables */\n\ndef tableName = 'dbo.employees'; \ndef procName = 'dbo.Generate_employee_data';\n\n/* Drop Table */\n\ninstanceLog.info(\" Drop table if it already exists \");\ndef checkTable=\"\"\"IF OBJECT_ID('$tableName', 'U') IS NOT NULL DROP TABLE dbo.employees; \"\"\"\nZenCycleDemo.execute(checkTable);\n\n/* Run the sql script for raw data */ \ninstanceLog.info(\" Executing the sql script \");\nZenCycleDemo.call(procName);\n\n/* Get Inserted Record Count */ \n\ndef rowCount= ZenCycleDemo .firstRow (\" SELECT COUNT(*)  FROM employees\");\ninstanceLog.info(\"Rows Inserted \"+ rowCount);\n\nreturn \"0\"",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
