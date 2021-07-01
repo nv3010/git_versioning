@@ -86,7 +86,7 @@
       "classObjName" : "ICE_1625146031651",
       "queryBuilderXML" : null,
       "connId" : 0,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 772237,
-        "srcColId" : 772227,
-        "trgColId" : 772235,
+        "colMapId" : 772250,
+        "srcColId" : 772240,
+        "trgColId" : 772248,
         "colMapType" : "join",
         "srcColName" : "accountno",
         "tgtColName" : "gd",
@@ -112,7 +112,7 @@
         "expression" : "( S.statecode != null) ? (S.statecode.trim().length() == 2) :  false",
         "result" : "Pass",
         "exprType" : "5",
-        "exprVisible" : 0,
+        "exprVisible" : 1,
         "exprIndex" : 0,
         "ruleId" : 772169,
         "ruleInstanceId" : 0,
@@ -135,8 +135,8 @@
         "expression" : "S.customername != null",
         "result" : "Pass",
         "exprType" : "5",
-        "exprVisible" : 0,
-        "exprIndex" : 0,
+        "exprVisible" : 1,
+        "exprIndex" : 1,
         "ruleId" : 772169,
         "ruleInstanceId" : 0,
         "ruleClassId" : 772172,
@@ -158,8 +158,8 @@
         "expression" : "( S.customercode != null ) ? ( S.customercode.trim().replace(\"-\",\"\").matches(\"[0-9]+\") ) : false",
         "result" : "Pass",
         "exprType" : "5",
-        "exprVisible" : 0,
-        "exprIndex" : 0,
+        "exprVisible" : 1,
+        "exprIndex" : 2,
         "ruleId" : 772169,
         "ruleInstanceId" : 0,
         "ruleClassId" : 772172,
@@ -181,8 +181,8 @@
         "expression" : "( S.customerphonenumber != null ) ? ( S.customerphonenumber.trim().length() <=  12 &&  S.customerphonenumber.trim().replace('-','').matches(\"[0-9]+\") ) : false",
         "result" : "Pass",
         "exprType" : "5",
-        "exprVisible" : 0,
-        "exprIndex" : 0,
+        "exprVisible" : 1,
+        "exprIndex" : 3,
         "ruleId" : 772169,
         "ruleInstanceId" : 0,
         "ruleClassId" : 772172,
@@ -204,8 +204,8 @@
         "expression" : "( S.signupdate != null ) ? ( S.signupdate ==~ /\\d{4}\\-\\d{2}\\-\\d{2}/ ) : false",
         "result" : "Pass",
         "exprType" : "5",
-        "exprVisible" : 0,
-        "exprIndex" : 0,
+        "exprVisible" : 1,
+        "exprIndex" : 4,
         "ruleId" : 772169,
         "ruleInstanceId" : 0,
         "ruleClassId" : 772172,
@@ -318,7 +318,7 @@
       "classObjName" : "ICE_1625146031651",
       "queryBuilderXML" : null,
       "connId" : 410,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -334,7 +334,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select \nPROVIDER_NUM AccountNo, PROVIDER_NM CustomerName, \nOFFICE_ADDRESS_1 AddressLine1, OFFICE_STATE_CD StateCode,  \nSPECIALITY_CD CustomerCode, PHONE_NUMBER CustomerPhoneNumber, EFFECTIVE_DT SignupDate FROM dbo.HC_PROVIDER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 772227,
+          "srcTgtColId" : 772240,
           "ruleClsPropId" : 772173,
           "srcTrgColName" : "accountno",
           "srcTrgColDataType" : "varchar",
@@ -345,7 +345,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 772228,
+          "srcTgtColId" : 772241,
           "ruleClsPropId" : 772173,
           "srcTrgColName" : "customername",
           "srcTrgColDataType" : "varchar",
@@ -356,7 +356,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 772229,
+          "srcTgtColId" : 772242,
           "ruleClsPropId" : 772173,
           "srcTrgColName" : "addressline1",
           "srcTrgColDataType" : "varchar",
@@ -367,7 +367,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 772230,
+          "srcTgtColId" : 772243,
           "ruleClsPropId" : 772173,
           "srcTrgColName" : "statecode",
           "srcTrgColDataType" : "varchar",
@@ -378,7 +378,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 772231,
+          "srcTgtColId" : 772244,
           "ruleClsPropId" : 772173,
           "srcTrgColName" : "customercode",
           "srcTrgColDataType" : "varchar",
@@ -389,7 +389,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 772232,
+          "srcTgtColId" : 772245,
           "ruleClsPropId" : 772173,
           "srcTrgColName" : "customerphonenumber",
           "srcTrgColDataType" : "varchar",
@@ -400,7 +400,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 772233,
+          "srcTgtColId" : 772246,
           "ruleClsPropId" : 772173,
           "srcTrgColName" : "signupdate",
           "srcTrgColDataType" : "varchar",
@@ -467,7 +467,7 @@
       "classObjName" : "ICE_1625146031651",
       "queryBuilderXML" : null,
       "connId" : 410,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -483,7 +483,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select GETDATE() as gd",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 772235,
+          "srcTgtColId" : 772248,
           "ruleClsPropId" : 772188,
           "srcTrgColName" : "gd",
           "srcTrgColDataType" : "String",
@@ -526,7 +526,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 772227,
+      "srcTgtColId" : 772240,
       "ruleClsPropId" : 772173,
       "srcTrgColName" : "accountno",
       "srcTrgColDataType" : "varchar",
@@ -537,7 +537,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 772228,
+      "srcTgtColId" : 772241,
       "ruleClsPropId" : 772173,
       "srcTrgColName" : "customername",
       "srcTrgColDataType" : "varchar",
@@ -548,7 +548,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 772229,
+      "srcTgtColId" : 772242,
       "ruleClsPropId" : 772173,
       "srcTrgColName" : "addressline1",
       "srcTrgColDataType" : "varchar",
@@ -559,7 +559,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 772230,
+      "srcTgtColId" : 772243,
       "ruleClsPropId" : 772173,
       "srcTrgColName" : "statecode",
       "srcTrgColDataType" : "varchar",
@@ -570,7 +570,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 772231,
+      "srcTgtColId" : 772244,
       "ruleClsPropId" : 772173,
       "srcTrgColName" : "customercode",
       "srcTrgColDataType" : "varchar",
@@ -581,7 +581,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 772232,
+      "srcTgtColId" : 772245,
       "ruleClsPropId" : 772173,
       "srcTrgColName" : "customerphonenumber",
       "srcTrgColDataType" : "varchar",
@@ -592,7 +592,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 772233,
+      "srcTgtColId" : 772246,
       "ruleClsPropId" : 772173,
       "srcTrgColName" : "signupdate",
       "srcTrgColDataType" : "varchar",
@@ -603,7 +603,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 772235,
+      "srcTgtColId" : 772248,
       "ruleClsPropId" : 772188,
       "srcTrgColName" : "gd",
       "srcTrgColDataType" : "String",
@@ -615,9 +615,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 772237,
-      "srcColId" : 772227,
-      "trgColId" : 772235,
+      "colMapId" : 772250,
+      "srcColId" : 772240,
+      "trgColId" : 772248,
       "colMapType" : "join",
       "srcColName" : "accountno",
       "tgtColName" : "gd",
@@ -641,6 +641,121 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 772207,
+      "exprLogID" : 0,
+      "exprName" : "statecompleteness",
+      "expression" : "( S.statecode != null) ? (S.statecode.trim().length() == 2) :  false",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 0,
+      "ruleId" : 772169,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 772172,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 772208,
+      "exprLogID" : 0,
+      "exprName" : "custname",
+      "expression" : "S.customername != null",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 772169,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 772172,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 772209,
+      "exprLogID" : 0,
+      "exprName" : "custcode",
+      "expression" : "( S.customercode != null ) ? ( S.customercode.trim().replace(\"-\",\"\").matches(\"[0-9]+\") ) : false",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 2,
+      "ruleId" : 772169,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 772172,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 772210,
+      "exprLogID" : 0,
+      "exprName" : "phone",
+      "expression" : "( S.customerphonenumber != null ) ? ( S.customerphonenumber.trim().length() <=  12 &&  S.customerphonenumber.trim().replace('-','').matches(\"[0-9]+\") ) : false",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 3,
+      "ruleId" : 772169,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 772172,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 772211,
+      "exprLogID" : 0,
+      "exprName" : "date",
+      "expression" : "( S.signupdate != null ) ? ( S.signupdate ==~ /\\d{4}\\-\\d{2}\\-\\d{2}/ ) : false",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 4,
+      "ruleId" : 772169,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 772172,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
