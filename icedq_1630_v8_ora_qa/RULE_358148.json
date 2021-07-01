@@ -43,11 +43,11 @@
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
     "srcConnId" : 2001,
-    "trgConnId" : 40992,
+    "trgConnId" : 116279,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
     "srcConn" : "MYSQL",
-    "trgConn" : "Oracle",
+    "trgConn" : "Teradata_DB",
     "elapseTime" : 0,
     "parameterId" : null,
     "type" : null,
@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(bonus) as cnt from icedq.staff",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358333,
+          "srcTgtColId" : 358342,
           "ruleClsPropId" : 358163,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "BIGINT",
@@ -168,7 +168,7 @@
       "vid" : "GetData21",
       "classObjName" : "ICE_1625121975895",
       "queryBuilderXML" : null,
-      "connId" : 40992,
+      "connId" : 116279,
       "resultType" : null,
       "connName" : null,
       "connUrl" : null,
@@ -183,12 +183,12 @@
         "ruleClsPropID" : 358172,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(bonus) as cnt from REGRESSION_DATABASE.STAFF",
+        "paramValue" : "select count(bonus) as cnt from REGRESSION_DATABASE.\"STAFF\"",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358336,
+          "srcTgtColId" : 358345,
           "ruleClsPropId" : 358172,
           "srcTrgColName" : "cnt",
-          "srcTrgColDataType" : "NUMBER",
+          "srcTrgColDataType" : "INTEGER",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -201,7 +201,7 @@
         "ruleClsPropID" : 358174,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "40992",
+        "paramValue" : "116279",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -229,15 +229,8 @@
         "ruleClsPropID" : 358179,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "cnt^~^2^~^NUMBER^~^0^~^1",
+        "paramValue" : "cnt^~^4^~^INTEGER^~^10^~^1",
         "srcTrgTbllist" : [ ],
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 358309,
-        "paramId" : 404,
-        "paramMethod" : "setIsMultipleOutVaiables",
-        "paramValue" : "false",
-        "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -268,9 +261,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 358337,
-        "srcColId" : 358333,
-        "trgColId" : 358336,
+        "colMapId" : 358346,
+        "srcColId" : 358342,
+        "trgColId" : 358345,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -333,7 +326,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 358333,
+      "srcTgtColId" : 358342,
       "ruleClsPropId" : 358163,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "BIGINT",
@@ -344,10 +337,10 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 358336,
+      "srcTgtColId" : 358345,
       "ruleClsPropId" : 358172,
       "srcTrgColName" : "cnt",
-      "srcTrgColDataType" : "NUMBER",
+      "srcTrgColDataType" : "INTEGER",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -356,9 +349,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 358337,
-      "srcColId" : 358333,
-      "trgColId" : 358336,
+      "colMapId" : 358346,
+      "srcColId" : 358342,
+      "trgColId" : 358345,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
