@@ -100,12 +100,12 @@
         "ruleClsPropID" : 358163,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select count(bonus) as bonus from icedq.staff",
+        "paramValue" : "select avg(bonus) as bonus from icedq.staff",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358202,
+          "srcTgtColId" : 358209,
           "ruleClsPropId" : 358163,
           "srcTrgColName" : "bonus",
-          "srcTrgColDataType" : "BIGINT",
+          "srcTrgColDataType" : "DECIMAL",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -146,7 +146,7 @@
         "ruleClsPropID" : 358170,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "bonus^~^-5^~^BIGINT^~^21^~^1",
+        "paramValue" : "bonus^~^3^~^DECIMAL^~^14^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -185,7 +185,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select avg(bonus) as bonus from REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358205,
+          "srcTgtColId" : 358212,
           "ruleClsPropId" : 358172,
           "srcTrgColName" : "bonus",
           "srcTrgColDataType" : "NUMBER",
@@ -268,9 +268,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 358206,
-        "srcColId" : 358202,
-        "trgColId" : 358205,
+        "colMapId" : 358213,
+        "srcColId" : 358209,
+        "trgColId" : 358212,
         "colMapType" : "join",
         "srcColName" : "bonus",
         "tgtColName" : "bonus",
@@ -310,10 +310,10 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 358202,
+      "srcTgtColId" : 358209,
       "ruleClsPropId" : 358163,
       "srcTrgColName" : "bonus",
-      "srcTrgColDataType" : "BIGINT",
+      "srcTrgColDataType" : "DECIMAL",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -321,7 +321,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 358205,
+      "srcTgtColId" : 358212,
       "ruleClsPropId" : 358172,
       "srcTrgColName" : "bonus",
       "srcTrgColDataType" : "NUMBER",
@@ -333,9 +333,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 358206,
-      "srcColId" : 358202,
-      "trgColId" : 358205,
+      "colMapId" : 358213,
+      "srcColId" : 358209,
+      "trgColId" : 358212,
       "colMapType" : "join",
       "srcColName" : "bonus",
       "tgtColName" : "bonus",
