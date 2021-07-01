@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select max(bonus) as bonus from icedq.staff",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358232,
+          "srcTgtColId" : 358240,
           "ruleClsPropId" : 358163,
           "srcTrgColName" : "bonus",
           "srcTrgColDataType" : "DECIMAL",
@@ -185,7 +185,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select max(bonus) as bonus from REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358235,
+          "srcTgtColId" : 358243,
           "ruleClsPropId" : 358172,
           "srcTrgColName" : "bonus",
           "srcTrgColDataType" : "NUMBER",
@@ -268,9 +268,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 358236,
-        "srcColId" : 358232,
-        "trgColId" : 358235,
+        "colMapId" : 358244,
+        "srcColId" : 358240,
+        "trgColId" : 358243,
         "colMapType" : "join",
         "srcColName" : "bonus",
         "tgtColName" : "bonus",
@@ -279,10 +279,10 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 358237,
+        "exprID" : 358245,
         "exprLogID" : 0,
         "exprName" : "avg",
-        "expression" : "S.bonus  == T.bonus",
+        "expression" : "S.bonus  ==  ( T.bonus + 09  )",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -294,7 +294,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.bonus  == T.bonus",
+        "exprOrg" : "S.bonus  ==  ( T.bonus + 09  )",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -333,7 +333,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 358232,
+      "srcTgtColId" : 358240,
       "ruleClsPropId" : 358163,
       "srcTrgColName" : "bonus",
       "srcTrgColDataType" : "DECIMAL",
@@ -344,7 +344,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 358235,
+      "srcTgtColId" : 358243,
       "ruleClsPropId" : 358172,
       "srcTrgColName" : "bonus",
       "srcTrgColDataType" : "NUMBER",
@@ -356,9 +356,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 358236,
-      "srcColId" : 358232,
-      "trgColId" : 358235,
+      "colMapId" : 358244,
+      "srcColId" : 358240,
+      "trgColId" : 358243,
       "colMapType" : "join",
       "srcColName" : "bonus",
       "tgtColName" : "bonus",
@@ -383,10 +383,10 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 358237,
+      "exprID" : 358245,
       "exprLogID" : 0,
       "exprName" : "avg",
-      "expression" : "S.bonus  == T.bonus",
+      "expression" : "S.bonus  ==  ( T.bonus + 09  )",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
