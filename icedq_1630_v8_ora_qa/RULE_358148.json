@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select COUNT(bonus) as bonus from icedq.staff",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358308,
+          "srcTgtColId" : 358317,
           "ruleClsPropId" : 358163,
           "srcTrgColName" : "bonus",
           "srcTrgColDataType" : "BIGINT",
@@ -185,7 +185,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(bonus) as cnt from REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358312,
+          "srcTgtColId" : 358320,
           "ruleClsPropId" : 358172,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -268,9 +268,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 358313,
-        "srcColId" : 358308,
-        "trgColId" : 358312,
+        "colMapId" : 358321,
+        "srcColId" : 358317,
+        "trgColId" : 358320,
         "colMapType" : "join",
         "srcColName" : "bonus",
         "tgtColName" : "cnt",
@@ -279,10 +279,10 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 358314,
+        "exprID" : 358322,
         "exprLogID" : 0,
-        "exprName" : "EXPR_FSEMVBL",
-        "expression" : "S.bonus",
+        "exprName" : "EXPR_ERBE0CP",
+        "expression" : "S.bonus == T.cnt",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -294,7 +294,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.bonus",
+        "exprOrg" : "S.bonus == T.cnt",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -333,7 +333,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 358308,
+      "srcTgtColId" : 358317,
       "ruleClsPropId" : 358163,
       "srcTrgColName" : "bonus",
       "srcTrgColDataType" : "BIGINT",
@@ -344,7 +344,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 358312,
+      "srcTgtColId" : 358320,
       "ruleClsPropId" : 358172,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -356,9 +356,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 358313,
-      "srcColId" : 358308,
-      "trgColId" : 358312,
+      "colMapId" : 358321,
+      "srcColId" : 358317,
+      "trgColId" : 358320,
       "colMapType" : "join",
       "srcColName" : "bonus",
       "tgtColName" : "cnt",
@@ -383,10 +383,10 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 358314,
+      "exprID" : 358322,
       "exprLogID" : 0,
-      "exprName" : "EXPR_FSEMVBL",
-      "expression" : "S.bonus",
+      "exprName" : "EXPR_ERBE0CP",
+      "expression" : "S.bonus == T.cnt",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
