@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select avg(bonus) as bonus from icedq.staff",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358209,
+          "srcTgtColId" : 358216,
           "ruleClsPropId" : 358163,
           "srcTrgColName" : "bonus",
           "srcTrgColDataType" : "DECIMAL",
@@ -185,7 +185,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select avg(bonus) as bonus from REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358212,
+          "srcTgtColId" : 358219,
           "ruleClsPropId" : 358172,
           "srcTrgColName" : "bonus",
           "srcTrgColDataType" : "NUMBER",
@@ -268,9 +268,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 358213,
-        "srcColId" : 358209,
-        "trgColId" : 358212,
+        "colMapId" : 358220,
+        "srcColId" : 358216,
+        "trgColId" : 358219,
         "colMapType" : "join",
         "srcColName" : "bonus",
         "tgtColName" : "bonus",
@@ -278,7 +278,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 358221,
+        "exprLogID" : 0,
+        "exprName" : "avg",
+        "expression" : "S.bonus - T.bonus == 0",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 0,
+        "ruleId" : 358148,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 358162,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.bonus - T.bonus == 0",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 358182,
         "paramId" : 9,
@@ -310,7 +333,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 358209,
+      "srcTgtColId" : 358216,
       "ruleClsPropId" : 358163,
       "srcTrgColName" : "bonus",
       "srcTrgColDataType" : "DECIMAL",
@@ -321,7 +344,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 358212,
+      "srcTgtColId" : 358219,
       "ruleClsPropId" : 358172,
       "srcTrgColName" : "bonus",
       "srcTrgColDataType" : "NUMBER",
@@ -333,9 +356,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 358213,
-      "srcColId" : 358209,
-      "trgColId" : 358212,
+      "colMapId" : 358220,
+      "srcColId" : 358216,
+      "trgColId" : 358219,
       "colMapType" : "join",
       "srcColName" : "bonus",
       "tgtColName" : "bonus",
@@ -359,6 +382,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 358221,
+      "exprLogID" : 0,
+      "exprName" : "avg",
+      "expression" : "S.bonus - T.bonus == 0",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 0,
+      "ruleId" : 358148,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 358162,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
