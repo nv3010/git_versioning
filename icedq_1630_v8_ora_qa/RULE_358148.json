@@ -100,12 +100,12 @@
         "ruleClsPropID" : 358163,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select max(bonus) as bonus from icedq.staff",
+        "paramValue" : "select SUM(bonus) as bonus from icedq.staff",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358256,
+          "srcTgtColId" : 358264,
           "ruleClsPropId" : 358163,
           "srcTrgColName" : "bonus",
-          "srcTrgColDataType" : "INT",
+          "srcTrgColDataType" : "DECIMAL",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -146,7 +146,7 @@
         "ruleClsPropID" : 358170,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "bonus^~^4^~^INT^~^11^~^1",
+        "paramValue" : "bonus^~^3^~^DECIMAL^~^32^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -183,9 +183,9 @@
         "ruleClsPropID" : 358172,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select max(bonus) as bonus from REGRESSION_DATABASE.STAFF",
+        "paramValue" : "select SUM(bonus) as bonus from REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358259,
+          "srcTgtColId" : 358267,
           "ruleClsPropId" : 358172,
           "srcTrgColName" : "bonus",
           "srcTrgColDataType" : "NUMBER",
@@ -268,9 +268,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 358260,
-        "srcColId" : 358256,
-        "trgColId" : 358259,
+        "colMapId" : 358268,
+        "srcColId" : 358264,
+        "trgColId" : 358267,
         "colMapType" : "join",
         "srcColName" : "bonus",
         "tgtColName" : "bonus",
@@ -279,7 +279,7 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 358261,
+        "exprID" : 358269,
         "exprLogID" : 0,
         "exprName" : "avg",
         "expression" : "S.bonus  ==  T.bonus",
@@ -333,10 +333,10 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 358256,
+      "srcTgtColId" : 358264,
       "ruleClsPropId" : 358163,
       "srcTrgColName" : "bonus",
-      "srcTrgColDataType" : "INT",
+      "srcTrgColDataType" : "DECIMAL",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -344,7 +344,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 358259,
+      "srcTgtColId" : 358267,
       "ruleClsPropId" : 358172,
       "srcTrgColName" : "bonus",
       "srcTrgColDataType" : "NUMBER",
@@ -356,9 +356,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 358260,
-      "srcColId" : 358256,
-      "trgColId" : 358259,
+      "colMapId" : 358268,
+      "srcColId" : 358264,
+      "trgColId" : 358267,
       "colMapType" : "join",
       "srcColName" : "bonus",
       "tgtColName" : "bonus",
@@ -383,7 +383,7 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 358261,
+      "exprID" : 358269,
       "exprLogID" : 0,
       "exprName" : "avg",
       "expression" : "S.bonus  ==  T.bonus",
