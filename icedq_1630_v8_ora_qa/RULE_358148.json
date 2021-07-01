@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select max(bonus) as cnt from icedq.staff",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358349,
+          "srcTgtColId" : 358362,
           "ruleClsPropId" : 358163,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "INT",
@@ -185,7 +185,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select max(bonus) as cnt from REGRESSION_DATABASE.\"STAFF\"",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 358352,
+          "srcTgtColId" : 358365,
           "ruleClsPropId" : 358172,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "BIGINT",
@@ -261,9 +261,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 358353,
-        "srcColId" : 358349,
-        "trgColId" : 358352,
+        "colMapId" : 358366,
+        "srcColId" : 358362,
+        "trgColId" : 358365,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -275,7 +275,7 @@
         "exprID" : 358338,
         "exprLogID" : 0,
         "exprName" : "EXPR_ERBE0CP",
-        "expression" : "S.bonus == T.cnt",
+        "expression" : "S.bonus == (T.cnt + 1)",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -287,7 +287,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.bonus == T.cnt",
+        "exprOrg" : "S.bonus == (T.cnt + 1)",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -326,7 +326,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 358349,
+      "srcTgtColId" : 358362,
       "ruleClsPropId" : 358163,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INT",
@@ -337,7 +337,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 358352,
+      "srcTgtColId" : 358365,
       "ruleClsPropId" : 358172,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "BIGINT",
@@ -349,9 +349,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 358353,
-      "srcColId" : 358349,
-      "trgColId" : 358352,
+      "colMapId" : 358366,
+      "srcColId" : 358362,
+      "trgColId" : 358365,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
@@ -379,7 +379,7 @@
       "exprID" : 358338,
       "exprLogID" : 0,
       "exprName" : "EXPR_ERBE0CP",
-      "expression" : "S.bonus == T.cnt",
+      "expression" : "S.bonus == (T.cnt + 1)",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
