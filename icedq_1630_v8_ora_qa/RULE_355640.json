@@ -100,9 +100,9 @@
         "ruleClsPropID" : 355644,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select min(DATE_FORMAT(birthdate, '%Y-%m-%d')) as min_birthdate from icedq.customer",
+        "paramValue" : "select min(DATE_FORMAT(birthdate, '%Y%m%d')) as min_birthdate from icedq.customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 359176,
+          "srcTgtColId" : 359183,
           "ruleClsPropId" : 355644,
           "srcTrgColName" : "min_birthdate",
           "srcTrgColDataType" : "VARCHAR",
@@ -146,7 +146,7 @@
         "ruleClsPropID" : 355651,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "min_birthdate^~^12^~^VARCHAR^~^40^~^1",
+        "paramValue" : "min_birthdate^~^12^~^VARCHAR^~^32^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -183,9 +183,9 @@
         "ruleClsPropID" : 355653,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select min(TO_CHAR(birthdate, 'YYYY-MM-DD')) as min_birthdate from REGRESSION_DATABASE.CUSTOMER",
+        "paramValue" : "select min(TO_CHAR(birthdate, 'YYYYMMDD')) as min_birthdate from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 359179,
+          "srcTgtColId" : 359186,
           "ruleClsPropId" : 355653,
           "srcTrgColName" : "min_birthdate",
           "srcTrgColDataType" : "VARCHAR2",
@@ -229,7 +229,7 @@
         "ruleClsPropID" : 355660,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "min_birthdate^~^12^~^VARCHAR2^~^10^~^1",
+        "paramValue" : "min_birthdate^~^12^~^VARCHAR2^~^8^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -268,9 +268,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 359180,
-        "srcColId" : 359176,
-        "trgColId" : 359179,
+        "colMapId" : 359187,
+        "srcColId" : 359183,
+        "trgColId" : 359186,
         "colMapType" : "join",
         "srcColName" : "min_birthdate",
         "tgtColName" : "min_birthdate",
@@ -333,7 +333,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 359176,
+      "srcTgtColId" : 359183,
       "ruleClsPropId" : 355644,
       "srcTrgColName" : "min_birthdate",
       "srcTrgColDataType" : "VARCHAR",
@@ -344,7 +344,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359179,
+      "srcTgtColId" : 359186,
       "ruleClsPropId" : 355653,
       "srcTrgColName" : "min_birthdate",
       "srcTrgColDataType" : "VARCHAR2",
@@ -356,9 +356,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 359180,
-      "srcColId" : 359176,
-      "trgColId" : 359179,
+      "colMapId" : 359187,
+      "srcColId" : 359183,
+      "trgColId" : 359186,
       "colMapType" : "join",
       "srcColName" : "min_birthdate",
       "tgtColName" : "min_birthdate",
