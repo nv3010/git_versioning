@@ -116,7 +116,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from icedq.customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 359246,
+          "srcTgtColId" : 359254,
           "ruleClsPropId" : 359205,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "BIGINT",
@@ -185,7 +185,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 359249,
+          "srcTgtColId" : 359257,
           "ruleClsPropId" : 359214,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -268,9 +268,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 359250,
-        "srcColId" : 359246,
-        "trgColId" : 359249,
+        "colMapId" : 359258,
+        "srcColId" : 359254,
+        "trgColId" : 359257,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -279,10 +279,10 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 359251,
+        "exprID" : 359259,
         "exprLogID" : 0,
         "exprName" : "Count",
-        "expression" : "S.cnt + T.cnt >= 150",
+        "expression" : "S.cnt  -  T.cnt >= 150",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -294,7 +294,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.cnt + T.cnt >= 150",
+        "exprOrg" : "S.cnt  -  T.cnt >= 150",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -333,7 +333,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 359246,
+      "srcTgtColId" : 359254,
       "ruleClsPropId" : 359205,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "BIGINT",
@@ -344,7 +344,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359249,
+      "srcTgtColId" : 359257,
       "ruleClsPropId" : 359214,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -356,9 +356,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 359250,
-      "srcColId" : 359246,
-      "trgColId" : 359249,
+      "colMapId" : 359258,
+      "srcColId" : 359254,
+      "trgColId" : 359257,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
@@ -383,10 +383,10 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 359251,
+      "exprID" : 359259,
       "exprLogID" : 0,
       "exprName" : "Count",
-      "expression" : "S.cnt + T.cnt >= 150",
+      "expression" : "S.cnt  -  T.cnt >= 150",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
