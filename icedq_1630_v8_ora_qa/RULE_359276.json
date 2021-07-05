@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 359313,
+          "srcTgtColId" : 359322,
           "ruleClsPropId" : 359280,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -192,7 +192,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.\"STAFF\"",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 359316,
+          "srcTgtColId" : 359325,
           "ruleClsPropId" : 359290,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "INTEGER",
@@ -268,9 +268,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 359317,
-        "srcColId" : 359313,
-        "trgColId" : 359316,
+        "colMapId" : 359326,
+        "srcColId" : 359322,
+        "trgColId" : 359325,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -279,10 +279,10 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 359318,
+        "exprID" : 359327,
         "exprLogID" : 0,
         "exprName" : "Count",
-        "expression" : "S.cnt - T.cnt  == 0",
+        "expression" : "S.cnt - T.cnt == 0  && S.cnt + T.cnt==300",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -294,7 +294,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.cnt - T.cnt  == 0",
+        "exprOrg" : "S.cnt - T.cnt == 0  && S.cnt + T.cnt==300",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -333,7 +333,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 359313,
+      "srcTgtColId" : 359322,
       "ruleClsPropId" : 359280,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -344,7 +344,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359316,
+      "srcTgtColId" : 359325,
       "ruleClsPropId" : 359290,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INTEGER",
@@ -356,9 +356,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 359317,
-      "srcColId" : 359313,
-      "trgColId" : 359316,
+      "colMapId" : 359326,
+      "srcColId" : 359322,
+      "trgColId" : 359325,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
@@ -383,10 +383,10 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 359318,
+      "exprID" : 359327,
       "exprLogID" : 0,
       "exprName" : "Count",
-      "expression" : "S.cnt - T.cnt  == 0",
+      "expression" : "S.cnt - T.cnt == 0  && S.cnt + T.cnt==300",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
