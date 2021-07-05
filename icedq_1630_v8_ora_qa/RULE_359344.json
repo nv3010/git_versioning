@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 350820,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 350820,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-07-05 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-07-05 00:00:00",
     "enterpriseErrorCode" : null,
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "Suraj_Bobade",
     "projectName" : "Suraj",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "Suraj_Bobade",
     "ruleClassId" : 359347,
     "successBody" : null,
     "failureBody" : null,
@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 359357,
+          "srcTgtColId" : 359395,
           "ruleClsPropId" : 359348,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -192,7 +192,7 @@
         "paramMethod" : "setFileName",
         "paramValue" : "\\CUSTOMER..txt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 359380,
+          "srcTgtColId" : 359396,
           "ruleClsPropId" : 359358,
           "srcTrgColName" : "7369",
           "srcTrgColDataType" : "String",
@@ -203,7 +203,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 359381,
+          "srcTgtColId" : 359397,
           "ruleClsPropId" : 359358,
           "srcTrgColName" : "SMITH",
           "srcTrgColDataType" : "NUMBER",
@@ -214,7 +214,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 359382,
+          "srcTgtColId" : 359398,
           "ruleClsPropId" : 359358,
           "srcTrgColName" : "JOB",
           "srcTrgColDataType" : "String",
@@ -225,7 +225,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 359383,
+          "srcTgtColId" : 359399,
           "ruleClsPropId" : 359358,
           "srcTrgColName" : "7902902838",
           "srcTrgColDataType" : "String",
@@ -236,7 +236,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 359384,
+          "srcTgtColId" : 359400,
           "ruleClsPropId" : 359358,
           "srcTrgColName" : "17-DEC-80",
           "srcTrgColDataType" : "String",
@@ -247,7 +247,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 359385,
+          "srcTgtColId" : 359401,
           "ruleClsPropId" : 359358,
           "srcTrgColName" : "800",
           "srcTrgColDataType" : "String",
@@ -258,7 +258,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 359386,
+          "srcTgtColId" : 359402,
           "ruleClsPropId" : 359358,
           "srcTrgColName" : "smith@example.com",
           "srcTrgColDataType" : "String",
@@ -269,7 +269,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 359387,
+          "srcTgtColId" : 359403,
           "ruleClsPropId" : 359358,
           "srcTrgColName" : "9933993399",
           "srcTrgColDataType" : "String",
@@ -280,7 +280,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 359388,
+          "srcTgtColId" : 359404,
           "ruleClsPropId" : 359358,
           "srcTrgColName" : "MALE",
           "srcTrgColDataType" : "String",
@@ -468,9 +468,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 359392,
-        "srcColId" : 359357,
-        "trgColId" : 359381,
+        "colMapId" : 359405,
+        "srcColId" : 359395,
+        "trgColId" : 359397,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "SMITH",
@@ -478,7 +478,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 359406,
+        "exprLogID" : 0,
+        "exprName" : "Count",
+        "expression" : "S.cnt - T.COUNT_SMITH == 85",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 0,
+        "ruleId" : 359344,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 359347,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.cnt - T.COUNT_SMITH == 85",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 359389,
         "paramId" : 9,
@@ -510,7 +533,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 359357,
+      "srcTgtColId" : 359395,
       "ruleClsPropId" : 359348,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -521,7 +544,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359380,
+      "srcTgtColId" : 359396,
       "ruleClsPropId" : 359358,
       "srcTrgColName" : "7369",
       "srcTrgColDataType" : "String",
@@ -532,7 +555,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359381,
+      "srcTgtColId" : 359397,
       "ruleClsPropId" : 359358,
       "srcTrgColName" : "SMITH",
       "srcTrgColDataType" : "NUMBER",
@@ -543,7 +566,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359382,
+      "srcTgtColId" : 359398,
       "ruleClsPropId" : 359358,
       "srcTrgColName" : "JOB",
       "srcTrgColDataType" : "String",
@@ -554,7 +577,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359383,
+      "srcTgtColId" : 359399,
       "ruleClsPropId" : 359358,
       "srcTrgColName" : "7902902838",
       "srcTrgColDataType" : "String",
@@ -565,7 +588,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359384,
+      "srcTgtColId" : 359400,
       "ruleClsPropId" : 359358,
       "srcTrgColName" : "17-DEC-80",
       "srcTrgColDataType" : "String",
@@ -576,7 +599,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359385,
+      "srcTgtColId" : 359401,
       "ruleClsPropId" : 359358,
       "srcTrgColName" : "800",
       "srcTrgColDataType" : "String",
@@ -587,7 +610,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359386,
+      "srcTgtColId" : 359402,
       "ruleClsPropId" : 359358,
       "srcTrgColName" : "smith@example.com",
       "srcTrgColDataType" : "String",
@@ -598,7 +621,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359387,
+      "srcTgtColId" : 359403,
       "ruleClsPropId" : 359358,
       "srcTrgColName" : "9933993399",
       "srcTrgColDataType" : "String",
@@ -609,7 +632,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 359388,
+      "srcTgtColId" : 359404,
       "ruleClsPropId" : 359358,
       "srcTrgColName" : "MALE",
       "srcTrgColDataType" : "String",
@@ -621,9 +644,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 359392,
-      "srcColId" : 359357,
-      "trgColId" : 359381,
+      "colMapId" : 359405,
+      "srcColId" : 359395,
+      "trgColId" : 359397,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "SMITH",
@@ -647,6 +670,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 359406,
+      "exprLogID" : 0,
+      "exprName" : "Count",
+      "expression" : "S.cnt - T.COUNT_SMITH == 85",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 0,
+      "ruleId" : 359344,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 359347,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
