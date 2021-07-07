@@ -100,9 +100,9 @@
         "ruleClsPropID" : 361834,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select firstname from REGRESSION_DATABASE.CUSTOMER group by firstname",
+        "paramValue" : "select firstname,count(firstname) as count from REGRESSION_DATABASE.CUSTOMER group by firstname",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 361875,
+          "srcTgtColId" : 361882,
           "ruleClsPropId" : 361834,
           "srcTrgColName" : "firstname",
           "srcTrgColDataType" : "VARCHAR2",
@@ -112,6 +112,17 @@
           "mapColName" : null,
           "colFormat" : null,
           "displayIndex" : 1
+        }, {
+          "srcTgtColId" : 361883,
+          "ruleClsPropId" : 361834,
+          "srcTrgColName" : "count",
+          "srcTrgColDataType" : "NUMBER",
+          "colFlagType" : "src",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : null,
+          "displayIndex" : 0
         } ],
         "fileContent" : null
       }, {
@@ -146,7 +157,7 @@
         "ruleClsPropID" : 361841,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "firstname^~^12^~^VARCHAR2^~^2000^~^1",
+        "paramValue" : "firstname^~^12^~^VARCHAR2^~^2000^~^1$~$count^~^2^~^NUMBER^~^0^~^2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -199,7 +210,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 361877,
+          "srcTgtColId" : 361885,
           "ruleClsPropId" : 361854,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -254,9 +265,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 361879,
-        "srcColId" : 361875,
-        "trgColId" : 361877,
+        "colMapId" : 361887,
+        "srcColId" : 361882,
+        "trgColId" : 361885,
         "colMapType" : "join",
         "srcColName" : "firstname",
         "tgtColName" : "cnt",
@@ -352,7 +363,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 361875,
+      "srcTgtColId" : 361882,
       "ruleClsPropId" : 361834,
       "srcTrgColName" : "firstname",
       "srcTrgColDataType" : "VARCHAR2",
@@ -363,7 +374,18 @@
       "colFormat" : null,
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 361877,
+      "srcTgtColId" : 361883,
+      "ruleClsPropId" : 361834,
+      "srcTrgColName" : "count",
+      "srcTrgColDataType" : "NUMBER",
+      "colFlagType" : "src",
+      "srcTrgColVisible" : 0,
+      "joinList" : null,
+      "mapColName" : "count",
+      "colFormat" : null,
+      "displayIndex" : 0
+    }, {
+      "srcTgtColId" : 361885,
       "ruleClsPropId" : 361854,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -375,9 +397,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 361879,
-      "srcColId" : 361875,
-      "trgColId" : 361877,
+      "colMapId" : 361887,
+      "srcColId" : 361882,
+      "trgColId" : 361885,
       "colMapType" : "join",
       "srcColName" : "firstname",
       "tgtColName" : "cnt",
