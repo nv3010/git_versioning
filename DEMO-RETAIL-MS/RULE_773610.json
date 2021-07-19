@@ -108,15 +108,25 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 776513,
-        "srcColId" : 776500,
-        "trgColId" : 776507,
+        "colMapId" : 776529,
+        "srcColId" : 776516,
+        "trgColId" : 776523,
         "colMapType" : "join",
         "srcColName" : "customerid",
         "tgtColName" : "customerid",
         "colMapExpr" : "customerid=customerid",
         "srcTrgColMapVisible" : 1,
         "displayIndex" : 3
+      }, {
+        "colMapId" : 776530,
+        "srcColId" : 776517,
+        "trgColId" : 776524,
+        "colMapType" : "join",
+        "srcColName" : "accountnumber",
+        "tgtColName" : "accountnumber",
+        "colMapExpr" : "accountnumber=accountnumber",
+        "srcTrgColMapVisible" : 1,
+        "displayIndex" : 4
       } ],
       "exprlist" : [ {
         "exprID" : 776496,
@@ -278,7 +288,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "SELECT * FROM \n(\nSELECT 11012 CustomerID, 'AW00011012' AccountNumber, 'Lauren' FirstName, 'Walker' LastName, 'F' Gender\nUNION ALL\nSELECT 11014 , 'AW00011014' , 'Harry' , 'Bennett' , '' \n  UNION ALL\nSELECT 11014 , 'AW00011015' , 'Sydney' , 'Bennett' , '' \n) X",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 776500,
+          "srcTgtColId" : 776516,
           "ruleClsPropId" : 773626,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "int",
@@ -289,7 +299,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 776501,
+          "srcTgtColId" : 776517,
           "ruleClsPropId" : 773626,
           "srcTrgColName" : "accountnumber",
           "srcTrgColDataType" : "varchar",
@@ -300,7 +310,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 776502,
+          "srcTgtColId" : 776518,
           "ruleClsPropId" : 773626,
           "srcTrgColName" : "firstname",
           "srcTrgColDataType" : "varchar",
@@ -311,7 +321,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 776503,
+          "srcTgtColId" : 776519,
           "ruleClsPropId" : 773626,
           "srcTrgColName" : "lastname",
           "srcTrgColDataType" : "varchar",
@@ -322,7 +332,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 776504,
+          "srcTgtColId" : 776520,
           "ruleClsPropId" : 773626,
           "srcTrgColName" : "gender",
           "srcTrgColDataType" : "varchar",
@@ -352,7 +362,7 @@
         "ruleClsPropID" : 773630,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1",
+        "paramValue" : "1,2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -412,7 +422,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "SELECT * FROM \n(\nSELECT 11012 CustomerID, 'AW00011012' AccountNumber, 'Lauren' FirstName, 'Walker' LastName, 'F' Gender\n  UNION ALL\nSELECT 11014 , 'AW00011015' , 'Sydney' , 'Bennett' , '' \n UNION ALL\nSELECT 11014 , 'AW00011014' , 'Harry' , 'Bennett' , ''  \n) X",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 776507,
+          "srcTgtColId" : 776523,
           "ruleClsPropId" : 773640,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "int",
@@ -423,7 +433,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 776508,
+          "srcTgtColId" : 776524,
           "ruleClsPropId" : 773640,
           "srcTrgColName" : "accountnumber",
           "srcTrgColDataType" : "varchar",
@@ -434,7 +444,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 776509,
+          "srcTgtColId" : 776525,
           "ruleClsPropId" : 773640,
           "srcTrgColName" : "firstname",
           "srcTrgColDataType" : "varchar",
@@ -445,7 +455,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 776510,
+          "srcTgtColId" : 776526,
           "ruleClsPropId" : 773640,
           "srcTrgColName" : "lastname",
           "srcTrgColDataType" : "varchar",
@@ -456,7 +466,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 776511,
+          "srcTgtColId" : 776527,
           "ruleClsPropId" : 773640,
           "srcTrgColName" : "gender",
           "srcTrgColDataType" : "varchar",
@@ -486,7 +496,7 @@
         "ruleClsPropID" : 773644,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1",
+        "paramValue" : "1,2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -520,7 +530,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 776500,
+      "srcTgtColId" : 776516,
       "ruleClsPropId" : 773626,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "int",
@@ -531,7 +541,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 776501,
+      "srcTgtColId" : 776517,
       "ruleClsPropId" : 773626,
       "srcTrgColName" : "accountnumber",
       "srcTrgColDataType" : "varchar",
@@ -542,7 +552,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 776502,
+      "srcTgtColId" : 776518,
       "ruleClsPropId" : 773626,
       "srcTrgColName" : "firstname",
       "srcTrgColDataType" : "varchar",
@@ -553,7 +563,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 776503,
+      "srcTgtColId" : 776519,
       "ruleClsPropId" : 773626,
       "srcTrgColName" : "lastname",
       "srcTrgColDataType" : "varchar",
@@ -564,7 +574,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 776504,
+      "srcTgtColId" : 776520,
       "ruleClsPropId" : 773626,
       "srcTrgColName" : "gender",
       "srcTrgColDataType" : "varchar",
@@ -575,7 +585,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 776507,
+      "srcTgtColId" : 776523,
       "ruleClsPropId" : 773640,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "int",
@@ -586,7 +596,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 776508,
+      "srcTgtColId" : 776524,
       "ruleClsPropId" : 773640,
       "srcTrgColName" : "accountnumber",
       "srcTrgColDataType" : "varchar",
@@ -597,7 +607,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 776509,
+      "srcTgtColId" : 776525,
       "ruleClsPropId" : 773640,
       "srcTrgColName" : "firstname",
       "srcTrgColDataType" : "varchar",
@@ -608,7 +618,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 776510,
+      "srcTgtColId" : 776526,
       "ruleClsPropId" : 773640,
       "srcTrgColName" : "lastname",
       "srcTrgColDataType" : "varchar",
@@ -619,7 +629,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 776511,
+      "srcTgtColId" : 776527,
       "ruleClsPropId" : 773640,
       "srcTrgColName" : "gender",
       "srcTrgColDataType" : "varchar",
@@ -631,15 +641,25 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 776513,
-      "srcColId" : 776500,
-      "trgColId" : 776507,
+      "colMapId" : 776529,
+      "srcColId" : 776516,
+      "trgColId" : 776523,
       "colMapType" : "join",
       "srcColName" : "customerid",
       "tgtColName" : "customerid",
       "colMapExpr" : "customerid=customerid",
       "srcTrgColMapVisible" : 1,
       "displayIndex" : 3
+    }, {
+      "colMapId" : 776530,
+      "srcColId" : 776517,
+      "trgColId" : 776524,
+      "colMapType" : "join",
+      "srcColName" : "accountnumber",
+      "tgtColName" : "accountnumber",
+      "colMapExpr" : "accountnumber=accountnumber",
+      "srcTrgColMapVisible" : 1,
+      "displayIndex" : 4
     } ],
     "objectVOList" : null,
     "srcCount" : null,
