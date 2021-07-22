@@ -42,12 +42,12 @@
     "failureHeader" : "",
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
-    "srcConnId" : 9280426,
-    "trgConnId" : 9280426,
+    "srcConnId" : 9495838,
+    "trgConnId" : 9495838,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
-    "srcConn" : "ADLS_JSON",
-    "trgConn" : "ADLS_JSON",
+    "srcConn" : "ADLS_JSON_1S",
+    "trgConn" : "ADLS_JSON_1S",
     "elapseTime" : 0,
     "parameterId" : "",
     "type" : null,
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 9630420,
-        "srcColId" : 9630414,
-        "trgColId" : 9630418,
+        "colMapId" : 9630432,
+        "srcColId" : 9630426,
+        "trgColId" : 9630430,
         "colMapType" : "join",
         "srcColName" : "salary",
         "tgtColName" : "cnt",
@@ -113,7 +113,7 @@
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
-        "exprIndex" : 1,
+        "exprIndex" : 0,
         "ruleId" : 9452251,
         "ruleInstanceId" : 0,
         "ruleClassId" : 9452252,
@@ -225,7 +225,7 @@
       "vid" : "GetData11",
       "classObjName" : "ICE_1625149968619",
       "queryBuilderXML" : null,
-      "connId" : 9280426,
+      "connId" : 9495838,
       "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
@@ -242,7 +242,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "SELECT (salary) FROM STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9630414,
+          "srcTgtColId" : 9630426,
           "ruleClsPropId" : 9452267,
           "srcTrgColName" : "salary",
           "srcTrgColDataType" : "INT",
@@ -258,7 +258,7 @@
         "ruleClsPropID" : 9452269,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "9280426",
+        "paramValue" : "9495838",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -293,14 +293,14 @@
         "ruleClsPropID" : 9452275,
         "paramId" : 8,
         "paramMethod" : "setFileName",
-        "paramValue" : "/abfss://icedq-datalake//Only_JSON/STAFF.json",
+        "paramValue" : "/JSON/STAFF.json",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
         "ruleClsPropID" : 9452276,
         "paramId" : 466,
         "paramMethod" : "setXMLRSDSchema",
-        "paramValue" : "<api:script xmlns:api=\"http://apiscript.com/ns?v1\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\n  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->\n  <api:info title=\"STAFF\" desc=\"Generated schema file.\" xmlns:other=\"http://apiscript.com/ns?v1\">\n    <!-- You can modify the name, type, and column size here. -->\n    <attr name=\"ADDRESS\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/ADDRESS\"     />\n    <attr name=\"BIRTHD\"      xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/BIRTHD\"      />\n    <attr name=\"BONUS\"       xs:type=\"double\"   readonly=\"false\"              other:xPath=\"/json/BONUS\"       />\n    <attr name=\"CITY\"        xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/CITY\"        />\n    <attr name=\"COMM\"        xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/COMM\"        />\n    <attr name=\"COMPANY\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/COMPANY\"     />\n    <attr name=\"FNAME\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/FNAME\"       />\n    <attr name=\"HIRED\"       xs:type=\"datetime\" readonly=\"false\"              other:xPath=\"/json/HIRED\"       />\n    <attr name=\"HPHONE\"      xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/HPHONE\"      />\n    <attr name=\"JOBCODE\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/JOBCODE\"     />\n    <attr name=\"LNAME\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/LNAME\"       />\n    <attr name=\"SALARY\"      xs:type=\"integer\"  readonly=\"false\"              other:xPath=\"/json/SALARY\"      />\n    <attr name=\"SEX\"         xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/SEX\"         />\n    <attr name=\"SSN\"         xs:type=\"integer\"  readonly=\"false\"              other:xPath=\"/json/SSN\"         />\n    <attr name=\"STAFFID\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/STAFFID\"     />\n    <attr name=\"STATE\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/STATE\"       />\n    <attr name=\"TOTALSALARY\" xs:type=\"double\"   readonly=\"false\"              other:xPath=\"/json/TOTALSALARY\" />\n    <attr name=\"json:_id\"    xs:type=\"string\"   readonly=\"false\"  key=\"true\"  other:xPath=\"/json/_id\"         />\n  </api:info>\n\n  <api:set attr=\"DataModel\" value=\"FLATTENEDDOCUMENTS\" />\n  <api:set attr=\"URI\" value=\"abfss://icedq-datalake/ADLS_JSON/Only_JSON/STAFF.json\" />\n\n  <api:set attr=\"JSONPath\" value=\"$.\" />\n\n  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->\n  <api:script method=\"GET\">\n    <api:call op=\"jsonproviderGet\">\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->\n  <api:script method=\"POST\">\n    <api:set attr=\"method\" value=\"POST\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Inserts are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->\n  <api:script method=\"MERGE\">\n    <api:set attr=\"method\" value=\"PUT\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Updates are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->\n  <api:script method=\"DELETE\">\n    <api:set attr=\"method\" value=\"DELETE\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Deletes are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n</api:script>\n",
+        "paramValue" : "<api:script xmlns:api=\"http://apiscript.com/ns?v1\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\n  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->\n  <api:info title=\"STAFF\" desc=\"Generated schema file.\" xmlns:other=\"http://apiscript.com/ns?v1\">\n    <!-- You can modify the name, type, and column size here. -->\n    <attr name=\"ADDRESS\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/ADDRESS\"     />\n    <attr name=\"BIRTHD\"      xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/BIRTHD\"      />\n    <attr name=\"BONUS\"       xs:type=\"double\"   readonly=\"false\"              other:xPath=\"/json/BONUS\"       />\n    <attr name=\"CITY\"        xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/CITY\"        />\n    <attr name=\"COMM\"        xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/COMM\"        />\n    <attr name=\"COMPANY\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/COMPANY\"     />\n    <attr name=\"FNAME\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/FNAME\"       />\n    <attr name=\"HIRED\"       xs:type=\"datetime\" readonly=\"false\"              other:xPath=\"/json/HIRED\"       />\n    <attr name=\"HPHONE\"      xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/HPHONE\"      />\n    <attr name=\"JOBCODE\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/JOBCODE\"     />\n    <attr name=\"LNAME\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/LNAME\"       />\n    <attr name=\"SALARY\"      xs:type=\"integer\"  readonly=\"false\"              other:xPath=\"/json/SALARY\"      />\n    <attr name=\"SEX\"         xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/SEX\"         />\n    <attr name=\"SSN\"         xs:type=\"integer\"  readonly=\"false\"              other:xPath=\"/json/SSN\"         />\n    <attr name=\"STAFFID\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/STAFFID\"     />\n    <attr name=\"STATE\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/STATE\"       />\n    <attr name=\"TOTALSALARY\" xs:type=\"double\"   readonly=\"false\"              other:xPath=\"/json/TOTALSALARY\" />\n    <attr name=\"json:_id\"    xs:type=\"string\"   readonly=\"false\"  key=\"true\"  other:xPath=\"/json/_id\"         />\n  </api:info>\n\n  <api:set attr=\"DataModel\" value=\"FLATTENEDDOCUMENTS\" />\n  <api:set attr=\"URI\" value=\"abfss://icedq-datalake/ADLS-JSON/JSON/STAFF.json\" />\n\n  <api:set attr=\"JSONPath\" value=\"$.\" />\n\n  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->\n  <api:script method=\"GET\">\n    <api:call op=\"jsonproviderGet\">\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->\n  <api:script method=\"POST\">\n    <api:set attr=\"method\" value=\"POST\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Inserts are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->\n  <api:script method=\"MERGE\">\n    <api:set attr=\"method\" value=\"PUT\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Updates are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->\n  <api:script method=\"DELETE\">\n    <api:set attr=\"method\" value=\"DELETE\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Deletes are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n</api:script>\n",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -314,7 +314,7 @@
         "ruleClsPropID" : 9452280,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "",
+        "paramValue" : "STAFF",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -364,7 +364,7 @@
       "vid" : "GetData21",
       "classObjName" : "ICE_1625149968619",
       "queryBuilderXML" : null,
-      "connId" : 9280426,
+      "connId" : 9495838,
       "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
@@ -381,7 +381,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 9630418,
+          "srcTgtColId" : 9630430,
           "ruleClsPropId" : 9452287,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -404,7 +404,7 @@
         "ruleClsPropID" : 9452290,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "9280426",
+        "paramValue" : "9495838",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -418,7 +418,7 @@
         "ruleClsPropID" : 9452292,
         "paramId" : 8,
         "paramMethod" : "setFileName",
-        "paramValue" : "/abfs://icedq-datalake/abfss://icedq-datalake//Only_JSON/STAFF.json",
+        "paramValue" : "/abfss://icedq-datalake/JSON/STAFF.json",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -432,14 +432,14 @@
         "ruleClsPropID" : 9452294,
         "paramId" : 466,
         "paramMethod" : "setXMLRSDSchema",
-        "paramValue" : "<api:script xmlns:api=\"http://apiscript.com/ns?v1\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\n  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->\n  <api:info title=\"STAFF\" desc=\"Generated schema file.\" xmlns:other=\"http://apiscript.com/ns?v1\">\n    <!-- You can modify the name, type, and column size here. -->\n    <attr name=\"ADDRESS\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/ADDRESS\"     />\n    <attr name=\"BIRTHD\"      xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/BIRTHD\"      />\n    <attr name=\"BONUS\"       xs:type=\"double\"   readonly=\"false\"              other:xPath=\"/json/BONUS\"       />\n    <attr name=\"CITY\"        xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/CITY\"        />\n    <attr name=\"COMM\"        xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/COMM\"        />\n    <attr name=\"COMPANY\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/COMPANY\"     />\n    <attr name=\"FNAME\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/FNAME\"       />\n    <attr name=\"HIRED\"       xs:type=\"datetime\" readonly=\"false\"              other:xPath=\"/json/HIRED\"       />\n    <attr name=\"HPHONE\"      xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/HPHONE\"      />\n    <attr name=\"JOBCODE\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/JOBCODE\"     />\n    <attr name=\"LNAME\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/LNAME\"       />\n    <attr name=\"SALARY\"      xs:type=\"integer\"  readonly=\"false\"              other:xPath=\"/json/SALARY\"      />\n    <attr name=\"SEX\"         xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/SEX\"         />\n    <attr name=\"SSN\"         xs:type=\"integer\"  readonly=\"false\"              other:xPath=\"/json/SSN\"         />\n    <attr name=\"STAFFID\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/STAFFID\"     />\n    <attr name=\"STATE\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/STATE\"       />\n    <attr name=\"TOTALSALARY\" xs:type=\"double\"   readonly=\"false\"              other:xPath=\"/json/TOTALSALARY\" />\n    <attr name=\"json:_id\"    xs:type=\"string\"   readonly=\"false\"  key=\"true\"  other:xPath=\"/json/_id\"         />\n  </api:info>\n\n  <api:set attr=\"DataModel\" value=\"FLATTENEDDOCUMENTS\" />\n  <api:set attr=\"URI\" value=\"abfss://icedq-datalake/ADLS_JSON/Only_JSON/STAFF.json\" />\n\n  <api:set attr=\"JSONPath\" value=\"$.\" />\n\n  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->\n  <api:script method=\"GET\">\n    <api:call op=\"jsonproviderGet\">\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->\n  <api:script method=\"POST\">\n    <api:set attr=\"method\" value=\"POST\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Inserts are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->\n  <api:script method=\"MERGE\">\n    <api:set attr=\"method\" value=\"PUT\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Updates are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->\n  <api:script method=\"DELETE\">\n    <api:set attr=\"method\" value=\"DELETE\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Deletes are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n</api:script>\n",
+        "paramValue" : "<api:script xmlns:api=\"http://apiscript.com/ns?v1\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\n  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->\n  <api:info title=\"STAFF\" desc=\"Generated schema file.\" xmlns:other=\"http://apiscript.com/ns?v1\">\n    <!-- You can modify the name, type, and column size here. -->\n    <attr name=\"ADDRESS\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/ADDRESS\"     />\n    <attr name=\"BIRTHD\"      xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/BIRTHD\"      />\n    <attr name=\"BONUS\"       xs:type=\"double\"   readonly=\"false\"              other:xPath=\"/json/BONUS\"       />\n    <attr name=\"CITY\"        xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/CITY\"        />\n    <attr name=\"COMM\"        xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/COMM\"        />\n    <attr name=\"COMPANY\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/COMPANY\"     />\n    <attr name=\"FNAME\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/FNAME\"       />\n    <attr name=\"HIRED\"       xs:type=\"datetime\" readonly=\"false\"              other:xPath=\"/json/HIRED\"       />\n    <attr name=\"HPHONE\"      xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/HPHONE\"      />\n    <attr name=\"JOBCODE\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/JOBCODE\"     />\n    <attr name=\"LNAME\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/LNAME\"       />\n    <attr name=\"SALARY\"      xs:type=\"integer\"  readonly=\"false\"              other:xPath=\"/json/SALARY\"      />\n    <attr name=\"SEX\"         xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/SEX\"         />\n    <attr name=\"SSN\"         xs:type=\"integer\"  readonly=\"false\"              other:xPath=\"/json/SSN\"         />\n    <attr name=\"STAFFID\"     xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/STAFFID\"     />\n    <attr name=\"STATE\"       xs:type=\"string\"   readonly=\"false\"              other:xPath=\"/json/STATE\"       />\n    <attr name=\"TOTALSALARY\" xs:type=\"double\"   readonly=\"false\"              other:xPath=\"/json/TOTALSALARY\" />\n    <attr name=\"json:_id\"    xs:type=\"string\"   readonly=\"false\"  key=\"true\"  other:xPath=\"/json/_id\"         />\n  </api:info>\n\n  <api:set attr=\"DataModel\" value=\"FLATTENEDDOCUMENTS\" />\n  <api:set attr=\"URI\" value=\"abfss://icedq-datalake/ADLS-JSON/JSON/STAFF.json\" />\n\n  <api:set attr=\"JSONPath\" value=\"$.\" />\n\n  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->\n  <api:script method=\"GET\">\n    <api:call op=\"jsonproviderGet\">\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->\n  <api:script method=\"POST\">\n    <api:set attr=\"method\" value=\"POST\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Inserts are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->\n  <api:script method=\"MERGE\">\n    <api:set attr=\"method\" value=\"PUT\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Updates are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->\n  <api:script method=\"DELETE\">\n    <api:set attr=\"method\" value=\"DELETE\"/>\n    <api:call op=\"jsonproviderGet\">\n      <api:throw code=\"500\" desc=\"Deletes are not currently supported.\"/>\n      <api:push/>\n    </api:call>\n  </api:script>\n\n</api:script>\n",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 9452297,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "",
+        "paramValue" : "STAFF",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -452,7 +452,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 9630414,
+      "srcTgtColId" : 9630426,
       "ruleClsPropId" : 9452267,
       "srcTrgColName" : "salary",
       "srcTrgColDataType" : "INT",
@@ -463,7 +463,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 9630418,
+      "srcTgtColId" : 9630430,
       "ruleClsPropId" : 9452287,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -475,9 +475,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 9630420,
-      "srcColId" : 9630414,
-      "trgColId" : 9630418,
+      "colMapId" : 9630432,
+      "srcColId" : 9630426,
+      "trgColId" : 9630430,
       "colMapType" : "join",
       "srcColName" : "salary",
       "tgtColName" : "cnt",
@@ -509,7 +509,7 @@
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
-      "exprIndex" : 1,
+      "exprIndex" : 0,
       "ruleId" : 9452251,
       "ruleInstanceId" : 0,
       "ruleClassId" : 9452252,
