@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-07-22 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-07-22 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "UIrisTraining",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 779500,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 779529,
-        "srcColId" : 779509,
-        "trgColId" : 779516,
+        "colMapId" : 779537,
+        "srcColId" : 779532,
+        "trgColId" : 779535,
         "colMapType" : "join",
         "srcColName" : "customerid",
         "tgtColName" : "gd",
@@ -217,9 +217,9 @@
         "ruleClsPropID" : 779501,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "SELECT CUSTOMERID, COUNT(*) NO_OF_DUPLICATES FROM \n(\nSELECT 11078 CustomerID, 'AW00011012' AccountNumber, 'Lauren' FirstName, 'Walker' LastName, 'F' Gender\nUNION ALL\nSELECT 11014 , 'AW00011014' , 'Sydney' , 'Bennett' , 'F' \nUNION ALL\nSELECT 11014 , 'AW00011015' , 'Chloe' , 'Young' , 'F' \nUNION ALL\nSELECT 11023 , 'AW00011023' , 'Seth' , 'Edwards' , 'M' \nUNION ALL\nSELECT 11019 , 'AW00011019' , NULL, 'Lal' , 'M' \nUNION ALL\nSELECT 11022 , 'AW00011022' , 'Ethan' , 'Zhang' , 'M' \nUNION ALL\nSELECT 11023 , 'AW00011020' , 'Jordan' , 'Wyane'  , 'M' \nUNION ALL\nSELECT 11013 , 'AW00011013' , 'Ian' , 'Jenkins' ,'M' \nUNION ALL\nSELECT 11021 , 'AW00011021' , 'Destiny' , 'Wilson', 'F'\nUNION ALL\nSELECT 11016 , 'AW00011016' , '' , 'Hill', 'M'\nUNION ALL\nSELECT 11067 , 'AW00011067' , 'Caleb', 'Carter' , 'M' \nUNION ALL\nSELECT 11078 , 'A00011078' , 'Gina', 'Martin' , 'F' \n) X\nGROUP BY CUSTOMERID\nHAVING COUNT(*) > 1",
+        "paramValue" : "SELECT CUSTOMERID, COUNT(*) NO_OF_DUPLICATES FROM \n(\nSELECT 11078 CustomerID, 'AW00011012' AccountNumber, 'Lauren' FirstName, 'Walker' LastName, 'F' Gender\nUNION ALL\nSELECT 11014 , 'AW00011014' , 'Sydney' , 'Bennett' , 'F' \nUNION ALL\nSELECT 11014 , 'AW00011015' , 'Chloe' , 'Young' , 'F' \nUNION ALL\nSELECT 11023 , 'AW00011023' , 'Seth' , 'Edwards' , 'M' \nUNION ALL\nSELECT 11019 , 'AW00011019' , NULL, 'Lal' , 'M' \nUNION ALL\nSELECT 11022 , 'AW00011022' , 'Ethan' , 'Zhang' , 'M' \nUNION ALL\nSELECT 11023 , 'AW00011020' , 'Jordan' , 'Wyane'  , 'M' \nUNION ALL\nSELECT 11013 , 'AW00011013' , 'Ian' , 'Jenkins' ,'M' \nUNION ALL\nSELECT 11021 , 'AW00011021' , 'Destiny' , 'Wilson', 'F'\nUNION ALL\nSELECT 11016 , 'AW00011016' , '' , 'Hill', 'M'\nUNION ALL\nSELECT 11067 , 'AW00011067' , 'Caleb', 'Carter' , 'M' \nUNION ALL\nSELECT 11078 , 'A00011078' , 'Gina', 'Martin' , 'F' \n) X\nGROUP BY CUSTOMERID\nHAVING COUNT(*) > 2",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 779509,
+          "srcTgtColId" : 779532,
           "ruleClsPropId" : 779501,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "int",
@@ -230,7 +230,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 779510,
+          "srcTgtColId" : 779533,
           "ruleClsPropId" : 779501,
           "srcTrgColName" : "no_of_duplicates",
           "srcTrgColDataType" : "int",
@@ -313,7 +313,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select GETDATE() as gd",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 779516,
+          "srcTgtColId" : 779535,
           "ruleClsPropId" : 779511,
           "srcTrgColName" : "gd",
           "srcTrgColDataType" : "String",
@@ -356,7 +356,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 779509,
+      "srcTgtColId" : 779532,
       "ruleClsPropId" : 779501,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "int",
@@ -367,7 +367,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 779510,
+      "srcTgtColId" : 779533,
       "ruleClsPropId" : 779501,
       "srcTrgColName" : "no_of_duplicates",
       "srcTrgColDataType" : "int",
@@ -378,7 +378,7 @@
       "colFormat" : "",
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 779516,
+      "srcTgtColId" : 779535,
       "ruleClsPropId" : 779511,
       "srcTrgColName" : "gd",
       "srcTrgColDataType" : "String",
@@ -390,9 +390,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 779529,
-      "srcColId" : 779509,
-      "trgColId" : 779516,
+      "colMapId" : 779537,
+      "srcColId" : 779532,
+      "trgColId" : 779535,
       "colMapType" : "join",
       "srcColName" : "customerid",
       "tgtColName" : "gd",
