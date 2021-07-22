@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-07-22 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-07-22 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "WIP",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 778887,
     "successBody" : "",
     "failureBody" : "",
@@ -79,7 +79,7 @@
       "name" : null,
       "ruleClassId" : 778887,
       "connType" : "",
-      "execMode" : "report",
+      "execMode" : "htreport",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 778926,
-        "srcColId" : 778896,
-        "trgColId" : 778913,
+        "colMapId" : 778945,
+        "srcColId" : 778929,
+        "trgColId" : 778942,
         "colMapType" : "join",
         "srcColName" : "GlobalRank",
         "tgtColName" : "cnt",
@@ -124,7 +124,7 @@
         "ruleClsPropID" : 778916,
         "paramId" : 798,
         "paramMethod" : "setEngineType",
-        "paramValue" : "Null",
+        "paramValue" : "V8",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -183,6 +183,13 @@
         "paramValue" : "",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
+      }, {
+        "ruleClsPropID" : 778943,
+        "paramId" : 487,
+        "paramMethod" : "setDegreeOfParallelism",
+        "paramValue" : "3",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -196,7 +203,7 @@
       "name" : null,
       "ruleClassId" : 778885,
       "connType" : "DATABASE",
-      "execMode" : "report",
+      "execMode" : "htreport",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
@@ -219,7 +226,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "SELECT * FROM EDW.web_rankings",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 778896,
+          "srcTgtColId" : 778929,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "GlobalRank",
           "srcTrgColDataType" : "TEXT",
@@ -230,7 +237,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 778897,
+          "srcTgtColId" : 778930,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "TldRank",
           "srcTrgColDataType" : "TEXT",
@@ -241,7 +248,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 778898,
+          "srcTgtColId" : 778931,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "Domain",
           "srcTrgColDataType" : "TEXT",
@@ -252,7 +259,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 778899,
+          "srcTgtColId" : 778932,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "TLD",
           "srcTrgColDataType" : "TEXT",
@@ -263,7 +270,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 778900,
+          "srcTgtColId" : 778933,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "RefSubNets",
           "srcTrgColDataType" : "TEXT",
@@ -274,7 +281,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 778901,
+          "srcTgtColId" : 778934,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "RefIPs",
           "srcTrgColDataType" : "TEXT",
@@ -285,7 +292,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 778902,
+          "srcTgtColId" : 778935,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "IDN_Domain",
           "srcTrgColDataType" : "TEXT",
@@ -296,7 +303,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 778903,
+          "srcTgtColId" : 778936,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "IDN_TLD",
           "srcTrgColDataType" : "TEXT",
@@ -307,7 +314,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 778904,
+          "srcTgtColId" : 778937,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "PrevGlobalRank",
           "srcTrgColDataType" : "TEXT",
@@ -318,7 +325,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 778905,
+          "srcTgtColId" : 778938,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "PrevTldRank",
           "srcTrgColDataType" : "TEXT",
@@ -329,7 +336,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 778906,
+          "srcTgtColId" : 778939,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "PrevRefSubNets",
           "srcTrgColDataType" : "TEXT",
@@ -340,7 +347,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 778907,
+          "srcTgtColId" : 778940,
           "ruleClsPropId" : 778888,
           "srcTrgColName" : "PrevRefIPs",
           "srcTrgColDataType" : "TEXT",
@@ -400,7 +407,7 @@
       "name" : null,
       "ruleClassId" : 778886,
       "connType" : "DATABASE",
-      "execMode" : "report",
+      "execMode" : "htreport",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
@@ -423,7 +430,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 778913,
+          "srcTgtColId" : 778942,
           "ruleClsPropId" : 778908,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -466,7 +473,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 778896,
+      "srcTgtColId" : 778929,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "GlobalRank",
       "srcTrgColDataType" : "TEXT",
@@ -477,7 +484,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778897,
+      "srcTgtColId" : 778930,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "TldRank",
       "srcTrgColDataType" : "TEXT",
@@ -488,7 +495,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778898,
+      "srcTgtColId" : 778931,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "Domain",
       "srcTrgColDataType" : "TEXT",
@@ -499,7 +506,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778899,
+      "srcTgtColId" : 778932,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "TLD",
       "srcTrgColDataType" : "TEXT",
@@ -510,7 +517,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778900,
+      "srcTgtColId" : 778933,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "RefSubNets",
       "srcTrgColDataType" : "TEXT",
@@ -521,7 +528,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778901,
+      "srcTgtColId" : 778934,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "RefIPs",
       "srcTrgColDataType" : "TEXT",
@@ -532,7 +539,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778902,
+      "srcTgtColId" : 778935,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "IDN_Domain",
       "srcTrgColDataType" : "TEXT",
@@ -543,7 +550,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778903,
+      "srcTgtColId" : 778936,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "IDN_TLD",
       "srcTrgColDataType" : "TEXT",
@@ -554,7 +561,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778904,
+      "srcTgtColId" : 778937,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "PrevGlobalRank",
       "srcTrgColDataType" : "TEXT",
@@ -565,7 +572,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778905,
+      "srcTgtColId" : 778938,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "PrevTldRank",
       "srcTrgColDataType" : "TEXT",
@@ -576,7 +583,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778906,
+      "srcTgtColId" : 778939,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "PrevRefSubNets",
       "srcTrgColDataType" : "TEXT",
@@ -587,7 +594,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778907,
+      "srcTgtColId" : 778940,
       "ruleClsPropId" : 778888,
       "srcTrgColName" : "PrevRefIPs",
       "srcTrgColDataType" : "TEXT",
@@ -598,7 +605,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 778913,
+      "srcTgtColId" : 778942,
       "ruleClsPropId" : 778908,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -610,9 +617,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 778926,
-      "srcColId" : 778896,
-      "trgColId" : 778913,
+      "colMapId" : 778945,
+      "srcColId" : 778929,
+      "trgColId" : 778942,
       "colMapType" : "join",
       "srcColName" : "GlobalRank",
       "tgtColName" : "cnt",
