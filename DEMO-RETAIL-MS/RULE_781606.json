@@ -95,37 +95,63 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 781674,
-        "srcColId" : 781665,
-        "trgColId" : 781670,
+        "colMapId" : 781688,
+        "srcColId" : 781679,
+        "trgColId" : 781684,
         "colMapType" : "join",
         "srcColName" : "id",
         "tgtColName" : "id",
         "colMapExpr" : "id=id",
         "srcTrgColMapVisible" : 1,
-        "displayIndex" : 1
-      }, {
-        "colMapId" : 781675,
-        "srcColId" : 781666,
-        "trgColId" : 781671,
-        "colMapType" : "join",
-        "srcColName" : "name",
-        "tgtColName" : "name",
-        "colMapExpr" : "name=name",
-        "srcTrgColMapVisible" : 1,
-        "displayIndex" : 2
-      }, {
-        "colMapId" : 781676,
-        "srcColId" : 781667,
-        "trgColId" : 781672,
-        "colMapType" : "join",
-        "srcColName" : "gender",
-        "tgtColName" : "gender",
-        "colMapExpr" : "gender=gender",
-        "srcTrgColMapVisible" : 1,
-        "displayIndex" : 3
+        "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 781689,
+        "exprLogID" : 0,
+        "exprName" : "name",
+        "expression" : "S.name == T.name",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 781606,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 781609,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.name == T.name",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      }, {
+        "exprID" : 781690,
+        "exprLogID" : 0,
+        "exprName" : "gender",
+        "expression" : "S.gender == T.gender",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 2,
+        "ruleId" : 781606,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 781609,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.gender == T.gender",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 781634,
         "paramId" : 9,
@@ -239,7 +265,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "SELECT * FROM \n( \n  SELECT 1 ID, 'BEN' NAME, 'M' GENDER\n  UNION ALL \n  SELECT 2 , 'JEN', 'F'\n  UNION ALL \n  SELECT 3, 'MARY', 'F'\n) X",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 781665,
+          "srcTgtColId" : 781679,
           "ruleClsPropId" : 781610,
           "srcTrgColName" : "id",
           "srcTrgColDataType" : "int",
@@ -250,7 +276,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 781666,
+          "srcTgtColId" : 781680,
           "ruleClsPropId" : 781610,
           "srcTrgColName" : "name",
           "srcTrgColDataType" : "varchar",
@@ -261,7 +287,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 781667,
+          "srcTgtColId" : 781681,
           "ruleClsPropId" : 781610,
           "srcTrgColName" : "gender",
           "srcTrgColDataType" : "varchar",
@@ -298,7 +324,7 @@
         "ruleClsPropID" : 781615,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1,2,3",
+        "paramValue" : "1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -351,7 +377,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "SELECT * FROM \n( \n  SELECT 1 ID, 'BEN' NAME, 'M' GENDER\n  UNION ALL \n  SELECT 2 , 'JE', 'F'\n  UNION ALL \n  SELECT 3, 'MARY', 'F'\n) X",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 781670,
+          "srcTgtColId" : 781684,
           "ruleClsPropId" : 781622,
           "srcTrgColName" : "id",
           "srcTrgColDataType" : "int",
@@ -362,7 +388,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 781671,
+          "srcTgtColId" : 781685,
           "ruleClsPropId" : 781622,
           "srcTrgColName" : "name",
           "srcTrgColDataType" : "varchar",
@@ -373,7 +399,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 781672,
+          "srcTgtColId" : 781686,
           "ruleClsPropId" : 781622,
           "srcTrgColName" : "gender",
           "srcTrgColDataType" : "varchar",
@@ -410,7 +436,7 @@
         "ruleClsPropID" : 781627,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "1,2,3",
+        "paramValue" : "1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -437,7 +463,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 781665,
+      "srcTgtColId" : 781679,
       "ruleClsPropId" : 781610,
       "srcTrgColName" : "id",
       "srcTrgColDataType" : "int",
@@ -448,7 +474,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 781666,
+      "srcTgtColId" : 781680,
       "ruleClsPropId" : 781610,
       "srcTrgColName" : "name",
       "srcTrgColDataType" : "varchar",
@@ -459,7 +485,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 781667,
+      "srcTgtColId" : 781681,
       "ruleClsPropId" : 781610,
       "srcTrgColName" : "gender",
       "srcTrgColDataType" : "varchar",
@@ -470,7 +496,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 781670,
+      "srcTgtColId" : 781684,
       "ruleClsPropId" : 781622,
       "srcTrgColName" : "id",
       "srcTrgColDataType" : "int",
@@ -481,7 +507,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 781671,
+      "srcTgtColId" : 781685,
       "ruleClsPropId" : 781622,
       "srcTrgColName" : "name",
       "srcTrgColDataType" : "varchar",
@@ -492,7 +518,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 781672,
+      "srcTgtColId" : 781686,
       "ruleClsPropId" : 781622,
       "srcTrgColName" : "gender",
       "srcTrgColDataType" : "varchar",
@@ -504,35 +530,15 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 781674,
-      "srcColId" : 781665,
-      "trgColId" : 781670,
+      "colMapId" : 781688,
+      "srcColId" : 781679,
+      "trgColId" : 781684,
       "colMapType" : "join",
       "srcColName" : "id",
       "tgtColName" : "id",
       "colMapExpr" : "id=id",
       "srcTrgColMapVisible" : 1,
-      "displayIndex" : 1
-    }, {
-      "colMapId" : 781675,
-      "srcColId" : 781666,
-      "trgColId" : 781671,
-      "colMapType" : "join",
-      "srcColName" : "name",
-      "tgtColName" : "name",
-      "colMapExpr" : "name=name",
-      "srcTrgColMapVisible" : 1,
-      "displayIndex" : 2
-    }, {
-      "colMapId" : 781676,
-      "srcColId" : 781667,
-      "trgColId" : 781672,
-      "colMapType" : "join",
-      "srcColName" : "gender",
-      "tgtColName" : "gender",
-      "colMapExpr" : "gender=gender",
-      "srcTrgColMapVisible" : 1,
-      "displayIndex" : 3
+      "displayIndex" : 0
     } ],
     "objectVOList" : null,
     "srcCount" : null,
@@ -550,6 +556,52 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 781689,
+      "exprLogID" : 0,
+      "exprName" : "name",
+      "expression" : "S.name == T.name",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 781606,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 781609,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 781690,
+      "exprLogID" : 0,
+      "exprName" : "gender",
+      "expression" : "S.gender == T.gender",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 2,
+      "ruleId" : 781606,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 781609,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
