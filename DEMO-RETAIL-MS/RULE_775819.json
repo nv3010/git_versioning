@@ -43,11 +43,11 @@
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
     "srcConnId" : 410,
-    "trgConnId" : 733807,
+    "trgConnId" : 410,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
     "srcConn" : "ZenCycleDemo",
-    "trgConn" : "BIGQUERY_CON",
+    "trgConn" : "ZenCycleDemo",
     "elapseTime" : 0,
     "parameterId" : "",
     "type" : null,
@@ -95,18 +95,18 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 781774,
-        "srcColId" : 781769,
-        "trgColId" : 781772,
+        "colMapId" : 781783,
+        "srcColId" : 781778,
+        "trgColId" : 781781,
         "colMapType" : "join",
         "srcColName" : "source_count",
         "tgtColName" : "target_count",
         "colMapExpr" : "target_count=source_count",
         "srcTrgColMapVisible" : 1,
-        "displayIndex" : 1
+        "displayIndex" : 3
       } ],
       "exprlist" : [ {
-        "exprID" : 781775,
+        "exprID" : 781784,
         "exprLogID" : 0,
         "exprName" : "target_count",
         "expression" : "S.source_count - T.target_count == 0",
@@ -242,7 +242,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1000 Source_Count",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 781769,
+          "srcTgtColId" : 781778,
           "ruleClsPropId" : 775823,
           "srcTrgColName" : "source_count",
           "srcTrgColDataType" : "int",
@@ -251,7 +251,7 @@
           "joinList" : null,
           "mapColName" : null,
           "colFormat" : "",
-          "displayIndex" : 2
+          "displayIndex" : 1
         } ],
         "fileContent" : null
       }, {
@@ -315,7 +315,7 @@
       "vid" : "GetData21",
       "classObjName" : "ICE_1626441616403",
       "queryBuilderXML" : null,
-      "connId" : 733807,
+      "connId" : 410,
       "resultType" : "a-b,b-a",
       "connName" : null,
       "connUrl" : null,
@@ -332,10 +332,10 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 995 Target_Count",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 781772,
+          "srcTgtColId" : 781781,
           "ruleClsPropId" : 775843,
           "srcTrgColName" : "target_count",
-          "srcTrgColDataType" : "INT",
+          "srcTrgColDataType" : "int",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -348,7 +348,7 @@
         "ruleClsPropID" : 775845,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "733807",
+        "paramValue" : "410",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -383,7 +383,7 @@
         "ruleClsPropID" : 775851,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "target_count^~^4^~^INT^~^10^~^1",
+        "paramValue" : "target_count^~^4^~^int^~^10^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -396,7 +396,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 781769,
+      "srcTgtColId" : 781778,
       "ruleClsPropId" : 775823,
       "srcTrgColName" : "source_count",
       "srcTrgColDataType" : "int",
@@ -405,12 +405,12 @@
       "joinList" : null,
       "mapColName" : "source_count",
       "colFormat" : "",
-      "displayIndex" : 2
+      "displayIndex" : 1
     }, {
-      "srcTgtColId" : 781772,
+      "srcTgtColId" : 781781,
       "ruleClsPropId" : 775843,
       "srcTrgColName" : "target_count",
-      "srcTrgColDataType" : "INT",
+      "srcTrgColDataType" : "int",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -419,15 +419,15 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 781774,
-      "srcColId" : 781769,
-      "trgColId" : 781772,
+      "colMapId" : 781783,
+      "srcColId" : 781778,
+      "trgColId" : 781781,
       "colMapType" : "join",
       "srcColName" : "source_count",
       "tgtColName" : "target_count",
       "colMapExpr" : "target_count=source_count",
       "srcTrgColMapVisible" : 1,
-      "displayIndex" : 1
+      "displayIndex" : 3
     } ],
     "objectVOList" : null,
     "srcCount" : null,
@@ -446,7 +446,7 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 781775,
+      "exprID" : 781784,
       "exprLogID" : 0,
       "exprName" : "target_count",
       "expression" : "S.source_count - T.target_count == 0",
