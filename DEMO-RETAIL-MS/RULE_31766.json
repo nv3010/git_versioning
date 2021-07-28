@@ -3,7 +3,7 @@
     "id" : 31766,
     "ruleInstanceId" : 0,
     "ruleDesc" : "This rule compares source data with staging table.",
-    "execMode" : null,
+    "execMode" : "recon",
     "exitCode" : null,
     "folderId" : 27796,
     "projectId" : 27794,
@@ -22,7 +22,7 @@
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2017-05-01 00:00:00",
-    "ruleModifiedDate" : "2021-07-13 00:00:00",
+    "ruleModifiedDate" : "2021-07-28 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -108,9 +108,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 774054,
-        "srcColId" : 774043,
-        "trgColId" : 774050,
+        "colMapId" : 782593,
+        "srcColId" : 782582,
+        "trgColId" : 782589,
         "colMapType" : "join",
         "srcColName" : "accountnumber",
         "tgtColName" : "accountnumber",
@@ -158,6 +158,29 @@
         "falseCount" : null,
         "errCount" : null,
         "exprOrg" : "S.gender == 'M' ? T.gender == 'Male' : T.gender == 'Female'",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      }, {
+        "exprID" : 782594,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_GGVH60H",
+        "expression" : "S.customerid != null",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 2,
+        "ruleId" : 31766,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 108862,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.customerid != null",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -278,7 +301,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "SELECT * FROM \n(\nSELECT 11012 CustomerID, 'AW00011012' AccountNumber, 'Lauren' FirstName, 'Walker' LastName, 'F' Gender\nUNION ALL\nSELECT 11014 , 'AW00011014' , 'Sydney' , 'Bennett' , '' \nUNION ALL\nSELECT 11015 , 'AW00011015' , 'Chloe' , 'Young' , 'F' \nUNION ALL\nSELECT 11023 , 'AW00011023' , 'Seth' , 'Edwards' , 'M' \nUNION ALL\nSELECT 11019 , 'AW00011019' , 'Luke' , 'Lal' , 'M' \nUNION ALL\nSELECT 11022 , 'AW00011022' , 'Ethan' , 'Zhang' , 'M' \nUNION ALL\nSELECT 11020 , 'AW00011020' , 'Jordan' , 'Wyane'  , 'M' \nUNION ALL\nSELECT 11013 , 'AW00011013' , 'Ian' , 'Jenkins' ,'M' \nUNION ALL\nSELECT 11021 , 'AW00011021' , 'Destiny' , 'Wilson', 'F'\nUNION ALL\nSELECT 11016 , 'AW00011016' , 'Wyatt' , 'Hill', 'M'\nUNION ALL\nSELECT 11067 , 'AW00011067' , 'Caleb', 'Carter' , 'M' \nUNION ALL\nSELECT 11078 , 'AW00011078' , 'Gina', 'Martin' , '' \n) X",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 774042,
+          "srcTgtColId" : 782581,
           "ruleClsPropId" : 765219,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "int",
@@ -289,7 +312,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 774043,
+          "srcTgtColId" : 782582,
           "ruleClsPropId" : 765219,
           "srcTrgColName" : "accountnumber",
           "srcTrgColDataType" : "varchar",
@@ -300,7 +323,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 774044,
+          "srcTgtColId" : 782583,
           "ruleClsPropId" : 765219,
           "srcTrgColName" : "firstname",
           "srcTrgColDataType" : "varchar",
@@ -311,7 +334,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 774045,
+          "srcTgtColId" : 782584,
           "ruleClsPropId" : 765219,
           "srcTrgColName" : "lastname",
           "srcTrgColDataType" : "varchar",
@@ -322,7 +345,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 774046,
+          "srcTgtColId" : 782585,
           "ruleClsPropId" : 765219,
           "srcTrgColName" : "gender",
           "srcTrgColDataType" : "varchar",
@@ -412,7 +435,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "SELECT * FROM \n(\nSELECT 11012 CustomerID, 'AW00011012' AccountNumber, 'Lauren Walker' FullName, 'Female' Gender\nUNION ALL\nSELECT 11013 , 'AW00011013' , 'Ian Jenkins' ,'Male' \nUNION ALL\nSELECT 11014 , 'AW00011014' , 'Sydney Bennett' , 'Female' \nUNION ALL\nSELECT 11015 , 'AW00011015' , 'Chloe Young' , 'Female' \nUNION ALL\nSELECT 11016 , 'AW00011016' , 'Wyatt Hill' , 'Male' \nUNION ALL\nSELECT 11019 , 'AW00011019' , 'Luke Lal' , 'Male' \nUNION ALL\nSELECT 11020 , 'AW00011020' , 'Jordan'  , 'Male' \nUNION ALL\nSELECT 11021 , 'AW00011021' , 'Destiny Wilson' , 'Fmale' \nUNION ALL\nSELECT 11022 , 'AW00011022' , 'Ethan Zhang' , 'Male' \nUNION ALL\nSELECT 11023 , 'AW00011023' , 'Seth Edwards' , 'Male' \n) X",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 774049,
+          "srcTgtColId" : 782588,
           "ruleClsPropId" : 765233,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "int",
@@ -423,7 +446,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 774050,
+          "srcTgtColId" : 782589,
           "ruleClsPropId" : 765233,
           "srcTrgColName" : "accountnumber",
           "srcTrgColDataType" : "varchar",
@@ -434,7 +457,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 774051,
+          "srcTgtColId" : 782590,
           "ruleClsPropId" : 765233,
           "srcTrgColName" : "fullname",
           "srcTrgColDataType" : "varchar",
@@ -445,7 +468,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 774052,
+          "srcTgtColId" : 782591,
           "ruleClsPropId" : 765233,
           "srcTrgColName" : "gender",
           "srcTrgColDataType" : "varchar",
@@ -509,7 +532,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 774042,
+      "srcTgtColId" : 782581,
       "ruleClsPropId" : 765219,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "int",
@@ -520,7 +543,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 774043,
+      "srcTgtColId" : 782582,
       "ruleClsPropId" : 765219,
       "srcTrgColName" : "accountnumber",
       "srcTrgColDataType" : "varchar",
@@ -531,7 +554,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 774044,
+      "srcTgtColId" : 782583,
       "ruleClsPropId" : 765219,
       "srcTrgColName" : "firstname",
       "srcTrgColDataType" : "varchar",
@@ -542,7 +565,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 774045,
+      "srcTgtColId" : 782584,
       "ruleClsPropId" : 765219,
       "srcTrgColName" : "lastname",
       "srcTrgColDataType" : "varchar",
@@ -553,7 +576,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 774046,
+      "srcTgtColId" : 782585,
       "ruleClsPropId" : 765219,
       "srcTrgColName" : "gender",
       "srcTrgColDataType" : "varchar",
@@ -564,7 +587,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 774049,
+      "srcTgtColId" : 782588,
       "ruleClsPropId" : 765233,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "int",
@@ -575,7 +598,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 774050,
+      "srcTgtColId" : 782589,
       "ruleClsPropId" : 765233,
       "srcTrgColName" : "accountnumber",
       "srcTrgColDataType" : "varchar",
@@ -586,7 +609,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 774051,
+      "srcTgtColId" : 782590,
       "ruleClsPropId" : 765233,
       "srcTrgColName" : "fullname",
       "srcTrgColDataType" : "varchar",
@@ -597,7 +620,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 774052,
+      "srcTgtColId" : 782591,
       "ruleClsPropId" : 765233,
       "srcTrgColName" : "gender",
       "srcTrgColDataType" : "varchar",
@@ -609,9 +632,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 774054,
-      "srcColId" : 774043,
-      "trgColId" : 774050,
+      "colMapId" : 782593,
+      "srcColId" : 782582,
+      "trgColId" : 782589,
       "colMapType" : "join",
       "srcColName" : "accountnumber",
       "tgtColName" : "accountnumber",
@@ -663,6 +686,29 @@
       "exprLogID" : 0,
       "exprName" : "gender",
       "expression" : "S.gender == 'M' ? T.gender == 'Male' : T.gender == 'Female'",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 2,
+      "ruleId" : 31766,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 108862,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 782594,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_GGVH60H",
+      "expression" : "S.customerid != null",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
