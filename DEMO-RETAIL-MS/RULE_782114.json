@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-07-28 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-07-28 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "Training",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 782117,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 782151,
-        "srcColId" : 782126,
-        "trgColId" : 782138,
+        "colMapId" : 782169,
+        "srcColId" : 782159,
+        "trgColId" : 782167,
         "colMapType" : "join",
         "srcColName" : "accountno",
         "tgtColName" : "gd",
@@ -288,14 +288,14 @@
         "ruleClsPropID" : 782148,
         "paramId" : 530,
         "paramMethod" : "setThresholdFlag",
-        "paramValue" : "false",
+        "paramValue" : "true",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
         "ruleClsPropID" : 782149,
         "paramId" : 531,
         "paramMethod" : "setThresholdExpression",
-        "paramValue" : "",
+        "paramValue" : "exitcode <= 200",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -334,7 +334,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select \nPROVIDER_NUM AccountNo, PROVIDER_NM CustomerName, \nOFFICE_ADDRESS_1 AddressLine1, OFFICE_STATE_CD StateCode,  \nSPECIALITY_CD CustomerCode, PHONE_NUMBER CustomerPhoneNumber, EFFECTIVE_DT SignupDate FROM dbo.HC_PROVIDER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 782126,
+          "srcTgtColId" : 782159,
           "ruleClsPropId" : 782118,
           "srcTrgColName" : "accountno",
           "srcTrgColDataType" : "varchar",
@@ -345,7 +345,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782127,
+          "srcTgtColId" : 782160,
           "ruleClsPropId" : 782118,
           "srcTrgColName" : "customername",
           "srcTrgColDataType" : "varchar",
@@ -356,7 +356,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782128,
+          "srcTgtColId" : 782161,
           "ruleClsPropId" : 782118,
           "srcTrgColName" : "addressline1",
           "srcTrgColDataType" : "varchar",
@@ -367,7 +367,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782129,
+          "srcTgtColId" : 782162,
           "ruleClsPropId" : 782118,
           "srcTrgColName" : "statecode",
           "srcTrgColDataType" : "varchar",
@@ -378,7 +378,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782130,
+          "srcTgtColId" : 782163,
           "ruleClsPropId" : 782118,
           "srcTrgColName" : "customercode",
           "srcTrgColDataType" : "varchar",
@@ -389,7 +389,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782131,
+          "srcTgtColId" : 782164,
           "ruleClsPropId" : 782118,
           "srcTrgColName" : "customerphonenumber",
           "srcTrgColDataType" : "varchar",
@@ -400,7 +400,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782132,
+          "srcTgtColId" : 782165,
           "ruleClsPropId" : 782118,
           "srcTrgColName" : "signupdate",
           "srcTrgColDataType" : "varchar",
@@ -483,7 +483,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select GETDATE() as gd",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 782138,
+          "srcTgtColId" : 782167,
           "ruleClsPropId" : 782133,
           "srcTrgColName" : "gd",
           "srcTrgColDataType" : "String",
@@ -526,7 +526,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 782126,
+      "srcTgtColId" : 782159,
       "ruleClsPropId" : 782118,
       "srcTrgColName" : "accountno",
       "srcTrgColDataType" : "varchar",
@@ -537,7 +537,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782127,
+      "srcTgtColId" : 782160,
       "ruleClsPropId" : 782118,
       "srcTrgColName" : "customername",
       "srcTrgColDataType" : "varchar",
@@ -548,7 +548,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782128,
+      "srcTgtColId" : 782161,
       "ruleClsPropId" : 782118,
       "srcTrgColName" : "addressline1",
       "srcTrgColDataType" : "varchar",
@@ -559,7 +559,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782129,
+      "srcTgtColId" : 782162,
       "ruleClsPropId" : 782118,
       "srcTrgColName" : "statecode",
       "srcTrgColDataType" : "varchar",
@@ -570,7 +570,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782130,
+      "srcTgtColId" : 782163,
       "ruleClsPropId" : 782118,
       "srcTrgColName" : "customercode",
       "srcTrgColDataType" : "varchar",
@@ -581,7 +581,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782131,
+      "srcTgtColId" : 782164,
       "ruleClsPropId" : 782118,
       "srcTrgColName" : "customerphonenumber",
       "srcTrgColDataType" : "varchar",
@@ -592,7 +592,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782132,
+      "srcTgtColId" : 782165,
       "ruleClsPropId" : 782118,
       "srcTrgColName" : "signupdate",
       "srcTrgColDataType" : "varchar",
@@ -603,7 +603,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782138,
+      "srcTgtColId" : 782167,
       "ruleClsPropId" : 782133,
       "srcTrgColName" : "gd",
       "srcTrgColDataType" : "String",
@@ -615,9 +615,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 782151,
-      "srcColId" : 782126,
-      "trgColId" : 782138,
+      "colMapId" : 782169,
+      "srcColId" : 782159,
+      "trgColId" : 782167,
       "colMapType" : "join",
       "srcColName" : "accountno",
       "tgtColName" : "gd",
