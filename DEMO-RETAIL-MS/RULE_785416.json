@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 785495,
-        "srcColId" : 785461,
-        "trgColId" : 785493,
+        "colMapId" : 785532,
+        "srcColId" : 785498,
+        "trgColId" : 785530,
         "colMapType" : "join",
         "srcColName" : "dim_master_quote_key",
         "tgtColName" : "gd",
@@ -217,9 +217,9 @@
         "ruleClsPropID" : 785420,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "SELECT\n\t*\nFROM\n\tMART\nWHERE\n\tSUM_ASSURED IS NULL\n\tOR dim_quote_proposed_contract_key is null\n\tOR SECONDARY_person_id is null\n\tOR KCIC_AMOUNT is null\n\tOR DISCOUNT_AMOUNT is null",
+        "paramValue" : "SELECT \n\t*\nFROM \n\tMART\nMINUS\nSELECT\n\t*\nFROM\n\tMART\nWHERE\n\tSUM_ASSURED IS NULL\n\tOR dim_quote_proposed_contract_key is null\n\tOR SECONDARY_person_id is null\n\tOR KCIC_AMOUNT is null\n\tOR DISCOUNT_AMOUNT is null",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 785461,
+          "srcTgtColId" : 785498,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dim_master_quote_key",
           "srcTrgColDataType" : "varchar",
@@ -230,7 +230,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785462,
+          "srcTgtColId" : 785499,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dim_quote_proposed_contract_key",
           "srcTrgColDataType" : "varchar",
@@ -241,7 +241,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785463,
+          "srcTgtColId" : 785500,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dim_quote_key",
           "srcTrgColDataType" : "varchar",
@@ -252,7 +252,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785464,
+          "srcTgtColId" : 785501,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dim_quote_person_primary_key",
           "srcTrgColDataType" : "varchar",
@@ -263,7 +263,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785465,
+          "srcTgtColId" : 785502,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dim_quote_person_secondary_key",
           "srcTrgColDataType" : "varchar",
@@ -274,7 +274,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785466,
+          "srcTgtColId" : 785503,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dim_product_key",
           "srcTrgColDataType" : "varchar",
@@ -285,7 +285,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785467,
+          "srcTgtColId" : 785504,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dim_quote_date_key",
           "srcTrgColDataType" : "varchar",
@@ -296,7 +296,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785468,
+          "srcTgtColId" : 785505,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dim_quote_time_key",
           "srcTrgColDataType" : "varchar",
@@ -307,7 +307,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785469,
+          "srcTgtColId" : 785506,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dim_effective_date_key",
           "srcTrgColDataType" : "varchar",
@@ -318,7 +318,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785470,
+          "srcTgtColId" : 785507,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dim_expiry_date_key",
           "srcTrgColDataType" : "varchar",
@@ -329,7 +329,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785471,
+          "srcTgtColId" : 785508,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "master_quote_id",
           "srcTrgColDataType" : "varchar",
@@ -340,7 +340,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785472,
+          "srcTgtColId" : 785509,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "quote_proposed_contract_id",
           "srcTrgColDataType" : "varchar",
@@ -351,7 +351,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785473,
+          "srcTgtColId" : 785510,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "quote_id",
           "srcTrgColDataType" : "varchar",
@@ -362,7 +362,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785474,
+          "srcTgtColId" : 785511,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "primary_person_id",
           "srcTrgColDataType" : "varchar",
@@ -373,7 +373,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785475,
+          "srcTgtColId" : 785512,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "secondary_person_id",
           "srcTrgColDataType" : "varchar",
@@ -384,7 +384,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785476,
+          "srcTgtColId" : 785513,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "product_id",
           "srcTrgColDataType" : "varchar",
@@ -395,7 +395,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785477,
+          "srcTgtColId" : 785514,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "quote_date",
           "srcTrgColDataType" : "varchar",
@@ -406,7 +406,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785478,
+          "srcTgtColId" : 785515,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "quote_time",
           "srcTrgColDataType" : "varchar",
@@ -417,7 +417,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785479,
+          "srcTgtColId" : 785516,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "effective_date",
           "srcTrgColDataType" : "varchar",
@@ -428,7 +428,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785480,
+          "srcTgtColId" : 785517,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "expiry_date",
           "srcTrgColDataType" : "varchar",
@@ -439,7 +439,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785481,
+          "srcTgtColId" : 785518,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "product_sequence",
           "srcTrgColDataType" : "varchar",
@@ -450,7 +450,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785482,
+          "srcTgtColId" : 785519,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "product_premium",
           "srcTrgColDataType" : "varchar",
@@ -461,7 +461,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785483,
+          "srcTgtColId" : 785520,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "initial_product_commission_payment",
           "srcTrgColDataType" : "varchar",
@@ -472,7 +472,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785484,
+          "srcTgtColId" : 785521,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "renewal_product_commission_payment",
           "srcTrgColDataType" : "varchar",
@@ -483,7 +483,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785485,
+          "srcTgtColId" : 785522,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "sum_assured",
           "srcTrgColDataType" : "varchar",
@@ -494,7 +494,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785486,
+          "srcTgtColId" : 785523,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "discount_amount",
           "srcTrgColDataType" : "varchar",
@@ -505,7 +505,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785487,
+          "srcTgtColId" : 785524,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "kcic_amount",
           "srcTrgColDataType" : "varchar",
@@ -516,7 +516,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785488,
+          "srcTgtColId" : 785525,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "test_quote_flag",
           "srcTrgColDataType" : "varchar",
@@ -527,7 +527,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785489,
+          "srcTgtColId" : 785526,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "batch_sequence",
           "srcTrgColDataType" : "varchar",
@@ -538,7 +538,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785490,
+          "srcTgtColId" : 785527,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dss_create_time",
           "srcTrgColDataType" : "varchar",
@@ -549,7 +549,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 785491,
+          "srcTgtColId" : 785528,
           "ruleClsPropId" : 785420,
           "srcTrgColName" : "dss_update_time",
           "srcTrgColDataType" : "varchar",
@@ -632,7 +632,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select GETDATE() as gd",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 785493,
+          "srcTgtColId" : 785530,
           "ruleClsPropId" : 785439,
           "srcTrgColName" : "gd",
           "srcTrgColDataType" : "String",
@@ -675,7 +675,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 785461,
+      "srcTgtColId" : 785498,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dim_master_quote_key",
       "srcTrgColDataType" : "varchar",
@@ -686,7 +686,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785462,
+      "srcTgtColId" : 785499,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dim_quote_proposed_contract_key",
       "srcTrgColDataType" : "varchar",
@@ -697,7 +697,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785463,
+      "srcTgtColId" : 785500,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dim_quote_key",
       "srcTrgColDataType" : "varchar",
@@ -708,7 +708,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785464,
+      "srcTgtColId" : 785501,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dim_quote_person_primary_key",
       "srcTrgColDataType" : "varchar",
@@ -719,7 +719,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785465,
+      "srcTgtColId" : 785502,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dim_quote_person_secondary_key",
       "srcTrgColDataType" : "varchar",
@@ -730,7 +730,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785466,
+      "srcTgtColId" : 785503,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dim_product_key",
       "srcTrgColDataType" : "varchar",
@@ -741,7 +741,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785467,
+      "srcTgtColId" : 785504,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dim_quote_date_key",
       "srcTrgColDataType" : "varchar",
@@ -752,7 +752,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785468,
+      "srcTgtColId" : 785505,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dim_quote_time_key",
       "srcTrgColDataType" : "varchar",
@@ -763,7 +763,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785469,
+      "srcTgtColId" : 785506,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dim_effective_date_key",
       "srcTrgColDataType" : "varchar",
@@ -774,7 +774,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785470,
+      "srcTgtColId" : 785507,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dim_expiry_date_key",
       "srcTrgColDataType" : "varchar",
@@ -785,7 +785,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785471,
+      "srcTgtColId" : 785508,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "master_quote_id",
       "srcTrgColDataType" : "varchar",
@@ -796,7 +796,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785472,
+      "srcTgtColId" : 785509,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "quote_proposed_contract_id",
       "srcTrgColDataType" : "varchar",
@@ -807,7 +807,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785473,
+      "srcTgtColId" : 785510,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "quote_id",
       "srcTrgColDataType" : "varchar",
@@ -818,7 +818,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785474,
+      "srcTgtColId" : 785511,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "primary_person_id",
       "srcTrgColDataType" : "varchar",
@@ -829,7 +829,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785475,
+      "srcTgtColId" : 785512,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "secondary_person_id",
       "srcTrgColDataType" : "varchar",
@@ -840,7 +840,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785476,
+      "srcTgtColId" : 785513,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "product_id",
       "srcTrgColDataType" : "varchar",
@@ -851,7 +851,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785477,
+      "srcTgtColId" : 785514,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "quote_date",
       "srcTrgColDataType" : "varchar",
@@ -862,7 +862,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785478,
+      "srcTgtColId" : 785515,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "quote_time",
       "srcTrgColDataType" : "varchar",
@@ -873,7 +873,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785479,
+      "srcTgtColId" : 785516,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "effective_date",
       "srcTrgColDataType" : "varchar",
@@ -884,7 +884,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785480,
+      "srcTgtColId" : 785517,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "expiry_date",
       "srcTrgColDataType" : "varchar",
@@ -895,7 +895,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785481,
+      "srcTgtColId" : 785518,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "product_sequence",
       "srcTrgColDataType" : "varchar",
@@ -906,7 +906,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785482,
+      "srcTgtColId" : 785519,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "product_premium",
       "srcTrgColDataType" : "varchar",
@@ -917,7 +917,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785483,
+      "srcTgtColId" : 785520,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "initial_product_commission_payment",
       "srcTrgColDataType" : "varchar",
@@ -928,7 +928,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785484,
+      "srcTgtColId" : 785521,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "renewal_product_commission_payment",
       "srcTrgColDataType" : "varchar",
@@ -939,7 +939,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785485,
+      "srcTgtColId" : 785522,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "sum_assured",
       "srcTrgColDataType" : "varchar",
@@ -950,7 +950,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785486,
+      "srcTgtColId" : 785523,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "discount_amount",
       "srcTrgColDataType" : "varchar",
@@ -961,7 +961,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785487,
+      "srcTgtColId" : 785524,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "kcic_amount",
       "srcTrgColDataType" : "varchar",
@@ -972,7 +972,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785488,
+      "srcTgtColId" : 785525,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "test_quote_flag",
       "srcTrgColDataType" : "varchar",
@@ -983,7 +983,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785489,
+      "srcTgtColId" : 785526,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "batch_sequence",
       "srcTrgColDataType" : "varchar",
@@ -994,7 +994,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785490,
+      "srcTgtColId" : 785527,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dss_create_time",
       "srcTrgColDataType" : "varchar",
@@ -1005,7 +1005,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785491,
+      "srcTgtColId" : 785528,
       "ruleClsPropId" : 785420,
       "srcTrgColName" : "dss_update_time",
       "srcTrgColDataType" : "varchar",
@@ -1016,7 +1016,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 785493,
+      "srcTgtColId" : 785530,
       "ruleClsPropId" : 785439,
       "srcTrgColName" : "gd",
       "srcTrgColDataType" : "String",
@@ -1028,9 +1028,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 785495,
-      "srcColId" : 785461,
-      "trgColId" : 785493,
+      "colMapId" : 785532,
+      "srcColId" : 785498,
+      "trgColId" : 785530,
       "colMapType" : "join",
       "srcColName" : "dim_master_quote_key",
       "tgtColName" : "gd",
