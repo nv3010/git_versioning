@@ -22,7 +22,7 @@
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2020-11-09 00:00:00",
-    "ruleModifiedDate" : "2021-08-04 00:00:00",
+    "ruleModifiedDate" : "2021-08-12 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -86,7 +86,7 @@
       "classObjName" : "ICE_1604957081408",
       "queryBuilderXML" : null,
       "connId" : 0,
-      "resultType" : "a-b,b-a",
+      "resultType" : "a-b,b-a,expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 784707,
-        "srcColId" : 784700,
-        "trgColId" : 784704,
+        "colMapId" : 786767,
+        "srcColId" : 786760,
+        "trgColId" : 786764,
         "colMapType" : "join",
         "srcColName" : "id",
         "tgtColName" : "id",
@@ -112,8 +112,8 @@
         "expression" : "S.name.trim() == T.name || \nS.name.trim() == ''?T.name == null:false",
         "result" : "Pass",
         "exprType" : "5",
-        "exprVisible" : 0,
-        "exprIndex" : 0,
+        "exprVisible" : 1,
+        "exprIndex" : 1,
         "ruleId" : 690468,
         "ruleInstanceId" : 0,
         "ruleClassId" : 690471,
@@ -226,7 +226,7 @@
       "classObjName" : "ICE_1604957081408",
       "queryBuilderXML" : null,
       "connId" : 410,
-      "resultType" : "a-b,b-a",
+      "resultType" : "a-b,b-a,expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -242,7 +242,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from\n(\n  select 1 id , 'John' name \n  union all\n  select 2 , ' ' \n  union all\n  select 3,''\n  union all\n  select 4, '   '\n  )x",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 784700,
+          "srcTgtColId" : 786760,
           "ruleClsPropId" : 690472,
           "srcTrgColName" : "id",
           "srcTrgColDataType" : "int",
@@ -253,7 +253,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 784701,
+          "srcTgtColId" : 786761,
           "ruleClsPropId" : 690472,
           "srcTrgColName" : "name",
           "srcTrgColDataType" : "varchar",
@@ -327,7 +327,7 @@
       "classObjName" : "ICE_1604957081408",
       "queryBuilderXML" : null,
       "connId" : 410,
-      "resultType" : "a-b,b-a",
+      "resultType" : "a-b,b-a,expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -343,7 +343,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from\n(\n  select 1 id , 'John' name \n  union all\n  select 2 , ' ' \n  union all\n  select 3,''\n  union all\n  select 4, '   '\n  )x",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 784704,
+          "srcTgtColId" : 786764,
           "ruleClsPropId" : 690482,
           "srcTrgColName" : "id",
           "srcTrgColDataType" : "int",
@@ -354,7 +354,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 784705,
+          "srcTgtColId" : 786765,
           "ruleClsPropId" : 690482,
           "srcTrgColName" : "name",
           "srcTrgColDataType" : "varchar",
@@ -418,7 +418,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 784700,
+      "srcTgtColId" : 786760,
       "ruleClsPropId" : 690472,
       "srcTrgColName" : "id",
       "srcTrgColDataType" : "int",
@@ -429,7 +429,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 784701,
+      "srcTgtColId" : 786761,
       "ruleClsPropId" : 690472,
       "srcTrgColName" : "name",
       "srcTrgColDataType" : "varchar",
@@ -440,7 +440,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 784704,
+      "srcTgtColId" : 786764,
       "ruleClsPropId" : 690482,
       "srcTrgColName" : "id",
       "srcTrgColDataType" : "int",
@@ -451,7 +451,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 784705,
+      "srcTgtColId" : 786765,
       "ruleClsPropId" : 690482,
       "srcTrgColName" : "name",
       "srcTrgColDataType" : "varchar",
@@ -463,9 +463,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 784707,
-      "srcColId" : 784700,
-      "trgColId" : 784704,
+      "colMapId" : 786767,
+      "srcColId" : 786760,
+      "trgColId" : 786764,
       "colMapType" : "join",
       "srcColName" : "id",
       "tgtColName" : "id",
@@ -489,6 +489,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 690504,
+      "exprLogID" : 0,
+      "exprName" : "name",
+      "expression" : "S.name.trim() == T.name || \nS.name.trim() == ''?T.name == null:false",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 690468,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 690471,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
