@@ -22,7 +22,7 @@
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-08-13 00:00:00",
-    "ruleModifiedDate" : "2021-08-13 00:00:00",
+    "ruleModifiedDate" : "2021-08-16 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 786826,
-        "srcColId" : 786821,
-        "trgColId" : 786824,
+        "colMapId" : 786875,
+        "srcColId" : 786870,
+        "trgColId" : 786873,
         "colMapType" : "join",
         "srcColName" : "id",
         "tgtColName" : "gd",
@@ -240,9 +240,9 @@
         "ruleClsPropID" : 786781,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "SELECT ID, TICKET_COMMENT FROM\n(\nSELECT 1 ID, 'This is a sample jdoe@gmail.com comment' TICKET_COMMENT\nUNION ALL\nSELECT 2 ID, 'This is also a sample comment' TICKET_COMMENT\nUNION ALL\nSELECT 3 ID, 'Now a comment with 203-666-4442 phone' TICKET_COMMENT\nUNION ALL\nSELECT 4 ID, 'What about an SSN 030-72-7381' TICKET_COMMENT\nUNION ALL\nSELECT 2 ID, 'Nothing in here' TICKET_COMMENT\n) AS TICKETS",
+        "paramValue" : "SELECT id, ticket_comment FROM\n(\nSELECT 1 ID, 'This is a sample comment with an jdoe@gmail.com' ticket_comment\nUNION ALL\nSELECT 2 ID, 'Comment with no PII data' \nUNION ALL\nSELECT 3 ID, 'Now a comment with 203-666-4442 phone number' \nUNION ALL\nSELECT 4 ID, 'What about an SSN 030-72-7381' \nUNION ALL\nSELECT 2 ID, 'Nothing to see here' \n) AS tickets",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 786821,
+          "srcTgtColId" : 786870,
           "ruleClsPropId" : 786781,
           "srcTrgColName" : "id",
           "srcTrgColDataType" : "int",
@@ -253,7 +253,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 786822,
+          "srcTgtColId" : 786871,
           "ruleClsPropId" : 786781,
           "srcTrgColName" : "ticket_comment",
           "srcTrgColDataType" : "varchar",
@@ -297,7 +297,7 @@
         "ruleClsPropID" : 786788,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "id^~^4^~^int^~^10^~^1$~$ticket_comment^~^12^~^varchar^~^39^~^2",
+        "paramValue" : "id^~^4^~^int^~^10^~^1$~$ticket_comment^~^12^~^varchar^~^47^~^2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -336,7 +336,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select GETDATE() as gd",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 786824,
+          "srcTgtColId" : 786873,
           "ruleClsPropId" : 786791,
           "srcTrgColName" : "gd",
           "srcTrgColDataType" : "String",
@@ -379,7 +379,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 786821,
+      "srcTgtColId" : 786870,
       "ruleClsPropId" : 786781,
       "srcTrgColName" : "id",
       "srcTrgColDataType" : "int",
@@ -390,7 +390,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 786822,
+      "srcTgtColId" : 786871,
       "ruleClsPropId" : 786781,
       "srcTrgColName" : "ticket_comment",
       "srcTrgColDataType" : "varchar",
@@ -401,7 +401,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 786824,
+      "srcTgtColId" : 786873,
       "ruleClsPropId" : 786791,
       "srcTrgColName" : "gd",
       "srcTrgColDataType" : "String",
@@ -413,9 +413,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 786826,
-      "srcColId" : 786821,
-      "trgColId" : 786824,
+      "colMapId" : 786875,
+      "srcColId" : 786870,
+      "trgColId" : 786873,
       "colMapType" : "join",
       "srcColName" : "id",
       "tgtColName" : "gd",
