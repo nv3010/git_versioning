@@ -22,7 +22,7 @@
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2020-12-03 00:00:00",
-    "ruleModifiedDate" : "2021-07-28 00:00:00",
+    "ruleModifiedDate" : "2021-08-27 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -86,7 +86,7 @@
       "classObjName" : "ICE_1611758355461",
       "queryBuilderXML" : null,
       "connId" : 0,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 782683,
-        "srcColId" : 782622,
-        "trgColId" : 782681,
+        "colMapId" : 789470,
+        "srcColId" : 789409,
+        "trgColId" : 789468,
         "colMapType" : "join",
         "srcColName" : "aboutme",
         "tgtColName" : "cnt",
@@ -105,7 +105,30 @@
         "srcTrgColMapVisible" : 0,
         "displayIndex" : 0
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 789471,
+        "exprLogID" : 0,
+        "exprName" : "Length_Inacuracy",
+        "expression" : "S.additionallabel.toString().substring(0,15).length() == 15",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 691864,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 698648,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.additionallabel.toString().substring(0,15).length() == 15",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "paramsVOLst" : [ {
         "ruleClsPropID" : 698736,
         "paramId" : 9,
@@ -180,7 +203,7 @@
         "ruleClsPropID" : 759120,
         "paramId" : 798,
         "paramMethod" : "setEngineType",
-        "paramValue" : "V8",
+        "paramValue" : "Null",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -210,7 +233,7 @@
       "classObjName" : "ICE_1611758355461",
       "queryBuilderXML" : null,
       "connId" : 698645,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -226,7 +249,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "SELECT * FROM TestTab",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 782622,
+          "srcTgtColId" : 789409,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "aboutme",
           "srcTrgColDataType" : "VARCHAR",
@@ -237,7 +260,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782623,
+          "srcTgtColId" : 789410,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "additionallabel",
           "srcTrgColDataType" : "VARCHAR",
@@ -248,7 +271,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782624,
+          "srcTgtColId" : 789411,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "address.city",
           "srcTrgColDataType" : "VARCHAR",
@@ -259,7 +282,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782625,
+          "srcTgtColId" : 789412,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "address.country",
           "srcTrgColDataType" : "VARCHAR",
@@ -270,7 +293,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782626,
+          "srcTgtColId" : 789413,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "address.formattedaddress",
           "srcTrgColDataType" : "VARCHAR",
@@ -281,7 +304,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782627,
+          "srcTgtColId" : 789414,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "address.state",
           "srcTrgColDataType" : "VARCHAR",
@@ -292,7 +315,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782628,
+          "srcTgtColId" : 789415,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "address.street",
           "srcTrgColDataType" : "VARCHAR",
@@ -303,7 +326,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782629,
+          "srcTgtColId" : 789416,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "address.zip",
           "srcTrgColDataType" : "VARCHAR",
@@ -314,7 +337,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782630,
+          "srcTgtColId" : 789417,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "bannerphoto.bannerphotourl",
           "srcTrgColDataType" : "VARCHAR",
@@ -325,7 +348,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782631,
+          "srcTgtColId" : 789418,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "bannerphoto.bannerphotoversionid",
           "srcTrgColDataType" : "VARCHAR",
@@ -336,7 +359,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782632,
+          "srcTgtColId" : 789419,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "bannerphoto.url",
           "srcTrgColDataType" : "VARCHAR",
@@ -347,7 +370,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782633,
+          "srcTgtColId" : 789420,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "chatteractivity.commentcount",
           "srcTrgColDataType" : "INT",
@@ -358,7 +381,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782634,
+          "srcTgtColId" : 789421,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "chatteractivity.commentreceivedcount",
           "srcTrgColDataType" : "INT",
@@ -369,7 +392,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782635,
+          "srcTgtColId" : 789422,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "chatteractivity.likereceivedcount",
           "srcTrgColDataType" : "INT",
@@ -380,7 +403,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782636,
+          "srcTgtColId" : 789423,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "chatteractivity.postcount",
           "srcTrgColDataType" : "INT",
@@ -391,7 +414,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782637,
+          "srcTgtColId" : 789424,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "chatterinfluence.percentile",
           "srcTrgColDataType" : "VARCHAR",
@@ -402,7 +425,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782638,
+          "srcTgtColId" : 789425,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "chatterinfluence.rank",
           "srcTrgColDataType" : "INT",
@@ -413,7 +436,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782639,
+          "srcTgtColId" : 789426,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "communitynickname",
           "srcTrgColDataType" : "VARCHAR",
@@ -424,7 +447,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782640,
+          "srcTgtColId" : 789427,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "companyname",
           "srcTrgColDataType" : "VARCHAR",
@@ -435,7 +458,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782641,
+          "srcTgtColId" : 789428,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "displayname",
           "srcTrgColDataType" : "VARCHAR",
@@ -446,7 +469,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782642,
+          "srcTgtColId" : 789429,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "email",
           "srcTrgColDataType" : "VARCHAR",
@@ -457,7 +480,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782643,
+          "srcTgtColId" : 789430,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "firstname",
           "srcTrgColDataType" : "VARCHAR",
@@ -468,7 +491,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782644,
+          "srcTgtColId" : 789431,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "followerscount",
           "srcTrgColDataType" : "INT",
@@ -479,7 +502,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782645,
+          "srcTgtColId" : 789432,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "followingcounts.people",
           "srcTrgColDataType" : "INT",
@@ -490,7 +513,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782646,
+          "srcTgtColId" : 789433,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "followingcounts.records",
           "srcTrgColDataType" : "INT",
@@ -501,7 +524,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782647,
+          "srcTgtColId" : 789434,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "followingcounts.total",
           "srcTrgColDataType" : "INT",
@@ -512,7 +535,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782648,
+          "srcTgtColId" : 789435,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "groupcount",
           "srcTrgColDataType" : "INT",
@@ -523,7 +546,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782649,
+          "srcTgtColId" : 789436,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "haschatter",
           "srcTrgColDataType" : "BIT",
@@ -534,7 +557,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782650,
+          "srcTgtColId" : 789437,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "id",
           "srcTrgColDataType" : "VARCHAR",
@@ -545,7 +568,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782651,
+          "srcTgtColId" : 789438,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "isactive",
           "srcTrgColDataType" : "BIT",
@@ -556,7 +579,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782652,
+          "srcTgtColId" : 789439,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "isinthiscommunity",
           "srcTrgColDataType" : "BIT",
@@ -567,7 +590,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782653,
+          "srcTgtColId" : 789440,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "lastname",
           "srcTrgColDataType" : "VARCHAR",
@@ -578,7 +601,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782654,
+          "srcTgtColId" : 789441,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "managerid",
           "srcTrgColDataType" : "VARCHAR",
@@ -589,7 +612,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782655,
+          "srcTgtColId" : 789442,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "managername",
           "srcTrgColDataType" : "VARCHAR",
@@ -600,7 +623,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782656,
+          "srcTgtColId" : 789443,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "motif.color",
           "srcTrgColDataType" : "VARCHAR",
@@ -611,7 +634,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782657,
+          "srcTgtColId" : 789444,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "motif.largeiconurl",
           "srcTrgColDataType" : "VARCHAR",
@@ -622,7 +645,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782658,
+          "srcTgtColId" : 789445,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "motif.mediumiconurl",
           "srcTrgColDataType" : "VARCHAR",
@@ -633,7 +656,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782659,
+          "srcTgtColId" : 789446,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "motif.smalliconurl",
           "srcTrgColDataType" : "VARCHAR",
@@ -644,7 +667,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782660,
+          "srcTgtColId" : 789447,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "motif.svgiconurl",
           "srcTrgColDataType" : "VARCHAR",
@@ -655,7 +678,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782661,
+          "srcTgtColId" : 789448,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "mysubscription",
           "srcTrgColDataType" : "VARCHAR",
@@ -666,7 +689,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782662,
+          "srcTgtColId" : 789449,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "name",
           "srcTrgColDataType" : "VARCHAR",
@@ -677,7 +700,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782663,
+          "srcTgtColId" : 789450,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "outofoffice.message",
           "srcTrgColDataType" : "VARCHAR",
@@ -688,7 +711,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782664,
+          "srcTgtColId" : 789451,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "phonenumbers",
           "srcTrgColDataType" : "VARCHAR",
@@ -699,7 +722,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782665,
+          "srcTgtColId" : 789452,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "photo.fullemailphotourl",
           "srcTrgColDataType" : "VARCHAR",
@@ -710,7 +733,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782666,
+          "srcTgtColId" : 789453,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "photo.largephotourl",
           "srcTrgColDataType" : "VARCHAR",
@@ -721,7 +744,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782667,
+          "srcTgtColId" : 789454,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "photo.mediumphotourl",
           "srcTrgColDataType" : "VARCHAR",
@@ -732,7 +755,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782668,
+          "srcTgtColId" : 789455,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "photo.photoversionid",
           "srcTrgColDataType" : "VARCHAR",
@@ -743,7 +766,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782669,
+          "srcTgtColId" : 789456,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "photo.smallphotourl",
           "srcTrgColDataType" : "VARCHAR",
@@ -754,7 +777,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782670,
+          "srcTgtColId" : 789457,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "photo.standardemailphotourl",
           "srcTrgColDataType" : "VARCHAR",
@@ -765,7 +788,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782671,
+          "srcTgtColId" : 789458,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "photo.url",
           "srcTrgColDataType" : "VARCHAR",
@@ -776,7 +799,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782672,
+          "srcTgtColId" : 789459,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "reputation",
           "srcTrgColDataType" : "VARCHAR",
@@ -787,7 +810,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782673,
+          "srcTgtColId" : 789460,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "thanksreceived",
           "srcTrgColDataType" : "INT",
@@ -798,7 +821,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782674,
+          "srcTgtColId" : 789461,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "title",
           "srcTrgColDataType" : "VARCHAR",
@@ -809,7 +832,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782675,
+          "srcTgtColId" : 789462,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "type",
           "srcTrgColDataType" : "VARCHAR",
@@ -820,7 +843,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782676,
+          "srcTgtColId" : 789463,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "url",
           "srcTrgColDataType" : "VARCHAR",
@@ -831,7 +854,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782677,
+          "srcTgtColId" : 789464,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "usertype",
           "srcTrgColDataType" : "VARCHAR",
@@ -842,7 +865,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782678,
+          "srcTgtColId" : 789465,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "username",
           "srcTrgColDataType" : "VARCHAR",
@@ -853,7 +876,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 782679,
+          "srcTgtColId" : 789466,
           "ruleClsPropId" : 698649,
           "srcTrgColName" : "users:_id",
           "srcTrgColDataType" : "VARCHAR",
@@ -990,7 +1013,7 @@
       "classObjName" : "ICE_1611758355461",
       "queryBuilderXML" : null,
       "connId" : 698645,
-      "resultType" : "rowcount",
+      "resultType" : "expression",
       "connName" : null,
       "connUrl" : null,
       "connFullUrl" : null,
@@ -1006,7 +1029,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 782681,
+          "srcTgtColId" : 789468,
           "ruleClsPropId" : 698730,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -1049,7 +1072,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 782622,
+      "srcTgtColId" : 789409,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "aboutme",
       "srcTrgColDataType" : "VARCHAR",
@@ -1060,7 +1083,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782623,
+      "srcTgtColId" : 789410,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "additionallabel",
       "srcTrgColDataType" : "VARCHAR",
@@ -1071,7 +1094,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782624,
+      "srcTgtColId" : 789411,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "address.city",
       "srcTrgColDataType" : "VARCHAR",
@@ -1082,7 +1105,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782625,
+      "srcTgtColId" : 789412,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "address.country",
       "srcTrgColDataType" : "VARCHAR",
@@ -1093,7 +1116,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782626,
+      "srcTgtColId" : 789413,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "address.formattedaddress",
       "srcTrgColDataType" : "VARCHAR",
@@ -1104,7 +1127,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782627,
+      "srcTgtColId" : 789414,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "address.state",
       "srcTrgColDataType" : "VARCHAR",
@@ -1115,7 +1138,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782628,
+      "srcTgtColId" : 789415,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "address.street",
       "srcTrgColDataType" : "VARCHAR",
@@ -1126,7 +1149,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782629,
+      "srcTgtColId" : 789416,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "address.zip",
       "srcTrgColDataType" : "VARCHAR",
@@ -1137,7 +1160,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782630,
+      "srcTgtColId" : 789417,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "bannerphoto.bannerphotourl",
       "srcTrgColDataType" : "VARCHAR",
@@ -1148,7 +1171,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782631,
+      "srcTgtColId" : 789418,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "bannerphoto.bannerphotoversionid",
       "srcTrgColDataType" : "VARCHAR",
@@ -1159,7 +1182,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782632,
+      "srcTgtColId" : 789419,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "bannerphoto.url",
       "srcTrgColDataType" : "VARCHAR",
@@ -1170,7 +1193,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782633,
+      "srcTgtColId" : 789420,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "chatteractivity.commentcount",
       "srcTrgColDataType" : "INT",
@@ -1181,7 +1204,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782634,
+      "srcTgtColId" : 789421,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "chatteractivity.commentreceivedcount",
       "srcTrgColDataType" : "INT",
@@ -1192,7 +1215,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782635,
+      "srcTgtColId" : 789422,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "chatteractivity.likereceivedcount",
       "srcTrgColDataType" : "INT",
@@ -1203,7 +1226,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782636,
+      "srcTgtColId" : 789423,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "chatteractivity.postcount",
       "srcTrgColDataType" : "INT",
@@ -1214,7 +1237,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782637,
+      "srcTgtColId" : 789424,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "chatterinfluence.percentile",
       "srcTrgColDataType" : "VARCHAR",
@@ -1225,7 +1248,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782638,
+      "srcTgtColId" : 789425,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "chatterinfluence.rank",
       "srcTrgColDataType" : "INT",
@@ -1236,7 +1259,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782639,
+      "srcTgtColId" : 789426,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "communitynickname",
       "srcTrgColDataType" : "VARCHAR",
@@ -1247,7 +1270,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782640,
+      "srcTgtColId" : 789427,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "companyname",
       "srcTrgColDataType" : "VARCHAR",
@@ -1258,7 +1281,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782641,
+      "srcTgtColId" : 789428,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "displayname",
       "srcTrgColDataType" : "VARCHAR",
@@ -1269,7 +1292,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782642,
+      "srcTgtColId" : 789429,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "email",
       "srcTrgColDataType" : "VARCHAR",
@@ -1280,7 +1303,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782643,
+      "srcTgtColId" : 789430,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "firstname",
       "srcTrgColDataType" : "VARCHAR",
@@ -1291,7 +1314,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782644,
+      "srcTgtColId" : 789431,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "followerscount",
       "srcTrgColDataType" : "INT",
@@ -1302,7 +1325,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782645,
+      "srcTgtColId" : 789432,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "followingcounts.people",
       "srcTrgColDataType" : "INT",
@@ -1313,7 +1336,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782646,
+      "srcTgtColId" : 789433,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "followingcounts.records",
       "srcTrgColDataType" : "INT",
@@ -1324,7 +1347,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782647,
+      "srcTgtColId" : 789434,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "followingcounts.total",
       "srcTrgColDataType" : "INT",
@@ -1335,7 +1358,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782648,
+      "srcTgtColId" : 789435,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "groupcount",
       "srcTrgColDataType" : "INT",
@@ -1346,7 +1369,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782649,
+      "srcTgtColId" : 789436,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "haschatter",
       "srcTrgColDataType" : "BIT",
@@ -1357,7 +1380,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782650,
+      "srcTgtColId" : 789437,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "id",
       "srcTrgColDataType" : "VARCHAR",
@@ -1368,7 +1391,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782651,
+      "srcTgtColId" : 789438,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "isactive",
       "srcTrgColDataType" : "BIT",
@@ -1379,7 +1402,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782652,
+      "srcTgtColId" : 789439,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "isinthiscommunity",
       "srcTrgColDataType" : "BIT",
@@ -1390,7 +1413,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782653,
+      "srcTgtColId" : 789440,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "lastname",
       "srcTrgColDataType" : "VARCHAR",
@@ -1401,7 +1424,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782654,
+      "srcTgtColId" : 789441,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "managerid",
       "srcTrgColDataType" : "VARCHAR",
@@ -1412,7 +1435,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782655,
+      "srcTgtColId" : 789442,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "managername",
       "srcTrgColDataType" : "VARCHAR",
@@ -1423,7 +1446,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782656,
+      "srcTgtColId" : 789443,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "motif.color",
       "srcTrgColDataType" : "VARCHAR",
@@ -1434,7 +1457,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782657,
+      "srcTgtColId" : 789444,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "motif.largeiconurl",
       "srcTrgColDataType" : "VARCHAR",
@@ -1445,7 +1468,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782658,
+      "srcTgtColId" : 789445,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "motif.mediumiconurl",
       "srcTrgColDataType" : "VARCHAR",
@@ -1456,7 +1479,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782659,
+      "srcTgtColId" : 789446,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "motif.smalliconurl",
       "srcTrgColDataType" : "VARCHAR",
@@ -1467,7 +1490,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782660,
+      "srcTgtColId" : 789447,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "motif.svgiconurl",
       "srcTrgColDataType" : "VARCHAR",
@@ -1478,7 +1501,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782661,
+      "srcTgtColId" : 789448,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "mysubscription",
       "srcTrgColDataType" : "VARCHAR",
@@ -1489,7 +1512,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782662,
+      "srcTgtColId" : 789449,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "name",
       "srcTrgColDataType" : "VARCHAR",
@@ -1500,7 +1523,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782663,
+      "srcTgtColId" : 789450,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "outofoffice.message",
       "srcTrgColDataType" : "VARCHAR",
@@ -1511,7 +1534,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782664,
+      "srcTgtColId" : 789451,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "phonenumbers",
       "srcTrgColDataType" : "VARCHAR",
@@ -1522,7 +1545,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782665,
+      "srcTgtColId" : 789452,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "photo.fullemailphotourl",
       "srcTrgColDataType" : "VARCHAR",
@@ -1533,7 +1556,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782666,
+      "srcTgtColId" : 789453,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "photo.largephotourl",
       "srcTrgColDataType" : "VARCHAR",
@@ -1544,7 +1567,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782667,
+      "srcTgtColId" : 789454,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "photo.mediumphotourl",
       "srcTrgColDataType" : "VARCHAR",
@@ -1555,7 +1578,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782668,
+      "srcTgtColId" : 789455,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "photo.photoversionid",
       "srcTrgColDataType" : "VARCHAR",
@@ -1566,7 +1589,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782669,
+      "srcTgtColId" : 789456,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "photo.smallphotourl",
       "srcTrgColDataType" : "VARCHAR",
@@ -1577,7 +1600,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782670,
+      "srcTgtColId" : 789457,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "photo.standardemailphotourl",
       "srcTrgColDataType" : "VARCHAR",
@@ -1588,7 +1611,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782671,
+      "srcTgtColId" : 789458,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "photo.url",
       "srcTrgColDataType" : "VARCHAR",
@@ -1599,7 +1622,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782672,
+      "srcTgtColId" : 789459,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "reputation",
       "srcTrgColDataType" : "VARCHAR",
@@ -1610,7 +1633,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782673,
+      "srcTgtColId" : 789460,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "thanksreceived",
       "srcTrgColDataType" : "INT",
@@ -1621,7 +1644,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782674,
+      "srcTgtColId" : 789461,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "title",
       "srcTrgColDataType" : "VARCHAR",
@@ -1632,7 +1655,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782675,
+      "srcTgtColId" : 789462,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "type",
       "srcTrgColDataType" : "VARCHAR",
@@ -1643,7 +1666,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782676,
+      "srcTgtColId" : 789463,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "url",
       "srcTrgColDataType" : "VARCHAR",
@@ -1654,7 +1677,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782677,
+      "srcTgtColId" : 789464,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "usertype",
       "srcTrgColDataType" : "VARCHAR",
@@ -1665,7 +1688,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782678,
+      "srcTgtColId" : 789465,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "username",
       "srcTrgColDataType" : "VARCHAR",
@@ -1676,7 +1699,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782679,
+      "srcTgtColId" : 789466,
       "ruleClsPropId" : 698649,
       "srcTrgColName" : "users:_id",
       "srcTrgColDataType" : "VARCHAR",
@@ -1687,7 +1710,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 782681,
+      "srcTgtColId" : 789468,
       "ruleClsPropId" : 698730,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -1699,9 +1722,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 782683,
-      "srcColId" : 782622,
-      "trgColId" : 782681,
+      "colMapId" : 789470,
+      "srcColId" : 789409,
+      "trgColId" : 789468,
       "colMapType" : "join",
       "srcColName" : "aboutme",
       "tgtColName" : "cnt",
@@ -1725,6 +1748,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 789471,
+      "exprLogID" : 0,
+      "exprName" : "Length_Inacuracy",
+      "expression" : "S.additionallabel.toString().substring(0,15).length() == 15",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 691864,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 698648,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
