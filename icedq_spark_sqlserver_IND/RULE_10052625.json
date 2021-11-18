@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 10053831,
-        "srcColId" : 10053825,
-        "trgColId" : 10053828,
+        "colMapId" : 10053873,
+        "srcColId" : 10053868,
+        "trgColId" : 10053871,
         "colMapType" : "join",
         "srcColName" : "customerid",
         "tgtColName" : "cnt",
@@ -109,7 +109,7 @@
         "exprID" : 10052658,
         "exprLogID" : 0,
         "exprName" : "Greater than check",
-        "expression" : "( S.num_salary - 5000 )  > 5000",
+        "expression" : "( S.num_salary - 5000 )  \n> \n5000",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -121,7 +121,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "( S.num_salary - 5000 )  > 5000",
+        "exprOrg" : "( S.num_salary - 5000 )  \n> \n5000",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -132,7 +132,7 @@
         "exprID" : 10052659,
         "exprLogID" : 0,
         "exprName" : "Null check",
-        "expression" : "S.num_salary !=  null",
+        "expression" : "S.num_salary \n!= \n null",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -144,7 +144,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.num_salary !=  null",
+        "exprOrg" : "S.num_salary \n!= \n null",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -272,7 +272,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "Select customerid, cast(nvarchar2_Salary as NUMBER(38)) num_salary from\n(\nselect 1001 CustomerId, 'Acc001' AccountNumber, cast('10000' as NVARCHAR2(2000)) nvarchar2_Salary, 'M' Gender from dual\nUNION ALL\nselect 1002 CustomerId, 'Acc002' AccountNumber, cast('12000      ' as NVARCHAR2(2000)) nvarchar2_Salary, 'F' Gender from dual\nUNION ALL\nselect 1003 CustomerId, 'Acc003' AccountNumber, cast('      12000' as NVARCHAR2(2000)) nvarchar2_Salary, 'F' Gender from dual\nUNION ALL\nselect 1004 CustomerId, 'Acc004' AccountNumber, cast(null as NVARCHAR2(2000)) nvarchar2_Salary, 'M' Gender from dual\nUNION ALL\nselect 1005 CustomerId, 'Acc005' AccountNumber, cast(NULL as NVARCHAR2(2000)) nvarchar2_Salary, 'F' Gender from dual\nUNION ALL\nselect 1006 CustomerId, 'Acc006' AccountNumber, cast(Null as NVARCHAR2(2000)) nvarchar2_Salary, 'F' Gender from dual\nUNION ALL\nselect 1007 CustomerId, 'Acc007' AccountNumber, cast('' as NVARCHAR2(2000)) nvarchar2_Salary, 'M' Gender from dual\nUNION ALL\nselect 1008 CustomerId, 'Acc008' AccountNumber, cast('0000' as NVARCHAR2(2000)) nvarchar2_Salary, 'M' Gender from dual\nUNION ALL\nselect 1009 CustomerId, 'Acc009' AccountNumber, cast('-250' as NVARCHAR2(1000)) nvarchar2_Salary, 'F' Gender from dual\n) Customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 10053825,
+          "srcTgtColId" : 10053868,
           "ruleClsPropId" : 10052641,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "NUMBER",
@@ -283,7 +283,7 @@
           "colFormat" : "",
           "displayIndex" : 1
         }, {
-          "srcTgtColId" : 10053826,
+          "srcTgtColId" : 10053869,
           "ruleClsPropId" : 10052641,
           "srcTrgColName" : "num_salary",
           "srcTrgColDataType" : "NUMBER",
@@ -387,7 +387,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 10053828,
+          "srcTgtColId" : 10053871,
           "ruleClsPropId" : 10052654,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -409,7 +409,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 10053825,
+      "srcTgtColId" : 10053868,
       "ruleClsPropId" : 10052641,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "NUMBER",
@@ -420,7 +420,7 @@
       "colFormat" : "",
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 10053826,
+      "srcTgtColId" : 10053869,
       "ruleClsPropId" : 10052641,
       "srcTrgColName" : "num_salary",
       "srcTrgColDataType" : "NUMBER",
@@ -431,7 +431,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10053828,
+      "srcTgtColId" : 10053871,
       "ruleClsPropId" : 10052654,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -443,9 +443,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 10053831,
-      "srcColId" : 10053825,
-      "trgColId" : 10053828,
+      "colMapId" : 10053873,
+      "srcColId" : 10053868,
+      "trgColId" : 10053871,
       "colMapType" : "join",
       "srcColName" : "customerid",
       "tgtColName" : "cnt",
@@ -473,7 +473,7 @@
       "exprID" : 10052658,
       "exprLogID" : 0,
       "exprName" : "Greater than check",
-      "expression" : "( S.num_salary - 5000 )  > 5000",
+      "expression" : "( S.num_salary - 5000 )  \n> \n5000",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
@@ -496,7 +496,7 @@
       "exprID" : 10052659,
       "exprLogID" : 0,
       "exprName" : "Null check",
-      "expression" : "S.num_salary !=  null",
+      "expression" : "S.num_salary \n!= \n null",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
