@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-11-19 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-11-19 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -49,12 +49,12 @@
     "srcConn" : "OracleDB",
     "trgConn" : "OracleDB",
     "elapseTime" : 0,
-    "parameterId" : null,
+    "parameterId" : "",
     "type" : null,
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "16.7.4",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 10058745,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 10058777,
-        "srcColId" : 10058769,
-        "trgColId" : 10058776,
+        "colMapId" : 10058787,
+        "srcColId" : 10058782,
+        "trgColId" : 10058785,
         "colMapType" : "join",
         "srcColName" : "customerid",
         "tgtColName" : "cnt",
@@ -226,7 +226,7 @@
         "ruleClsPropID" : 10058759,
         "paramId" : 798,
         "paramMethod" : "setEngineType",
-        "paramValue" : "V8",
+        "paramValue" : "Null",
         "srcTrgTbllist" : null,
         "fileContent" : null
       } ],
@@ -272,7 +272,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "Select customerid, cast(nvarchar2_Salary as NUMBER(38)) num_salary from\n(\nselect 1001 CustomerId, 'Acc001' AccountNumber, cast('10000' as NVARCHAR2(2000)) nvarchar2_Salary, 'M' Gender from dual\nUNION ALL\nselect 1002 CustomerId, 'Acc002' AccountNumber, cast('12000      ' as NVARCHAR2(2000)) nvarchar2_Salary, 'F' Gender from dual\nUNION ALL\nselect 1003 CustomerId, 'Acc003' AccountNumber, cast('      12000' as NVARCHAR2(2000)) nvarchar2_Salary, 'F' Gender from dual\nUNION ALL\nselect 1004 CustomerId, 'Acc004' AccountNumber, cast(null as NVARCHAR2(2000)) nvarchar2_Salary, 'M' Gender from dual\nUNION ALL\nselect 1005 CustomerId, 'Acc005' AccountNumber, cast(NULL as NVARCHAR2(2000)) nvarchar2_Salary, 'F' Gender from dual\nUNION ALL\nselect 1006 CustomerId, 'Acc006' AccountNumber, cast(Null as NVARCHAR2(2000)) nvarchar2_Salary, 'F' Gender from dual\nUNION ALL\nselect 1007 CustomerId, 'Acc007' AccountNumber, cast('' as NVARCHAR2(2000)) nvarchar2_Salary, 'M' Gender from dual\nUNION ALL\nselect 1008 CustomerId, 'Acc008' AccountNumber, cast('0000' as NVARCHAR2(2000)) nvarchar2_Salary, 'M' Gender from dual\nUNION ALL\nselect 1009 CustomerId, 'Acc009' AccountNumber, cast('-250' as NVARCHAR2(1000)) nvarchar2_Salary, 'F' Gender from dual\n) Customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 10058769,
+          "srcTgtColId" : 10058782,
           "ruleClsPropId" : 10058761,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "NUMBER",
@@ -283,7 +283,7 @@
           "colFormat" : "",
           "displayIndex" : 1
         }, {
-          "srcTgtColId" : 10058770,
+          "srcTgtColId" : 10058783,
           "ruleClsPropId" : 10058761,
           "srcTrgColName" : "num_salary",
           "srcTrgColDataType" : "NUMBER",
@@ -387,7 +387,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 10058776,
+          "srcTgtColId" : 10058785,
           "ruleClsPropId" : 10058774,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -409,7 +409,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 10058769,
+      "srcTgtColId" : 10058782,
       "ruleClsPropId" : 10058761,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "NUMBER",
@@ -420,7 +420,7 @@
       "colFormat" : "",
       "displayIndex" : 1
     }, {
-      "srcTgtColId" : 10058770,
+      "srcTgtColId" : 10058783,
       "ruleClsPropId" : 10058761,
       "srcTrgColName" : "num_salary",
       "srcTrgColDataType" : "NUMBER",
@@ -431,7 +431,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10058776,
+      "srcTgtColId" : 10058785,
       "ruleClsPropId" : 10058774,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -443,9 +443,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 10058777,
-      "srcColId" : 10058769,
-      "trgColId" : 10058776,
+      "colMapId" : 10058787,
+      "srcColId" : 10058782,
+      "trgColId" : 10058785,
       "colMapType" : "join",
       "srcColName" : "customerid",
       "tgtColName" : "cnt",
@@ -464,7 +464,7 @@
     "resultType" : null,
     "showErrorData" : null,
     "reportXlsx" : null,
-    "ruleParameter" : null,
+    "ruleParameter" : "",
     "classCreatedBy" : 0,
     "classModifydBy" : 0,
     "classCreateDate" : null,
