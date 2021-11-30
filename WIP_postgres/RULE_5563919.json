@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-11-30 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-11-30 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "HBase_Testing",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 5563920,
     "successBody" : "",
     "failureBody" : "",
@@ -102,7 +102,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5563951,
+          "srcTgtColId" : 5563960,
           "ruleClsPropId" : 5563949,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -171,7 +171,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select eebuc_20191125tablecol1008: , eebuc_20191125tablecol1012: , eebuc_20191125tablecol1018: as name from col100_10k",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5563943,
+          "srcTgtColId" : 5563956,
           "ruleClsPropId" : 5563941,
           "srcTrgColName" : "eebuc_20191125tablecol1008:",
           "srcTrgColDataType" : "VARCHAR",
@@ -182,7 +182,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563944,
+          "srcTgtColId" : 5563957,
           "ruleClsPropId" : 5563941,
           "srcTrgColName" : "eebuc_20191125tablecol1012:",
           "srcTrgColDataType" : "FLOAT",
@@ -193,7 +193,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563945,
+          "srcTgtColId" : 5563958,
           "ruleClsPropId" : 5563941,
           "srcTrgColName" : "name",
           "srcTrgColDataType" : "VARCHAR",
@@ -269,9 +269,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5563952,
-        "srcColId" : 5563943,
-        "trgColId" : 5563951,
+        "colMapId" : 5563962,
+        "srcColId" : 5563956,
+        "trgColId" : 5563960,
         "colMapType" : "join",
         "srcColName" : "eebuc_20191125tablecol1008:",
         "tgtColName" : "cnt",
@@ -282,7 +282,7 @@
       "exprlist" : [ {
         "exprID" : 5563953,
         "exprLogID" : 0,
-        "exprName" : "EXPR_SCE7U9Q",
+        "exprName" : "Name_Equals",
         "expression" : "S.name == 'Aubrey'",
         "result" : "Pass",
         "exprType" : "5",
@@ -304,6 +304,13 @@
         "exporg" : null
       } ],
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 5563923,
+        "paramId" : 531,
+        "paramMethod" : "setThresholdExpression",
+        "paramValue" : "",
+        "srcTrgTbllist" : [ ],
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 5563934,
         "paramId" : 465,
         "paramMethod" : "setReportXlsx",
@@ -373,13 +380,6 @@
         "paramValue" : "false",
         "srcTrgTbllist" : null,
         "fileContent" : null
-      }, {
-        "ruleClsPropID" : 5563923,
-        "paramId" : 531,
-        "paramMethod" : "setThresholdExpression",
-        "paramValue" : "",
-        "srcTrgTbllist" : [ ],
-        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -390,7 +390,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5563943,
+      "srcTgtColId" : 5563956,
       "ruleClsPropId" : 5563941,
       "srcTrgColName" : "eebuc_20191125tablecol1008:",
       "srcTrgColDataType" : "VARCHAR",
@@ -401,7 +401,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563944,
+      "srcTgtColId" : 5563957,
       "ruleClsPropId" : 5563941,
       "srcTrgColName" : "eebuc_20191125tablecol1012:",
       "srcTrgColDataType" : "FLOAT",
@@ -412,7 +412,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563945,
+      "srcTgtColId" : 5563958,
       "ruleClsPropId" : 5563941,
       "srcTrgColName" : "name",
       "srcTrgColDataType" : "VARCHAR",
@@ -423,7 +423,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563951,
+      "srcTgtColId" : 5563960,
       "ruleClsPropId" : 5563949,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -435,9 +435,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5563952,
-      "srcColId" : 5563943,
-      "trgColId" : 5563951,
+      "colMapId" : 5563962,
+      "srcColId" : 5563956,
+      "trgColId" : 5563960,
       "colMapType" : "join",
       "srcColName" : "eebuc_20191125tablecol1008:",
       "tgtColName" : "cnt",
@@ -464,7 +464,7 @@
     "exprVOList" : [ {
       "exprID" : 5563953,
       "exprLogID" : 0,
-      "exprName" : "EXPR_SCE7U9Q",
+      "exprName" : "Name_Equals",
       "expression" : "S.name == 'Aubrey'",
       "result" : "Pass",
       "exprType" : "5",
