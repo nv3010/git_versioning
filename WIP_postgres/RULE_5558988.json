@@ -3,7 +3,7 @@
     "id" : 5558988,
     "ruleInstanceId" : 0,
     "ruleDesc" : "",
-    "execMode" : "recon",
+    "execMode" : "htrecon",
     "exitCode" : null,
     "folderId" : 5558503,
     "projectId" : 5558501,
@@ -79,7 +79,7 @@
       "name" : null,
       "ruleClassId" : 5558989,
       "connType" : "",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 5563017,
-        "srcColId" : 5562994,
-        "trgColId" : 5563006,
+        "colMapId" : 5563054,
+        "srcColId" : 5563030,
+        "trgColId" : 5563042,
         "colMapType" : "join",
         "srcColName" : "rowkey",
         "tgtColName" : "rowkey",
@@ -106,7 +106,7 @@
         "displayIndex" : 11
       } ],
       "exprlist" : [ {
-        "exprID" : 5563018,
+        "exprID" : 5563055,
         "exprLogID" : 0,
         "exprName" : "rowkey",
         "expression" : "S.rowkey == T.rowkey",
@@ -129,7 +129,7 @@
         "ve" : 0,
         "exporg" : null
       }, {
-        "exprID" : 5563019,
+        "exprID" : 5563056,
         "exprLogID" : 0,
         "exprName" : "cf:addr_id",
         "expression" : "S.cf:addr_id == T.cf:addr_id",
@@ -152,7 +152,7 @@
         "ve" : 0,
         "exporg" : null
       }, {
-        "exprID" : 5563020,
+        "exprID" : 5563057,
         "exprLogID" : 0,
         "exprName" : "cf:birth_day",
         "expression" : "S.cf:birth_day == T.cf:birth_day",
@@ -175,7 +175,7 @@
         "ve" : 0,
         "exporg" : null
       }, {
-        "exprID" : 5563021,
+        "exprID" : 5563058,
         "exprLogID" : 0,
         "exprName" : "cf:birth_month",
         "expression" : "S.cf:birth_month == T.cf:birth_month",
@@ -198,7 +198,7 @@
         "ve" : 0,
         "exporg" : null
       }, {
-        "exprID" : 5563022,
+        "exprID" : 5563059,
         "exprLogID" : 0,
         "exprName" : "cf:birth_year",
         "expression" : "S.cf:birth_year == T.cf:birth_year",
@@ -221,7 +221,7 @@
         "ve" : 0,
         "exporg" : null
       }, {
-        "exprID" : 5563023,
+        "exprID" : 5563060,
         "exprLogID" : 0,
         "exprName" : "cf:birthdate",
         "expression" : "S.cf:birthdate == T.cf:birthdate",
@@ -244,7 +244,7 @@
         "ve" : 0,
         "exporg" : null
       }, {
-        "exprID" : 5563024,
+        "exprID" : 5563061,
         "exprLogID" : 0,
         "exprName" : "cf:cust_key",
         "expression" : "S.cf:cust_key == T.cf:cust_key",
@@ -267,7 +267,7 @@
         "ve" : 0,
         "exporg" : null
       }, {
-        "exprID" : 5563025,
+        "exprID" : 5563062,
         "exprLogID" : 0,
         "exprName" : "cf:cust_type",
         "expression" : "S.cf:cust_type == T.cf:cust_type",
@@ -290,7 +290,7 @@
         "ve" : 0,
         "exporg" : null
       }, {
-        "exprID" : 5563026,
+        "exprID" : 5563063,
         "exprLogID" : 0,
         "exprName" : "cf:email",
         "expression" : "S.cf:email == T.cf:email",
@@ -313,7 +313,7 @@
         "ve" : 0,
         "exporg" : null
       }, {
-        "exprID" : 5563027,
+        "exprID" : 5563064,
         "exprLogID" : 0,
         "exprName" : "cf:full_name",
         "expression" : "S.cf:full_name == T.cf:full_name",
@@ -337,6 +337,13 @@
         "exporg" : null
       } ],
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 5563052,
+        "paramId" : 487,
+        "paramMethod" : "setDegreeOfParallelism",
+        "paramValue" : "1",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 5559002,
         "paramId" : 531,
         "paramMethod" : "setThresholdExpression",
@@ -426,7 +433,7 @@
       "name" : null,
       "ruleClassId" : 5558991,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
@@ -491,7 +498,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from customer_cf",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5563006,
+          "srcTgtColId" : 5563042,
           "ruleClsPropId" : 5559010,
           "srcTrgColName" : "rowkey",
           "srcTrgColDataType" : "VARCHAR",
@@ -502,7 +509,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563007,
+          "srcTgtColId" : 5563043,
           "ruleClsPropId" : 5559010,
           "srcTrgColName" : "cf:addr_id",
           "srcTrgColDataType" : "INT",
@@ -513,7 +520,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563008,
+          "srcTgtColId" : 5563044,
           "ruleClsPropId" : 5559010,
           "srcTrgColName" : "cf:birth_day",
           "srcTrgColDataType" : "INT",
@@ -524,7 +531,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563009,
+          "srcTgtColId" : 5563045,
           "ruleClsPropId" : 5559010,
           "srcTrgColName" : "cf:birth_month",
           "srcTrgColDataType" : "INT",
@@ -535,7 +542,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563010,
+          "srcTgtColId" : 5563046,
           "ruleClsPropId" : 5559010,
           "srcTrgColName" : "cf:birth_year",
           "srcTrgColDataType" : "INT",
@@ -546,7 +553,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563011,
+          "srcTgtColId" : 5563047,
           "ruleClsPropId" : 5559010,
           "srcTrgColName" : "cf:birthdate",
           "srcTrgColDataType" : "DATE",
@@ -557,7 +564,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563012,
+          "srcTgtColId" : 5563048,
           "ruleClsPropId" : 5559010,
           "srcTrgColName" : "cf:cust_key",
           "srcTrgColDataType" : "VARCHAR",
@@ -568,7 +575,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563013,
+          "srcTgtColId" : 5563049,
           "ruleClsPropId" : 5559010,
           "srcTrgColName" : "cf:cust_type",
           "srcTrgColDataType" : "VARCHAR",
@@ -579,7 +586,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563014,
+          "srcTgtColId" : 5563050,
           "ruleClsPropId" : 5559010,
           "srcTrgColName" : "cf:email",
           "srcTrgColDataType" : "VARCHAR",
@@ -590,7 +597,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563015,
+          "srcTgtColId" : 5563051,
           "ruleClsPropId" : 5559010,
           "srcTrgColName" : "cf:full_name",
           "srcTrgColDataType" : "VARCHAR",
@@ -615,7 +622,7 @@
       "name" : null,
       "ruleClassId" : 5558990,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
@@ -680,7 +687,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from customer_cf",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 5562994,
+          "srcTgtColId" : 5563030,
           "ruleClsPropId" : 5559003,
           "srcTrgColName" : "rowkey",
           "srcTrgColDataType" : "VARCHAR",
@@ -691,7 +698,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5562995,
+          "srcTgtColId" : 5563031,
           "ruleClsPropId" : 5559003,
           "srcTrgColName" : "cf:addr_id",
           "srcTrgColDataType" : "INT",
@@ -702,7 +709,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5562996,
+          "srcTgtColId" : 5563032,
           "ruleClsPropId" : 5559003,
           "srcTrgColName" : "cf:birth_day",
           "srcTrgColDataType" : "INT",
@@ -713,7 +720,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5562997,
+          "srcTgtColId" : 5563033,
           "ruleClsPropId" : 5559003,
           "srcTrgColName" : "cf:birth_month",
           "srcTrgColDataType" : "INT",
@@ -724,7 +731,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5562998,
+          "srcTgtColId" : 5563034,
           "ruleClsPropId" : 5559003,
           "srcTrgColName" : "cf:birth_year",
           "srcTrgColDataType" : "INT",
@@ -735,7 +742,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5562999,
+          "srcTgtColId" : 5563035,
           "ruleClsPropId" : 5559003,
           "srcTrgColName" : "cf:birthdate",
           "srcTrgColDataType" : "DATE",
@@ -746,7 +753,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563000,
+          "srcTgtColId" : 5563036,
           "ruleClsPropId" : 5559003,
           "srcTrgColName" : "cf:cust_key",
           "srcTrgColDataType" : "VARCHAR",
@@ -757,7 +764,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563001,
+          "srcTgtColId" : 5563037,
           "ruleClsPropId" : 5559003,
           "srcTrgColName" : "cf:cust_type",
           "srcTrgColDataType" : "VARCHAR",
@@ -768,7 +775,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563002,
+          "srcTgtColId" : 5563038,
           "ruleClsPropId" : 5559003,
           "srcTrgColName" : "cf:email",
           "srcTrgColDataType" : "VARCHAR",
@@ -779,7 +786,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 5563003,
+          "srcTgtColId" : 5563039,
           "ruleClsPropId" : 5559003,
           "srcTrgColName" : "cf:full_name",
           "srcTrgColDataType" : "VARCHAR",
@@ -801,7 +808,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 5562994,
+      "srcTgtColId" : 5563030,
       "ruleClsPropId" : 5559003,
       "srcTrgColName" : "rowkey",
       "srcTrgColDataType" : "VARCHAR",
@@ -812,7 +819,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5562995,
+      "srcTgtColId" : 5563031,
       "ruleClsPropId" : 5559003,
       "srcTrgColName" : "cf:addr_id",
       "srcTrgColDataType" : "INT",
@@ -823,7 +830,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5562996,
+      "srcTgtColId" : 5563032,
       "ruleClsPropId" : 5559003,
       "srcTrgColName" : "cf:birth_day",
       "srcTrgColDataType" : "INT",
@@ -834,7 +841,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5562997,
+      "srcTgtColId" : 5563033,
       "ruleClsPropId" : 5559003,
       "srcTrgColName" : "cf:birth_month",
       "srcTrgColDataType" : "INT",
@@ -845,7 +852,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5562998,
+      "srcTgtColId" : 5563034,
       "ruleClsPropId" : 5559003,
       "srcTrgColName" : "cf:birth_year",
       "srcTrgColDataType" : "INT",
@@ -856,7 +863,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5562999,
+      "srcTgtColId" : 5563035,
       "ruleClsPropId" : 5559003,
       "srcTrgColName" : "cf:birthdate",
       "srcTrgColDataType" : "DATE",
@@ -867,7 +874,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563000,
+      "srcTgtColId" : 5563036,
       "ruleClsPropId" : 5559003,
       "srcTrgColName" : "cf:cust_key",
       "srcTrgColDataType" : "VARCHAR",
@@ -878,7 +885,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563001,
+      "srcTgtColId" : 5563037,
       "ruleClsPropId" : 5559003,
       "srcTrgColName" : "cf:cust_type",
       "srcTrgColDataType" : "VARCHAR",
@@ -889,7 +896,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563002,
+      "srcTgtColId" : 5563038,
       "ruleClsPropId" : 5559003,
       "srcTrgColName" : "cf:email",
       "srcTrgColDataType" : "VARCHAR",
@@ -900,7 +907,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563003,
+      "srcTgtColId" : 5563039,
       "ruleClsPropId" : 5559003,
       "srcTrgColName" : "cf:full_name",
       "srcTrgColDataType" : "VARCHAR",
@@ -911,7 +918,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563006,
+      "srcTgtColId" : 5563042,
       "ruleClsPropId" : 5559010,
       "srcTrgColName" : "rowkey",
       "srcTrgColDataType" : "VARCHAR",
@@ -922,7 +929,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563007,
+      "srcTgtColId" : 5563043,
       "ruleClsPropId" : 5559010,
       "srcTrgColName" : "cf:addr_id",
       "srcTrgColDataType" : "INT",
@@ -933,7 +940,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563008,
+      "srcTgtColId" : 5563044,
       "ruleClsPropId" : 5559010,
       "srcTrgColName" : "cf:birth_day",
       "srcTrgColDataType" : "INT",
@@ -944,7 +951,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563009,
+      "srcTgtColId" : 5563045,
       "ruleClsPropId" : 5559010,
       "srcTrgColName" : "cf:birth_month",
       "srcTrgColDataType" : "INT",
@@ -955,7 +962,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563010,
+      "srcTgtColId" : 5563046,
       "ruleClsPropId" : 5559010,
       "srcTrgColName" : "cf:birth_year",
       "srcTrgColDataType" : "INT",
@@ -966,7 +973,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563011,
+      "srcTgtColId" : 5563047,
       "ruleClsPropId" : 5559010,
       "srcTrgColName" : "cf:birthdate",
       "srcTrgColDataType" : "DATE",
@@ -977,7 +984,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563012,
+      "srcTgtColId" : 5563048,
       "ruleClsPropId" : 5559010,
       "srcTrgColName" : "cf:cust_key",
       "srcTrgColDataType" : "VARCHAR",
@@ -988,7 +995,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563013,
+      "srcTgtColId" : 5563049,
       "ruleClsPropId" : 5559010,
       "srcTrgColName" : "cf:cust_type",
       "srcTrgColDataType" : "VARCHAR",
@@ -999,7 +1006,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563014,
+      "srcTgtColId" : 5563050,
       "ruleClsPropId" : 5559010,
       "srcTrgColName" : "cf:email",
       "srcTrgColDataType" : "VARCHAR",
@@ -1010,7 +1017,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 5563015,
+      "srcTgtColId" : 5563051,
       "ruleClsPropId" : 5559010,
       "srcTrgColName" : "cf:full_name",
       "srcTrgColDataType" : "VARCHAR",
@@ -1022,9 +1029,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 5563017,
-      "srcColId" : 5562994,
-      "trgColId" : 5563006,
+      "colMapId" : 5563054,
+      "srcColId" : 5563030,
+      "trgColId" : 5563042,
       "colMapType" : "join",
       "srcColName" : "rowkey",
       "tgtColName" : "rowkey",
@@ -1049,7 +1056,7 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 5563018,
+      "exprID" : 5563055,
       "exprLogID" : 0,
       "exprName" : "rowkey",
       "expression" : "S.rowkey == T.rowkey",
@@ -1072,7 +1079,7 @@
       "ve" : 0,
       "exporg" : null
     }, {
-      "exprID" : 5563019,
+      "exprID" : 5563056,
       "exprLogID" : 0,
       "exprName" : "cf:addr_id",
       "expression" : "S.cf:addr_id == T.cf:addr_id",
@@ -1095,7 +1102,7 @@
       "ve" : 0,
       "exporg" : null
     }, {
-      "exprID" : 5563020,
+      "exprID" : 5563057,
       "exprLogID" : 0,
       "exprName" : "cf:birth_day",
       "expression" : "S.cf:birth_day == T.cf:birth_day",
@@ -1118,7 +1125,7 @@
       "ve" : 0,
       "exporg" : null
     }, {
-      "exprID" : 5563021,
+      "exprID" : 5563058,
       "exprLogID" : 0,
       "exprName" : "cf:birth_month",
       "expression" : "S.cf:birth_month == T.cf:birth_month",
@@ -1141,7 +1148,7 @@
       "ve" : 0,
       "exporg" : null
     }, {
-      "exprID" : 5563022,
+      "exprID" : 5563059,
       "exprLogID" : 0,
       "exprName" : "cf:birth_year",
       "expression" : "S.cf:birth_year == T.cf:birth_year",
@@ -1164,7 +1171,7 @@
       "ve" : 0,
       "exporg" : null
     }, {
-      "exprID" : 5563023,
+      "exprID" : 5563060,
       "exprLogID" : 0,
       "exprName" : "cf:birthdate",
       "expression" : "S.cf:birthdate == T.cf:birthdate",
@@ -1187,7 +1194,7 @@
       "ve" : 0,
       "exporg" : null
     }, {
-      "exprID" : 5563024,
+      "exprID" : 5563061,
       "exprLogID" : 0,
       "exprName" : "cf:cust_key",
       "expression" : "S.cf:cust_key == T.cf:cust_key",
@@ -1210,7 +1217,7 @@
       "ve" : 0,
       "exporg" : null
     }, {
-      "exprID" : 5563025,
+      "exprID" : 5563062,
       "exprLogID" : 0,
       "exprName" : "cf:cust_type",
       "expression" : "S.cf:cust_type == T.cf:cust_type",
@@ -1233,7 +1240,7 @@
       "ve" : 0,
       "exporg" : null
     }, {
-      "exprID" : 5563026,
+      "exprID" : 5563063,
       "exprLogID" : 0,
       "exprName" : "cf:email",
       "expression" : "S.cf:email == T.cf:email",
@@ -1256,7 +1263,7 @@
       "ve" : 0,
       "exporg" : null
     }, {
-      "exprID" : 5563027,
+      "exprID" : 5563064,
       "exprLogID" : 0,
       "exprName" : "cf:full_name",
       "expression" : "S.cf:full_name == T.cf:full_name",
