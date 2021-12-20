@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-12-20 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-12-20 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "MMTraining",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 861041,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 861080,
-        "srcColId" : 861050,
-        "trgColId" : 861067,
+        "colMapId" : 861099,
+        "srcColId" : 861084,
+        "trgColId" : 861097,
         "colMapType" : "join",
         "srcColName" : "customerid",
         "tgtColName" : "gd",
@@ -106,10 +106,10 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 861081,
+        "exprID" : 861100,
         "exprLogID" : 0,
-        "exprName" : "EXPR_6ZLBRB9",
-        "expression" : "S.gender == 'M'",
+        "exprName" : "genChk",
+        "expression" : "S.gender in [ 'M', 'F' ]",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -121,7 +121,30 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.gender == 'M'",
+        "exprOrg" : "S.gender in [ 'M', 'F' ]",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      }, {
+        "exprID" : 861101,
+        "exprLogID" : 0,
+        "exprName" : "nmChk",
+        "expression" : "S.firstname != null",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 861038,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 861041,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.firstname != null",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -242,7 +265,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from dbo.Customer",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 861050,
+          "srcTgtColId" : 861084,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "customerid",
           "srcTrgColDataType" : "int",
@@ -253,7 +276,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 861051,
+          "srcTgtColId" : 861085,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "acctnumber",
           "srcTrgColDataType" : "varchar",
@@ -264,7 +287,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 861052,
+          "srcTgtColId" : 861086,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "firstname",
           "srcTrgColDataType" : "varchar",
@@ -275,7 +298,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 861053,
+          "srcTgtColId" : 861087,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "lastname",
           "srcTrgColDataType" : "varchar",
@@ -286,7 +309,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 861054,
+          "srcTgtColId" : 861088,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "gender",
           "srcTrgColDataType" : "char",
@@ -297,7 +320,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 861055,
+          "srcTgtColId" : 861089,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "birthdate",
           "srcTrgColDataType" : "nvarchar",
@@ -308,7 +331,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 861056,
+          "srcTgtColId" : 861090,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "datefirstpurchase",
           "srcTrgColDataType" : "varchar",
@@ -319,7 +342,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 861057,
+          "srcTgtColId" : 861091,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "phoneno",
           "srcTrgColDataType" : "varchar",
@@ -330,7 +353,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 861058,
+          "srcTgtColId" : 861092,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "email",
           "srcTrgColDataType" : "varchar",
@@ -341,7 +364,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 861059,
+          "srcTgtColId" : 861093,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "yearlyincome",
           "srcTrgColDataType" : "varchar",
@@ -352,7 +375,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 861060,
+          "srcTgtColId" : 861094,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "addressid",
           "srcTrgColDataType" : "int",
@@ -363,7 +386,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 861061,
+          "srcTgtColId" : 861095,
           "ruleClsPropId" : 861042,
           "srcTrgColName" : "load_date",
           "srcTrgColDataType" : "nvarchar",
@@ -446,7 +469,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select GETDATE() as gd",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 861067,
+          "srcTgtColId" : 861097,
           "ruleClsPropId" : 861062,
           "srcTrgColName" : "gd",
           "srcTrgColDataType" : "String",
@@ -489,7 +512,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 861050,
+      "srcTgtColId" : 861084,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "customerid",
       "srcTrgColDataType" : "int",
@@ -500,7 +523,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861051,
+      "srcTgtColId" : 861085,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "acctnumber",
       "srcTrgColDataType" : "varchar",
@@ -511,7 +534,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861052,
+      "srcTgtColId" : 861086,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "firstname",
       "srcTrgColDataType" : "varchar",
@@ -522,7 +545,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861053,
+      "srcTgtColId" : 861087,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "lastname",
       "srcTrgColDataType" : "varchar",
@@ -533,7 +556,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861054,
+      "srcTgtColId" : 861088,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "gender",
       "srcTrgColDataType" : "char",
@@ -544,7 +567,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861055,
+      "srcTgtColId" : 861089,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "birthdate",
       "srcTrgColDataType" : "nvarchar",
@@ -555,7 +578,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861056,
+      "srcTgtColId" : 861090,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "datefirstpurchase",
       "srcTrgColDataType" : "varchar",
@@ -566,7 +589,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861057,
+      "srcTgtColId" : 861091,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "phoneno",
       "srcTrgColDataType" : "varchar",
@@ -577,7 +600,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861058,
+      "srcTgtColId" : 861092,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "email",
       "srcTrgColDataType" : "varchar",
@@ -588,7 +611,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861059,
+      "srcTgtColId" : 861093,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "yearlyincome",
       "srcTrgColDataType" : "varchar",
@@ -599,7 +622,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861060,
+      "srcTgtColId" : 861094,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "addressid",
       "srcTrgColDataType" : "int",
@@ -610,7 +633,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861061,
+      "srcTgtColId" : 861095,
       "ruleClsPropId" : 861042,
       "srcTrgColName" : "load_date",
       "srcTrgColDataType" : "nvarchar",
@@ -621,7 +644,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 861067,
+      "srcTgtColId" : 861097,
       "ruleClsPropId" : 861062,
       "srcTrgColName" : "gd",
       "srcTrgColDataType" : "String",
@@ -633,9 +656,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 861080,
-      "srcColId" : 861050,
-      "trgColId" : 861067,
+      "colMapId" : 861099,
+      "srcColId" : 861084,
+      "trgColId" : 861097,
       "colMapType" : "join",
       "srcColName" : "customerid",
       "tgtColName" : "gd",
@@ -660,10 +683,33 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 861081,
+      "exprID" : 861100,
       "exprLogID" : 0,
-      "exprName" : "EXPR_6ZLBRB9",
-      "expression" : "S.gender == 'M'",
+      "exprName" : "genChk",
+      "expression" : "S.gender in [ 'M', 'F' ]",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 861038,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 861041,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    }, {
+      "exprID" : 861101,
+      "exprLogID" : 0,
+      "exprName" : "nmChk",
+      "expression" : "S.firstname != null",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
