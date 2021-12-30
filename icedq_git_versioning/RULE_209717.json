@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2021-12-30 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2021-12-30 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -42,11 +42,11 @@
     "failureHeader" : "",
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
-    "srcConnId" : 209714,
+    "srcConnId" : 209715,
     "trgConnId" : 209714,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
-    "srcConn" : "Parquet_Directory_120",
+    "srcConn" : "parquet_s3_IAM",
     "trgConn" : "Parquet_Directory_120",
     "elapseTime" : 0,
     "parameterId" : "",
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "0_test_swap",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 209720,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 209746,
-        "srcColId" : 209731,
-        "trgColId" : 209742,
+        "colMapId" : 209753,
+        "srcColId" : 209749,
+        "trgColId" : 209752,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -146,7 +146,7 @@
       "vid" : "GetData11",
       "classObjName" : "ICE_1640843703259",
       "queryBuilderXML" : null,
-      "connId" : 209714,
+      "connId" : 209715,
       "resultType" : "",
       "connName" : null,
       "connUrl" : null,
@@ -163,7 +163,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from sample",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 209731,
+          "srcTgtColId" : 209749,
           "ruleClsPropId" : 209721,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "INT",
@@ -179,7 +179,7 @@
         "ruleClsPropID" : 209723,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "209714",
+        "paramValue" : "209715",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -214,7 +214,7 @@
         "ruleClsPropID" : 209729,
         "paramId" : 8,
         "paramMethod" : "setFileName",
-        "paramValue" : "\\sample.parquet",
+        "paramValue" : "sample.parquet",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -260,7 +260,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from sample",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 209742,
+          "srcTgtColId" : 209752,
           "ruleClsPropId" : 209732,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "INT",
@@ -318,7 +318,7 @@
         "ruleClsPropID" : 209741,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "sample",
+        "paramValue" : "",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -331,7 +331,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 209731,
+      "srcTgtColId" : 209749,
       "ruleClsPropId" : 209721,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INT",
@@ -342,7 +342,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 209742,
+      "srcTgtColId" : 209752,
       "ruleClsPropId" : 209732,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INT",
@@ -354,9 +354,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 209746,
-      "srcColId" : 209731,
-      "trgColId" : 209742,
+      "colMapId" : 209753,
+      "srcColId" : 209749,
+      "trgColId" : 209752,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
