@@ -42,12 +42,12 @@
     "failureHeader" : null,
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
-    "srcConnId" : 2036601,
-    "trgConnId" : 2036601,
+    "srcConnId" : 2047248,
+    "trgConnId" : 2047248,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
-    "srcConn" : "Parquet_Directory_Windows_Conn",
-    "trgConn" : "Parquet_Directory_Windows_Conn",
+    "srcConn" : "Parquet_S3_IAM Cred_Windows_System_Conn",
+    "trgConn" : "Parquet_S3_IAM Cred_Windows_System_Conn",
     "elapseTime" : 0,
     "parameterId" : null,
     "type" : null,
@@ -85,7 +85,7 @@
       "vid" : "GetData11",
       "classObjName" : "ICE_1640665110867",
       "queryBuilderXML" : null,
-      "connId" : 2036601,
+      "connId" : 2047248,
       "resultType" : "a-b",
       "connName" : null,
       "connUrl" : null,
@@ -100,7 +100,7 @@
         "ruleClsPropID" : 2165908,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "2036601",
+        "paramValue" : "2047248",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -121,7 +121,7 @@
         "ruleClsPropID" : 2165911,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "s_customerid",
+        "paramValue" : "empno",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -135,32 +135,32 @@
         "ruleClsPropID" : 2165914,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "s_customerid^~^12^~^VARCHAR^~^2000^~^1$~$sum^~^12^~^VARCHAR^~^2000^~^2",
+        "paramValue" : "empno^~^12^~^VARCHAR^~^2000^~^1$~$sum^~^12^~^VARCHAR^~^2000^~^2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 2165915,
         "paramId" : 8,
         "paramMethod" : "setFileName",
-        "paramValue" : "\\Staff.parquet",
+        "paramValue" : "employee1.parquet",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
         "ruleClsPropID" : 2165916,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "Staff",
+        "paramValue" : "employee1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 2165917,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select s_customerid, sum(s_customerid) as sum from staff\nGroup by s_customerid\nhaving SUM(s_customerid)>1",
+        "paramValue" : "select empno, sum(empno) as sum from employee1\nGroup by empno\nhaving SUM(empno)>1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2165919,
+          "srcTgtColId" : 2166224,
           "ruleClsPropId" : 2165917,
-          "srcTrgColName" : "s_customerid",
+          "srcTrgColName" : "empno",
           "srcTrgColDataType" : "VARCHAR",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -169,7 +169,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2165920,
+          "srcTgtColId" : 2166225,
           "ruleClsPropId" : 2165917,
           "srcTrgColName" : "sum",
           "srcTrgColDataType" : "VARCHAR",
@@ -200,7 +200,7 @@
       "vid" : "GetData21",
       "classObjName" : "ICE_1640665110867",
       "queryBuilderXML" : null,
-      "connId" : 2036601,
+      "connId" : 2047248,
       "resultType" : "a-b",
       "connName" : null,
       "connUrl" : null,
@@ -222,7 +222,7 @@
         "ruleClsPropID" : 2165922,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "s_customerid",
+        "paramValue" : "empno",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -236,18 +236,18 @@
         "ruleClsPropID" : 2165925,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "s_customerid^~^12^~^VARCHAR^~^2000^~^1$~$sum^~^12^~^VARCHAR^~^2000^~^2",
+        "paramValue" : "empno^~^12^~^VARCHAR^~^2000^~^1$~$sum^~^12^~^VARCHAR^~^2000^~^2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 2165926,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select s_customerid, sum(s_customerid) as sum from staff\nGroup by s_customerid\nhaving SUM(s_customerid)>1",
+        "paramValue" : "select empno, sum(empno) as sum from employee1\nGroup by empno\nhaving SUM(empno)>1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2165932,
+          "srcTgtColId" : 2166228,
           "ruleClsPropId" : 2165926,
-          "srcTrgColName" : "s_customerid",
+          "srcTrgColName" : "empno",
           "srcTrgColDataType" : "VARCHAR",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -256,7 +256,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2165933,
+          "srcTgtColId" : 2166229,
           "ruleClsPropId" : 2165926,
           "srcTrgColName" : "sum",
           "srcTrgColDataType" : "VARCHAR",
@@ -272,7 +272,7 @@
         "ruleClsPropID" : 2165928,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "2036601",
+        "paramValue" : "2047248",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -286,14 +286,14 @@
         "ruleClsPropID" : 2165930,
         "paramId" : 8,
         "paramMethod" : "setFileName",
-        "paramValue" : "\\Staff.parquet",
+        "paramValue" : "employee1.parquet",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
         "ruleClsPropID" : 2165931,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "Staff",
+        "paramValue" : "employee1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -325,13 +325,13 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 2165946,
-        "srcColId" : 2165919,
-        "trgColId" : 2165932,
+        "colMapId" : 2166231,
+        "srcColId" : 2166224,
+        "trgColId" : 2166228,
         "colMapType" : "join",
-        "srcColName" : "s_customerid",
-        "tgtColName" : "s_customerid",
-        "colMapExpr" : "s_customerid=s_customerid",
+        "srcColName" : "empno",
+        "tgtColName" : "empno",
+        "colMapExpr" : "empno=empno",
         "srcTrgColMapVisible" : 1,
         "displayIndex" : 1
       } ],
@@ -423,18 +423,18 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 2165919,
+      "srcTgtColId" : 2166224,
       "ruleClsPropId" : 2165917,
-      "srcTrgColName" : "s_customerid",
+      "srcTrgColName" : "empno",
       "srcTrgColDataType" : "VARCHAR",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "s_customerid",
+      "mapColName" : "empno",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2165920,
+      "srcTgtColId" : 2166225,
       "ruleClsPropId" : 2165917,
       "srcTrgColName" : "sum",
       "srcTrgColDataType" : "VARCHAR",
@@ -445,18 +445,18 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2165932,
+      "srcTgtColId" : 2166228,
       "ruleClsPropId" : 2165926,
-      "srcTrgColName" : "s_customerid",
+      "srcTrgColName" : "empno",
       "srcTrgColDataType" : "VARCHAR",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "s_customerid",
+      "mapColName" : "empno",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2165933,
+      "srcTgtColId" : 2166229,
       "ruleClsPropId" : 2165926,
       "srcTrgColName" : "sum",
       "srcTrgColDataType" : "VARCHAR",
@@ -468,13 +468,13 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 2165946,
-      "srcColId" : 2165919,
-      "trgColId" : 2165932,
+      "colMapId" : 2166231,
+      "srcColId" : 2166224,
+      "trgColId" : 2166228,
       "colMapType" : "join",
-      "srcColName" : "s_customerid",
-      "tgtColName" : "s_customerid",
-      "colMapExpr" : "s_customerid=s_customerid",
+      "srcColName" : "empno",
+      "tgtColName" : "empno",
+      "colMapExpr" : "empno=empno",
       "srcTrgColMapVisible" : 1,
       "displayIndex" : 1
     } ],
