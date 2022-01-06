@@ -3,7 +3,7 @@
     "id" : 2167999,
     "ruleInstanceId" : 0,
     "ruleDesc" : null,
-    "execMode" : "recon",
+    "execMode" : "htrecon",
     "exitCode" : null,
     "folderId" : 2047244,
     "projectId" : 1233018,
@@ -79,7 +79,7 @@
       "name" : null,
       "ruleClassId" : 2168000,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
@@ -149,7 +149,7 @@
         "ruleClsPropID" : 2168011,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "employee1",
+        "paramValue" : null,
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -158,7 +158,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select empno, sum(empno) as sum from employee1\nGroup by empno\nhaving SUM(empno)>1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2168014,
+          "srcTgtColId" : 2169325,
           "ruleClsPropId" : 2168012,
           "srcTrgColName" : "empno",
           "srcTrgColDataType" : "VARCHAR",
@@ -169,7 +169,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2168015,
+          "srcTgtColId" : 2169326,
           "ruleClsPropId" : 2168012,
           "srcTrgColName" : "sum",
           "srcTrgColDataType" : "VARCHAR",
@@ -194,7 +194,7 @@
       "name" : null,
       "ruleClassId" : 2168001,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
@@ -245,7 +245,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select empno, sum(empno) as sum from employee1\nGroup by empno\nhaving SUM(empno)>1",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2168027,
+          "srcTgtColId" : 2169329,
           "ruleClsPropId" : 2168021,
           "srcTrgColName" : "empno",
           "srcTrgColDataType" : "VARCHAR",
@@ -256,7 +256,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2168028,
+          "srcTgtColId" : 2169330,
           "ruleClsPropId" : 2168021,
           "srcTrgColName" : "sum",
           "srcTrgColDataType" : "VARCHAR",
@@ -293,7 +293,7 @@
         "ruleClsPropID" : 2168026,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "employee1",
+        "paramValue" : null,
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -309,7 +309,7 @@
       "name" : null,
       "ruleClassId" : 2168002,
       "connType" : null,
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
@@ -325,9 +325,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 2168041,
-        "srcColId" : 2168014,
-        "trgColId" : 2168027,
+        "colMapId" : 2169333,
+        "srcColId" : 2169325,
+        "trgColId" : 2169329,
         "colMapType" : "join",
         "srcColName" : "empno",
         "tgtColName" : "empno",
@@ -413,6 +413,13 @@
         "paramValue" : "",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
+      }, {
+        "ruleClsPropID" : 2169331,
+        "paramId" : 487,
+        "paramMethod" : "setDegreeOfParallelism",
+        "paramValue" : "8",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -423,7 +430,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 2168014,
+      "srcTgtColId" : 2169325,
       "ruleClsPropId" : 2168012,
       "srcTrgColName" : "empno",
       "srcTrgColDataType" : "VARCHAR",
@@ -434,7 +441,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2168015,
+      "srcTgtColId" : 2169326,
       "ruleClsPropId" : 2168012,
       "srcTrgColName" : "sum",
       "srcTrgColDataType" : "VARCHAR",
@@ -445,7 +452,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2168027,
+      "srcTgtColId" : 2169329,
       "ruleClsPropId" : 2168021,
       "srcTrgColName" : "empno",
       "srcTrgColDataType" : "VARCHAR",
@@ -456,7 +463,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2168028,
+      "srcTgtColId" : 2169330,
       "ruleClsPropId" : 2168021,
       "srcTrgColName" : "sum",
       "srcTrgColDataType" : "VARCHAR",
@@ -468,9 +475,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 2168041,
-      "srcColId" : 2168014,
-      "trgColId" : 2168027,
+      "colMapId" : 2169333,
+      "srcColId" : 2169325,
+      "trgColId" : 2169329,
       "colMapType" : "join",
       "srcColName" : "empno",
       "tgtColName" : "empno",
