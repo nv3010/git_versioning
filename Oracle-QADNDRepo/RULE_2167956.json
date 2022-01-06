@@ -3,7 +3,7 @@
     "id" : 2167956,
     "ruleInstanceId" : 0,
     "ruleDesc" : null,
-    "execMode" : "recon",
+    "execMode" : "htrecon",
     "exitCode" : null,
     "folderId" : 2047244,
     "projectId" : 1233018,
@@ -79,7 +79,7 @@
       "name" : null,
       "ruleClassId" : 2167957,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
@@ -149,7 +149,7 @@
         "ruleClsPropID" : 2167968,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "employee1",
+        "paramValue" : null,
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -158,7 +158,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select empcode, count(*) as cnt from employee1\nGroup by empcode",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2167971,
+          "srcTgtColId" : 2169314,
           "ruleClsPropId" : 2167969,
           "srcTrgColName" : "empcode",
           "srcTrgColDataType" : "VARCHAR",
@@ -169,7 +169,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2167972,
+          "srcTgtColId" : 2169315,
           "ruleClsPropId" : 2167969,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "INT",
@@ -194,7 +194,7 @@
       "name" : null,
       "ruleClassId" : 2167958,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
@@ -217,7 +217,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select empcode, count(*) as cnt from employee1\nGroup by empcode",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2167984,
+          "srcTgtColId" : 2169318,
           "ruleClsPropId" : 2167973,
           "srcTrgColName" : "empcode",
           "srcTrgColDataType" : "VARCHAR",
@@ -228,7 +228,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2167985,
+          "srcTgtColId" : 2169319,
           "ruleClsPropId" : 2167973,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "INT",
@@ -293,7 +293,7 @@
         "ruleClsPropID" : 2167983,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "employee1",
+        "paramValue" : null,
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -309,7 +309,7 @@
       "name" : null,
       "ruleClassId" : 2167959,
       "connType" : null,
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
@@ -325,9 +325,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 2167998,
-        "srcColId" : 2167971,
-        "trgColId" : 2167984,
+        "colMapId" : 2169322,
+        "srcColId" : 2169314,
+        "trgColId" : 2169318,
         "colMapType" : "join",
         "srcColName" : "empcode",
         "tgtColName" : "empcode",
@@ -337,6 +337,13 @@
       } ],
       "exprlist" : [ ],
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 2169320,
+        "paramId" : 487,
+        "paramMethod" : "setDegreeOfParallelism",
+        "paramValue" : "8",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 2167986,
         "paramId" : 9,
         "paramMethod" : "setSourceObject",
@@ -423,7 +430,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 2167971,
+      "srcTgtColId" : 2169314,
       "ruleClsPropId" : 2167969,
       "srcTrgColName" : "empcode",
       "srcTrgColDataType" : "VARCHAR",
@@ -434,7 +441,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2167972,
+      "srcTgtColId" : 2169315,
       "ruleClsPropId" : 2167969,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INT",
@@ -445,7 +452,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2167984,
+      "srcTgtColId" : 2169318,
       "ruleClsPropId" : 2167973,
       "srcTrgColName" : "empcode",
       "srcTrgColDataType" : "VARCHAR",
@@ -456,7 +463,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2167985,
+      "srcTgtColId" : 2169319,
       "ruleClsPropId" : 2167973,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INT",
@@ -468,9 +475,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 2167998,
-      "srcColId" : 2167971,
-      "trgColId" : 2167984,
+      "colMapId" : 2169322,
+      "srcColId" : 2169314,
+      "trgColId" : 2169318,
       "colMapType" : "join",
       "srcColName" : "empcode",
       "tgtColName" : "empcode",
