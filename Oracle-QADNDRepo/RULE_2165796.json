@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 1198020,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 1198020,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2022-01-06 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2022-01-06 00:00:00",
     "enterpriseErrorCode" : null,
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -42,19 +42,19 @@
     "failureHeader" : null,
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
-    "srcConnId" : 2036601,
-    "trgConnId" : 2036601,
+    "srcConnId" : 2047248,
+    "trgConnId" : 2047248,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
-    "srcConn" : "Parquet_Directory_Windows_Conn",
-    "trgConn" : "Parquet_Directory_Windows_Conn",
+    "srcConn" : "Parquet_S3_IAM Cred_Windows_System_Conn",
+    "trgConn" : "Parquet_S3_IAM Cred_Windows_System_Conn",
     "elapseTime" : 0,
     "parameterId" : null,
     "type" : null,
     "isRuleExit" : null,
     "ruleCreatedByName" : "SwaraS",
     "projectName" : "WIP_Swara",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "SwaraS",
     "ruleClassId" : 2165799,
     "successBody" : null,
     "failureBody" : null,
@@ -85,7 +85,7 @@
       "vid" : "GetData11",
       "classObjName" : "ICE_1640665110867",
       "queryBuilderXML" : null,
-      "connId" : 2036601,
+      "connId" : 2047248,
       "resultType" : "a-b",
       "connName" : null,
       "connUrl" : null,
@@ -100,7 +100,7 @@
         "ruleClsPropID" : 2165800,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "2036601",
+        "paramValue" : "2047248",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -121,7 +121,7 @@
         "ruleClsPropID" : 2165803,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "s_customerid",
+        "paramValue" : "empcode",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -135,32 +135,32 @@
         "ruleClsPropID" : 2165806,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "s_customerid^~^12^~^VARCHAR^~^2000^~^1$~$cnt^~^4^~^INT^~^10^~^2",
+        "paramValue" : "empcode^~^12^~^VARCHAR^~^2000^~^1$~$cnt^~^4^~^INT^~^10^~^2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 2165807,
         "paramId" : 8,
         "paramMethod" : "setFileName",
-        "paramValue" : "\\Staff.parquet",
+        "paramValue" : "employee1.parquet",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
         "ruleClsPropID" : 2165808,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "Staff",
+        "paramValue" : "employee1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 2165809,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select s_customerid, count(*) as cnt from Staff\nGroup by s_customerid",
+        "paramValue" : "select empcode, count(*) as cnt from employee1\nGroup by empcode",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2165811,
+          "srcTgtColId" : 2166214,
           "ruleClsPropId" : 2165809,
-          "srcTrgColName" : "s_customerid",
+          "srcTrgColName" : "empcode",
           "srcTrgColDataType" : "VARCHAR",
           "colFlagType" : "src",
           "srcTrgColVisible" : 0,
@@ -169,7 +169,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2165812,
+          "srcTgtColId" : 2166215,
           "ruleClsPropId" : 2165809,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "INT",
@@ -200,7 +200,7 @@
       "vid" : "GetData21",
       "classObjName" : "ICE_1640665110867",
       "queryBuilderXML" : null,
-      "connId" : 2036601,
+      "connId" : 2047248,
       "resultType" : "a-b",
       "connName" : null,
       "connUrl" : null,
@@ -215,11 +215,11 @@
         "ruleClsPropID" : 2165813,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select s_customerid, count(*) as cnt from Staff\nGroup by s_customerid",
+        "paramValue" : "select empcode, count(*) as cnt from employee1\nGroup by empcode",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2165824,
+          "srcTgtColId" : 2166218,
           "ruleClsPropId" : 2165813,
-          "srcTrgColName" : "s_customerid",
+          "srcTrgColName" : "empcode",
           "srcTrgColDataType" : "VARCHAR",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
@@ -228,7 +228,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2165825,
+          "srcTgtColId" : 2166219,
           "ruleClsPropId" : 2165813,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "INT",
@@ -244,7 +244,7 @@
         "ruleClsPropID" : 2165815,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "2036601",
+        "paramValue" : "2047248",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -265,7 +265,7 @@
         "ruleClsPropID" : 2165818,
         "paramId" : 84,
         "paramMethod" : "setOrderByStr",
-        "paramValue" : "s_customerid",
+        "paramValue" : "empcode",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
@@ -279,21 +279,21 @@
         "ruleClsPropID" : 2165821,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "s_customerid^~^12^~^VARCHAR^~^2000^~^1$~$cnt^~^4^~^INT^~^10^~^2",
+        "paramValue" : "empcode^~^12^~^VARCHAR^~^2000^~^1$~$cnt^~^4^~^INT^~^10^~^2",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
         "ruleClsPropID" : 2165822,
         "paramId" : 8,
         "paramMethod" : "setFileName",
-        "paramValue" : "\\Staff.parquet",
+        "paramValue" : "employee1.parquet",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
         "ruleClsPropID" : 2165823,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "Staff",
+        "paramValue" : "employee1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -325,13 +325,13 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 2165838,
-        "srcColId" : 2165811,
-        "trgColId" : 2165824,
+        "colMapId" : 2166221,
+        "srcColId" : 2166214,
+        "trgColId" : 2166218,
         "colMapType" : "join",
-        "srcColName" : "s_customerid",
-        "tgtColName" : "s_customerid",
-        "colMapExpr" : "s_customerid=s_customerid",
+        "srcColName" : "empcode",
+        "tgtColName" : "empcode",
+        "colMapExpr" : "empcode=empcode",
         "srcTrgColMapVisible" : 1,
         "displayIndex" : 1
       } ],
@@ -423,18 +423,18 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 2165811,
+      "srcTgtColId" : 2166214,
       "ruleClsPropId" : 2165809,
-      "srcTrgColName" : "s_customerid",
+      "srcTrgColName" : "empcode",
       "srcTrgColDataType" : "VARCHAR",
       "colFlagType" : "src",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "s_customerid",
+      "mapColName" : "empcode",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2165812,
+      "srcTgtColId" : 2166215,
       "ruleClsPropId" : 2165809,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INT",
@@ -445,18 +445,18 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2165824,
+      "srcTgtColId" : 2166218,
       "ruleClsPropId" : 2165813,
-      "srcTrgColName" : "s_customerid",
+      "srcTrgColName" : "empcode",
       "srcTrgColDataType" : "VARCHAR",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
-      "mapColName" : "s_customerid",
+      "mapColName" : "empcode",
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2165825,
+      "srcTgtColId" : 2166219,
       "ruleClsPropId" : 2165813,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INT",
@@ -468,13 +468,13 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 2165838,
-      "srcColId" : 2165811,
-      "trgColId" : 2165824,
+      "colMapId" : 2166221,
+      "srcColId" : 2166214,
+      "trgColId" : 2166218,
       "colMapType" : "join",
-      "srcColName" : "s_customerid",
-      "tgtColName" : "s_customerid",
-      "colMapExpr" : "s_customerid=s_customerid",
+      "srcColName" : "empcode",
+      "tgtColName" : "empcode",
+      "colMapExpr" : "empcode=empcode",
       "srcTrgColMapVisible" : 1,
       "displayIndex" : 1
     } ],
