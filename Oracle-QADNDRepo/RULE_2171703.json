@@ -43,11 +43,11 @@
     "failureAttFlag" : 0,
     "successAttFlag" : 0,
     "srcConnId" : 2036601,
-    "trgConnId" : 2036601,
+    "trgConnId" : 1198024,
     "srcSysGroupId" : 0,
     "trgSysGroupId" : 0,
     "srcConn" : "Parquet_Directory_Windows_Conn",
-    "trgConn" : "Parquet_Directory_Windows_Conn",
+    "trgConn" : "Oracle_Sys_Conc",
     "elapseTime" : 0,
     "parameterId" : null,
     "type" : null,
@@ -100,9 +100,9 @@
         "ruleClsPropID" : 2171707,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "Select count(*) as cnt from Customer",
+        "paramValue" : "Select count(*) as cnt from STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2171717,
+          "srcTgtColId" : 2171735,
           "ruleClsPropId" : 2171707,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "INT",
@@ -153,14 +153,14 @@
         "ruleClsPropID" : 2171715,
         "paramId" : 8,
         "paramMethod" : "setFileName",
-        "paramValue" : "\\Customer.parquet",
+        "paramValue" : "\\STAFF.parquet",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
         "ruleClsPropID" : 2171716,
         "paramId" : 493,
         "paramMethod" : "setCacheTableName",
-        "paramValue" : "Customer",
+        "paramValue" : "STAFF",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
@@ -182,7 +182,7 @@
       "vid" : "GetData21",
       "classObjName" : "ICE_1640159250083",
       "queryBuilderXML" : null,
-      "connId" : 2036601,
+      "connId" : 1198024,
       "resultType" : null,
       "connName" : null,
       "connUrl" : null,
@@ -197,12 +197,12 @@
         "ruleClsPropID" : 2171718,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "Select count(*) as cnt from Customer",
+        "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.STAFF",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2171728,
+          "srcTgtColId" : 2171739,
           "ruleClsPropId" : 2171718,
           "srcTrgColName" : "cnt",
-          "srcTrgColDataType" : "INT",
+          "srcTrgColDataType" : "NUMBER",
           "colFlagType" : "tgt",
           "srcTrgColVisible" : 0,
           "joinList" : null,
@@ -215,7 +215,7 @@
         "ruleClsPropID" : 2171720,
         "paramId" : 16,
         "paramMethod" : "setConnId",
-        "paramValue" : "2036601",
+        "paramValue" : "1198024",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -243,22 +243,15 @@
         "ruleClsPropID" : 2171725,
         "paramId" : 83,
         "paramMethod" : "setColumnsMInfo",
-        "paramValue" : "cnt^~^4^~^INT^~^10^~^1",
+        "paramValue" : "cnt^~^2^~^NUMBER^~^0^~^1",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
-        "ruleClsPropID" : 2171726,
-        "paramId" : 8,
-        "paramMethod" : "setFileName",
-        "paramValue" : "\\Customer.parquet",
+        "ruleClsPropID" : 2171736,
+        "paramId" : 404,
+        "paramMethod" : "setIsMultipleOutVaiables",
+        "paramValue" : "false",
         "srcTrgTbllist" : null,
-        "fileContent" : null
-      }, {
-        "ruleClsPropID" : 2171727,
-        "paramId" : 493,
-        "paramMethod" : "setCacheTableName",
-        "paramValue" : "Customer",
-        "srcTrgTbllist" : [ ],
         "fileContent" : null
       } ],
       "bigDataExecMode" : null,
@@ -289,9 +282,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 2171732,
-        "srcColId" : 2171717,
-        "trgColId" : 2171728,
+        "colMapId" : 2171740,
+        "srcColId" : 2171735,
+        "trgColId" : 2171739,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -331,7 +324,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 2171717,
+      "srcTgtColId" : 2171735,
       "ruleClsPropId" : 2171707,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "INT",
@@ -342,10 +335,10 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2171728,
+      "srcTgtColId" : 2171739,
       "ruleClsPropId" : 2171718,
       "srcTrgColName" : "cnt",
-      "srcTrgColDataType" : "INT",
+      "srcTrgColDataType" : "NUMBER",
       "colFlagType" : "tgt",
       "srcTrgColVisible" : 0,
       "joinList" : null,
@@ -354,9 +347,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 2171732,
-      "srcColId" : 2171717,
-      "trgColId" : 2171728,
+      "colMapId" : 2171740,
+      "srcColId" : 2171735,
+      "trgColId" : 2171739,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
