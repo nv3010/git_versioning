@@ -156,9 +156,9 @@
         "ruleClsPropID" : 2043944,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select s_salary, sum(s_salary) as sum from staff\nGroup by s_salary\nhaving SUM(s_salary)>1",
+        "paramValue" : "select s_salary, sum(s_salary) as sum from staff (cast(s_salary as int))\nGroup by s_salary\nhaving SUM(s_salary)>0",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2172783,
+          "srcTgtColId" : 2172793,
           "ruleClsPropId" : 2043944,
           "srcTrgColName" : "s_salary",
           "srcTrgColDataType" : "VARCHAR",
@@ -169,7 +169,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2172784,
+          "srcTgtColId" : 2172794,
           "ruleClsPropId" : 2043944,
           "srcTrgColName" : "sum",
           "srcTrgColDataType" : "VARCHAR",
@@ -243,9 +243,9 @@
         "ruleClsPropID" : 2043948,
         "paramId" : 6,
         "paramMethod" : "setQueryString",
-        "paramValue" : "select s_salary, sum(s_salary) as sum from staff\nGroup by s_salary\nhaving SUM(s_salary)>1",
+        "paramValue" : "select s_salary, sum(s_salary) as sum from staff (cast(s_salary as int))\nGroup by s_salary\nhaving SUM(s_salary)>0",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 2172787,
+          "srcTgtColId" : 2172797,
           "ruleClsPropId" : 2043948,
           "srcTrgColName" : "s_salary",
           "srcTrgColDataType" : "VARCHAR",
@@ -256,7 +256,7 @@
           "colFormat" : null,
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 2172788,
+          "srcTgtColId" : 2172798,
           "ruleClsPropId" : 2043948,
           "srcTrgColName" : "sum",
           "srcTrgColDataType" : "VARCHAR",
@@ -325,9 +325,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 2172790,
-        "srcColId" : 2172783,
-        "trgColId" : 2172787,
+        "colMapId" : 2172800,
+        "srcColId" : 2172793,
+        "trgColId" : 2172797,
         "colMapType" : "join",
         "srcColName" : "s_salary",
         "tgtColName" : "s_salary",
@@ -423,7 +423,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 2172783,
+      "srcTgtColId" : 2172793,
       "ruleClsPropId" : 2043944,
       "srcTrgColName" : "s_salary",
       "srcTrgColDataType" : "VARCHAR",
@@ -434,7 +434,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2172784,
+      "srcTgtColId" : 2172794,
       "ruleClsPropId" : 2043944,
       "srcTrgColName" : "sum",
       "srcTrgColDataType" : "VARCHAR",
@@ -445,7 +445,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2172787,
+      "srcTgtColId" : 2172797,
       "ruleClsPropId" : 2043948,
       "srcTrgColName" : "s_salary",
       "srcTrgColDataType" : "VARCHAR",
@@ -456,7 +456,7 @@
       "colFormat" : null,
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 2172788,
+      "srcTgtColId" : 2172798,
       "ruleClsPropId" : 2043948,
       "srcTrgColName" : "sum",
       "srcTrgColDataType" : "VARCHAR",
@@ -468,9 +468,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 2172790,
-      "srcColId" : 2172783,
-      "trgColId" : 2172787,
+      "colMapId" : 2172800,
+      "srcColId" : 2172793,
+      "trgColId" : 2172797,
       "colMapType" : "join",
       "srcColName" : "s_salary",
       "tgtColName" : "s_salary",
