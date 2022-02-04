@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 26567,
-        "srcColId" : 26553,
-        "trgColId" : 26565,
+        "colMapId" : 26585,
+        "srcColId" : 26571,
+        "trgColId" : 26583,
         "colMapType" : "join",
         "srcColName" : "employee_id",
         "tgtColName" : "cnt",
@@ -106,10 +106,10 @@
         "displayIndex" : 0
       } ],
       "exprlist" : [ {
-        "exprID" : 26568,
+        "exprID" : 26586,
         "exprLogID" : 0,
         "exprName" : "EXPR_SW0ZDC2",
-        "expression" : "S.first_name != 'Steven'",
+        "expression" : "S.first_name != 'Steven' && S.first_name != 'null'",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -121,7 +121,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.first_name != 'Steven'",
+        "exprOrg" : "S.first_name != 'Steven' && S.first_name != 'null'",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -263,7 +263,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt from dual",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 26565,
+          "srcTgtColId" : 26583,
           "ruleClsPropId" : 26531,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -353,7 +353,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from HR.EMPLOYEES",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 26553,
+          "srcTgtColId" : 26571,
           "ruleClsPropId" : 26511,
           "srcTrgColName" : "employee_id",
           "srcTrgColDataType" : "NUMBER",
@@ -364,7 +364,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 26554,
+          "srcTgtColId" : 26572,
           "ruleClsPropId" : 26511,
           "srcTrgColName" : "first_name",
           "srcTrgColDataType" : "VARCHAR2",
@@ -375,7 +375,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 26555,
+          "srcTgtColId" : 26573,
           "ruleClsPropId" : 26511,
           "srcTrgColName" : "last_name",
           "srcTrgColDataType" : "VARCHAR2",
@@ -386,7 +386,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 26556,
+          "srcTgtColId" : 26574,
           "ruleClsPropId" : 26511,
           "srcTrgColName" : "email",
           "srcTrgColDataType" : "VARCHAR2",
@@ -397,7 +397,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 26557,
+          "srcTgtColId" : 26575,
           "ruleClsPropId" : 26511,
           "srcTrgColName" : "phone_number",
           "srcTrgColDataType" : "VARCHAR2",
@@ -408,7 +408,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 26558,
+          "srcTgtColId" : 26576,
           "ruleClsPropId" : 26511,
           "srcTrgColName" : "hire_date",
           "srcTrgColDataType" : "DATE",
@@ -419,7 +419,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 26559,
+          "srcTgtColId" : 26577,
           "ruleClsPropId" : 26511,
           "srcTrgColName" : "job_id",
           "srcTrgColDataType" : "VARCHAR2",
@@ -430,7 +430,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 26560,
+          "srcTgtColId" : 26578,
           "ruleClsPropId" : 26511,
           "srcTrgColName" : "salary",
           "srcTrgColDataType" : "NUMBER",
@@ -441,7 +441,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 26561,
+          "srcTgtColId" : 26579,
           "ruleClsPropId" : 26511,
           "srcTrgColName" : "commission_pct",
           "srcTrgColDataType" : "NUMBER",
@@ -452,7 +452,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 26562,
+          "srcTgtColId" : 26580,
           "ruleClsPropId" : 26511,
           "srcTrgColName" : "manager_id",
           "srcTrgColDataType" : "NUMBER",
@@ -463,7 +463,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 26563,
+          "srcTgtColId" : 26581,
           "ruleClsPropId" : 26511,
           "srcTrgColName" : "department_id",
           "srcTrgColDataType" : "NUMBER",
@@ -485,7 +485,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 26553,
+      "srcTgtColId" : 26571,
       "ruleClsPropId" : 26511,
       "srcTrgColName" : "employee_id",
       "srcTrgColDataType" : "NUMBER",
@@ -496,7 +496,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 26554,
+      "srcTgtColId" : 26572,
       "ruleClsPropId" : 26511,
       "srcTrgColName" : "first_name",
       "srcTrgColDataType" : "VARCHAR2",
@@ -507,7 +507,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 26555,
+      "srcTgtColId" : 26573,
       "ruleClsPropId" : 26511,
       "srcTrgColName" : "last_name",
       "srcTrgColDataType" : "VARCHAR2",
@@ -518,7 +518,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 26556,
+      "srcTgtColId" : 26574,
       "ruleClsPropId" : 26511,
       "srcTrgColName" : "email",
       "srcTrgColDataType" : "VARCHAR2",
@@ -529,7 +529,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 26557,
+      "srcTgtColId" : 26575,
       "ruleClsPropId" : 26511,
       "srcTrgColName" : "phone_number",
       "srcTrgColDataType" : "VARCHAR2",
@@ -540,7 +540,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 26558,
+      "srcTgtColId" : 26576,
       "ruleClsPropId" : 26511,
       "srcTrgColName" : "hire_date",
       "srcTrgColDataType" : "DATE",
@@ -551,7 +551,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 26559,
+      "srcTgtColId" : 26577,
       "ruleClsPropId" : 26511,
       "srcTrgColName" : "job_id",
       "srcTrgColDataType" : "VARCHAR2",
@@ -562,7 +562,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 26560,
+      "srcTgtColId" : 26578,
       "ruleClsPropId" : 26511,
       "srcTrgColName" : "salary",
       "srcTrgColDataType" : "NUMBER",
@@ -573,7 +573,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 26561,
+      "srcTgtColId" : 26579,
       "ruleClsPropId" : 26511,
       "srcTrgColName" : "commission_pct",
       "srcTrgColDataType" : "NUMBER",
@@ -584,7 +584,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 26562,
+      "srcTgtColId" : 26580,
       "ruleClsPropId" : 26511,
       "srcTrgColName" : "manager_id",
       "srcTrgColDataType" : "NUMBER",
@@ -595,7 +595,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 26563,
+      "srcTgtColId" : 26581,
       "ruleClsPropId" : 26511,
       "srcTrgColName" : "department_id",
       "srcTrgColDataType" : "NUMBER",
@@ -606,7 +606,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 26565,
+      "srcTgtColId" : 26583,
       "ruleClsPropId" : 26531,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -618,9 +618,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 26567,
-      "srcColId" : 26553,
-      "trgColId" : 26565,
+      "colMapId" : 26585,
+      "srcColId" : 26571,
+      "trgColId" : 26583,
       "colMapType" : "join",
       "srcColName" : "employee_id",
       "tgtColName" : "cnt",
@@ -645,10 +645,10 @@
     "classCreateDate" : null,
     "classModifyDate" : null,
     "exprVOList" : [ {
-      "exprID" : 26568,
+      "exprID" : 26586,
       "exprLogID" : 0,
       "exprName" : "EXPR_SW0ZDC2",
-      "expression" : "S.first_name != 'Steven'",
+      "expression" : "S.first_name != 'Steven' && S.first_name != 'null'",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
