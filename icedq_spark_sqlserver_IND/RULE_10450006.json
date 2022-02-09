@@ -3,7 +3,7 @@
     "id" : 10450006,
     "ruleInstanceId" : 0,
     "ruleDesc" : "",
-    "execMode" : "recon",
+    "execMode" : "htrecon",
     "exitCode" : null,
     "folderId" : 10418173,
     "projectId" : 579,
@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 9134473,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 9134473,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2022-02-09 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2022-02-09 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "mridula.p@toranainc.com",
     "projectName" : "WIP_Mridula",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "mridula.p@toranainc.com",
     "ruleClassId" : 10450007,
     "successBody" : "",
     "failureBody" : "",
@@ -79,7 +79,7 @@
       "name" : null,
       "ruleClassId" : 10450007,
       "connType" : "",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 10450092,
-        "srcColId" : 10450032,
-        "trgColId" : 10450067,
+        "colMapId" : 10450173,
+        "srcColId" : 10450119,
+        "trgColId" : 10450146,
         "colMapType" : "join",
         "srcColName" : "col_smallint",
         "tgtColName" : "col_smallint",
@@ -735,6 +735,13 @@
         "paramValue" : "",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
+      }, {
+        "ruleClsPropID" : 10450171,
+        "paramId" : 487,
+        "paramMethod" : "setDegreeOfParallelism",
+        "paramValue" : "1",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -748,7 +755,7 @@
       "name" : null,
       "ruleClassId" : 10450008,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
@@ -771,7 +778,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from ICEDQ.ALL_DATATYPE",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 10450032,
+          "srcTgtColId" : 10450119,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_smallint",
           "srcTrgColDataType" : "NUMBER",
@@ -782,7 +789,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450033,
+          "srcTgtColId" : 10450120,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_varchar",
           "srcTrgColDataType" : "VARCHAR2",
@@ -793,7 +800,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450034,
+          "srcTgtColId" : 10450121,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_char",
           "srcTrgColDataType" : "CHAR",
@@ -804,7 +811,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450035,
+          "srcTgtColId" : 10450122,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_nchar",
           "srcTrgColDataType" : "NVARCHAR2",
@@ -815,7 +822,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450036,
+          "srcTgtColId" : 10450123,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_text",
           "srcTrgColDataType" : "VARCHAR2",
@@ -826,7 +833,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450037,
+          "srcTgtColId" : 10450124,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_integer",
           "srcTrgColDataType" : "NUMBER",
@@ -837,7 +844,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450038,
+          "srcTgtColId" : 10450125,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_integer_negative",
           "srcTrgColDataType" : "NUMBER",
@@ -848,7 +855,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450039,
+          "srcTgtColId" : 10450126,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_decimal",
           "srcTrgColDataType" : "NUMBER",
@@ -859,7 +866,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450040,
+          "srcTgtColId" : 10450127,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_decimal_negative",
           "srcTrgColDataType" : "NUMBER",
@@ -870,7 +877,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450041,
+          "srcTgtColId" : 10450128,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_float",
           "srcTrgColDataType" : "NUMBER",
@@ -881,7 +888,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450042,
+          "srcTgtColId" : 10450129,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_float_negative",
           "srcTrgColDataType" : "NUMBER",
@@ -892,7 +899,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450043,
+          "srcTgtColId" : 10450130,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_bigint",
           "srcTrgColDataType" : "NUMBER",
@@ -903,7 +910,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450044,
+          "srcTgtColId" : 10450131,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_bigint_negative",
           "srcTrgColDataType" : "NUMBER",
@@ -914,7 +921,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450045,
+          "srcTgtColId" : 10450132,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_real",
           "srcTrgColDataType" : "NUMBER",
@@ -925,7 +932,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450046,
+          "srcTgtColId" : 10450133,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_real_negative",
           "srcTrgColDataType" : "NUMBER",
@@ -936,7 +943,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450047,
+          "srcTgtColId" : 10450134,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_date",
           "srcTrgColDataType" : "DATE",
@@ -947,7 +954,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450048,
+          "srcTgtColId" : 10450135,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_timestamp",
           "srcTrgColDataType" : "TIMESTAMP",
@@ -958,7 +965,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450049,
+          "srcTgtColId" : 10450136,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_boolean",
           "srcTrgColDataType" : "CHAR",
@@ -969,7 +976,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450050,
+          "srcTgtColId" : 10450137,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_timestamp_with_timezone",
           "srcTrgColDataType" : "TIMESTAMP",
@@ -980,7 +987,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450051,
+          "srcTgtColId" : 10450138,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_clob",
           "srcTrgColDataType" : "CLOB",
@@ -991,7 +998,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450052,
+          "srcTgtColId" : 10450139,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_blob",
           "srcTrgColDataType" : "BLOB",
@@ -1002,7 +1009,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450053,
+          "srcTgtColId" : 10450140,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_raw",
           "srcTrgColDataType" : "RAW",
@@ -1013,7 +1020,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450054,
+          "srcTgtColId" : 10450141,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_binary_float",
           "srcTrgColDataType" : "BINARY_FLOAT",
@@ -1024,7 +1031,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450055,
+          "srcTgtColId" : 10450142,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_binary_double",
           "srcTrgColDataType" : "BINARY_DOUBLE",
@@ -1035,7 +1042,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450056,
+          "srcTgtColId" : 10450143,
           "ruleClsPropId" : 10450022,
           "srcTrgColName" : "col_long",
           "srcTrgColDataType" : "LONG",
@@ -1109,7 +1116,7 @@
       "name" : null,
       "ruleClassId" : 10450009,
       "connType" : "DATABASE",
-      "execMode" : "recon",
+      "execMode" : "htrecon",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
@@ -1132,7 +1139,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from ICEDQ.ALL_DATATYPE",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 10450067,
+          "srcTgtColId" : 10450146,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_smallint",
           "srcTrgColDataType" : "NUMBER",
@@ -1143,7 +1150,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450068,
+          "srcTgtColId" : 10450147,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_varchar",
           "srcTrgColDataType" : "VARCHAR2",
@@ -1154,7 +1161,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450069,
+          "srcTgtColId" : 10450148,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_char",
           "srcTrgColDataType" : "CHAR",
@@ -1165,7 +1172,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450070,
+          "srcTgtColId" : 10450149,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_nchar",
           "srcTrgColDataType" : "NVARCHAR2",
@@ -1176,7 +1183,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450071,
+          "srcTgtColId" : 10450150,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_text",
           "srcTrgColDataType" : "VARCHAR2",
@@ -1187,7 +1194,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450072,
+          "srcTgtColId" : 10450151,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_integer",
           "srcTrgColDataType" : "NUMBER",
@@ -1198,7 +1205,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450073,
+          "srcTgtColId" : 10450152,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_integer_negative",
           "srcTrgColDataType" : "NUMBER",
@@ -1209,7 +1216,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450074,
+          "srcTgtColId" : 10450153,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_decimal",
           "srcTrgColDataType" : "NUMBER",
@@ -1220,7 +1227,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450075,
+          "srcTgtColId" : 10450154,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_decimal_negative",
           "srcTrgColDataType" : "NUMBER",
@@ -1231,7 +1238,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450076,
+          "srcTgtColId" : 10450155,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_float",
           "srcTrgColDataType" : "NUMBER",
@@ -1242,7 +1249,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450077,
+          "srcTgtColId" : 10450156,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_float_negative",
           "srcTrgColDataType" : "NUMBER",
@@ -1253,7 +1260,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450078,
+          "srcTgtColId" : 10450157,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_bigint",
           "srcTrgColDataType" : "NUMBER",
@@ -1264,7 +1271,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450079,
+          "srcTgtColId" : 10450158,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_bigint_negative",
           "srcTrgColDataType" : "NUMBER",
@@ -1275,7 +1282,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450080,
+          "srcTgtColId" : 10450159,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_real",
           "srcTrgColDataType" : "NUMBER",
@@ -1286,7 +1293,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450081,
+          "srcTgtColId" : 10450160,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_real_negative",
           "srcTrgColDataType" : "NUMBER",
@@ -1297,7 +1304,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450082,
+          "srcTgtColId" : 10450161,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_date",
           "srcTrgColDataType" : "DATE",
@@ -1308,7 +1315,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450083,
+          "srcTgtColId" : 10450162,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_timestamp",
           "srcTrgColDataType" : "TIMESTAMP",
@@ -1319,7 +1326,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450084,
+          "srcTgtColId" : 10450163,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_boolean",
           "srcTrgColDataType" : "CHAR",
@@ -1330,7 +1337,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450085,
+          "srcTgtColId" : 10450164,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_timestamp_with_timezone",
           "srcTrgColDataType" : "TIMESTAMP",
@@ -1341,7 +1348,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450086,
+          "srcTgtColId" : 10450165,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_clob",
           "srcTrgColDataType" : "CLOB",
@@ -1352,7 +1359,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450087,
+          "srcTgtColId" : 10450166,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_blob",
           "srcTrgColDataType" : "BLOB",
@@ -1363,7 +1370,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450088,
+          "srcTgtColId" : 10450167,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_raw",
           "srcTrgColDataType" : "RAW",
@@ -1374,7 +1381,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450089,
+          "srcTgtColId" : 10450168,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_binary_float",
           "srcTrgColDataType" : "BINARY_FLOAT",
@@ -1385,7 +1392,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450090,
+          "srcTgtColId" : 10450169,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_binary_double",
           "srcTrgColDataType" : "BINARY_DOUBLE",
@@ -1396,7 +1403,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10450091,
+          "srcTgtColId" : 10450170,
           "ruleClsPropId" : 10450057,
           "srcTrgColName" : "col_long",
           "srcTrgColDataType" : "LONG",
@@ -1467,7 +1474,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 10450032,
+      "srcTgtColId" : 10450119,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_smallint",
       "srcTrgColDataType" : "NUMBER",
@@ -1478,7 +1485,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450033,
+      "srcTgtColId" : 10450120,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_varchar",
       "srcTrgColDataType" : "VARCHAR2",
@@ -1489,7 +1496,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450034,
+      "srcTgtColId" : 10450121,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_char",
       "srcTrgColDataType" : "CHAR",
@@ -1500,7 +1507,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450035,
+      "srcTgtColId" : 10450122,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_nchar",
       "srcTrgColDataType" : "NVARCHAR2",
@@ -1511,7 +1518,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450036,
+      "srcTgtColId" : 10450123,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_text",
       "srcTrgColDataType" : "VARCHAR2",
@@ -1522,7 +1529,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450037,
+      "srcTgtColId" : 10450124,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_integer",
       "srcTrgColDataType" : "NUMBER",
@@ -1533,7 +1540,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450038,
+      "srcTgtColId" : 10450125,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_integer_negative",
       "srcTrgColDataType" : "NUMBER",
@@ -1544,7 +1551,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450039,
+      "srcTgtColId" : 10450126,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_decimal",
       "srcTrgColDataType" : "NUMBER",
@@ -1555,7 +1562,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450040,
+      "srcTgtColId" : 10450127,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_decimal_negative",
       "srcTrgColDataType" : "NUMBER",
@@ -1566,7 +1573,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450041,
+      "srcTgtColId" : 10450128,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_float",
       "srcTrgColDataType" : "NUMBER",
@@ -1577,7 +1584,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450042,
+      "srcTgtColId" : 10450129,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_float_negative",
       "srcTrgColDataType" : "NUMBER",
@@ -1588,7 +1595,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450043,
+      "srcTgtColId" : 10450130,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_bigint",
       "srcTrgColDataType" : "NUMBER",
@@ -1599,7 +1606,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450044,
+      "srcTgtColId" : 10450131,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_bigint_negative",
       "srcTrgColDataType" : "NUMBER",
@@ -1610,7 +1617,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450045,
+      "srcTgtColId" : 10450132,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_real",
       "srcTrgColDataType" : "NUMBER",
@@ -1621,7 +1628,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450046,
+      "srcTgtColId" : 10450133,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_real_negative",
       "srcTrgColDataType" : "NUMBER",
@@ -1632,7 +1639,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450047,
+      "srcTgtColId" : 10450134,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_date",
       "srcTrgColDataType" : "DATE",
@@ -1643,7 +1650,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450048,
+      "srcTgtColId" : 10450135,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_timestamp",
       "srcTrgColDataType" : "TIMESTAMP",
@@ -1654,7 +1661,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450049,
+      "srcTgtColId" : 10450136,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_boolean",
       "srcTrgColDataType" : "CHAR",
@@ -1665,7 +1672,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450050,
+      "srcTgtColId" : 10450137,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_timestamp_with_timezone",
       "srcTrgColDataType" : "TIMESTAMP",
@@ -1676,7 +1683,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450051,
+      "srcTgtColId" : 10450138,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_clob",
       "srcTrgColDataType" : "CLOB",
@@ -1687,7 +1694,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450052,
+      "srcTgtColId" : 10450139,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_blob",
       "srcTrgColDataType" : "BLOB",
@@ -1698,7 +1705,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450053,
+      "srcTgtColId" : 10450140,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_raw",
       "srcTrgColDataType" : "RAW",
@@ -1709,7 +1716,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450054,
+      "srcTgtColId" : 10450141,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_binary_float",
       "srcTrgColDataType" : "BINARY_FLOAT",
@@ -1720,7 +1727,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450055,
+      "srcTgtColId" : 10450142,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_binary_double",
       "srcTrgColDataType" : "BINARY_DOUBLE",
@@ -1731,7 +1738,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450056,
+      "srcTgtColId" : 10450143,
       "ruleClsPropId" : 10450022,
       "srcTrgColName" : "col_long",
       "srcTrgColDataType" : "LONG",
@@ -1742,7 +1749,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450067,
+      "srcTgtColId" : 10450146,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_smallint",
       "srcTrgColDataType" : "NUMBER",
@@ -1753,7 +1760,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450068,
+      "srcTgtColId" : 10450147,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_varchar",
       "srcTrgColDataType" : "VARCHAR2",
@@ -1764,7 +1771,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450069,
+      "srcTgtColId" : 10450148,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_char",
       "srcTrgColDataType" : "CHAR",
@@ -1775,7 +1782,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450070,
+      "srcTgtColId" : 10450149,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_nchar",
       "srcTrgColDataType" : "NVARCHAR2",
@@ -1786,7 +1793,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450071,
+      "srcTgtColId" : 10450150,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_text",
       "srcTrgColDataType" : "VARCHAR2",
@@ -1797,7 +1804,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450072,
+      "srcTgtColId" : 10450151,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_integer",
       "srcTrgColDataType" : "NUMBER",
@@ -1808,7 +1815,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450073,
+      "srcTgtColId" : 10450152,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_integer_negative",
       "srcTrgColDataType" : "NUMBER",
@@ -1819,7 +1826,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450074,
+      "srcTgtColId" : 10450153,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_decimal",
       "srcTrgColDataType" : "NUMBER",
@@ -1830,7 +1837,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450075,
+      "srcTgtColId" : 10450154,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_decimal_negative",
       "srcTrgColDataType" : "NUMBER",
@@ -1841,7 +1848,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450076,
+      "srcTgtColId" : 10450155,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_float",
       "srcTrgColDataType" : "NUMBER",
@@ -1852,7 +1859,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450077,
+      "srcTgtColId" : 10450156,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_float_negative",
       "srcTrgColDataType" : "NUMBER",
@@ -1863,7 +1870,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450078,
+      "srcTgtColId" : 10450157,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_bigint",
       "srcTrgColDataType" : "NUMBER",
@@ -1874,7 +1881,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450079,
+      "srcTgtColId" : 10450158,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_bigint_negative",
       "srcTrgColDataType" : "NUMBER",
@@ -1885,7 +1892,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450080,
+      "srcTgtColId" : 10450159,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_real",
       "srcTrgColDataType" : "NUMBER",
@@ -1896,7 +1903,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450081,
+      "srcTgtColId" : 10450160,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_real_negative",
       "srcTrgColDataType" : "NUMBER",
@@ -1907,7 +1914,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450082,
+      "srcTgtColId" : 10450161,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_date",
       "srcTrgColDataType" : "DATE",
@@ -1918,7 +1925,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450083,
+      "srcTgtColId" : 10450162,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_timestamp",
       "srcTrgColDataType" : "TIMESTAMP",
@@ -1929,7 +1936,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450084,
+      "srcTgtColId" : 10450163,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_boolean",
       "srcTrgColDataType" : "CHAR",
@@ -1940,7 +1947,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450085,
+      "srcTgtColId" : 10450164,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_timestamp_with_timezone",
       "srcTrgColDataType" : "TIMESTAMP",
@@ -1951,7 +1958,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450086,
+      "srcTgtColId" : 10450165,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_clob",
       "srcTrgColDataType" : "CLOB",
@@ -1962,7 +1969,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450087,
+      "srcTgtColId" : 10450166,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_blob",
       "srcTrgColDataType" : "BLOB",
@@ -1973,7 +1980,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450088,
+      "srcTgtColId" : 10450167,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_raw",
       "srcTrgColDataType" : "RAW",
@@ -1984,7 +1991,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450089,
+      "srcTgtColId" : 10450168,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_binary_float",
       "srcTrgColDataType" : "BINARY_FLOAT",
@@ -1995,7 +2002,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450090,
+      "srcTgtColId" : 10450169,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_binary_double",
       "srcTrgColDataType" : "BINARY_DOUBLE",
@@ -2006,7 +2013,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10450091,
+      "srcTgtColId" : 10450170,
       "ruleClsPropId" : 10450057,
       "srcTrgColName" : "col_long",
       "srcTrgColDataType" : "LONG",
@@ -2018,9 +2025,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 10450092,
-      "srcColId" : 10450032,
-      "trgColId" : 10450067,
+      "colMapId" : 10450173,
+      "srcColId" : 10450119,
+      "trgColId" : 10450146,
       "colMapType" : "join",
       "srcColName" : "col_smallint",
       "tgtColName" : "col_smallint",
