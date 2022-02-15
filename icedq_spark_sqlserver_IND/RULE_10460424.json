@@ -3,7 +3,7 @@
     "id" : 10460424,
     "ruleInstanceId" : 0,
     "ruleDesc" : "",
-    "execMode" : "report",
+    "execMode" : "htreport",
     "exitCode" : null,
     "folderId" : 10226460,
     "projectId" : 579,
@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2022-02-15 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2022-02-15 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "WIP_Mridula",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 10460425,
     "successBody" : "",
     "failureBody" : "",
@@ -79,7 +79,7 @@
       "name" : null,
       "ruleClassId" : 10460425,
       "connType" : "",
-      "execMode" : "report",
+      "execMode" : "htreport",
       "index" : 1,
       "classRun" : "com.ice.bpel.CompareData",
       "vid" : "CompareData11",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 10460459,
-        "srcColId" : 10460451,
-        "trgColId" : 10460458,
+        "colMapId" : 10460486,
+        "srcColId" : 10460480,
+        "trgColId" : 10460483,
         "colMapType" : "join",
         "srcColName" : "sex",
         "tgtColName" : "cnt",
@@ -206,6 +206,13 @@
         "paramValue" : "",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
+      }, {
+        "ruleClsPropID" : 10460484,
+        "paramId" : 487,
+        "paramMethod" : "setDegreeOfParallelism",
+        "paramValue" : "1",
+        "srcTrgTbllist" : null,
+        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -219,7 +226,7 @@
       "name" : null,
       "ruleClassId" : 10460426,
       "connType" : "DATABASE",
-      "execMode" : "report",
+      "execMode" : "htreport",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData11",
@@ -242,7 +249,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(s_sex) as sex,s_jobcode from partition group by s_jobcode having count(s_sex) >50",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 10460451,
+          "srcTgtColId" : 10460480,
           "ruleClsPropId" : 10460440,
           "srcTrgColName" : "sex",
           "srcTrgColDataType" : "INT",
@@ -253,7 +260,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 10460452,
+          "srcTgtColId" : 10460481,
           "ruleClsPropId" : 10460440,
           "srcTrgColName" : "s_jobcode",
           "srcTrgColDataType" : "VARCHAR",
@@ -334,7 +341,7 @@
       "name" : null,
       "ruleClassId" : 10460427,
       "connType" : "DATABASE",
-      "execMode" : "report",
+      "execMode" : "htreport",
       "index" : 0,
       "classRun" : "com.ice.bpel.GetData",
       "vid" : "GetData21",
@@ -357,7 +364,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select 1 as cnt",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 10460458,
+          "srcTgtColId" : 10460483,
           "ruleClsPropId" : 10460453,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "String",
@@ -400,7 +407,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 10460451,
+      "srcTgtColId" : 10460480,
       "ruleClsPropId" : 10460440,
       "srcTrgColName" : "sex",
       "srcTrgColDataType" : "INT",
@@ -411,7 +418,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10460452,
+      "srcTgtColId" : 10460481,
       "ruleClsPropId" : 10460440,
       "srcTrgColName" : "s_jobcode",
       "srcTrgColDataType" : "VARCHAR",
@@ -422,7 +429,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10460458,
+      "srcTgtColId" : 10460483,
       "ruleClsPropId" : 10460453,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "String",
@@ -434,9 +441,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 10460459,
-      "srcColId" : 10460451,
-      "trgColId" : 10460458,
+      "colMapId" : 10460486,
+      "srcColId" : 10460480,
+      "trgColId" : 10460483,
       "colMapType" : "join",
       "srcColName" : "sex",
       "tgtColName" : "cnt",
