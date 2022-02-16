@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2022-02-16 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2022-02-16 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "punam",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 29911,
     "successBody" : "",
     "failureBody" : "",
@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 29950,
-        "srcColId" : 29922,
-        "trgColId" : 29935,
+        "colMapId" : 29962,
+        "srcColId" : 29953,
+        "trgColId" : 29958,
         "colMapType" : "join",
         "srcColName" : "country_id",
         "tgtColName" : "country_id",
@@ -105,7 +105,30 @@
         "srcTrgColMapVisible" : 1,
         "displayIndex" : 1
       } ],
-      "exprlist" : [ ],
+      "exprlist" : [ {
+        "exprID" : 29963,
+        "exprLogID" : 0,
+        "exprName" : "EXPR_AYD000K",
+        "expression" : "S.country_id !=0",
+        "result" : "Pass",
+        "exprType" : "5",
+        "exprVisible" : 1,
+        "exprIndex" : 1,
+        "ruleId" : 29908,
+        "ruleInstanceId" : 0,
+        "ruleClassId" : 29911,
+        "ruleName" : null,
+        "trueCount" : null,
+        "falseCount" : null,
+        "errCount" : null,
+        "exprOrg" : "S.country_id !=0",
+        "tc" : null,
+        "fc" : null,
+        "er" : null,
+        "name" : null,
+        "ve" : 0,
+        "exporg" : null
+      } ],
       "derivedexprlist" : null,
       "paramsVOLst" : [ {
         "ruleClsPropID" : 29948,
@@ -270,7 +293,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from HR.COUNTRIES",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 29935,
+          "srcTgtColId" : 29958,
           "ruleClsPropId" : 29925,
           "srcTrgColName" : "country_id",
           "srcTrgColDataType" : "CHAR",
@@ -281,7 +304,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 29936,
+          "srcTgtColId" : 29959,
           "ruleClsPropId" : 29925,
           "srcTrgColName" : "country_name",
           "srcTrgColDataType" : "VARCHAR2",
@@ -292,7 +315,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 29937,
+          "srcTgtColId" : 29960,
           "ruleClsPropId" : 29925,
           "srcTrgColName" : "region_id",
           "srcTrgColDataType" : "NUMBER",
@@ -390,7 +413,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select * from HR.COUNTRIES",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 29922,
+          "srcTgtColId" : 29953,
           "ruleClsPropId" : 29912,
           "srcTrgColName" : "country_id",
           "srcTrgColDataType" : "CHAR",
@@ -401,7 +424,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 29923,
+          "srcTgtColId" : 29954,
           "ruleClsPropId" : 29912,
           "srcTrgColName" : "country_name",
           "srcTrgColDataType" : "VARCHAR2",
@@ -412,7 +435,7 @@
           "colFormat" : "",
           "displayIndex" : 0
         }, {
-          "srcTgtColId" : 29924,
+          "srcTgtColId" : 29955,
           "ruleClsPropId" : 29912,
           "srcTrgColName" : "region_id",
           "srcTrgColDataType" : "NUMBER",
@@ -434,7 +457,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 29922,
+      "srcTgtColId" : 29953,
       "ruleClsPropId" : 29912,
       "srcTrgColName" : "country_id",
       "srcTrgColDataType" : "CHAR",
@@ -445,7 +468,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 29923,
+      "srcTgtColId" : 29954,
       "ruleClsPropId" : 29912,
       "srcTrgColName" : "country_name",
       "srcTrgColDataType" : "VARCHAR2",
@@ -456,7 +479,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 29924,
+      "srcTgtColId" : 29955,
       "ruleClsPropId" : 29912,
       "srcTrgColName" : "region_id",
       "srcTrgColDataType" : "NUMBER",
@@ -467,7 +490,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 29935,
+      "srcTgtColId" : 29958,
       "ruleClsPropId" : 29925,
       "srcTrgColName" : "country_id",
       "srcTrgColDataType" : "CHAR",
@@ -478,7 +501,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 29936,
+      "srcTgtColId" : 29959,
       "ruleClsPropId" : 29925,
       "srcTrgColName" : "country_name",
       "srcTrgColDataType" : "VARCHAR2",
@@ -489,7 +512,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 29937,
+      "srcTgtColId" : 29960,
       "ruleClsPropId" : 29925,
       "srcTrgColName" : "region_id",
       "srcTrgColDataType" : "NUMBER",
@@ -501,9 +524,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 29950,
-      "srcColId" : 29922,
-      "trgColId" : 29935,
+      "colMapId" : 29962,
+      "srcColId" : 29953,
+      "trgColId" : 29958,
       "colMapType" : "join",
       "srcColName" : "country_id",
       "tgtColName" : "country_id",
@@ -527,6 +550,29 @@
     "classModifydBy" : 0,
     "classCreateDate" : null,
     "classModifyDate" : null,
-    "exprVOList" : [ ]
+    "exprVOList" : [ {
+      "exprID" : 29963,
+      "exprLogID" : 0,
+      "exprName" : "EXPR_AYD000K",
+      "expression" : "S.country_id !=0",
+      "result" : "Pass",
+      "exprType" : "5",
+      "exprVisible" : 1,
+      "exprIndex" : 1,
+      "ruleId" : 29908,
+      "ruleInstanceId" : 0,
+      "ruleClassId" : 29911,
+      "ruleName" : null,
+      "trueCount" : null,
+      "falseCount" : null,
+      "errCount" : null,
+      "exprOrg" : null,
+      "tc" : null,
+      "fc" : null,
+      "er" : null,
+      "name" : null,
+      "ve" : 0,
+      "exporg" : null
+    } ]
   }
 }
