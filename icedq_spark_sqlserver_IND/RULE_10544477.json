@@ -95,9 +95,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 10544512,
-        "srcColId" : 10544508,
-        "trgColId" : 10544511,
+        "colMapId" : 10544519,
+        "srcColId" : 10544515,
+        "trgColId" : 10544518,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -109,7 +109,7 @@
         "exprID" : 10544505,
         "exprLogID" : 0,
         "exprName" : "EXPR_LKOU3TD",
-        "expression" : "S.cnt - T.cnt <= (0.01*S.cnt)",
+        "expression" : "S.cnt - T.cn != 0",
         "result" : "Pass",
         "exprType" : "5",
         "exprVisible" : 1,
@@ -121,7 +121,7 @@
         "trueCount" : null,
         "falseCount" : null,
         "errCount" : null,
-        "exprOrg" : "S.cnt - T.cnt <= (0.01*S.cnt)",
+        "exprOrg" : "S.cnt - T.cn != 0",
         "tc" : null,
         "fc" : null,
         "er" : null,
@@ -188,7 +188,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 10544508,
+          "srcTgtColId" : 10544515,
           "ruleClsPropId" : 10544481,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -279,7 +279,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from REGRESSION_DATABASE.CUSTOMER",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 10544511,
+          "srcTgtColId" : 10544518,
           "ruleClsPropId" : 10544491,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -343,7 +343,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 10544508,
+      "srcTgtColId" : 10544515,
       "ruleClsPropId" : 10544481,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -354,7 +354,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 10544511,
+      "srcTgtColId" : 10544518,
       "ruleClsPropId" : 10544491,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -366,9 +366,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 10544512,
-      "srcColId" : 10544508,
-      "trgColId" : 10544511,
+      "colMapId" : 10544519,
+      "srcColId" : 10544515,
+      "trgColId" : 10544518,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
@@ -396,7 +396,7 @@
       "exprID" : 10544505,
       "exprLogID" : 0,
       "exprName" : "EXPR_LKOU3TD",
-      "expression" : "S.cnt - T.cnt <= (0.01*S.cnt)",
+      "expression" : "S.cnt - T.cn != 0",
       "result" : "Pass",
       "exprType" : "5",
       "exprVisible" : 1,
