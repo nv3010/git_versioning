@@ -101,7 +101,7 @@
         "ruleClsPropID" : 10552308,
         "paramId" : 231,
         "paramMethod" : "setGroovyScript",
-        "paramValue" : "1640_Hive_Kerberos.eachRow('''show databases'''){\nrow -> print('Res:' +row.table_name)\n}",
+        "paramValue" : "def sql = Hive_Kerberos_1640\nsql.query('show databases'){resultSet ->\nwhile (resultSet.next()) {\n    def first = resultSet.getString(1)\nprint(first )\n}\n}",
         "srcTrgTbllist" : [ ],
         "fileContent" : null
       }, {
