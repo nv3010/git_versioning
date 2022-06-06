@@ -18,11 +18,11 @@
     "ruleTemplate" : null,
     "statusName" : null,
     "ruleCreatedBy" : 7,
-    "ruleModifiedBy" : 0,
+    "ruleModifiedBy" : 7,
     "subjectAreaKey" : 0,
     "ruleStatus" : 1,
     "ruleCreateDate" : "2022-06-06 00:00:00",
-    "ruleModifiedDate" : null,
+    "ruleModifiedDate" : "2022-06-06 00:00:00",
     "enterpriseErrorCode" : "",
     "legalEntityId" : 1,
     "subjectAreaName" : null,
@@ -54,7 +54,7 @@
     "isRuleExit" : null,
     "ruleCreatedByName" : "admin",
     "projectName" : "Apurv_test",
-    "ruleModifiedByName" : null,
+    "ruleModifiedByName" : "admin",
     "ruleClassId" : 112482,
     "successBody" : "",
     "failureBody" : "",
@@ -96,9 +96,9 @@
       "ruleName" : null,
       "ruleParameter" : null,
       "srcTrgMaplist" : [ {
-        "colMapId" : 112506,
-        "srcColId" : 112492,
-        "trgColId" : 112502,
+        "colMapId" : 112515,
+        "srcColId" : 112511,
+        "trgColId" : 112514,
         "colMapType" : "join",
         "srcColName" : "cnt",
         "tgtColName" : "cnt",
@@ -112,7 +112,7 @@
         "ruleClsPropID" : 112505,
         "paramId" : 798,
         "paramMethod" : "setEngineType",
-        "paramValue" : "V8",
+        "paramValue" : "Null",
         "srcTrgTbllist" : null,
         "fileContent" : null
       }, {
@@ -208,7 +208,7 @@
         "paramMethod" : "setQueryString",
         "paramValue" : "select count(*) as cnt from HR.EMPLOYEES",
         "srcTrgTbllist" : [ {
-          "srcTgtColId" : 112502,
+          "srcTgtColId" : 112514,
           "ruleClsPropId" : 112493,
           "srcTrgColName" : "cnt",
           "srcTrgColDataType" : "NUMBER",
@@ -252,6 +252,24 @@
       "exprlist" : [ ],
       "derivedexprlist" : null,
       "paramsVOLst" : [ {
+        "ruleClsPropID" : 112483,
+        "paramId" : 6,
+        "paramMethod" : "setQueryString",
+        "paramValue" : "select count(*) as cnt from HR.EMPLOYEES",
+        "srcTrgTbllist" : [ {
+          "srcTgtColId" : 112511,
+          "ruleClsPropId" : 112483,
+          "srcTrgColName" : "cnt",
+          "srcTrgColDataType" : "NUMBER",
+          "colFlagType" : "src",
+          "srcTrgColVisible" : 0,
+          "joinList" : null,
+          "mapColName" : null,
+          "colFormat" : "",
+          "displayIndex" : 0
+        } ],
+        "fileContent" : null
+      }, {
         "ruleClsPropID" : 112491,
         "paramId" : 404,
         "paramMethod" : "setIsMultipleOutVaiables",
@@ -293,24 +311,6 @@
         "paramValue" : "7693",
         "srcTrgTbllist" : null,
         "fileContent" : null
-      }, {
-        "ruleClsPropID" : 112483,
-        "paramId" : 6,
-        "paramMethod" : "setQueryString",
-        "paramValue" : "select count(*) as cnt from HR.EMPLOYEES",
-        "srcTrgTbllist" : [ {
-          "srcTgtColId" : 112492,
-          "ruleClsPropId" : 112483,
-          "srcTrgColName" : "cnt",
-          "srcTrgColDataType" : "NUMBER",
-          "colFlagType" : "src",
-          "srcTrgColVisible" : 0,
-          "joinList" : null,
-          "mapColName" : null,
-          "colFormat" : "",
-          "displayIndex" : 0
-        } ],
-        "fileContent" : null
       } ],
       "bigDataExecMode" : null,
       "srcConnServer" : null,
@@ -321,7 +321,7 @@
       "thresholdExpression" : null
     } ],
     "srcTrgTbllist" : [ {
-      "srcTgtColId" : 112492,
+      "srcTgtColId" : 112511,
       "ruleClsPropId" : 112483,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -332,7 +332,7 @@
       "colFormat" : "",
       "displayIndex" : 0
     }, {
-      "srcTgtColId" : 112502,
+      "srcTgtColId" : 112514,
       "ruleClsPropId" : 112493,
       "srcTrgColName" : "cnt",
       "srcTrgColDataType" : "NUMBER",
@@ -344,9 +344,9 @@
       "displayIndex" : 0
     } ],
     "colMapList" : [ {
-      "colMapId" : 112506,
-      "srcColId" : 112492,
-      "trgColId" : 112502,
+      "colMapId" : 112515,
+      "srcColId" : 112511,
+      "trgColId" : 112514,
       "colMapType" : "join",
       "srcColName" : "cnt",
       "tgtColName" : "cnt",
